@@ -1,0 +1,76 @@
+<HTML>
+<HEAD>
+  <STYLE TYPE="text/css">
+  <!--
+    A:visited {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:active {text-decoration: underline; color="#0055FF"; font-weight: bold}
+    A:link {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:hover {text-decoration: underline; color: #ACACD7; font-weight: bold}
+  -->  
+  </STYLE>
+  <TITLE>Modeling tutorial - Настраиваем 3D MAX</TITLE>
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; Charset=Windows-1251">
+  <META NAME="author" CONTENT="Stanislav Serov (yxo), E-Mail: neotropic@halflife.ru">
+  <META NAME="copyright" CONTENT="R.M.C.">
+</HEAD>
+<BODY BGCOLOR="#4F4958"><FONT FACE="Arial">
+<A NAME="up"></A>
+<TABLE ALIGN="center" WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1" BORDERCOLOR="Silver" HEIGHT="100%">
+
+<TR>
+<TD ALIGN="justify" VALIGN="top" BGCOLOR="Black" BORDERCOLOR="Silver">
+<FONT SIZE="2" COLOR="White">
+  <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR><TD BGCOLOR="#BFD9DF" ALIGN="center"><FONT SIZE="2"><B>Modeling tutorial - Настраиваем 3D MAX</A></B></FONT></TD>
+ </TR>
+  </TABLE>
+<BR>
+
+<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% >
+<p align="center"><font size="3" color="#ACACD7"><strong>УСТАНОВКА ВАШИХ ОБЛАСТЕЙ ПРОСМОТРА</strong></font></p><font size="2" color="#ACACD7">
+<br>Хорошо, первое необходимое действие - выбор конфигурации ваших областей просмотра. Обычно люди сотавляют заданную по умолчанию конфигурацию подобно этой:
+<br>Верхний левый - top view
+<br>Верхний правый - left view
+<br>Нижний левый - front view
+<br>Нижний правый - perspective view
+<br>Вы можете конфигурировать их как вам угодно. Если они не сконфигурированы, а вам хочется настроить их подругому значит надо выполнить следующие действия: 
+<br>Щелкаем правой кнопкой мыши на названии области просмотра. Например, в 'перспективной' области просмотра. Вы должны увидеть раскрывающееся меню, которое включает команду виды(Views):
+<p align="center"><img src="views.gif"><p>
+Нажмите на 'Views', и вам будет представлен второй список всех доступных видов (включая любые камеры, которые можно создать - хотя, если вы только моделируете то не нуждаетесь в камерах) выберете тот вид, который вы хотите, нажав на его название, и область просмотра автоматически перейдет на него. 
+Также, если вы хотите сконфигурировать четыре области просмотра изменив их количество или размер,то щелкнете правой кнопкой мыши на заголовке области просмотра жмите на "Configure" 
+<p align="center"><img src="configuremenu.gif"><p>
+Здесь мы видим общее меню настройки жмём далее на 'Layout', и выбираем количество областей просмотра и их расположение.
+<p align="center"><img src="configuredialogue.gif"><p>
+<p align="center"><font size="3"><strong>УСТАНОВКА КНОПОК МОДИФИКАТОРА</strong></font></p>
+
+Далее настроим кнопки модификатора 3DS MAX которыми будем часто пользоваться для удобства. Два из наиболее важных модификатора для моделирования HalfLife - модификатор редактирования сеточной модели (Edit Mesh), и UVW модификатор (UVW Unwrap Modifier). Так что мы теперь прибавим эти два модификатора к нашему списку кнопок модификатора. Плюс еще можно добавить кнопку модификатора Character Studio фирмы Kinetix. Обязательно поставте себе модуль Caracter Studio, а то ни о каких новых моделях игрока и речи быть не может.<br>
+Щелкните на вкладку Modifier в верху справа:
+<p align="center"><img src="modifiericon.gif"><p>
+Теперь жмём на эту кнопку:
+<p align="center"><img src="setsicon.gif"><p>
+Далее появится окно которое позволит вам настроть вашу установку кнопок модификаторов. Измените значение 'total buttons' на три, так, чтобы вы теперь имели тринадцать кнопок. Это даст вам три новые пустые кнопки в основании.
+<p align="center"><img src="configbut.gif"><p>
+
+Выберите первую кнопку, нажав на неё. Теперь выберите в списке слева 'Edit Mesh' модификатор. 
+<p align="center"><img src="addedit.gif"><p>
+Теперь жмите на стрелку '>'. Теперь выберите другую пустую кнопку, нажимая на неё, и найдите 'UVW Unwrap Modifier' модификатор в списке (примечание: Не перепутайте с 'UVW map', который уже есть на ваших кнопках). Повторитесь вышеупомянутый процесс с UVW Unwrap Modifier.Тоже самое проделайте для модификатора 'Phisyque'.
+Теперь сохраните новую конфигурацию, напечатав имя вашей новой конфигурации в верхнем правом поле, и щелкните "SAVE". 
+<br>Как только вы сделали это, вы готовы создавать модели!<br><br>
+</td>
+</table>
+</font>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR>
+  <TD WIDTH="100%" ALIGN="center"><FONT SIZE="2" COLOR="White"><A HREF="../../tut.shtml">Назад</A></FONT></TD></TR>
+  </TABLE>
+
+</DIV>
+
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

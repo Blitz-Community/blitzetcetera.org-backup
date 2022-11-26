@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9E%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D1%83%D1%87%D0%B0_%D0%BE%D1%82_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B2_3D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Отражение луча от произвольной поверхности в 3D,Grover" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Отражение луча от произвольной поверхности в 3D — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Отражение_луча_от_произвольной_поверхности_в_3D";
+var wgTitle = "Отражение луча от произвольной поверхности в 3D";
+var wgAction = "view";
+var wgArticleId = "1647";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3235";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Отражение_луча_от_произвольной_поверхности_в_3D">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Отражение луча от произвольной поверхности в 3D</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Как узнать, куда полетит шарик после столкновения с кубиком? Сразу вспоминаем фразу: «Угол отражения равен углу падения». Правильно!!! Но что делать, если мы не знаем угол падения? Всё просто…
+</p><p>Нам необходимо знать направление полета шарика. Для этого нам нужны три числа: на сколько мячик сместится по оси X, по оси Y и по оси Z. То есть, шарик вылетел из точки (0,0,0) после перемещения его координата (4,2,4) – это и есть вектор направления полета шарика. Обозначим его V(vx,vy,vz)
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection01.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection01.jpg" src="ugvlyx05.jpg" width="320" height="261" /></a></span></div></div>
+<p>Если траектория шарика может меняться со временем (например, сдуло ветром), то вектор перемещения шарика можно вычислить путем вычитания предыдущих координат шарика из нынешних.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection02.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection02.jpg" src="rgt18cei.jpg" width="320" height="261" /></a></span></div></div>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">vx = x_new - x_old = <span style="color: #33ffdd;">8</span> – <span style="color: #33ffdd;">6</span> = <span style="color: #33ffdd;">2</span><br />
+vy = y_new – y_old = <span style="color: #33ffdd;">4</span> – <span style="color: #33ffdd;">1</span> = <span style="color: #33ffdd;">3</span></div> 
+<p>Так же вычисляется и vz.
+</p><p>Еще необходимо знать, как повернута плоскость кубика, с которой шарик столкнулся. Для этого существует вектор нормали. Это перпендикуляр к плоскости. Назовем его вектор N(nx,ny,nz).
+</p><p>В Blitz 3D вектор нормали можно узнать, используя команды CollisionNX(),CollisionNY(),CollisionNZ(). Используются они в цикле от 1 до CountCollisions(entity).
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #aaffff; font-weight: bold;">CountCollisions</span><span style=" ">&#40;</span>sharik<span style=" ">&#41;</span><br />
+<p><br />
+nx#=<span style="color: #aaffff; font-weight: bold;">CollisionNX</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+ny#=<span style="color: #aaffff; font-weight: bold;">CollisionNY</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+nz#=<span style="color: #aaffff; font-weight: bold;">CollisionNZ</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Next</span></div>
+<p>nx, ny, nz – вектор нормали плоскости, с которой столкнулся шарик.
+</p><p>Итак, мы знаем направление полета шарика vx, vy, vz и направление плоскости, с которой шарик столкнулся. Можно начинать считать:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #aaffff; font-weight: bold;">CountCollisions</span><span style=" ">&#40;</span>sharik<span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #ffee00">; Находим векрот нормали плоскости</span><br />
+nx#=<span style="color: #aaffff; font-weight: bold;">CollisionNX</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+ny#=<span style="color: #aaffff; font-weight: bold;">CollisionNY</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+nz#=<span style="color: #aaffff; font-weight: bold;">CollisionNZ</span><span style=" ">&#40;</span>sharik,k<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">; Находим вектор полета шарика</span><br />
+vx#=<span style="color: #aaffff; font-weight: bold;">EntityX</span><span style=" ">&#40;</span>sharik<span style=" ">&#41;</span>-old_x#<br />
+vy#=<span style="color: #aaffff; font-weight: bold;">EntityY</span><span style=" ">&#40;</span>sharik<span style=" ">&#41;</span>-old_y#<br />
+vz#=<span style="color: #aaffff; font-weight: bold;">EntityZ</span><span style=" ">&#40;</span>sharik<span style=" ">&#41;</span>-old_z#<br />
+<br />
+<span style="color: #ffee00">; Вычисление нового вектора полета шарика (1)</span><br />
+dot#=vx*nx+vy*ny+vz*nz<br />
+ex#=nx*dot<br />
+ey#=ny*dot<br />
+ez#=nz*dot<br />
+new_x=vx-ex*<span style="color: #33ffdd;">2</span><br />
+new_y=vy-ey*<span style="color: #33ffdd;">2</span><br />
+new_z=vz-ez*<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<br />
+</p>
+New_x, new_y, new_z – новый вектор направления полета шарика.</div>
+<p>Вычисления после нахождения векторов – это поворот вектора полета шарика вокруг вектора нормали плоскости на 180 градусов. Процесс вычисления поворота одного вектора вокруг другого на любой угол очень трудоемкий. Но так как у нас угол всегда постоянен, то формула сокращается до той, что представлена в программе выше (1).
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection03.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Reflection03.jpg" src="xb0uc_x4.jpg" width="320" height="261" /></a></span></div></div>
+<p>Альфа ( угол падения) равен Бета (угол отражения).
+</p><p>Для направления шарика на новый вектор полета применим команду AlignToVector:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">AlignToVector</span> sharik,new_x,new_y,new_z,<span style="color: #33ffdd;">3</span></div>
+<p>ВСЁ!!!
+</p>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Grover" title="Участник:Grover">Grover</a> (e-mail: mail_grover@mail.ru)
+</p>
+<!-- Saved in parser cache with key db1:pcache:idhash:1647-0!1!0!!ru!2 and timestamp 20071110033026 -->
+<div class="printfooter">
+Получено с <a href="-oou97qp.html">http://blitzetcetera.org/index.php/%D0%9E%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D1%83%D1%87%D0%B0_%D0%BE%D1%82_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B2_3D</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9E%D1%82%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5_%D0%BB%D1%83%D1%87%D0%B0_%D0%BE%D1%82_%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D0%B2%D0%B5%D1%80%D1%85%D0%BD%D0%BE%D1%81%D1%82%D0%B8_%D0%B2_3D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

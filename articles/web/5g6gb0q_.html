@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Неофициальная спецификация формата файлов «B3D» V0.2,Alrusdi" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Неофициальная спецификация формата файлов «B3D» V0.2 — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Неофициальная_спецификация_формата_файлов_«B3D»_V0.2";
+var wgTitle = "Неофициальная спецификация формата файлов «B3D» V0.2";
+var wgAction = "view";
+var wgArticleId = "613";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3418";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Неофициальная_спецификация_формата_файлов_«B3D»_V0_2">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Неофициальная спецификация формата файлов «B3D» V0.2</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">1</span> <span class="toctext">Введение</span></a></li>
+<li class="toclevel-1"><a href="#B3D_.D0.B2_.D1.86.D0.B5.D0.BB.D0.BE.D0.BC"><span class="tocnumber">2</span> <span class="toctext">B3D в целом</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D1.81.D1.82.D0.B0.D0.B2.D0.BD.D1.8B.D0.B5_.D1.87.D0.B0.D1.81.D1.82.D0.B8_.D0.BF.D0.BE_.D0.BE.D1.82.D0.B4.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D1.81.D1.82.D0.B8"><span class="tocnumber">3</span> <span class="toctext">Составные части по отдельности</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.2A.D0.9F.D0.A0.D0.98.D0.9C.D0.95.D0.A7.D0.90.D0.9D.D0.98.D0.AF.2A"><span class="tocnumber">3.1</span> <span class="toctext">*ПРИМЕЧАНИЯ*</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9E.D1.81.D0.BD.D0.BE.D0.B2.D0.BD.D1.8B.D0.B5_.D1.84.D1.80.D0.B0.D0.B3.D0.BC.D0.B5.D0.BD.D1.82.D1.8B_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0_B3D"><span class="tocnumber">3.2</span> <span class="toctext">Основные фрагменты файла B3D</span></a></li>
+<li class="toclevel-2"><a href="#BB3D"><span class="tocnumber">3.3</span> <span class="toctext">BB3D</span></a></li>
+<li class="toclevel-2"><a href="#TEXS"><span class="tocnumber">3.4</span> <span class="toctext">TEXS</span></a></li>
+<li class="toclevel-2"><a href="#BRUS"><span class="tocnumber">3.5</span> <span class="toctext">BRUS</span></a></li>
+<li class="toclevel-2"><a href="#NODE"><span class="tocnumber">3.6</span> <span class="toctext">NODE</span></a></li>
+<li class="toclevel-2"><a href="#VRTS"><span class="tocnumber">3.7</span> <span class="toctext">VRTS</span></a></li>
+<li class="toclevel-2"><a href="#TRIS"><span class="tocnumber">3.8</span> <span class="toctext">TRIS</span></a></li>
+<li class="toclevel-2"><a href="#MESH"><span class="tocnumber">3.9</span> <span class="toctext">MESH</span></a></li>
+<li class="toclevel-2"><a href="#BONE"><span class="tocnumber">3.10</span> <span class="toctext">BONE</span></a></li>
+<li class="toclevel-2"><a href="#KEYS"><span class="tocnumber">3.11</span> <span class="toctext">KEYS</span></a></li>
+<li class="toclevel-2"><a href="#ANIM"><span class="tocnumber">3.12</span> <span class="toctext">ANIM</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.92.D1.81.D0.B5.2C_.D1.87.D1.82.D0.BE_.D0.BD.D1.83.D0.B6.D0.BD.D0.BE_.D0.B7.D0.BD.D0.B0.D1.82.D1.8C_.D0.BE.D0.B1_.D0.B8.D0.B5.D1.80.D0.B0.D1.80.D1.85.D0.B8.D0.B8_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D0.B8"><span class="tocnumber">4</span> <span class="toctext">Все, что нужно знать об иерархии модели</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.B5.D0.B9.D1.88.D0.B0.D1.8F_.D1.81.D1.82.D0.B0.D1.82.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B0.D1.8F_.D0.BD.D0.B5.D1.82.D0.B5.D0.BA.D1.81.D1.82.D1.83.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D0.B0.D1.8F_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D1.8C"><span class="tocnumber">5</span> <span class="toctext">Простейшая статическая нетекстурированная модель</span></a></li>
+<li class="toclevel-1"><a href="#B3DFile.bb"><span class="tocnumber">6</span> <span class="toctext">B3DFile.bb</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=1" title="Править секцию: Введение">править</a>]</span> <span class="mw-headline">Введение</span></h2>
+<p>Этот документ представляет собой попытку описания на русском формата файлов B3D использующихся в Blitz Basic. Как вы уже догадались B3D - внутренний формат Блица, главным образом предназначенный для описания 3D моделей, материалов и ссылок на текстуры.
+</p><p>Надо заметить, что перевод оказался делом довольно непростым. Причем не из-за того что формат особо заумный (он напротив весьма дружественный), а из-за проблем с терминологией. Сложилась довольно стройная и универсальная английская терминология описания форматов файлов, а вот русской увы нет. Поэтому chunk обозван фрагментом, node - ветвью а кое-что - вообще никак.
+</p>
+<a name="B3D_.D0.B2_.D1.86.D0.B5.D0.BB.D0.BE.D0.BC"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=2" title="Править секцию: B3D в целом">править</a>]</span> <span class="mw-headline">B3D в целом</span></h2>
+<p>Файл можно представить в виде совокупности следующих элементов: 
+</p>
+<ul><li>Скелет модели (bones) необходимый для анимации. 
+</li><li>Совокупность субмоделей состоящих в свою очередь из поверхностей. 
+</li><li>Кадры анимации в виде ряда фиксированных положений скелета модели. 
+</li><li>Информация о текстурах и общем цвете модели. 
+</li></ul>
+<p>При описании формата принята нотация в стиле C/C++ с учетом следующей специфики данных и их размеров. 
+</p>
+<ul><li>int (4 байта), целое со знаком. Любые целые числа (1, 2, 324382 и т. д.) в пределах от -2147483648 до 2147483647
+</li><li>float (тоже 4 байта). Дробные числа с плавающей запятой (1.34, 2.345.0.0994), целые приведенные к этому типу имеют вид 1.0 2.0 и т. д. 
+</li><li>char (1 байт). Символы типа A,a,c,$,&amp;,1 и т. д., в том виде как они обычно хранятся в файлах. Несколько отличается от строкового типа данных в Блице. Для трансляции можно воспользоваться функциями предоставлеенные Марком Сибли - B3dfile.bb. Кроме того, там можно найти функции для записи заголовка файла и отдельных его элементов - целых, дробных чисел и chunks 
+</li></ul>
+<p>Каждому chunk предшествует 8 байт заголовка:  B3D Chunk  
+</p>
+<table>
+<tr>
+<td>char tag [4]
+</td><td>4 байта - 4 буквы названия тега (BB3D, TEXS, BRUS и т. д.) )
+</td></tr>
+<tr>
+<td>int length
+</td><td>4 байта размер фрагмента (не включая размера самого заголовка)
+</td></tr></table>
+<p>Каждый chunk содержит данные о размере и необязательные вложенные chunks. При написании собственного загрузчика необходимо предусмотреть пропуск всего тела неподдерживаемых chunks .
+</p>
+<a name=".D0.A1.D0.BE.D1.81.D1.82.D0.B0.D0.B2.D0.BD.D1.8B.D0.B5_.D1.87.D0.B0.D1.81.D1.82.D0.B8_.D0.BF.D0.BE_.D0.BE.D1.82.D0.B4.D0.B5.D0.BB.D1.8C.D0.BD.D0.BE.D1.81.D1.82.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=3" title="Править секцию: Составные части по отдельности">править</a>]</span> <span class="mw-headline">Составные части по отдельности</span></h2>
+<a name=".2A.D0.9F.D0.A0.D0.98.D0.9C.D0.95.D0.A7.D0.90.D0.9D.D0.98.D0.AF.2A"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=4" title="Править секцию: *ПРИМЕЧАНИЯ*">править</a>]</span> <span class="mw-headline">*ПРИМЕЧАНИЯ*</span></h3>
+<ul><li>Значения цвета (RGBA), берутся от 0 до 1. То есть берем цвет из Блица и делим на 255. 
+</li><li>string (char[]) значения представляют строку в стиле 'C' . По умолчанию Блиц читает строки из файлов не так! 
+</li><li>Quaternions используются для задания направления. Первое значение - параметр 'w', следующие 3 параметра 'vector'. Ноль ориентации описывается как 1,0,0,0. Самое время почитать подробнее о кватернионах...(Хм... Да уж! Хорошее место - документация по DirectX SDK) 
+</li><li>Все на что следует ссылка 'по индексу' всегда должно быть описано в файле РАНЬШЕ чем собственно ссылка. Т. е. не ссылаться на то чего еще не загружено. 
+</li><li>Ссылки типа brush_id могут быть -1: основной цвет модели по умолчанию.
+</li><li>Все заключенное в фигурные скобки {} в последующих описаниях подразумевает что блок может неограниченно повторяться вплоть до следующего сhunk. Квадратные скобки [] означают необязательные элементы. 
+</li></ul>
+<a name=".D0.9E.D1.81.D0.BD.D0.BE.D0.B2.D0.BD.D1.8B.D0.B5_.D1.84.D1.80.D0.B0.D0.B3.D0.BC.D0.B5.D0.BD.D1.82.D1.8B_.D1.84.D0.B0.D0.B9.D0.BB.D0.B0_B3D"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=5" title="Править секцию: Основные фрагменты файла B3D">править</a>]</span> <span class="mw-headline">Основные фрагменты файла B3D</span></h3>
+<ul><li>[BB3D] Заголовок. 
+</li><li>[TEXS] Описание текстур. 
+</li><li>[BRUS] Информация об основном цвете модели. 
+</li><li>[NODE] Объекты (Blitz3D Entity). 
+</li><li>[VRTS] Информация о вершинах модели. 
+</li><li>[TRIS] Описание поверхности. 
+</li><li>[MESH] Описание собственно модели. 
+</li><li>[BONE] Анимационный скелет модели(кости). 
+</li><li>[KEYS] Описание кадров анимации. 
+</li><li>[ANIM] Описание анимации. 
+</li></ul>
+<a name="BB3D"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=6" title="Править секцию: BB3D">править</a>]</span> <span class="mw-headline">BB3D</span></h3>
+<table>
+<tr>
+<td>int version
+</td><td>версия формата, по умочанию 1. На момент этого описания формат файла не изменялся со времени его разработки, а значит как минимум для версии Blitz3D 1.83 версия остается первой. Тег длины соответственно обозначает размер файла в байтах не считая заголовка. Формат записи версии файла выглядит так major*100+minor те: версия 1.0 обозначается как 1000 1.1 1001 и т. д.
+</td></tr></table>
+<a name="TEXS"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=7" title="Править секцию: TEXS">править</a>]</span> <span class="mw-headline">TEXS</span></h3>
+<table>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td>char file[ ]
+</td><td>имя текстуры типа "wall.bmp" Online загрузка не поддерживается.
+</td></tr>
+<tr>
+<td>int flags,blend
+</td><td>флаги текстуры. Формируются на том же принципе,что и в Блице.
+</td></tr>
+<tr>
+<td>float x_pos,y_pos
+</td><td>положение текстуры: по умолчанию = 0,0.
+</td></tr>
+<tr>
+<td>float x_scale,y_scale
+</td><td>масштабирование текстуры: по умолчанию = 1,1.
+</td></tr>
+<tr>
+<td>float rotation
+</td><td>вращение текстуры (в радианах): по умолчанию = 0 радиан = 180/pi градусов
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Такое описание должно быть для всех используемых текстур. Флаг текстуры 65536 не описанный Марком Сибли означает то, что текстура использует второй набор текстурных координат. Таких наборов в Блиц может быть не больше двух.
+</p><p>Пример:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">If</span> t\flags <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #33ffdd;">65536</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+<p>&nbsp;<span style="color: #aaffff; font-weight: bold;">TextureCoords</span> t\tex,<span style="color: #33ffdd;">1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">TextureCoords</span> t\tex,<span style="color: #33ffdd;">0</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">EndIf</span></div>
+<a name="BRUS"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=8" title="Править секцию: BRUS">править</a>]</span> <span class="mw-headline">BRUS</span></h3>
+<table>
+<tr>
+<td>int n_texs
+</td><td>
+</td></tr>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td><td>char name[]
+</td><td>Имя типа "WATER" - имя текстуры
+</td></tr>
+<tr>
+<td>float red,green,blue,alpha
+</td><td>Цвет, последняя составляющая которого - прозрачность: по умолчанию= 1,1,1,1
+</td></tr>
+<tr>
+<td>float shininess
+</td><td>Блик: по умолчанию= 0
+</td></tr>
+<tr>
+<td>int blend,fx
+</td><td>Смешивание(blending) и специальные эффекты: по умолчанию= 1,0
+</td></tr>
+<tr>
+<td>int texture_id
+</td><td>список идентификаторов всех используемых в данном материале текстур могут использоваься текстуры прозрачности, освещения, маска и т. д. Все ID должны вводится с типом int т.е по четыре байта.
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Каждый материал должен содержать отдельный тег BRUS. 
+</p>
+<a name="NODE"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=9" title="Править секцию: NODE">править</a>]</span> <span class="mw-headline">NODE</span></h3>
+<table>
+<tr>
+<td>char name[]
+</td><td>имя ветви структуры
+</td></tr>
+<tr>
+<td>float position
+</td><td>локальная позиция...
+</td></tr>
+<tr>
+<td>float scale
+</td><td>масштабирование...
+</td></tr>
+<tr>
+<td>float rotation
+</td><td>общий поворот...
+</td></tr>
+<tr>
+<td>BONE]
+</td><td>тег типа описываемого ветвью структуры, если нераспознается, то принимается как центр масс (pivot).
+</td></tr>
+<tr>
+<td>[KEYS[,KEYS...]]
+</td><td>необязательные кадры анимации
+</td></tr>
+<tr>
+<td>[NODE[,NODE...]]&lt;/td&gt;
+</td><td>необязательные вложенные иерархии
+</td></tr>
+<tr>
+<td>[ANIM]
+</td><td>необязательная анимация
+</td></tr></table>
+<a name="VRTS"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=10" title="Править секцию: VRTS">править</a>]</span> <span class="mw-headline">VRTS</span></h3>
+<table>
+<tr>
+<td>int flags
+</td><td>1 = вершина с нормалями, 2 = цветная вершина
+</td></tr>
+<tr>
+<td>int tex_coord_sets
+</td><td>количество блоков текстурных координат на вершину (1 - простые U/V) max = 8
+</td></tr>
+<tr>
+<td>int tex_coord_set_size
+</td><td>размер блока (2 - простые U/V) max = 4
+</td></tr>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td>float x,y,z
+</td><td>обязательны
+</td></tr>
+<tr>
+<td>float nx,ny,nz
+</td><td>нормаль вершины: только если flags=1
+</td></tr>
+<tr>
+<td>float red,green,blue,alpha
+</td><td>цвет вершины: если (flags= 2)
+</td></tr>
+<tr>
+<td>float tex_coords
+</td><td>текстурные координаты
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Фрагмент VRTS содержит список вершин модели. Значение flags показывает какая и сколько дополнительной информации хранится с каждой вершиной (информация о нормали или цвет вершины). В tex_coord_sets и tex_coord_set_size хранится информация о текстурных координатах.
+</p><p>Если, по тем или иным причинам, доведется просматривать файл в шестнадцатиричном редакторе,  не стоит удивляться тому, что вершины задаются нечитабельно. Число 1, например выглядит как 0000803F. На самом деле именно так в шестнадцатеричном виде записываются числа с плавающей запятой (Тип данных float в С/С++ и single в VB). Мне не известен алгоритм непосредственного преобразования таких чисел к нормальному виду, но как обходной маневр можно использовать чтение их из файла оператором ReadFloat с выводом на экран.  Для обратной операции используем WriteFloat потом читаем это число побайтово (всего 4 байта), преобразуем при помощи Hex и выводим на экран в правильной последовательности.
+</p><p>Чтобы структура VERTS стала немного понятнее приводится следующий пример описания VRTS, в виде, в котором он должен быть в файле.
+</p><p>EXAMPLE:
+</p><p><br />
+</p>
+<table>
+<tr>
+<td> 1
+</td><td> Флаг показывающий, что с каждой вершиной дополнительно хранится описание нормали, он должен быть равен 2 если модель цветная но без текстуры, и 3 если без текстуры но с нормалью
+</td></tr>
+<tr>
+<td> 1
+</td><td> простейший uvset.
+</td></tr>
+<tr>
+<td> 2
+</td><td> простейший uvset.
+</td></tr>
+<tr>
+<td> &lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td> 2.3
+</td><td> X \
+</td></tr>
+<tr>
+<td> 3.2
+</td><td> Y &#124;--- координаты вершины.
+</td></tr>
+<tr>
+<td> -1.34
+</td><td> Z /
+</td></tr>
+<tr>
+<td> 0.0096
+</td><td>
+</td></tr>
+<tr>
+<td> -0.9998
+</td><td> нормаль к вершине.
+</td></tr>
+<tr>
+<td> 0.0200
+</td><td>
+</td></tr>
+<tr>
+<td> 0.45
+</td><td> текстурная координата U
+</td></tr>
+<tr>
+<td> 0.23
+</td><td> текстурная координата V
+</td></tr>
+<tr>
+<td> ...
+</td><td> и так для каждой вершины.
+</td></tr>
+<tr>
+<td> &rsaquo;
+</td><td>
+</td></tr></table>
+<p><br />
+</p>
+<a name="TRIS"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=11" title="Править секцию: TRIS">править</a>]</span> <span class="mw-headline">TRIS</span></h3>
+<table>
+<tr>
+<td>int brush_id
+</td><td>общий цвет(кисть) модели: по умолчанию= -1
+</td></tr>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td>int vertex_id
+</td><td>индексы вершин треугольника. Порядок обхода влияет на то, которая из сторон будет видимой.
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Описывает треугольники составляющие модель.  
+</p>
+<a name="MESH"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=12" title="Править секцию: MESH">править</a>]</span> <span class="mw-headline">MESH</span></h3>
+<table>
+<tr>
+<td>int brush_id
+</td><td>основной цвет(кисть): по умолчанию=-1
+</td></tr>
+<tr>
+<td>VRTS
+</td><td>вершины
+</td></tr>
+<tr>
+<td>TRIS
+</td><td>1 или более наборов треугольников
+</td></tr></table>
+<p>Описывает модель в общем. Имеет единственный фрагмент VRTS и один или более TRIS.
+</p>
+<a name="BONE"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=13" title="Править секцию: BONE">править</a>]</span> <span class="mw-headline">BONE</span></h3>
+<table>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td>int vertex_id
+</td><td>индекс вершины, которой управляет данный манипулятор
+</td></tr>
+<tr>
+<td>float weight
+</td><td>не поддерживается устанавливается в 1
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Описывает манипуляторы(кости) скелетной анимации.
+</p>
+<a name="KEYS"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=14" title="Править секцию: KEYS">править</a>]</span> <span class="mw-headline">KEYS</span></h3>
+<table>
+<tr>
+<td>int flags
+</td><td>1=position, 2=scale, 4=rotation
+</td></tr>
+<tr>
+<td>&lsaquo;
+</td><td>
+</td></tr>
+<tr>
+<td>int frame
+</td><td>в каком кадре срабатывает
+</td></tr>
+<tr>
+<td>float position
+</td><td>если (flags=1)
+</td></tr>
+<tr>
+<td>float scale
+</td><td>если (flags=2)
+</td></tr>
+<tr>
+<td>float rotation
+</td><td>если (flags= 4)
+</td></tr>
+<tr>
+<td>&rsaquo;
+</td><td>
+</td></tr></table>
+<p>Описывает ключевые моменты анимации. Изменение поворота, масштаба, координат модели не могут быть скомбинированы в одном фрагменте KEYS, но несколько KEYS могут указывать на один и тот же кадр
+</p>
+<a name="ANIM"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=15" title="Править секцию: ANIM">править</a>]</span> <span class="mw-headline">ANIM</span></h3>
+<table>
+<tr>
+<td>int flags
+</td><td>не используется=0
+</td></tr>
+<tr>
+<td>int frames
+</td><td>сколько кадров в анимации
+</td></tr>
+<tr>
+<td>float fps
+</td><td>скорось анимации(кадры в секунду)= 60
+</td></tr></table>
+<p>Описывает анимацию. Каждый такой фрагмент является отдельной анимационной последовательностью. Каждая ветвь иерархической модели (типа персонажа) может иметь на каждую ветвь иерархии только одну анимационную последовательность.
+</p>
+<a name=".D0.92.D1.81.D0.B5.2C_.D1.87.D1.82.D0.BE_.D0.BD.D1.83.D0.B6.D0.BD.D0.BE_.D0.B7.D0.BD.D0.B0.D1.82.D1.8C_.D0.BE.D0.B1_.D0.B8.D0.B5.D1.80.D0.B0.D1.80.D1.85.D0.B8.D0.B8_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=16" title="Править секцию: Все, что нужно знать об иерархии модели">править</a>]</span> <span class="mw-headline">Все, что нужно знать об иерархии модели</span></h2>
+<p>Специфика описываемого стандарта может привести к ошибкам доступа на этапе чтения модели в Блиц. Как уже говорилось Все на что следует ссылка 'по индексу' всегда должно быть описано в файле РАНЬШЕ чем собственно ссылка.. т.е.: Использования манипулятором(костью) индекса вершины, который идет в файле ниже, чем описание этого манипулятора вызовет горячо любимый некоторыми Illegal Memory Address.
+</p><p>Фрагмент NODE описывает Blitz3D Entity. Иерархия модели определяется системой вложенных элементов NODE.
+</p><p>Тип NODE должен определятся однозначно. Он может быть и MESH, и BONE, но не одновременно и тем и другим! Если тип не распознается, то принимается как центр масс (pivot).
+</p><p>Появление в NODE тега ANIM обозначает, что именно на этом уровне иерархии начинается ее анимация. Это предполагает возможность нескольких вложенных анимаций воспроизводящихся на разных скоростях. 
+</p>
+<a name=".D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.B5.D0.B9.D1.88.D0.B0.D1.8F_.D1.81.D1.82.D0.B0.D1.82.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B0.D1.8F_.D0.BD.D0.B5.D1.82.D0.B5.D0.BA.D1.81.D1.82.D1.83.D1.80.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.BD.D0.B0.D1.8F_.D0.BC.D0.BE.D0.B4.D0.B5.D0.BB.D1.8C"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=17" title="Править секцию: Простейшая статическая нетекстурированная модель">править</a>]</span> <span class="mw-headline">Простейшая статическая нетекстурированная модель</span></h2>
+<table>
+<tr>
+<td> BB3D
+</td><td> заголовок
+</td></tr>
+<tr>
+<td> 1
+</td><td> версия
+</td></tr>
+<tr>
+<td> NODE
+</td><td>
+</td></tr>
+<tr>
+<td> "root_node"
+</td><td> имя элемента иерархии
+</td></tr>
+<tr>
+<td> 0,0,0
+</td><td> положение
+</td></tr>
+<tr>
+<td> 1,1,1
+</td><td> масштаб
+</td></tr>
+<tr>
+<td> 1,0,0,0
+</td><td> вращение
+</td></tr>
+<tr>
+<td> MESH
+</td><td> 3D модель
+</td></tr>
+<tr>
+<td> -1
+</td><td> нет материала (brush)
+</td></tr>
+<tr>
+<td> VRTS
+</td><td> вершины
+</td></tr>
+<tr>
+<td> 0
+</td><td> с вершинами нет никакой дополнительной информации
+</td></tr>
+<tr>
+<td> 0,0
+</td><td> и координат текстуры нет
+</td></tr>
+<tr>
+<td> (x,y,z...)
+</td><td> координаты вершины
+</td></tr>
+<tr>
+<td> TRIS
+</td><td> треугольники модели
+</td></tr>
+<tr>
+<td> -1
+</td><td> без материала (brush)
+</td></tr>
+<tr>
+<td> (v0,v1,v2...)
+</td><td> перечисление индексов вершин
+</td></tr></table>
+<a name="B3DFile.bb"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2&amp;action=edit&amp;section=18" title="Править секцию: B3DFile.bb">править</a>]</span> <span class="mw-headline">B3DFile.bb</span></h2>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;</span><br />
+<p><span style="color: #ffee00">;b3d file utils to be included</span><br />
+<span style="color: #ffee00">;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> b3d_stack<span style=" ">&#40;</span><span style="color: #33ffdd;">100</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> b3d_file,b3d_tos<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dSetFile<span style=" ">&#40;</span> file <span style=" ">&#41;</span><br />
+b3d_tos=<span style="color: #33ffdd;">0</span><br />
+b3d_file=file<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;***** functions for reading from B3D files *****</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dReadByte<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dReadInt<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">ReadInt</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dReadFloat#<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">ReadFloat</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dReadString$<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+ch=b3dReadByte<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> ch=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Return</span> t$<br />
+t$=t$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>ch<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dReadChunk$<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">4</span><br />
+tag$=tag$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>b3dReadByte<span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+sz=<span style="color: #aaffff; font-weight: bold;">ReadInt</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+b3d_tos=b3d_tos<span style="color: #33ffdd;">+1</span><br />
+b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">FilePos</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span>+sz<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> tag$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dExitChunk<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> b3d_file,b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span><br />
+b3d_tos=b3d_tos<span style="color: #33ffdd;">-1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dChunkSize<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">FilePos</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;***** Functions for writing to B3D files *****</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dWriteByte<span style=" ">&#40;</span> n <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span><span style=" ">&#40;</span> b3d_file,n <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dWriteInt<span style=" ">&#40;</span> n <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span><span style=" ">&#40;</span> b3d_file,n <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dWriteFloat<span style=" ">&#40;</span> n# <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteFloat</span><span style=" ">&#40;</span> b3d_file,n <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dWriteString<span style=" ">&#40;</span> t$ <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span> t$ <span style=" ">&#41;</span><br />
+ch=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>t$,k,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+b3dWriteByte<span style=" ">&#40;</span>ch<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> ch=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Return</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+b3dWriteByte<span style=" ">&#40;</span> <span style="color: #33ffdd;">0</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dBeginChunk<span style=" ">&#40;</span> tag$ <span style=" ">&#41;</span><br />
+b3d_tos=b3d_tos<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">4</span><br />
+b3dWriteByte<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span> tag$,k,<span style="color: #33ffdd;">1</span> <span style=" ">&#41;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+b3dWriteInt<span style=" ">&#40;</span> <span style="color: #33ffdd;">0</span> <span style=" ">&#41;</span><br />
+b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">FilePos</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> b3dEndChunk<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+n=<span style="color: #aaffff; font-weight: bold;">FilePos</span><span style=" ">&#40;</span> b3d_file <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> b3d_file,b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span><br />
+b3dWriteInt<span style=" ">&#40;</span> n-b3d_stack<span style=" ">&#40;</span>b3d_tos<span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> b3d_file,n<br />
+b3d_tos=b3d_tos<span style="color: #33ffdd;">-1</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<hr />
+<p>Авторы: Mark Sibly, Adam Templeton (DragoBC@hotmail.com)<br />
+Дата создания: 2003 г.<br />
+Перевод: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Alrusdi" title="Участник:Alrusdi">Александр Альрушди</a> (e-mail: ork@indus.ru)<br />
+Дата перевода: 2005 г.<br />
+Благодарности: Beaker, Bloodlocust
+</p>
+<!-- Saved in parser cache with key db1:pcache:idhash:613-0!1!0!!ru!2 and timestamp 20071110040725 -->
+<div class="printfooter">
+Получено с <a href="5g6gb0q_.html">http://blitzetcetera.org/index.php/%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9D%D0%B5%D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F_%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82%D0%B0_%D1%84%D0%B0%D0%B9%D0%BB%D0%BE%D0%B2_%C2%ABB3D%C2%BB_V0.2 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

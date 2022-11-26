@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Стрельба на опережение,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Стрельба на опережение — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Стрельба_на_опережение";
+var wgTitle = "Стрельба на опережение";
+var wgAction = "view";
+var wgArticleId = "633";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3545";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Стрельба_на_опережение">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Стрельба на опережение</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Практически во всех играх механизм ведения огня компьютерным противником одинаков - нацелиться прямо на игрока и выстрелить. Соответственно, от снаряда легко увернуться, просто  шагнув в сторону. Немного сложнее увернуться от ракет (т. к. нужно отбежать от места взрыва) и от огня (например, пехотинцев в Unreal) со случайным отклонением от цели. Моментальный выстрел (когда сразу просчитывается вся траектория полета снаряда и определяется объект столкновения) не рассматриваем - здесь хорошо подходит именно простой вариант (с небольшими вариациями типа задержки перед началом стрельбы (пулеметчик из Doom2), низкой частотой огня (сержант из Doom) и уменьшенной точностью).
+</p>
+<a name=".D0.9B.D0.B8.D0.BD.D0.B5.D0.B9.D0.BD.D0.BE.D0.B5_.D0.B4.D0.B2.D0.B8.D0.B6.D0.B5.D0.BD.D0.B8.D0.B5"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=1" title="Править секцию: Линейное движение">править</a>]</span> <span class="mw-headline">Линейное движение</span></h2>
+<p>Пусть даны координаты пушки (x<sub>0</sub>, y<sub>0</sub>) и координаты объекта (x, y). Рассмотрим задачу для двумерного пространства: снаряд стартует в центре пушки и его скорость - константа (v<sub>0</sub>), а объект движется с постоянной скоростью (v) под углом a от оси X. Необходимо найти угол a<sub>0</sub>, при котором  снаряд, выпущенный из пушки, попадет точно в центр объекта.
+</p><p>Координаты объекта в момент времени t будут равны (x<sub>0</sub> + t v<sub>x</sub>, y<sub>0</sub> + t v<sub>y</sub>), где v<sub>x</sub> = cos(a), v<sub>y</sub> = sin(a). Следует учесть, что снаряд вылетает не из центра пушки, а из дула, которое находится на некотором расстоянии от нее. До этой точки снаряд долетел бы, преодолев некоторое расстояние r. Таким образом, под каким бы углом пушка бы не выстрелила, в момент времени t снаряд будет от нее на расстоянии vt + r. Выразив расстояние через координаты, получаем уравнение:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Shooting01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Shooting01.gif" src="wko2akuh.gif" width="298" height="227" /></a></span></div></div>
+<p>В итоге, после возведения в квадрат (т. к. t &gt; 0, v &gt; 0 и r &gt; 0, то знак учитывать не нужно), раскрытия скобок и приведения подобных, получим квадратное уравнение (&#916;x = x - x<sub>0</sub>, &#916;y = y - y<sub>0</sub>):
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Shooting02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Shooting02.gif" src="0x0pt0s4.gif" width="423" height="21" /></a></span></div></div>
+<p>Если дискриминант этого уравнения меньше нуля, значит решения не существует (при этом целесообразно будет просто нацелить пушку на объект с помощью  функции ATan2). В ином случае, если больший из корней положителен, то пушка стреляет в направлении точки, в которой должна произойти встреча снаряда и объекта. Вы можете улучшить алгоритм, просчитав вариант, когда оба корня положительны (тогда оптимальным будет выбор меньшего корня - снаряд попадет раньше).
+</p><p>Решение для трехмерного варианта выводится аналогичным образом - попытайтесь его найти.
+Задачи, где учитывается ускорение и скорость вращения, гораздо сложнее, т. к. из-за усложнения формулы для движения объекта, приходится решать уравнения четвертой степени.
+</p>
+<a name=".D0.A3.D1.81.D1.82.D1.80.D0.B0.D0.BD.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B7.D0.B0.D0.B2.D0.B8.D1.81.D0.B8.D0.BC.D0.BE.D1.81.D1.82.D0.B8_.D0.BE.D1.82_FPS"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=2" title="Править секцию: Устранение зависимости от FPS">править</a>]</span> <span class="mw-headline">Устранение зависимости от FPS</span></h2>
+<p>Хотя напрямую этот раздел темы не касается, все же будет полезно его разобрать. Часто бывает так, что старые игры и демошки на одних компьютерах тормозят, на других - идут нормально, на третьих - быстрят. Это происходит из-за того, что в этих программах за один цикл действия происходит фиксированная трансформация мира (например, движение на один пиксел, поворот камеры на 1 градус и т. д.). Поэтому, чем больше / меньше от задуманного в программе циклов (и больше / меньше кадров в секунду она выдает), тем быстрее / медленнее идет процесс. Чтобы этого избежать, фиксируют кол-во кадров в секунду (а если скорость низкая - рендеринг некоторых может быть пропущен) или вводят зависимость внутренних процессов от времени. Недостаток первого - ограниченный FPS (можно сделать его завышенным, делая по нескольку циклов на рендеринг), второго - искажение процессов, вызванное изменением FPS (перемещения становятся более округлыми или резкими и скачкообразными, чего можно, впрочем, избежать, задав верхнюю границу периода времени на рендеринг). Остановимся на втором варианте.
+</p><p>Все довольно просто - во все процессы, которые должны зависеть от времени, добавляется множитель dt#, который равен протяженности предыдущего цикла в миллисекундах. Это поворот игрока, движение игрока и снарядов. Поворот башен (кроме вращающихся автоматически) не требует регулировки.
+</p>
+<a name=".D0.A1.D0.B0.D0.BC.D0.BE.D0.BE.D0.B1.D1.83.D1.87.D0.B5.D0.BD.D0.B8.D0.B5"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=3" title="Править секцию: Самообучение">править</a>]</span> <span class="mw-headline">Самообучение</span></h2>
+<p>Создания самообучающейся системы - задача, основной этап решения которой ориентирован на поиск подходящей модели. В данном случае, требуется найти оптимальный угол для стрельбы, основываясь на опыте предыдущих. Входные параметры - координаты, направление движения игрока, скорость, координаты снарядов.
+</p><p>Алгоритм должен стремиться попасть в игрока - оптимальным будет вариант, когда снаряд попадет в центр. Но для этого снаряд должен долететь  до цели т. е. расстояния от пушки до игрока и до снаряда должны сравняться. В этом случае можно заключить, насколько удачен был выстрел и, на основе этого опыта, алгоритм должен сделать вывод. А вывод таков - "если бы пушка выстрелила в направлении текущей позиции игрока этим снарядом, то результат был бы оптимален". Соответственно, компьютер учитывает поправку к выстрелу для данного расстояния и, когда игрок будет на таком же расстоянии, как в прошлый раз, нужно будет выстрелить, отклонившись от прямого направления на игрока на сохраненный угол.
+</p><p>Для хранения соответствий "расстояние - поправка" создадим массив и зададим шаг, на который будут различаться соседние расстояния в массиве. Расстояние для записи поправки можно взять как в момент встречи (так в приведенном коде), так и в момент выстрела (придется запоминать и включить переменную в тип снаряда) - разница невелика.
+</p><p>В программе есть доп. алгоритмы стрельбы - в заданном направлении, вращаясь и стрельба веером.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Graphics3D</span> <span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> <span style="color: #aaffff; font-weight: bold;">CreateCamera</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">-20</span><br />
+<span style="color: #aaffff; font-weight: bold;">RotateEntity</span> <span style="color: #aaffff; font-weight: bold;">CreateLight</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">45</span>,<span style="color: #33ffdd;">45</span>,<span style="color: #33ffdd;">45</span><br />
+<br />
+<span style="color: #ffee00">;Тип для пушки - координаты, угол, режим стрельбы, указатели на 3D-объекты,</span><br />
+<span style="color: #ffee00">; переменные для AI</span><br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> turret<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> x#,y#,Mode,head,barrel,ang#,dir#,dx#,dy#<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #ffee00">;Тип для выстрела - координаты, приращения, указатель на 3D-объект,</span><br />
+<span style="color: #ffee00">; расстояние от пушки, вспомогательные переменные для AI</span><br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> shot<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> x#,y#,dx#,dy#,h,r#,tx#,ty#,dir#,t.turret<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> aimax=<span style="color: #33ffdd;">200</span>,aistp#=.<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> aiang#<span style=" ">&#40;</span>aimax<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">SetFont</span> <span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;arial&quot;</span>,<span style="color: #33ffdd;">14</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;Константы - период стрельбы, скорость снарядов, скорость игрока</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> frq=<span style="color: #33ffdd;">200</span>, v0#=.<span style="color: #33ffdd;">01</span>, vp#=.<span style="color: #33ffdd;">005</span><br />
+<span style="color: #ffee00">;Const frq=200, v0#=.2, vp#=.1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> bs#=<span style="color: #33ffdd;">2</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> x#,y#<br />
+<br />
+<span style="color: #ffee00">;createturret 1:createturret 2:createturret 3:createturret 4</span><br />
+createturret <span style="color: #33ffdd;">5</span>:createturret <span style="color: #33ffdd;">4</span>:createturret <span style="color: #33ffdd;">2</span><br />
+<br />
+<br />
+<span style="color: #ffee00">;Создание игрока</span><br />
+p=<span style="color: #aaffff; font-weight: bold;">CreateSphere</span><span style=" ">&#40;</span><span style="color: #33ffdd;">16</span><span style=" ">&#41;</span><br />
+h=<span style="color: #aaffff; font-weight: bold;">CreateSphere</span><span style=" ">&#40;</span><span style="color: #33ffdd;">8</span>,p<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> h,<span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">ScaleEntity</span> h,.<span style="color: #33ffdd;">4</span>,.<span style="color: #33ffdd;">4</span>,.<span style="color: #33ffdd;">4</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;tim=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> t.turret=<span style="color: #aaffff; font-weight: bold;">Each</span> turret<br />
+<br />
+&nbsp; <span style="color: #ffee00">;Вспомогательные переменные + нацеливание на игрока по умолчанию</span><br />
+&nbsp; dx#=x#-t\x<br />
+&nbsp; dy#=y#-t\y<br />
+&nbsp; cang#=<span style="color: #aaffff; font-weight: bold;">ATan2</span><span style=" ">&#40;</span>dy#,dx<span style=" ">&#41;</span><br />
+&nbsp; t\dx#=dx#<br />
+&nbsp; t\dy#=dy#<br />
+&nbsp; t\dir#=cang#<br />
+&nbsp; pr#=<span style="color: #aaffff; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>dx#*dx#+dy#*dy#<span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #ffee00">;Режимы прицеливания пушек:</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Select</span> t\Mode<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">0</span><span style="color: #ffee00">; стрельба в данном направлении</span><br />
+&nbsp; &nbsp; cang=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span><span style="color: #ffee00">; стрельба с вращением</span><br />
+&nbsp; &nbsp; cang#=t\ang#+.<span style="color: #33ffdd;">05</span>*dt#<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span><span style="color: #ffee00">; точное нацеливание на объект</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">3</span><span style="color: #ffee00">; стрельба веером</span><br />
+&nbsp; &nbsp; cang#=cang#+<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>dcang#<span style=" ">&#41;</span>*<span style="color: #33ffdd;">30</span><br />
+&nbsp; &nbsp; dcang#=dcang#<span style="color: #33ffdd;">+2</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">4</span><span style="color: #ffee00">; стрельба на опережение</span><br />
+&nbsp; &nbsp; <span style="color: #ffee00">;Вычисление коэффициентов квадратного уравнения</span><br />
+&nbsp; &nbsp; a#=v#*v#-v0#*v0#<br />
+&nbsp; &nbsp; b#=<span style="color: #33ffdd;">2.0</span>*v#*<span style=" ">&#40;</span>dx#*<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>+dy#*<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>-bs#<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; c#=dx#*dx#+dy#*dy#-bs#*bs#<br />
+&nbsp; &nbsp; <span style="color: #ffee00">;Вычисление дискриминанта</span><br />
+&nbsp; &nbsp; d#=b#*b#<span style="color: #33ffdd;">-4.0</span>*a#*c#<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> d#&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;Вычисление момента встречи снаряда и игрока</span><br />
+&nbsp; &nbsp; &nbsp;t1#=<span style=" ">&#40;</span>-b#+<span style="color: #aaffff; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>d#<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style="color: #33ffdd;">2.0</span>/a#<br />
+&nbsp; &nbsp; &nbsp;t2#=<span style=" ">&#40;</span>-b#-<span style="color: #aaffff; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>d#<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style="color: #33ffdd;">2.0</span>/a#<br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> t2#&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> t1#=t2#<br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> t1#&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Вычисление угла через координаты объекта в найденный момент времени</span><br />
+&nbsp; &nbsp; &nbsp; cang#=<span style="color: #aaffff; font-weight: bold;">ATan2</span><span style=" ">&#40;</span>y#+t1#*v#*<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>-t\y#,x#+t1#*v#*<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>-t\x#<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span> <br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">5</span><span style="color: #ffee00">; самообучающаяся пушка (поправка к углу берется из массива</span><br />
+&nbsp; &nbsp; cang#=cang#+aiang<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Int</span><span style=" ">&#40;</span>pr#*aistp#<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+<br />
+&nbsp; <span style="color: #ffee00">;Поворот пушки</span><br />
+&nbsp; rotateturret t,cang#<br />
+&nbsp; <span style="color: #ffee00">;Возврат дула на прежнее положение</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">EntityX</span><span style=" ">&#40;</span>t\barrel<span style=" ">&#41;</span>&lt;.<span style="color: #33ffdd;">75</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">MoveEntity</span> t\barrel,<span style="color: #33ffdd;">0</span>,-.<span style="color: #33ffdd;">25</span>/frq*dt#,<span style="color: #33ffdd;">0</span><br />
+&nbsp;<br />
+&nbsp; <span style="color: #ffee00">;Выстрел и смещение дула внутрь пушки</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> nextshot&lt;=tim <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;fire t<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> t\barrel,.<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+&nbsp;<span style="color: #ffee00">;Задание следующего момента стрельбы </span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> nextshot&lt;=tim <span style="color: #aaffff; font-weight: bold;">Then</span> nextshot=tim+frq<br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> s.shot=<span style="color: #aaffff; font-weight: bold;">Each</span> shot<br />
+&nbsp; <span style="color: #ffee00">;Смещение снарядов</span><br />
+&nbsp; s\x#=s\x#+s\dx#*dt#<br />
+&nbsp; s\y#=s\y#+s\dy#*dt#<br />
+&nbsp; s\r#=s\r#+v0#*dt#<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">PositionEntity</span> s\h,s\x#,s\y#,<span style="color: #33ffdd;">0</span><br />
+&nbsp; <span style="color: #ffee00">;Если расстояния от пушки до снаряда и до игрока равны, то</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> pr#&lt;=s\r# <span style="color: #aaffff; font-weight: bold;">And</span> s\dir#&lt;<span style="color: #33ffdd;">999</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Вычисляется корректирующий угол для данного расстояния</span><br />
+&nbsp; &nbsp;Newang#=s\t\dir#-s\dir#<br />
+&nbsp; &nbsp;<span style="color: #ffee00">; втискивается в границы [-180,180)</span><br />
+&nbsp; &nbsp;Newang#=Newang#-<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span><span style=" ">&#40;</span>Newang#<span style="color: #33ffdd;">+180.0</span><span style=" ">&#41;</span>/<span style="color: #33ffdd;">360.0</span><span style=" ">&#41;</span>*<span style="color: #33ffdd;">360.0</span><br />
+&nbsp; &nbsp;<span style="color: #ffee00">; и заносится в массив,</span><br />
+&nbsp; &nbsp;aiang<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Int</span><span style=" ">&#40;</span>pr#*aistp#<span style=" ">&#41;</span><span style=" ">&#41;</span>=Newang#<br />
+&nbsp; &nbsp;<span style="color: #ffee00">; (следующая строка - чтобы не заносить этот снаряд в массив еще раз)</span><br />
+&nbsp; &nbsp;s\dir#=<span style="color: #33ffdd;">999</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>s\x#-x#<span style=" ">&#41;</span>^<span style="color: #33ffdd;">2</span>+<span style=" ">&#40;</span>s\y#-y#<span style=" ">&#41;</span>^<span style="color: #33ffdd;">2</span>&lt;<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">FreeEntity</span> s\h:<span style="color: #aaffff; font-weight: bold;">Delete</span> s<br />
+&nbsp; &nbsp;red=<span style="color: #33ffdd;">255</span><br />
+&nbsp; &nbsp;hits#=hits#<span style="color: #33ffdd;">+1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Удаление снарядов, вышедших за границы экрана</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Abs</span><span style=" ">&#40;</span>s\x#<span style=" ">&#41;</span>+<span style="color: #aaffff; font-weight: bold;">Abs</span><span style=" ">&#40;</span>s\y#<span style=" ">&#41;</span>&gt;<span style="color: #33ffdd;">40</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> s\h:<span style="color: #aaffff; font-weight: bold;">Delete</span> s<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+&nbsp;<span style="color: #ffee00">;Индикация попадания</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> red&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; red=red-<span style="color: #aaffff; font-weight: bold;">Int</span><span style=" ">&#40;</span>dt/<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; red=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">EntityColor</span> p,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>-red,<span style="color: #33ffdd;">255</span>-red<br />
+<br />
+&nbsp;<span style="color: #ffee00">;Перемещение и поворот игрока (скорость вычисляется исходя из прошедшего времени)</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> p,x#,y#,<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">RotateEntity</span> p,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,ang#<br />
+&nbsp;v#=<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">200</span><span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">208</span><span style=" ">&#41;</span><span style=" ">&#41;</span>*vp#<br />
+&nbsp;ang#=ang#+.<span style="color: #33ffdd;">3</span>*dt#*<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">203</span><span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">205</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;x#=x#+v#*<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*dt#<br />
+&nbsp;y#=y#+v#*<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*dt#<br />
+&nbsp;<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">RenderWorld</span><br />
+&nbsp;<span style="color: #ffee00">;Счет</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #00ff66;">&quot;Hits/sec:&quot;</span>+<span style=" ">&#40;</span>hits#/sec#<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+&nbsp;<span style="color: #ffee00">;Время, затраченное этот цикл (дробное, так как умножается на дробные величины)</span><br />
+&nbsp;dt#=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-tim<br />
+&nbsp;sec#=sec#<span style="color: #33ffdd;">+0.001</span>*dt#<br />
+<span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> createturret<span style=" ">&#40;</span>Mode<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Создание головной части</span><br />
+t.turret=<span style="color: #aaffff; font-weight: bold;">New</span> turret<br />
+t\head=<span style="color: #aaffff; font-weight: bold;">CreateCylinder</span><span style=" ">&#40;</span><span style="color: #33ffdd;">6</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">ScaleMesh</span> t\head,<span style="color: #33ffdd;">1</span>,.<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">1</span><br />
+<span style="color: #aaffff; font-weight: bold;">RotateMesh</span> t\head,<span style="color: #33ffdd;">90</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #ffee00">;Дуло создать отдельно, но привязать к головной части</span><br />
+t\barrel=<span style="color: #aaffff; font-weight: bold;">CreateCylinder</span><span style=" ">&#40;</span><span style="color: #33ffdd;">16</span>,<span style="color: #aaffff; font-weight: bold;">False</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">RotateEntity</span> t\barrel,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">90</span><br />
+<span style="color: #aaffff; font-weight: bold;">ScaleEntity</span> t\barrel,.<span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">1</span>,.<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> t\barrel,.<span style="color: #33ffdd;">75</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+h=<span style="color: #aaffff; font-weight: bold;">CreateCylinder</span><span style=" ">&#40;</span><span style="color: #33ffdd;">16</span>,<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">ScaleEntity</span> h,.<span style="color: #33ffdd;">3</span>,.<span style="color: #33ffdd;">3</span>,.<span style="color: #33ffdd;">3</span><br />
+<span style="color: #aaffff; font-weight: bold;">RotateEntity</span> h,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">90</span><br />
+<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> h,<span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">EntityParent</span> t\barrel,t\head<br />
+<span style="color: #aaffff; font-weight: bold;">EntityParent</span> h,t\barrel<br />
+<span style="color: #ffee00">;Задание координат пушки случайным образом</span><br />
+t\x#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-20</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+t\y#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-20</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">PositionEntity</span> t\head,t\x#,t\y#,<span style="color: #33ffdd;">0</span><br />
+t\Mode=Mode<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> rotateturret<span style=" ">&#40;</span>t.turret,ang#<span style=" ">&#41;</span><br />
+t\ang#=ang#<br />
+<span style="color: #aaffff; font-weight: bold;">RotateEntity</span> t\head,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,ang#<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> fire<span style=" ">&#40;</span>t.turret<span style=" ">&#41;</span><br />
+ang#=t\ang#<br />
+s.shot=<span style="color: #aaffff; font-weight: bold;">New</span> shot<br />
+s\x#=t\x#+<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*r<br />
+s\y#=t\y#+<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*r<br />
+s\r#=r<br />
+s\dx#=<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*v0#<br />
+s\dy#=<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang#<span style=" ">&#41;</span>*v0#<br />
+s\h=<span style="color: #aaffff; font-weight: bold;">CreateSphere</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">ScaleEntity</span> s\h,.<span style="color: #33ffdd;">15</span>,.<span style="color: #33ffdd;">15</span>,.<span style="color: #33ffdd;">15</span><br />
+<span style="color: #aaffff; font-weight: bold;">EntityColor</span> s\h,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #ffee00">;Вспомогательные переменные (для AI)</span><br />
+s\tx#=t\x#<br />
+s\ty#=t\y#<br />
+s\dir=t\dir#<br />
+s\t=t<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/4/4c/Shooting.bb" class="internal" title="Shooting.bb">скачать исходный код</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 6675 bytes
+Post-expand include size: 348 bytes
+Template argument size: 18 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:633-0!1!0!!ru!2 and timestamp 20071110033046 -->
+<div class="printfooter">
+Получено с <a href="ioz5uls2-2.html">http://blitzetcetera.org/index.php/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A1%D1%82%D1%80%D0%B5%D0%BB%D1%8C%D0%B1%D0%B0_%D0%BD%D0%B0_%D0%BE%D0%BF%D0%B5%D1%80%D0%B5%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

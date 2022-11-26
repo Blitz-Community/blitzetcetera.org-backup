@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Рекурсивное программирование,MANIAK dobrii" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Рекурсивное программирование — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Рекурсивное_программирование";
+var wgTitle = "Рекурсивное программирование";
+var wgAction = "view";
+var wgArticleId = "458";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3587";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Рекурсивное_программирование">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Рекурсивное программирование</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Предполагается, что ты уже понимаешь основные Блитзовские функции и программный поток.(Оператор If, циклы For...Next; While...Wend и т.п. )
+</p>
+<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.A7.D1.82.D0.BE_.D1.82.D0.B0.D0.BA.D0.BE.D0.B5_.D1.80.D0.B5.D0.BA.D1.83.D1.80.D1.81.D0.B8.D1.8F.3F"><span class="tocnumber">1</span> <span class="toctext">Что такое рекурсия?</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.BE.D0.B9_.D0.BF.D1.80.D0.B8.D0.BC.D0.B5.D1.80_-_.D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D1.8F_.D1.84.D0.B0.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B0.D0.BB.D0.B0"><span class="tocnumber">2</span> <span class="toctext">Простой пример - Функция факториала</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.9D.D1.83_.D0.B8_.D0.BA.D0.B0.D0.BA_.D1.8D.D1.82.D0.BE_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.B0.D0.B5.D1.82.3F"><span class="tocnumber">2.1</span> <span class="toctext">Ну и как это работает?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.91.D0.B5.D1.81.D0.BA.D0.BE.D0.BD.D0.B5.D1.87.D0.BD.D0.BE.D1.81.D1.82.D1.8C:_.D0.BD.D0.B5_.D0.BA.D0.B0.D1.82.D0.B8.D1.82.21"><span class="tocnumber">3</span> <span class="toctext">Бесконечность: не катит!</span></a></li>
+<li class="toclevel-1"><a href="#A_.D0.9D.D0.B0.D0.B2.D0.BE.D1.80.D0.BE.D1.87.D0.B5.D0.BD.D0.BD.D1.8B.D0.B9_.D0.BF.D1.80.D0.B8.D0.BC.D0.B5.D1.80_-_.D0.9A.D0.BE.D0.B2.D0.B5.D1.80_.D0.A1.D0.B5.D1.80.D0.BF.D0.B8.D0.BD.D1.81.D0.BA.D0.BE.D0.B3.D0.BE.28Sierpinski.29"><span class="tocnumber">4</span> <span class="toctext">A Навороченный пример - Ковер Серпинского(Sierpinski)</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.A1.D1.85.D0.B5.D0.BC.D0.B0_.D0.BF.D0.BE.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BD.D0.B8.D1.8F_.D0.BA.D0.BE.D0.B2.D1.80.D0.B0_.D0.A1.D0.B5.D1.80.D0.BF.D0.B8.D0.BD.D1.81.D0.BA.D0.BE.D0.B3.D0.BE."><span class="tocnumber">4.1</span> <span class="toctext">Схема построения ковра Серпинского.</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9A.D0.B0.D0.BA_.D0.BE.D0.BD.D0.BE_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.B0.D0.B5.D1.82.3F"><span class="tocnumber">4.2</span> <span class="toctext">Как оно работает?</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.9E.D0.B3.D1.80.D0.B0.D0.BD.D0.B8.D1.87.D0.B5.D0.BD.D0.B8.D1.8F"><span class="tocnumber">5</span> <span class="toctext">Ограничения</span></a></li>
+<li class="toclevel-1"><a href="#.D0.92.D1.8B.D0.B2.D0.BE.D0.B4.3F"><span class="tocnumber">6</span> <span class="toctext">Вывод?</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.A7.D1.82.D0.BE_.D1.82.D0.B0.D0.BA.D0.BE.D0.B5_.D1.80.D0.B5.D0.BA.D1.83.D1.80.D1.81.D0.B8.D1.8F.3F"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=1" title="Править секцию: Что такое рекурсия?">править</a>]</span> <span class="mw-headline">Что такое рекурсия?</span></h2>
+<p>Проще говоря, рекурсия - это когда функция вызывает саму себя, пока не произойдет какое-нибудь условие. С каждым новым вызовом, она будет менять один или более параметров, зависящих от их текущих значений. Ничего не понял??? Это дело проще всего объясняется простым примером&nbsp;:
+</p>
+<a name=".D0.9F.D1.80.D0.BE.D1.81.D1.82.D0.BE.D0.B9_.D0.BF.D1.80.D0.B8.D0.BC.D0.B5.D1.80_-_.D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D1.8F_.D1.84.D0.B0.D0.BA.D1.82.D0.BE.D1.80.D0.B8.D0.B0.D0.BB.D0.B0"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=2" title="Править секцию: Простой пример - Функция факториала">править</a>]</span> <span class="mw-headline">Простой пример - Функция факториала</span></h2>
+<p>Мы будем писать функцию, которая будет возвращать факториал определенного числа. Факториал числа (n), это про произведение всех целых чисел от 1 до n. Например: Факториал 5 = 1 x 2 x 3 x 4 x 5, что равно 120. Не беспокойся сильно об этом, ведь дело не в том, ЧТО мы делаем, а КАК мы это делаем. Если мы будем писать функцию факториала по стандартному пути, то у нас получится что-то вроде этого:  
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Print</span> factorial<span style=" ">&#40;</span><span style="color: #FFFFFF;">5</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> factorial<span style=" ">&#40;</span>number<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> n = <span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">To</span> number<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> n = <span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;result = <span style="color: #FFFFFF;">1</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp;result = n * result<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Return</span> result<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<p>Используя рекурсию, наш код будет выглядеть так:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Print</span> factorial<span style=" ">&#40;</span><span style="color: #33ffdd;">5</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> factorial<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n = <span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> n * factorial<span style=" ">&#40;</span>n - <span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Большой разницы между двумя видами функций нет, зато это показывает технику рекурсии.
+</p>
+<a name=".D0.9D.D1.83_.D0.B8_.D0.BA.D0.B0.D0.BA_.D1.8D.D1.82.D0.BE_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.B0.D0.B5.D1.82.3F"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=3" title="Править секцию: Ну и как это работает?">править</a>]</span> <span class="mw-headline">Ну и как это работает?</span></h3>
+<p>Рекурсия просто заменила цикл For n=1 to number...Next . Если мы будем проверять, что происходит на каждом шагу, то мы увидим:
+</p><p>возвращает значение 5 * factorial(4)
+</p>
+<dl><dd>factorial(4)  возвращает значение 4 * factorial(3)
+<dl><dd>возвращает значение 3 * factorial(2)
+<dl><dd>возвращает значение 2 * factorial(1)
+<dl><dd>factorial(1)  просто возвращает 1 и больше не вызывает функцию factorial()
+</dd></dl>
+</dd></dl>
+</dd></dl>
+</dd></dl>
+<p>Надеюсь, Ты начинаешь понимать процесс. Чтобы  разобраться со всем этим делом получше, можно проследить происходящее с зада на перед, так мы сможем узнать значения, которые получаются при каждом вызове функции и понять, как достигается конечный результат:
+</p>
+<dl><dd><dl><dd><dl><dd><dl><dd>factorial(1) = 1
+</dd></dl>
+</dd><dd>factorial(2)  = 2 x 1 = 2, 1 - это значение, полученное из factorial(1)
+</dd></dl>
+</dd><dd>factorial(3)  = 3 x 2 = 6, 2 - это значение, полученное из factorial(2)
+</dd></dl>
+</dd><dd>factorial(4)  = 4 x 6 = 24, 6 - это значение, полученное из factorial(3)
+</dd></dl>
+<p>factorial(5)  = 5 x 24 = 120, 24 - это значение, полученное из factorial(4)
+</p>
+<a name=".D0.91.D0.B5.D1.81.D0.BA.D0.BE.D0.BD.D0.B5.D1.87.D0.BD.D0.BE.D1.81.D1.82.D1.8C:_.D0.BD.D0.B5_.D0.BA.D0.B0.D1.82.D0.B8.D1.82.21"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=4" title="Править секцию: Бесконечность: не катит!">править</a>]</span> <span class="mw-headline">Бесконечность: не катит!</span></h2>
+<p>В вышеприведенном примере ты заметил, что функция зовет себя, только если n  не равно 1 и, так как n всегда уменьшается, мы знаем, что будет конечное число вызовов. Однако если не впихнуть это условие, то функция будет звать себя бесконечное число раз и Blitz скажет тебе тихим и поставленным голосом: "Stack Overflow" .
+</p><p>Советую всегда вставлять такие условия в рекурсивные функции, чтобы они звали себя максимальное количество раз(а не бесконечное). Это показано в следующем примере: 
+</p>
+<a name="A_.D0.9D.D0.B0.D0.B2.D0.BE.D1.80.D0.BE.D1.87.D0.B5.D0.BD.D0.BD.D1.8B.D0.B9_.D0.BF.D1.80.D0.B8.D0.BC.D0.B5.D1.80_-_.D0.9A.D0.BE.D0.B2.D0.B5.D1.80_.D0.A1.D0.B5.D1.80.D0.BF.D0.B8.D0.BD.D1.81.D0.BA.D0.BE.D0.B3.D0.BE.28Sierpinski.29"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=5" title="Править секцию: A Навороченный пример - Ковер Серпинского(Sierpinski)">править</a>]</span> <span class="mw-headline">A Навороченный пример - Ковер Серпинского(Sierpinski)</span></h2>
+<p>Мы изучили основы, пора бы забабахать что-нибудь поинтересней. Ковер Серпинского назван так в честь польского математика:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Recursion01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Recursion01.gif" src="a48133mu.gif" width="304" height="304" /></a></span></div></div>
+<p>"Чё за?" - спросишь ты, но не волнуйся, мы разобьем процесс создания этого чуда на простенькие кусочки и разберем каждый из них. 
+</p>
+<a name=".D0.A1.D1.85.D0.B5.D0.BC.D0.B0_.D0.BF.D0.BE.D1.81.D1.82.D1.80.D0.BE.D0.B5.D0.BD.D0.B8.D1.8F_.D0.BA.D0.BE.D0.B2.D1.80.D0.B0_.D0.A1.D0.B5.D1.80.D0.BF.D0.B8.D0.BD.D1.81.D0.BA.D0.BE.D0.B3.D0.BE."></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=6" title="Править секцию: Схема построения ковра Серпинского.">править</a>]</span> <span class="mw-headline">Схема построения ковра Серпинского.</span></h3>
+<ul><li>Шаг 1. Начнем с рисования белого, закрашенного квадрата размером с наш ковер.
+</li><li>Шаг 2. Поделим этот квадрат на 9 равных квадратиков и закрасим средний черным цветом.
+</li><li>Шаг 3. Повторим Шаг 2 для оставшихся восьми квадратиков. Каждая итерация (повторение) создаст 9 квадратиков поменьше вокруг "родителя".
+</li></ul>
+<p>Диаграмма внизу показывает 3 итерации. Заготовка растет экспоненциально на каждом уровне.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Recursion02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Recursion02.gif" src="o_vezkpg.gif" width="304" height="119" /></a></span></div></div>
+<ul><li>Итак, на первом куске диаграммы мы поделили квадрат на девять равных квадратов и закрасили центральный черным цветом
+</li><li>После следующей итерации(2-ой кусок диаграммы) у нас появилось ещё 8 черных квадратиков вокруг здорового, полученного после первой итерации.
+</li><li>Ну а после третей итерации(3-ий кусок диаграммы) появляется по 8 квадратиков для каждого из восьми квадратов, полученных после 2-ой итерации.
+</li></ul>
+<p>Надеюсь, ты понял, как это всё получается. Позырим теперь, как оно делается: А теперь КОД!
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;устанавливаем экран и высчитываем его центр</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Const</span> screenWidth = <span style="color: #33ffdd;">800</span>, screenHeight = <span style="color: #33ffdd;">600</span><br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> screenWidth, screenHeight, <span style="color: #33ffdd;">16</span>, <span style="color: #33ffdd;">2</span><br />
+centerX = screenWidth / <span style="color: #33ffdd;">2</span><br />
+centerY = screenHeight / <span style="color: #33ffdd;">2</span><br />
+<br />
+<span style="color: #ffee00">;Задаем размер ковра и порог для рекурсивной фунуции</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> carpetSize = <span style="color: #33ffdd;">600</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;задаем размер ковра</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> threshold = <span style="color: #33ffdd;">4</span>&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;задаем порог рекурсии</span><br />
+<br />
+<span style="color: #ffee00">;Рисуем белый квадрат посередине экрана, размером с ковер</span><br />
+offset = carpetSize / <span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Rect</span> centerX - offset, centerY - offset, carpetSize, carpetSize<br />
+<br />
+<span style="color: #ffee00">;ставим цвет рисования черным и приступаем к рекурсии...</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>, <span style="color: #33ffdd;">0</span>, <span style="color: #33ffdd;">0</span><br />
+carpet<span style=" ">&#40;</span>centerX, centerY, carpetSize, threshold<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;СЁ, готово! После нажатия на любую кнопку прога завершается </span><br />
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<br />
+<br />
+&nbsp;<br />
+<span style="color: #ffee00">;рекурсивная функция</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> carpet<span style=" ">&#40;</span>x, y, size, threshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; newSize = size / <span style="color: #33ffdd;">3</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;1/3 предыдущего размера</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; offset = newSize / <span style="color: #33ffdd;">2</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;новое значение отступа</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;рисуем черный квадрат в центре(это и есть &quot;родитель&quot;, центральный)</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Rect</span> x - offset, y - offset, newSize, newSize<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> threshold &gt; <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; newThreshold = threshold - <span style="color: #33ffdd;">1</span>&nbsp; &nbsp; <span style="color: #ffee00">;уменяшаем порог - не забудь про это!</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;зовем функцию ковра 8 раз для каждого квадратика вокруг центрального </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x - newSize, y - newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x, y - newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x + newSize, y - newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x + newSize, y, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x + newSize, y + newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x, y + newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x - newSize, y + newSize, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; carpet<span style=" ">&#40;</span>x - newSize, y, newSize, newThreshold<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<a name=".D0.9A.D0.B0.D0.BA_.D0.BE.D0.BD.D0.BE_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.B0.D0.B5.D1.82.3F"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=7" title="Править секцию: Как оно работает?">править</a>]</span> <span class="mw-headline">Как оно работает?</span></h3>
+<p>Каждый раз, когда вызывается функция, рисуется новый квадрат и запрашивается 4 переменные: позиция по x&amp;y нового квадрата, его размер (это будет размер всего ковра, если функция вызывается первый раз) и текущий порог рекурсии.
+</p>
+<ul><li>Для начала функции надо поделить текущий квадрат (определяется параметром size) на 9 равных квадратов, чтобы закрасить центральный. Делается это делением size на 3. Т.к. мы знаем позицию центра, мы легко можем закрасить центральный квадрат. Обрати внимание, как значение offset используется при рисовании квадрата.
+</li><li>После этого нужно проверить значение порога рекурсии.
+</li><li>Если мы достигли порога (threshold = 0), то мы закончили. В обратном случае мы ставим новое значение порога. Затем просто зовем функцию 8 раз, используя новые значения size и threshold. Нам также необходимо определить новые значения x и y для оставшихся 8-ми квадратов.
+</li></ul>
+<a name=".D0.9E.D0.B3.D1.80.D0.B0.D0.BD.D0.B8.D1.87.D0.B5.D0.BD.D0.B8.D1.8F"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=8" title="Править секцию: Ограничения">править</a>]</span> <span class="mw-headline">Ограничения</span></h2>
+<p>Как объяснялось выше, должно быть конечное число итераций рекурсивных функций, чтобы получалось то, что тебе нужно сделать. Я бы не рекомендовал ставить порог рекурсии более нескольких тысяч.
+</p>
+<a name=".D0.92.D1.8B.D0.B2.D0.BE.D0.B4.3F"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5&amp;action=edit&amp;section=9" title="Править секцию: Вывод?">править</a>]</span> <span class="mw-headline">Вывод?</span></h2>
+<p>Как и у многих вещей в жизни, у рекурсии есть много преимуществ, но она не всегда является лучшим решением.  Некоторые люди советуют избегать всего этого, но я считаю, что рекурсия является лучшим решением для многих проблем. В конце концов, это тебе решать - юзать рекурсию или нет. Некоторые из нас юзают, а некоторые - нет.
+</p><p>Хорошо провести время.:
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/f/fd/Recursion.zip" class="internal" title="Recursion.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: Ghost Dancer (e-mail: ghost@aurora-soft.co.uk, сайт: <a href="http://www.aurora-soft.co.uk/" class="external free" title="http://www.aurora-soft.co.uk" rel="nofollow">http://www.aurora-soft.co.uk</a>)<br />
+Дата создания: 8th February 2003г.<br />
+Перевод: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:MANIAK_dobrii" title="Участник:MANIAK dobrii">MANIAK dobrii</a> (e-mail: MANIAK_dobrii@list.ru, сайт: <a href="http://www.maniak-dobrii.nm.ru/" class="external free" title="http://www.maniak-dobrii.nm.ru/" rel="nofollow">http://www.maniak-dobrii.nm.ru/</a>)<br />
+Дата перевода: 11 октября 2004г.
+</p><!-- 
+Pre-expand include size: 3096 bytes
+Post-expand include size: 611 bytes
+Template argument size: 27 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:458-0!1!0!!ru!2 and timestamp 20071110040939 -->
+<div class="printfooter">
+Получено с <a href="5i4k4f5x.html">http://blitzetcetera.org/index.php/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

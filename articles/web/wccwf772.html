@@ -1,0 +1,645 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Создаём свой Crimsonland на BlitzMax,DanFi" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Создаём свой Crimsonland на BlitzMax — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Создаём_свой_Crimsonland_на_BlitzMax";
+var wgTitle = "Создаём свой Crimsonland на BlitzMax";
+var wgAction = "view";
+var wgArticleId = "1745";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3337";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Создаём_свой_Crimsonland_на_BlitzMax">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Создаём свой Crimsonland на BlitzMax</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.98.D0.BD.D0.B8.D1.86.D0.B8.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D1.8F_.D0.BC.D0.B8.D1.80.D0.B0"><span class="tocnumber">1</span> <span class="toctext">Инициализация мира</span></a></li>
+<li class="toclevel-1"><a href="#.D0.97.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_.D0.BC.D0.B5.D0.B4.D0.B8.D0.B0"><span class="tocnumber">2</span> <span class="toctext">Загрузка медиа</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2.2C_.D0.BF.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D1.85.2C_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B9.2C_.D0.BD.D0.B5.D0.BE.D0.B1.D1.85.D0.BE.D0.B4.D0.B8.D0.BC.D1.8B.D1.85_.D0.B4.D0.BB.D1.8F_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D1.8B_.D0.B8.D0.B3.D1.80.D1.8B"><span class="tocnumber">3</span> <span class="toctext">Создания типов, переменных, функций, необходимых для работы игры</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2_.D0.B4.D0.BB.D1.8F_.D0.B8.D0.B3.D1.80.D1.8B"><span class="tocnumber">4</span> <span class="toctext">Создания типов для игры</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BE.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B4.D0.BB.D1.8F_.D0.BE.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BE.D0.B2"><span class="tocnumber">5</span> <span class="toctext">Создание обновления для объектов</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.93.D0.BB.D0.B0.D0.B2.D0.BD.D1.8B.D0.B9_.D0.B3.D0.B5.D1.80.D0.BE.D0.B9"><span class="tocnumber">5.1</span> <span class="toctext">Главный герой</span></a></li>
+<li class="toclevel-2"><a href="#.D0.A1.D1.87.D0.B5.D1.82.D1.87.D0.B8.D0.BA"><span class="tocnumber">5.2</span> <span class="toctext">Счетчик</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9C.D0.BE.D0.BD.D1.81.D1.82.D1.80.D1.8B"><span class="tocnumber">5.3</span> <span class="toctext">Монстры</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9F.D1.83.D0.BB.D0.B8"><span class="tocnumber">5.4</span> <span class="toctext">Пули</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9A.D1.80.D0.BE.D0.B2.D1.8C"><span class="tocnumber">5.5</span> <span class="toctext">Кровь</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BC.D0.B5.D0.BD.D1.8E"><span class="tocnumber">6</span> <span class="toctext">Создание меню</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A6.D0.B8.D0.BA.D0.BB_.D0.B4.D0.BB.D1.8F_.D0.B8.D0.B3.D1.80.D1.8B"><span class="tocnumber">7</span> <span class="toctext">Цикл для игры</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.98.D0.BD.D0.B8.D1.86.D0.B8.D0.B0.D0.BB.D0.B8.D0.B7.D0.B0.D1.86.D0.B8.D1.8F_.D0.BC.D0.B8.D1.80.D0.B0"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=1" title="Править секцию: Инициализация мира">править</a>]</span> <span class="mw-headline">Инициализация мира</span></h2>
+<p>Вначале давайте подумаем, о чем будет наша игра. Сделаем давайте мы безумную экшн-мясо-кровища-шутер. По экрану будет бегать чел. Чел этот будет из автомата или из дробовика крошить монстров. Будут декалитры крови. Круто?&nbsp;;)
+</p><p>Ну, начнем писать код. Создадим новый файл - file =&gt; new. Создали? сохраним его в папку Crimsonland2 (предварительно создав ее&nbsp;;) ). 
+</p><p>Для начала нужно задать разрешение экрана. Хранить значения мы будет в константах height, width. Для теста возьмем 1024х768. Пишем:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'ЧАСТЬ 1. Инициализация мира.</span><br />
+<p><br />
+<span style="color: #B1E7EB;">'======== КОНСТАНТЫ</span><br />
+<span style="color: #ffff00; font-weight: bold;">Const</span> width=<span style="color: #FFFFFF;">1024</span> , height=<span style="color: #FFFFFF;">768</span> <span style="color: #B1E7EB;">'Константы расширения</span><br />
+<span style="color: #B1E7EB;">'======== УСТАНОВКА ИГРЫ </span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Graphics</span> width,height,<span style="color: #FFFFFF;">32</span> &nbsp; &nbsp;<span style="color: #B1E7EB;">'Ставим настройки.</span></div>
+<p>Все. Теперь игра уже представляет собой что-то. Круто? думаю ,пока нет.&nbsp;;)
+</p>
+<a name=".D0.97.D0.B0.D0.B3.D1.80.D1.83.D0.B7.D0.BA.D0.B0_.D0.BC.D0.B5.D0.B4.D0.B8.D0.B0"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=2" title="Править секцию: Загрузка медиа">править</a>]</span> <span class="mw-headline">Загрузка медиа</span></h2>
+<p>Так. для начала сохраните у себя на компе эти картинки:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_1.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_1.jpg" src="o23scv96.jpg" width="256" height="256" /></a></span></div></div>
+<p>Под названием <b>1.jpg</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/1.jpg</b>  . Это у нас будет текстура земли в игре.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:182px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_1.png" class="internal" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_1.png" class="thumbimage" src="exh6mmyv.png" width="180" height="13" /></a>  <div class="thumbcaption"><div class="magnify" style="float:right"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_1.png" class="internal" title="Увеличить"><img src="gau13a4-.png" width="15" height="11" alt="" /></a></div></div></div></div></div>
+<p>Под названием <b>1.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/1.png</b> . Главный герой.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Blood.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Blood.png" src="gqr_l24x.png" width="56" height="64" /></a></span></div></div>
+<p>Под названием <b>blood.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/blood.png</b> . Кровища для игры. 
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_BulletPistol.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_BulletPistol.png" src="6fm4mv_m.png" width="120" height="14" /></a></span></div></div>
+<p>Под названием <b>bulletPistol.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/bulletPistol.png</b>. Пуля.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Button.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Button.png" src="2i80b8l0.png" width="200" height="40" /></a></span></div></div>
+<p>Под названием <b>button.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/Button/button.png</b>. Кнопка. 
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonDown.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonDown.png" src="7gy6lzs-.png" width="200" height="40" /></a></span></div></div>
+<p>Под названием <b>buttondown.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/Button/buttondown.png</b>. Когда наводим указатель на кнопку.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonExit.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonExit.png" src="sh3aaena.png" width="200" height="40" /></a></span></div></div>
+<p>Под названием <b>buttonexit.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/Button/buttonexit.png</b>. 
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonExitDown.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_ButtonExitDown.png" src="1w758ftp.png" width="200" height="40" /></a></span></div></div>
+<p>Под названием <b>buttonexitdown.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/Button/buttonexitdown.png</b>. Когда наводим указатель на кнопку.
+</p>
+<div class="center"><div class="thumb tnone"><div class="thumbinner" style="width:182px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Monster.png" class="internal" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Monster.png" class="thumbimage" src="vck4d0w6.png" width="180" height="5" /></a>  <div class="thumbcaption"><div class="magnify" style="float:right"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Crimsonland_Monster.png" class="internal" title="Увеличить"><img src="gau13a4-.png" width="15" height="11" alt="" /></a></div></div></div></div></div>
+<p>Под названием <b>monster.png</b> и переместим в папку игры&nbsp;: <b>CrimsonLand2/media/monster/monster.png</b> .
+</p><p>Так, все медиа мы вроде загрузили. Сейчас напишем код ,который бы все это загружал...
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Global</span> Fonimage = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/1.jpg&quot;</span><span style=" ">&#41;</span> &nbsp; <span style="color: #B1E7EB;">'Загружаем текстуру для игры. </span><br />
+<p><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> BulletImage = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/bulletPistol.png&quot;</span><span style=" ">&#41;</span> &nbsp; &nbsp;<span style="color: #B1E7EB;">'Загружаем картинку пули.</span><br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> BulletImage <span style="color: #B1E7EB;">'Координаты картинки монстра по центру.</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> PlayerImage = <span style="color: #ffff00; font-weight: bold;">LoadAnimImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/1.png&quot;</span>,<span style="color: #FFFFFF;">68</span>,<span style="color: #FFFFFF;">40</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">8</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Загружаем картинку для главного игрока.</span><br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> PlayerImage <span style="color: #B1E7EB;">'Делаем координаты картинки по центру.</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> MonsterImage = <span style="color: #ffff00; font-weight: bold;">LoadAnimImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Monster/1.png&quot;</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Загрузка картинки монстра.</span><br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> MonsterImage <span style="color: #B1E7EB;">'Координаты картинки монстра по центру.</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> BloodImage = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Blood.png&quot;</span><span style=" ">&#41;</span> <br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> BloodImage <br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> Button = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Button/button.png&quot;</span><span style=" ">&#41;</span> &nbsp; <span style="color: #B1E7EB;">'Кнопка для начала новый игры.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> ButtonDown = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Button/buttondown.png&quot;</span><span style=" ">&#41;</span> <br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> Button <br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> ButtonDown<br />
+<br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> ButtonExit = &nbsp;<span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Button/buttonexit.png&quot;</span><span style=" ">&#41;</span> &nbsp; <span style="color: #B1E7EB;">'Кнопка для начала новый игры.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> ButtonExitDown = <span style="color: #ffff00; font-weight: bold;">LoadImage</span> <span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Media/Button/buttonexitdown.png&quot;</span><span style=" ">&#41;</span> <br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> ButtonExit <br />
+<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span> ButtonExitDown<br />
+<br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> SMonster:<span style="color: #ffff00; font-weight: bold;">TList</span>=<span style="color: #ffff00; font-weight: bold;">New</span> <span style="color: #ffff00; font-weight: bold;">TList</span><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> SPlayer:<span style="color: #ffff00; font-weight: bold;">TList</span>=<span style="color: #ffff00; font-weight: bold;">New</span> <span style="color: #ffff00; font-weight: bold;">TList</span> <span style="color: #B1E7EB;">'Листы для объектов.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> SBullet:<span style="color: #ffff00; font-weight: bold;">TList</span>=<span style="color: #ffff00; font-weight: bold;">New</span> <span style="color: #ffff00; font-weight: bold;">TList</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Global</span> SBlood:<span style="color: #ffff00; font-weight: bold;">TList</span>=<span style="color: #ffff00; font-weight: bold;">New</span> <span style="color: #ffff00; font-weight: bold;">TList</span></div>
+<ul><li><b>Global</b> - объявляет новую переменную.
+</li><li><b>LoadImage</b> - загружает картинку.
+</li><li><b>MidHandleImage</b> - координаты картинки по центру.
+</li><li><b>TList</b> - листы, списки, в которых будут содержатся данные об наших объектах.
+</li></ul>
+<p>Загрузили в нашу игру мы медиа. Что дальше? 
+</p>
+<a name=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2.2C_.D0.BF.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D1.85.2C_.D1.84.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B9.2C_.D0.BD.D0.B5.D0.BE.D0.B1.D1.85.D0.BE.D0.B4.D0.B8.D0.BC.D1.8B.D1.85_.D0.B4.D0.BB.D1.8F_.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D1.8B_.D0.B8.D0.B3.D1.80.D1.8B"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=3" title="Править секцию: Создания типов, переменных, функций, необходимых для работы игры">править</a>]</span> <span class="mw-headline">Создания типов, переменных, функций, необходимых для работы игры</span></h2>
+<p>А дальше у нас идет создание необходимого. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Global</span> TipGame <span style="color: #B1E7EB;">'Для того, чтобы можно было понять, что сейчас происходит. 0- меню. 1- игра.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Global</span> Level = <span style="color: #FFFFFF;">1000</span> <span style="color: #B1E7EB;">'Уровень</span><br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> time <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Global</span> a</div>
+<p>Объявляем переменные. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'======== ДЛЯ УПРАВЛЕНИЯ СПИСКАМИ &nbsp;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Function</span> UpdateEntities<span style=" ">&#40;</span> list:<span style="color: #ffff00; font-weight: bold;">TList</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> entity:TEntity=<span style="color: #ffff00; font-weight: bold;">EachIn</span> list<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entity.<span style="">Update</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+<br />
+<span style="color: #B1E7EB;">'======== ТИП ДЛЯ РАБОТЫ С ДРУГИМИ ТИПАМИ</span><br />
+<span style="color: #B1E7EB;">'Чтобы можно было работать с другими типами, необходим этот...</span><br />
+<span style="color: #ffff00; font-weight: bold;">Type</span> TEntity<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> link:<span style="color: #ffff00; font-weight: bold;">TLink</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> remove<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; link.<span style="">remove</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Sila:<span style="color: #FFFFFF;">-1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> AddLast<span style=" ">&#40;</span> list:<span style="color: #ffff00; font-weight: bold;">TList</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; link=list.<span style="">AddLast</span><span style=" ">&#40;</span> <span style="color: #ffff00; font-weight: bold;">Self</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Abstract</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Можно сказать, функция для обновления объектов в списке, а тип для работы функции... вроде...
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> Dn_DrawImage <span style=" ">&#40;</span>image, x#, y#, rotat#,level# <span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Рисуем картинку через функцию.</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetBlend</span> Alphablend<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> rotat<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetAlpha</span> level<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> image, x, y<br />
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> Dn_DrawAnimImage <span style=" ">&#40;</span>image, x#, y#, rotat#,level#, f <span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Рисуем картинку через функцию.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetBlend</span> Alphablend<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> rotat<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetAlpha</span> level<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> image, x, y, f<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<p>Две функции для отрисовки изображений. 
+</p>
+<ul><li> <b>Dn_DrawImage</b>  - для обычных картинок. 
+<ul><li> image
+</li><li> x - положение 
+</li><li> y - положение 
+</li><li> rotat - поворот картинки
+</li><li> level - прозрачность. 
+</li></ul>
+</li><li> <b>Dn_DrawAnimImage</b> - для анимационных картинок.
+<ul><li> f - номер кадра.
+</li></ul>
+</li></ul>
+<p><br />
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'======== ОПРЕДЕЛИТЬ УГОЛ МЕЖДУ ТОЧКАМИ &nbsp; &nbsp;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Function</span> Angle!<span style=" ">&#40;</span>x0!,y0!,x1!,y1!<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">ATan2</span><span style=" ">&#40;</span>y1-y0,x1-x0<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<p>Функция для определения угла между двумя точками.
+</p>
+<a name=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D1.8F_.D1.82.D0.B8.D0.BF.D0.BE.D0.B2_.D0.B4.D0.BB.D1.8F_.D0.B8.D0.B3.D1.80.D1.8B"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=4" title="Править секцию: Создания типов для игры">править</a>]</span> <span class="mw-headline">Создания типов для игры</span></h2>
+<p>В этой части мы сделаем все необходимые типы для игры:
+</p>
+<ol><li>Герой
+</li><li>Монстр
+</li><li>Пуля
+</li><li>Кровь
+</li></ol>
+<p>Так. Приступим сразу к коду:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TPlayer <span style="color: #ffff00; font-weight: bold;">Extends</span> TEntity <span style="color: #B1E7EB;">'Объявляем тип.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Field</span> X#,Y# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Положение игрока.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Life &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Жизнь.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Ang &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Поворот.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> frame , animnext &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Для анимации.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Weapon &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Какое оружие. 0 - автомат. 1 - дробовик</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Shot &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Когда был произведен предыдузий выстрел.&nbsp; &nbsp;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для...</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' пока здесь ничего не пишем, но сделаем метку</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> CreatePlayer:TPlayer<span style=" ">&#40;</span> <span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Функция для создания игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Player:TPlayer=<span style="color: #ffff00; font-weight: bold;">New</span> TPlayer <span style="color: #B1E7EB;">'Создаем игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Player.<span style="">x</span> = width*<span style="color: #FFFFFF;">0.5</span> <span style="color: #B1E7EB;">'Делаем, чтобы положение игрока было точно в центре.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Player.<span style="">y</span> = height*<span style="color: #FFFFFF;">0.5</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Player.<span style="">life</span> = <span style="color: #FFFFFF;">100</span> &nbsp; &nbsp;<span style="color: #B1E7EB;">'100 жизней для начала. </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Player.<span style="">AddLast</span> SPlayer <span style="color: #B1E7EB;">'Добавляем объект в список.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> Player <span style="color: #B1E7EB;">'Возвращаем объект.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p><b>Type</b> - объявляет тип.
+<b>Extends</b> - "привязка". В нашем случае к типу TEntity. Помните, мы такой создали?
+<b>Field</b> - знаения для типа. 
+<b>Function</b> CreatePlayer:TPlayer( ) - Функция для создания объекта - игрока. TPlayer означает, к какому типу относится функция.
+</p><p>Так же у нас для монстра, пули и крови. Только у поля значения другие и названия. )
+</p><p>Для того, чтобы создать игрока, достаточно ввести TPlayer.CreatePlayer (), но мы это напишем потом.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TMonster <span style="color: #ffff00; font-weight: bold;">Extends</span> TEntity <span style="color: #B1E7EB;">'Объявляем тип.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Field</span> X#,Y# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Положение объекта.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Life &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Жизнь.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Ang &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Поворот.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> frame , animnext&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Для анимации.</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для монстра.</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' пока здесь ничего не пишем, но сделаем метку</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span> <br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> CreateMonster:Tmonster<span style=" ">&#40;</span>x#,y#<span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Функция для создания монстра.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> monster:TMonster=<span style="color: #ffff00; font-weight: bold;">New</span> TMonster <span style="color: #B1E7EB;">'Создаем игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Monster.<span style="">x</span> = x<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Monster.<span style="">y</span> = y<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Monster.<span style="">life</span> = <span style="color: #FFFFFF;">100</span> &nbsp; &nbsp;<span style="color: #B1E7EB;">'100 жизней для начала. </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Monster.<span style="">AddLast</span> SMonster <span style="color: #B1E7EB;">'Добавляем объект в список</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> Monster <span style="color: #B1E7EB;">'Возвращаем объект.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Чтобы создать монстра, надо написать:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">TMonster.<span style="">CreateMonster</span><span style=" ">&#40;</span>х, у<span style=" ">&#41;</span></div>
+<p>Х, У - положение монстра. Если мы хотим, чтобы у монстров разные жизни были, или еще что-нибудь, то нужно заместо:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> CreateMonster:Tmonster<span style=" ">&#40;</span>x#,y#<span style=" ">&#41;</span><br />
+Monster.<span style="">life</span> = <span style="color: #FFFFFF;">100</span></div>
+<p>писать
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> CreateMonster:Tmonster<span style=" ">&#40;</span>x#,y#, life<span style=" ">&#41;</span><br />
+Monster.<span style="">life</span> = life</div>
+<p>То есть при создании нового монстра мы будем указывать еще и его количество жизней, но в моем туториале мы не будем делать этого. )))
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TBullet <span style="color: #ffff00; font-weight: bold;">Extends</span> TEntity <span style="color: #B1E7EB;">'Объявляем тип.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Field</span> X#,Y# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Положение пули.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Ang &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Поворот.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> speed <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для пули.</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' пока здесь ничего не пишем, но сделаем метку</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span> <br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> CreateBullet:TBullet<span style=" ">&#40;</span>x#,y#,ang#, speed<span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Функция для создания пули.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Bullet:TBullet=<span style="color: #ffff00; font-weight: bold;">New</span> TBullet <span style="color: #B1E7EB;">'Создаем игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Bullet.<span style="">x</span># = x#<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Bullet.<span style="">y</span># = y#<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Bullet.<span style="">ang</span> = ang<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Bullet.<span style="">speed</span> = speed<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Bullet.<span style="">AddLast</span> SBullet <span style="color: #B1E7EB;">'Добавляем объект в список</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> Bullet <span style="color: #B1E7EB;">'Возвращаем объект.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Создаем пулю. Чтобы создать, нужно написать:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">TBullet.<span style="">CreateBullet</span> <span style=" ">&#40;</span>x,y,поворот пули, скорость в px<span style=" ">&#41;</span></div>
+<p>Правда, делать мы это будем в методе обновлении игрока. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TBlood <span style="color: #ffff00; font-weight: bold;">Extends</span> TEntity <span style="color: #B1E7EB;">'Объявляем тип.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Field</span> X#,Y# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Положение пули.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Ang &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Поворот.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> Alpha# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Прозрачность крови.</span><br />
+<span style="color: #ffff00; font-weight: bold;">Field</span> AlphaM# &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #B1E7EB;">'Как быстро будет кровь становится прозрачнее</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для крови.</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' пока здесь ничего не пишем, но сделаем метку</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> CreateBlood:TBlood<span style=" ">&#40;</span>x#,y#,m#<span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Функция для создания крови.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Blood:TBlood=<span style="color: #ffff00; font-weight: bold;">New</span> TBlood <span style="color: #B1E7EB;">'Создаем игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">x</span> = x<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">y</span> = y<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">alpham</span> = m<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">alpha</span> = <span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">ang</span> = <span style="color: #ffff00; font-weight: bold;">Rand</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">360</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blood.<span style="">AddLast</span> SBlood <span style="color: #B1E7EB;">'Добавляем объект в список</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> Blood <span style="color: #B1E7EB;">'Возвращаем объект.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Типы все похожи ,не правда ли?  То же самое и с кровью. Только мы добавили несколько новых значений. Значение <b>alpham</b>, <b>alpha</b>.
+Ang у нас будет каждый раз разное. Чтобы кровь была не похоже друг на друга, каждый раз рисуем ее в случайном повороте.
+</p><p><b>Alpha</b> - при зарисовке будет указываться, на сколько прозрачной будет кровь. Так же будет как "счетчик". Постепенно это значение будет уменьшатся на <b>alpham</b>, и когда <b>alpha</b> будет меньше или равна 0 ,то удаляем кровь.
+</p><p>Хе. Вы почти создали основу , "каркас" вашей игры. Осталось не так уж и много...
+</p><p>Правда посмотреть пока не на что...
+</p>
+<a name=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BE.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F_.D0.B4.D0.BB.D1.8F_.D0.BE.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BE.D0.B2"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=5" title="Править секцию: Создание обновления для объектов">править</a>]</span> <span class="mw-headline"> Создание обновления для объектов</span></h2>
+<p>Без обновления объектов у нас игра просто не будет работать. Так давай те же напишем его!&nbsp;;)
+</p>
+<a name=".D0.93.D0.BB.D0.B0.D0.B2.D0.BD.D1.8B.D0.B9_.D0.B3.D0.B5.D1.80.D0.BE.D0.B9"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=6" title="Править секцию: Главный герой">править</a>]</span> <span class="mw-headline">Главный герой</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'Движение игрока.</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_W<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Y = Y - <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_S<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Y = Y + <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_A<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> X = X - <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_D<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> X = X + <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; Ang = Angle<span style=" ">&#40;</span>x,y,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Определяем поворот игрока.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> frame=<span style="color: #FFFFFF;">8</span> <span style="color: #ffff00; font-weight: bold;">Then</span> frame=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Dn_DrawAnimImage <span style=" ">&#40;</span>playerImage, x, y, ang,<span style="color: #FFFFFF;">1</span>,frame <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> shot &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> weapon = <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span> shot = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + &nbsp;<span style="color: #FFFFFF;">50</span> &nbsp;; TBullet.<span style="">CreateBullet</span> <span style=" ">&#40;</span>x,y,ang+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-6</span>,<span style="color: #FFFFFF;">6</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">30</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> weapon = <span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">Then</span> shot = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + &nbsp;<span style="color: #FFFFFF;">500</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">For</span> i = <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">To</span> <span style="color: #FFFFFF;">10</span>&nbsp;; TBullet.<span style="">CreateBullet</span> <span style=" ">&#40;</span>x,y,ang+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-40</span>,<span style="color: #FFFFFF;">40</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">15</span><span style=" ">&#41;</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span> <span style=" ">&#40;</span>key_f1<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> weapon=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span> <span style=" ">&#40;</span>key_f2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> weapon=<span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> <span style="color: #FFFFFF;">0</span><br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> life ,<span style="color: #FFFFFF;">0</span> , <span style="color: #FFFFFF;">0</span></div>
+<p>Так. найдите в коде <b>обновление игрока / type TPlayer =&gt; Method Update ()</b>
+</p><p>Там мы оставляли метку. Убираем ее и пишем вышенаписанное .)))
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_W<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Y = Y - <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_S<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Y = Y + <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_A<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> X = X - <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_D<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> X = X + <span style="color: #FFFFFF;">3</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span></div>
+<p>Перемещение главного игрока. То есть при нажатие на клавишу (W,A,S,D) , у нас изменяются координаты. И так же при нажатии на клавигу у нас происходит смена кадров. 
+</p><p>X=X+3, где 3 - скорость. Изменить, если надо)
+</p><p>If animnext &lt; MilliSecs () Then animnext=MilliSecs()+50&nbsp;; frame:+1 
+Если animnext &lt; с.времени , то animnext = с.время+50мс , кадр = +1
+</p><p>Каждые 50 мс увеличиваем кадр на 1. А всего у нас кадров 8. =&gt; если покажется 9 кадр, несуществующий, будет ошибка. Ставим ограничение:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> frame=<span style="color: #FFFFFF;">8</span> <span style="color: #ffff00; font-weight: bold;">Then</span> frame=<span style="color: #FFFFFF;">0</span></div>
+<p>(если кадр = 8 , то кадр = 0)
+</p><p><i>Примечание: отсчет кадров начинается с нуля =&gt; 8 кадр - несуществующий.</i>
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Dn_DrawAnimImage <span style=" ">&#40;</span>playerImage, x, y, ang,<span style="color: #FFFFFF;">1</span>,frame <span style=" ">&#41;</span></div>
+<p>Рисуем анимационную картинку - playerImage . В положении х игрока, у игрока, с поворотом ang. С прозрачностью 1 (непрозрачный) и кадром frame. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Ang = Angle<span style=" ">&#40;</span>x,y,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Определяем поворот игрока.</span></div>
+<p>Определяем через нашу функцию поворот между точкой один (главный герой) и точкой два (курсор)
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> shot &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> weapon = <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span> shot = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + &nbsp;<span style="color: #FFFFFF;">50</span> &nbsp;; TBullet.<span style="">CreateBullet</span> <span style=" ">&#40;</span>x,y,ang+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-6</span>,<span style="color: #FFFFFF;">6</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">30</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> weapon = <span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">Then</span> shot = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + &nbsp;<span style="color: #FFFFFF;">500</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">For</span> i = <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">To</span> <span style="color: #FFFFFF;">10</span>&nbsp;; TBullet.<span style="">CreateBullet</span> <span style=" ">&#40;</span>x,y,ang+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-40</span>,<span style="color: #FFFFFF;">40</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">15</span><span style=" ">&#41;</span>&nbsp;; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span></div>
+<p>Если shot меньше с.времени и нажата левая кнопка мыши, то:
+</p>
+<ul><li>если оружие 0 (автомат), то увеличиваем shot, и создаем пулю.
+</li><li>если оружие 1 (дробовик), то увеличиваем shot, и много (11) пуль создаем пулю.
+</li></ul>
+<p>11 потому-что начинается счет с 0 и идет до 10 - 11.
+</p>
+<a name=".D0.A1.D1.87.D0.B5.D1.82.D1.87.D0.B8.D0.BA"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=7" title="Править секцию: Счетчик">править</a>]</span> <span class="mw-headline">Счетчик</span></h3>
+<p>наша переменная содержит число. (системное время)
+если системное время больше начего числа, то выполняем действие какое-нибудь, и увеличиваем число на с.время+мс. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span> <span style=" ">&#40;</span>key_f1<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> weapon=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span> <span style=" ">&#40;</span>key_f2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> weapon=<span style="color: #FFFFFF;">1</span></div>
+<p>Если нажимаем клавишу F1, то достаем автомат, или переменная weapon = 0 
+</p><p>Если нажимаем клавишу F2, то достаем дробовик, или переменная weapon = 1
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">SetRotation</span> <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> life ,<span style="color: #FFFFFF;">0</span> , <span style="color: #FFFFFF;">0</span></div>
+<p>Рисуем жизни. )
+</p><p>Так. Главного героя сделали. Все. перерыв. Идите выпейте чего-нибудь, отдохните)))
+</p><p>Отдохнули? приступаем к монстрам.
+</p>
+<a name=".D0.9C.D0.BE.D0.BD.D1.81.D1.82.D1.80.D1.8B"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=8" title="Править секцию: Монстры">править</a>]</span> <span class="mw-headline">Монстры</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для монстра.</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> life &lt; <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span> remove&nbsp;; <span style="color: #ffff00; font-weight: bold;">Return</span>; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level&gt;<span style="color: #FFFFFF;">300</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Level:<span style="color: #FFFFFF;">-5</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> Player:TPlayer = <span style="color: #ffff00; font-weight: bold;">EachIn</span> SPlayer<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> x &gt; player.<span style="">x</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> x &lt; player.<span style="">x</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &gt; player.<span style="">y</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &lt; player.<span style="">y</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; player.<span style="">life</span>:<span style="color: #FFFFFF;">-1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TBlood.<span style="">CreateBlood</span> <span style=" ">&#40;</span>player.<span style="">x</span>,player.<span style="">y</span>,<span style="color: #FFFFFF;">0.01</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; Ang = Angle<span style=" ">&#40;</span>x,y,player.<span style="">x</span>,player.<span style="">y</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Определяем поворот монстра</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; x=x+<span style=" ">&#40;</span><span style="color: #FFFFFF;">3.5</span>*<span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; y=y+<span style=" ">&#40;</span><span style="color: #FFFFFF;">3.5</span>*<span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> frame=<span style="color: #FFFFFF;">20</span> <span style="color: #ffff00; font-weight: bold;">Then</span> frame=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Dn_DrawAnimImage <span style=" ">&#40;</span>monsterimage, x, y, ang,<span style="color: #FFFFFF;">1</span>,frame <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span></div>
+<p>Весь код на монстров.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> life &lt; <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">If</span> Level&gt;<span style="color: #FFFFFF;">300</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Level:<span style="color: #FFFFFF;">-5</span>; remove&nbsp;; <span style="color: #ffff00; font-weight: bold;">Return</span></div>
+<p>Если жизни меньше 0 ,то если у нас скорость появления монстров (Level) больше 300, о уменьшаем ее. (на деле же чем меньше скорость, тем чаще они появляются.) Удалям объект (через TEntity, по этому не подствечивается). Возвращаем все.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">For</span> Player:TPlayer = <span style="color: #ffff00; font-weight: bold;">EachIn</span> SPlayer<br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> x &gt; player.<span style="">x</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> x &lt; player.<span style="">x</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &gt; player.<span style="">y</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &lt; player.<span style="">y</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; player.<span style="">life</span>:<span style="color: #FFFFFF;">-1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TBlood.<span style="">CreateBlood</span> <span style=" ">&#40;</span>player.<span style="">x</span>,player.<span style="">y</span>,<span style="color: #FFFFFF;">0.01</span><span style=" ">&#41;</span><br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span></div>
+<p>Смотрим на всех героев главных (а их он у нас один, но можно сделать и больше, только как быть с управлением?)
+</p><p>Если наш монстр близко к герою&nbsp;: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> x &gt; player.<span style="">x</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> x &lt; player.<span style="">x</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &gt; player.<span style="">y</span> - <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &lt; player.<span style="">y</span> + <span style="color: #FFFFFF;">30</span> <span style="color: #ffff00; font-weight: bold;">Then</span></div>
+<p>То&nbsp;: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">player.<span style="">life</span>:<span style="color: #FFFFFF;">-1</span><br />
+TBlood.<span style="">CreateBlood</span> <span style=" ">&#40;</span>player.<span style="">x</span>,player.<span style="">y</span>,<span style="color: #FFFFFF;">0.01</span><span style=" ">&#41;</span></div>
+<p>Уменьшаем жизни героя и создаем кровь в позиции героя. 
+</p><p>сейчас немного объясню, почему так пишем... 
+</p><p>Смотрите, мы  в методе игрока писали просто<b> x</b> , а здесь <b>player.x</b>, так?
+а <b>х</b> у нас это координата монстра. Дело в том, что если если мы используем значения объекта прямо в его типе, то писать <b>player.</b> и тому подобное не надо. А если мы вызываем значения объекта из другого типа (из монстра вызываем героя), то надо писать <b>player</b>. и тому подобное...
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">x=x+<span style=" ">&#40;</span><span style="color: #FFFFFF;">3.5</span>*<span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; y=y+<span style=" ">&#40;</span><span style="color: #FFFFFF;">3.5</span>*<span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span></div>
+<p>Перемещаем монстра относительно его поворота. 3.5 - скорость его. Если надо, можно увеличить или уменьшить...
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> animnext &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> animnext=<span style="color: #ffff00; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span>&nbsp;; frame:<span style="color: #FFFFFF;">+1</span> <br />
+<p><span style="color: #ffff00; font-weight: bold;">If</span> frame=<span style="color: #FFFFFF;">20</span> <span style="color: #ffff00; font-weight: bold;">Then</span> frame=<span style="color: #FFFFFF;">0</span><br />
+</p>
+Dn_DrawAnimImage <span style=" ">&#40;</span>monsterimage, x, y, ang,<span style="color: #FFFFFF;">1</span>,frame <span style=" ">&#41;</span></div>
+<p>Для анимации... думаю, уже не надо расписывать)
+</p>
+<a name=".D0.9F.D1.83.D0.BB.D0.B8"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=9" title="Править секцию: Пули">править</a>]</span> <span class="mw-headline">Пули</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для пули.</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Если пуля вылетает за пределы карты - удаляем.</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> x&lt;<span style="color: #FFFFFF;">-100</span> <span style="color: #ffff00; font-weight: bold;">Or</span> x&gt;=width<span style="color: #FFFFFF;">+100</span> <span style="color: #ffff00; font-weight: bold;">Or</span> y&gt;=height <span style="color: #ffff00; font-weight: bold;">Or</span> y&lt;=<span style="color: #FFFFFF;">-100</span> &nbsp;<span style="color: #ffff00; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; remove<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> Monster:TMonster = <span style="color: #ffff00; font-weight: bold;">EachIn</span> SMonster<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> x &gt; monster.<span style="">x</span> - <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> x &lt; monster.<span style="">x</span> + <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &gt; monster.<span style="">y</span> - <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &lt; monster.<span style="">y</span> + <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">Then</span>&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; monster.<span style="">life</span>:<span style="color: #FFFFFF;">-20</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TBlood.<span style="">CreateBlood</span> <span style=" ">&#40;</span>x,y,<span style="color: #FFFFFF;">0.001</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; remove<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span>&nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; x=x+<span style=" ">&#40;</span>speed*<span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; y=y+<span style=" ">&#40;</span>speed*<span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Dn_DrawImage bulletImage, x, y, ang,<span style="color: #FFFFFF;">1</span> <br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span></div>
+<p><br />
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> x&lt;<span style="color: #FFFFFF;">-100</span> <span style="color: #ffff00; font-weight: bold;">Or</span> x&gt;=width<span style="color: #FFFFFF;">+100</span> <span style="color: #ffff00; font-weight: bold;">Or</span> y&gt;=height <span style="color: #ffff00; font-weight: bold;">Or</span> y&lt;=<span style="color: #FFFFFF;">-100</span> &nbsp;<span style="color: #ffff00; font-weight: bold;">Then</span><br />
+<p>remove<br />
+<span style="color: #ffff00; font-weight: bold;">Return</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>Если пуля вылетает за пределы экрана - удаляем.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">For</span> Monster:TMonster = <span style="color: #ffff00; font-weight: bold;">EachIn</span> SMonster<br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> x &gt; monster.<span style="">x</span> - <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> x &lt; monster.<span style="">x</span> + <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &gt; monster.<span style="">y</span> - <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">And</span> y &lt; monster.<span style="">y</span> + <span style="color: #FFFFFF;">25</span> <span style="color: #ffff00; font-weight: bold;">Then</span>&nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; monster.<span style="">life</span>:<span style="color: #FFFFFF;">-20</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; TBlood.<span style="">CreateBlood</span> <span style=" ">&#40;</span>x,y,<span style="color: #FFFFFF;">0.001</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; remove<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span>&nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span></div>
+<p>Обновляем монстров. Если пуля близко к монстру ,то удаляем пулю, добавляем крови.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">x=x+<span style=" ">&#40;</span>speed*<span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+y=y+<span style=" ">&#40;</span>speed*<span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>ang<span style=" ">&#41;</span><span style=" ">&#41;</span></div>	
+<p>Перемещаем пулю.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Dn_DrawImage bulletImage, x, y, ang,<span style="color: #FFFFFF;">1</span></div>
+<p>Рисуем.
+</p>
+<a name=".D0.9A.D1.80.D0.BE.D0.B2.D1.8C"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=10" title="Править секцию: Кровь">править</a>]</span> <span class="mw-headline">Кровь</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #B1E7EB;">'Цикл, где будут проходить все действия для крови.</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> alpha &lt; <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span> &nbsp;REmove&nbsp;; <span style="color: #ffff00; font-weight: bold;">Return</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; alpha = alpha - alpham<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Dn_DrawImage <span style=" ">&#40;</span>BloodImage, x, y, ang,alpha <span style=" ">&#41;</span><br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Method</span></div>
+<p>Постепенно делаем кровь прозрачней. (уменьшаем alpha на alpham)
+Если прозрачность = 0 (т.е. совсем невидим), то удаляем
+</p><p>Так. можете себя поздравить. Вы полностью сделали каркас вашей игры.
+</p>
+<a name=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D0.BC.D0.B5.D0.BD.D1.8E"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=11" title="Править секцию: Создание меню">править</a>]</span> <span class="mw-headline">Создание меню</span></h2>
+<p>Ни одна игра не обходится без меню. Так давайте же создадим меню и в нашей игре.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">While</span> &nbsp;TipGame &lt;&gt; <span style="color: #FFFFFF;">1</span> <span style="color: #B1E7EB;">'Цикл для меню. Пока переменная не равна 1, будет меню.</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<br />
+Dn_DrawImage <span style=" ">&#40;</span>button, width*<span style="color: #FFFFFF;">0.5</span>, height*<span style="color: #FFFFFF;">0.5</span>, <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span> <span style=" ">&#41;</span><br />
+Dn_DrawImage <span style=" ">&#40;</span>buttonexit, width*<span style="color: #FFFFFF;">0.5</span>, height*<span style="color: #FFFFFF;">0.5</span><span style="color: #FFFFFF;">+50</span>, <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span> <span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+<span style="color: #B1E7EB;">'Вот такой мегааццкий код для коллизии кнопка - курсор. &nbsp;</span><br />
+<span style="color: #B1E7EB;">'(width*0.5)-((ImageWidth(Button))*0.5) - ширину * 0.5 &nbsp;- ширину кнопки * 0.5 &nbsp;-- определяем начальную х кнопки.</span><br />
+<span style="color: #B1E7EB;">'(width*0.5)+((ImageWidth(Button))*0.5) - ширину * 0.5 &nbsp;+ ширину кнопки * 0.5 &nbsp;-- определяем конечную х кнопки.</span><br />
+<span style="color: #B1E7EB;">'и так же для высоты кнопки&nbsp;;)</span><br />
+Dn_DrawImage <span style=" ">&#40;</span>buttondown, width*<span style="color: #FFFFFF;">0.5</span>, height*<span style="color: #FFFFFF;">0.5</span>, <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span> <span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span><span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> TipGame = <span style="color: #FFFFFF;">1</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+Dn_DrawImage <span style=" ">&#40;</span>buttonexitdown, width*<span style="color: #FFFFFF;">0.5</span>, height*<span style="color: #FFFFFF;">0.5</span><span style="color: #FFFFFF;">+50</span>, <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span> <span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>width*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>-<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt; <span style=" ">&#40;</span>height*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span>+<span style=" ">&#40;</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>Button<span style=" ">&#41;</span><span style=" ">&#41;</span>*<span style="color: #FFFFFF;">0.5</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">+50</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Wend</span></div>
+<p>Тут все просто. Рисуем две кнопки. Если курсор находится в зоне кнопки, то рисуем поверх нее другую. Если нажимаем на курсор и курсор находится над кнопкой, то делаем то-то. 
+В нашем случае изменяем переменную <b>TipGame 1</b>.
+</p><p>А цикл меню заверщается, если переменная становится не равна<b> 0</b>. то есть если мы нажимаем на "новая игра", то цикл меню завершается и продолжается выполнение кода...
+</p><p>Кстати, <b>cls</b> - очищает экран, <b>flip </b>- все рисует. 
+</p>
+<a name=".D0.A6.D0.B8.D0.BA.D0.BB_.D0.B4.D0.BB.D1.8F_.D0.B8.D0.B3.D1.80.D1.8B"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax&amp;action=edit&amp;section=12" title="Править секцию: Цикл для игры">править</a>]</span> <span class="mw-headline">Цикл для игры</span></h2>
+<p>Так. Подошли мы к концу. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">TPlayer.<span style="">CreatePlayer</span> <span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span> <span style=" ">&#40;</span>KEy_Escape<span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">TileImage</span> Fonimage , <span style="color: #FFFFFF;">0</span> , <span style="color: #FFFFFF;">0</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Sblood<br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Sbullet <br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Splayer <br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Smonster<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> time &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; time = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + level <br />
+&nbsp; &nbsp; &nbsp; &nbsp; a = <span style="color: #ffff00; font-weight: bold;">Rand</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">4</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> a<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-50</span>, <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>height<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span>width<span style="color: #FFFFFF;">+50</span>, <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>height<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">3</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>width<span style=" ">&#41;</span> , <span style="color: #FFFFFF;">-50</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">4</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>width<span style=" ">&#41;</span>, height<span style="color: #FFFFFF;">+50</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Select</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Wend</span></div>
+<dl><dd>TPlayer.CreatePlayer () - что это такое?&nbsp;;)
+</dd><dd>TileImage Fonimage , 0 , 0 - Рисуем фон игры.
+</dd></dl>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">UpdateEntities Sblood<br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Sbullet <br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Splayer <br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateEntities Smonster</div>
+<p>Обновляем все объекты. UpdateEntities - наша функция, она была в самом начале.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> time &lt; <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> <br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; time = <span style="color: #ffff00; font-weight: bold;">MilliSecs</span> <span style=" ">&#40;</span><span style=" ">&#41;</span> + level <br />
+&nbsp; &nbsp; &nbsp; &nbsp; a = <span style="color: #ffff00; font-weight: bold;">Rand</span> <span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">4</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> a<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-50</span>, <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>height<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span>width<span style="color: #FFFFFF;">+50</span>, <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>height<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">3</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>width<span style=" ">&#41;</span> , <span style="color: #FFFFFF;">-50</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">4</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; TMonster.<span style="">CreateMonster</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span>width<span style=" ">&#41;</span>, height<span style="color: #FFFFFF;">+50</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Select</span><br />
+</p>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">If</span></div>
+<p>Так. Если time меньше системного времени, то присваиваем переменной a случайное значение от 1 до 4.
+</p>
+<ul><li>Если равно 1 , то создаем монстра слева экрана. 
+</li><li>Если 2, то справа.
+</li><li>Если 3, то вверху экрана.
+</li><li>Если 4, то снизу.
+</li></ul>
+<p>Все! нажимаем F5! Работает? если нет - код в студию ,будем выяснять. А так, все готово! Вы можете поздравить себя с созданием игры основы Crimsonland. Конечно, все аспекты типа уровней, спецэффетов и тому подобного описывать я не буду, но вы уже сделали основу. Уже легче. 
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/f/fd/Crimsonland.zip" class="internal" title="Crimsonland.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:DanFi" title="Участник:DanFi">DanFi</a> (ICQ: 468-909-567)
+</p>
+<!-- Saved in parser cache with key db1:pcache:idhash:1745-0!1!0!!ru!2 and timestamp 20071110032231 -->
+<div class="printfooter">
+Получено с <a href="wccwf772.html">http://blitzetcetera.org/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D1%91%D0%BC_%D1%81%D0%B2%D0%BE%D0%B9_Crimsonland_%D0%BD%D0%B0_BlitzMax by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

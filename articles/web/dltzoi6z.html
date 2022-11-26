@@ -1,0 +1,589 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%91%D0%B0%D0%B7%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85:_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82_DBF by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Базы данных: формат DBF,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Базы данных: формат DBF — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Базы_данных:_формат_DBF";
+var wgTitle = "Базы данных: формат DBF";
+var wgAction = "view";
+var wgArticleId = "462";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3583";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Базы_данных_формат_DBF">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Базы данных: формат DBF</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Прежде всего, что такое база данных? В самом простом варианте - это таблица с определенным количеством строк и столбцов. Если взять отдельную строку и столбец, то на их пересечении находится ячейка с какими-нибудь данными. К примеру, обычный календарь на январь - это база данных с семью столбцами - днями недели и 5-6 строками - неделями месяца. В каждой ячейке содержится число, лежащее на пересечении строки соответствующей недели и столбца дня недели или нет ничего (для дней, относящихся к другому месяцу). Работа с базами данных в BlitzBasic затруднена, так как в нем отсутствуют соответствующие процедуры. В этой статье будет рассказано, как создать процедуры работы с базами вручную.
+</p><p>Форматов баз данных много, но здесь будет рассмотрен самый простой из них - формат DBase (DBF). Простота его заключается в том, что все данные представлены в текстовом виде, поля и строки имеют фиксированную длину, а структура максимально проста. К тому же, самые распространенные программы, работающие с базами данных - Excel и Access понимают этот формат и могут конвертировать в него базы данных других форматов.
+</p><p>Начинается DBF-файл с заголовка, длиной в 32 байта, структура которого выглядит так:
+</p>
+<table border="2">
+<tr>
+<td> Байты
+</td><td> Описание
+</td></tr>
+<tr>
+<td> 00
+</td><td> Версия:
+</td></tr>
+<tr>
+<td> 01-03
+</td><td> Последнее изменение (ГГММДД)
+</td></tr>
+<tr>
+<td> 04-07
+</td><td> Число записей в файле
+</td></tr>
+<tr>
+<td> 08-09
+</td><td> Положение первой записи с данными
+</td></tr>
+<tr>
+<td> 10-11
+</td><td> Длина одной записи с данными (включая признак удаления)
+</td></tr>
+<tr>
+<td> 12-31
+</td><td> Зарезервированы
+</td></tr></table>
+<p>Далее идут подзаписи полей, то есть блоки, характеризующие каждый столбец таблицы. Длина каждого блока - также 32 байта, а структура такова:
+</p>
+<table border="2">
+<tr>
+<td> Байты
+</td><td> Описание
+</td></tr>
+<tr>
+<td> 00-10
+</td><td> Название поля (максимально - 10 символов, если меньше 10, то дополняется пустым символом (код - 0))
+</td></tr>
+<tr>
+<td> 11
+</td><td> Тип данных: C - символьное, N - числовое, L - логическое, D - дата, F - с плавающей точкой
+</td></tr>
+<tr>
+<td> 12-15
+</td><td> Расположение поля внутри записи
+</td></tr>
+<tr>
+<td> 16-17
+</td><td> Длина поля (в байтах)
+</td></tr>
+<tr>
+<td> 18-32
+</td><td> Зарезервированы
+</td></tr></table>
+<p>Подзаписи полей завершаются символом с кодом 13, а затем идут, собственно, данные. Они начинаются с позиции, указываемой в записи  заголовка в байтах  08 - 09. Запись для каждой строки базы данных начинается с байта, содержащего признак удаления. Если в этот байт занесен пробел (код ASCII - 32), то запись не удалялась; если же в первом байте - звездочка  (код - 42),  то  запись удалена. За признаком удаления следуют данные.
+</p><p>Средствами BlitzBasic мы можем напрямую считывать информацию из файла. К сожалению, в языке отсутствует возможность считывания n символов в строку, поэтому если необходимо считать данные из определенной ячейки, придется либо считывать поле побайтно из файла, добавляя символы в строковую переменную, либо считать все поле в банк и формировать переменную, считывая данные из него. Рассмотрим первый вариант.
+</p><p>Итак, для начала необходима инициализация: открытие файла базы данных, определение символьной длины каждого поля и его позиции в строке, длины одной строки, количества строк и столбцов (в заголовке количество строк и позиции полей в строке могут быть указаны неправильно, поэтому рассчитываем их, исходя из имеющихся данных). Также нужно корректно закрыть базу и сделать процедуру чтения данных. В первом примере на экран выводится содержимое базы данных "<a href="http://blitzetcetera.org/images/7/73/DBF-DataBase.zip" class="internal" title="DBF-DataBase.zip">storage.dbf</a>". Это список продуктов: столбец 0 - название, столбец 1 - цена, столбец 2 - количество.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">640</span>,<span style="color: #33ffdd;">480</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">SetFont</span> <span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Arial&quot;</span>,<span style="color: #33ffdd;">16</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;Максимальное количество столбцов</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> maxdbf=<span style="color: #33ffdd;">100</span><br />
+<span style="color: #ffee00">;Служебные переменные</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> dbfile,fleng,stpos,rowq,colq<br />
+<span style="color: #ffee00">;Массив для информации о столбцах</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> dbc<span style=" ">&#40;</span>maxdbf,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;Открытие базы данных</span><br />
+opendb <span style="color: #00ff66;">&quot;storage.dbf&quot;</span><br />
+<span style="color: #ffee00">;Вывод базы данных на экран</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> rowq<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Print</span> trimdbf$<span style=" ">&#40;</span>n,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+trimdbf$<span style=" ">&#40;</span>n,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;$, &quot;</span>+trimdbf$<span style=" ">&#40;</span>n,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;pcs.&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #ffee00">;Закрытие базы данных</span><br />
+closedb<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+<br />
+<span style="color: #ffee00">;Функция открытия файла базы данных</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> opendb<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Эта переменная будет хранить идентификатор файла</span><br />
+dbfile=<span style="color: #aaffff; font-weight: bold;">OpenFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,<span style="color: #33ffdd;">8</span><br />
+<span style="color: #ffee00">;Начало блока данных</span><br />
+stpos=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Длина записи с данными (одной строки)</span><br />
+fleng=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Расчет количества строк</span><br />
+rowq=<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">FileSize</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span>-stpos<span style=" ">&#41;</span>/fleng<br />
+<br />
+<span style="color: #ffee00">;Счетчик количества столбцов</span><br />
+colq=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #ffee00">;Позиция первой подзаписи - 1</span><br />
+dbc<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span><br />
+<span style="color: #ffee00">;Цикл по всем подзаписям полей</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;<span style="color: #ffee00">;Адрес начала подзаписи</span><br />
+&nbsp;fp=<span style="color: #33ffdd;">32</span>*<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffee00">;Выход, если встречен символ с кодом 13</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span>=<span style="color: #33ffdd;">13</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp;<span style="color: #ffee00">;Считывание длины поля (в символах)</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<span style="color: #33ffdd;">+16</span><br />
+&nbsp;dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffee00">;Расчет позиции поля</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> colq&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;colq=colq<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция закрытия файла базы данных</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closedb<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> dbfile<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция считывания данных из ячейки</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbf$<span style=" ">&#40;</span>row,col<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Определения адреса ячейки в файле</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*row+dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Формирование символьной переменной с данными ячейки</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;m$=m$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> m$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция, удаляющая в строке пробелы слева и справа</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> trimdbf$<span style=" ">&#40;</span>row,col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">Trim</span>$<span style=" ">&#40;</span>dbf$<span style=" ">&#40;</span>row,col<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Однако, обычно при работе с таблицами, они считываются или формируются построчно, так что лучше всего будет занести в банк всю строку и далее работать с ним. Добавим процедуру чтения / записи строки и изменения данных в строке, а также очистки строки (для этого можно использовать вспомогательный банк). Очистка нужна для того, чтобы при изменении данных в ячейках не оставался мусор от прежних данных. Здесь изменяется файл базы, поэтому лучше сделать копию и работать с ней. В этом примере цена изменяется с учетом скидки 12%, а количество товара увеличивается вдвое.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Const</span> maxdbf=<span style="color: #33ffdd;">100</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Global</span> dbfile,fleng,stpos,rowq,colq,dbbank<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> dbc<span style=" ">&#40;</span>maxdbf,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">CopyFile</span> <span style="color: #00ff66;">&quot;storage.dbf&quot;</span>,<span style="color: #00ff66;">&quot;storage2.dbf&quot;</span><br />
+opendb <span style="color: #00ff66;">&quot;storage2.dbf&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> rowq<span style="color: #33ffdd;">-1</span><br />
+&nbsp;readrow n<br />
+&nbsp;v=readdbf<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;writedbf <span style="color: #33ffdd;">1</span>,.<span style="color: #33ffdd;">88</span>*v<br />
+&nbsp;v=readdbf<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;writedbf <span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">2</span>*v<br />
+&nbsp;writerow n<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+closedb<br />
+<br />
+opendb <span style="color: #00ff66;">&quot;storage2.dbf&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> rowq<span style="color: #33ffdd;">-1</span><br />
+&nbsp;readrow n<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Print</span> trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;$, &quot;</span>+trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;pcs.&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+closedb<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> opendb<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbfile=<span style="color: #aaffff; font-weight: bold;">OpenFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,<span style="color: #33ffdd;">8</span><br />
+stpos=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+fleng=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+rowq=<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">FileSize</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span>-stpos<span style=" ">&#41;</span>/fleng<br />
+<br />
+<span style="color: #ffee00">;Вспомогательный буфер для хранения строки</span><br />
+dbbank=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#41;</span><br />
+<br />
+dbc<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span><br />
+colq=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;fp=<span style="color: #33ffdd;">32</span>*<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span>=<span style="color: #33ffdd;">13</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<span style="color: #33ffdd;">+16</span><br />
+&nbsp;dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> colq&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;colq=colq<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closedb<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> dbfile<br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbank<br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbankc<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция чтения строки из файла в буфер</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readrow<span style=" ">&#40;</span>row<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Определения адреса строки в файле</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*row<br />
+<span style="color: #ffee00">;Чтение данных из файла в буфер строки</span><br />
+<span style="color: #aaffff; font-weight: bold;">ReadBytes</span> dbbank,dbfile,<span style="color: #33ffdd;">0</span>,fleng<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция записи строки из буфера строки в файл</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writerow<span style=" ">&#40;</span>row<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Определения адреса строки в файле</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*row<br />
+<span style="color: #ffee00">;Запись данных из буфера строки в файл</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteBytes</span> dbbank,dbfile,<span style="color: #33ffdd;">0</span>,fleng<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция считывания данных из ячейки буфера строки</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Формирование символьной переменной с данными ячейки</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;m$=m$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">PeekByte</span><span style=" ">&#40;</span>dbbank,dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+n<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> m$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция записи данных в ячейку буфера строки</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writedbf<span style=" ">&#40;</span>col,m$<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Побайтовая запись из строковой переменной в буфер</span><br />
+l=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>m$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n&lt;l <span style="color: #aaffff; font-weight: bold;">Then</span> v=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,n<span style="color: #33ffdd;">+1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Else</span> v=<span style="color: #33ffdd;">32</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbank,n+dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>,v<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Обрезка пробелов справа и слева</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> trimdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">Trim</span>$<span style=" ">&#40;</span>readdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Следующие процедуры помогут в создании новой базы данных. В примере, сначала загружаются данные из старой базы в память, сортируясь по имени, а затем создается новая база, в которой присутствует еще один столбец - цена всей партии данного продукта. В нее записываются отсортированные данные с вычисленными значениями нового столбца.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> baserow<br />
+<p>&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> name$<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> price#<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> quantity<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> maxdbf=<span style="color: #33ffdd;">100</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> dbfile,fleng,stpos,rowq,colq,dbbank,dbbankc<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> dbc<span style=" ">&#40;</span>maxdbf,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+opendb <span style="color: #00ff66;">&quot;storage.dbf&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> rowq<span style="color: #33ffdd;">-1</span><br />
+&nbsp;readrow n<br />
+&nbsp;r.baserow=<span style="color: #aaffff; font-weight: bold;">New</span> baserow<br />
+&nbsp;r\name$=readdbf<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+&nbsp;r\price#=readdbf<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;r\quantity=readdbf<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> r2.baserow=<span style="color: #aaffff; font-weight: bold;">Each</span> baserow<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> r2\name$&gt;r\name$ <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Insert</span> r <span style="color: #aaffff; font-weight: bold;">Before</span> r2:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+closedb<br />
+<br />
+createdb <span style="color: #00ff66;">&quot;storage2.dbf&quot;</span><br />
+addfield <span style="color: #00ff66;">&quot;NAME&quot;</span>,<span style="color: #33ffdd;">51</span><br />
+addfield <span style="color: #00ff66;">&quot;PRICE($)&quot;</span>,<span style="color: #33ffdd;">9</span><br />
+addfield <span style="color: #00ff66;">&quot;QUANTITY&quot;</span>,<span style="color: #33ffdd;">9</span><br />
+addfield <span style="color: #00ff66;">&quot;TOTAL&quot;</span>,<span style="color: #33ffdd;">9</span><br />
+closeheader<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> r=<span style="color: #aaffff; font-weight: bold;">Each</span> baserow<br />
+&nbsp;clearbnk<br />
+&nbsp;writedbf <span style="color: #33ffdd;">0</span>,r\name$<br />
+&nbsp;writedbf <span style="color: #33ffdd;">1</span>,r\price#<br />
+&nbsp;writedbf <span style="color: #33ffdd;">2</span>,r\quantity<br />
+&nbsp;writedbf <span style="color: #33ffdd;">3</span>,r\quantity*r\price<br />
+&nbsp;addrow<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+closedb<br />
+<br />
+opendb <span style="color: #00ff66;">&quot;storage2.dbf&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> rowq<span style="color: #33ffdd;">-1</span><br />
+&nbsp;readrow n<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Print</span> trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;pcs.&quot;</span>+trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;$, total:&quot;</span>+trimdbf$<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;$&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+closedb<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> opendb<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbfile=<span style="color: #aaffff; font-weight: bold;">OpenFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,<span style="color: #33ffdd;">8</span><br />
+stpos=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+fleng=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+rowq=<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">FileSize</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span>-stpos<span style=" ">&#41;</span>/fleng<br />
+<br />
+<span style="color: #ffee00">;Вспомогательный буфер для хранения строки</span><br />
+dbbank=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Создание и инициализация банк для очистки буфера</span><br />
+dbbankc=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> fleng<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbankc,n,<span style="color: #33ffdd;">32</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+dbc<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span><br />
+colq=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;fp=<span style="color: #33ffdd;">32</span>*<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span>=<span style="color: #33ffdd;">13</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,fp<span style="color: #33ffdd;">+16</span><br />
+&nbsp;dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>dbfile<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> colq&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> dbc<span style=" ">&#40;</span>colq,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+dbc<span style=" ">&#40;</span>colq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;colq=colq<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closedb<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Запись количества строк перед закрытием базы</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,<span style="color: #33ffdd;">4</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile,rowq<br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> dbfile<br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbank<br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbankc<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readrow<span style=" ">&#40;</span>row<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*row<br />
+<span style="color: #aaffff; font-weight: bold;">ReadBytes</span> dbbank,dbfile,<span style="color: #33ffdd;">0</span>,fleng<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writerow<span style=" ">&#40;</span>row<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*row<br />
+<span style="color: #aaffff; font-weight: bold;">WriteBytes</span> dbbank,dbfile,<span style="color: #33ffdd;">0</span>,fleng<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;m$=m$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">PeekByte</span><span style=" ">&#40;</span>dbbank,dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+n<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> m$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writedbf<span style=" ">&#40;</span>col,m$<span style=" ">&#41;</span><br />
+l=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>m$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n&lt;l <span style="color: #aaffff; font-weight: bold;">Then</span> v=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,n<span style="color: #33ffdd;">+1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Else</span> v=<span style="color: #33ffdd;">32</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbank,n+dbc<span style=" ">&#40;</span>col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>,v<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> trimdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">Trim</span>$<span style=" ">&#40;</span>readdbf$<span style=" ">&#40;</span>col<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция создания новой базы данных</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> createdb<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbfile=<span style="color: #aaffff; font-weight: bold;">WriteFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Номер версии DBase - 4, дата - первое января 2000г (можно любую)</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile,<span style="color: #33ffdd;">3</span><span style="color: #33ffdd;">+1</span> <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span><span style="color: #33ffdd;">+1</span> <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">16</span><br />
+<span style="color: #ffee00">;Остальную часть заголовка пока обнулим</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">7</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+stpos=<span style="color: #33ffdd;">32</span><br />
+fleng=<span style="color: #33ffdd;">1</span><br />
+rowq=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Добавление нового столбца</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> addfield<span style=" ">&#40;</span>name$,l<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Запись имени поля</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">11</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteByte</span> dbfile,<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>name$,n,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #ffee00">;Тип поля-символьное (C)</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span> dbfile,<span style="color: #33ffdd;">67</span><br />
+<span style="color: #ffee00">;Запись позиции поля в строке</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile,fleng<br />
+f=<span style=" ">&#40;</span>stpos <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">5</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+dbc<span style=" ">&#40;</span>f,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=fleng<br />
+<span style="color: #ffee00">;Запись длины поля</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> dbfile,l<br />
+dbc<span style=" ">&#40;</span>f,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=l<br />
+<span style="color: #ffee00">;Остальные заполняются нулями</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">7</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteShort</span> dbfile,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+fleng=fleng+l<br />
+stpos=stpos<span style="color: #33ffdd;">+32</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция, закрывающая заголовок</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closeheader<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Символ конца заголовка</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span> dbfile,<span style="color: #33ffdd;">13</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,<span style="color: #33ffdd;">8</span><br />
+<span style="color: #ffee00">;Запись позиции начала данных</span><br />
+stpos=stpos<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> dbfile,stpos<br />
+<span style="color: #ffee00">;Запись длины записи с данными</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> dbfile,fleng<br />
+<br />
+<span style="color: #ffee00">;Подготовка банков</span><br />
+dbbank=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#41;</span><br />
+dbbankc=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> fleng<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbankc,n,<span style="color: #33ffdd;">32</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция, добавляющая строку в базу данных</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> addrow<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile,stpos+fleng*rowq<br />
+<span style="color: #aaffff; font-weight: bold;">WriteBytes</span> dbbank,dbfile,<span style="color: #33ffdd;">0</span>,fleng<br />
+rowq=rowq<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Функция очистки буфера строки</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> clearbnk<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CopyBank</span> dbbankc,<span style="color: #33ffdd;">0</span>,dbbank,<span style="color: #33ffdd;">0</span>,fleng<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Теперь еще один очень важный момент: в большинстве задач приходится открывать сразу несколько баз данных (например, две для чтения, одну для записи), поэтому в окончательный вариант библиотеки процедур нужно добавить возможность оперирования несколькими базами данных:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Const</span> maxdbf=<span style="color: #33ffdd;">100</span>, dbq=<span style="color: #33ffdd;">2</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Dim</span> dbfile<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,fleng<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,stpos<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,rowq<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,colq<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,dbbank<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span>,dbbankc<span style=" ">&#40;</span>dbq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> dbc<span style=" ">&#40;</span>dbq,maxdbf,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> opendb<span style=" ">&#40;</span>db,file$<span style=" ">&#41;</span><br />
+f=<span style="color: #aaffff; font-weight: bold;">OpenFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=f<br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> f,<span style="color: #33ffdd;">8</span><br />
+stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">FileSize</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span>-stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style=" ">&#41;</span>/fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<br />
+dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+dbbankc<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbankc<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,n,<span style="color: #33ffdd;">32</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+dbc<span style=" ">&#40;</span>db,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span><br />
+cq=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;fp=<span style="color: #33ffdd;">32</span>*<span style=" ">&#40;</span>cq<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> f,fp<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span>=<span style="color: #33ffdd;">13</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">SeekFile</span> f,fp<span style="color: #33ffdd;">+16</span><br />
+&nbsp;dbc<span style=" ">&#40;</span>db,cq,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">ReadShort</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> colq<span style=" ">&#40;</span>db<span style=" ">&#41;</span>&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> dbc<span style=" ">&#40;</span>db,cq,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=dbc<span style=" ">&#40;</span>db,cq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+dbc<span style=" ">&#40;</span>db,cq<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;cq=cq<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+colq<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=cq<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closedb<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+f=dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> f,<span style="color: #33ffdd;">4</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> f,rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">FreeBank</span> dbbankc<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readrow<span style=" ">&#40;</span>db,row<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>*row<br />
+<span style="color: #aaffff; font-weight: bold;">ReadBytes</span> dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writerow<span style=" ">&#40;</span>db,row<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>*row<br />
+<span style="color: #aaffff; font-weight: bold;">WriteBytes</span> dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> readdbf$<span style=" ">&#40;</span>db,col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>db,col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;m$=m$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">PeekByte</span><span style=" ">&#40;</span>dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,dbc<span style=" ">&#40;</span>db,col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>+n<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> m$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> writedbf<span style=" ">&#40;</span>db,col,m$<span style=" ">&#41;</span><br />
+l=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>m$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> dbc<span style=" ">&#40;</span>db,col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n&lt;l <span style="color: #aaffff; font-weight: bold;">Then</span> v=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,n<span style="color: #33ffdd;">+1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Else</span> v=<span style="color: #33ffdd;">32</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">PokeByte</span> dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,n+dbc<span style=" ">&#40;</span>db,col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>,v<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> trimdbf$<span style=" ">&#40;</span>db,col<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">Trim</span>$<span style=" ">&#40;</span>readdbf$<span style=" ">&#40;</span>db,col<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> createdb<span style=" ">&#40;</span>db,file$<span style=" ">&#41;</span><br />
+dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">OpenFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">3</span><span style="color: #33ffdd;">+1</span> <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span><span style="color: #33ffdd;">+1</span> <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">16</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">7</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteInt</span> dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #33ffdd;">32</span><br />
+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span><br />
+rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> addfield<span style=" ">&#40;</span>db,name$,l<span style=" ">&#41;</span><br />
+f=dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">11</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteByte</span> f,<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>name$,n,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span> f,<span style="color: #33ffdd;">66</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteInt</span> f,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+fld=<span style=" ">&#40;</span>stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">5</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+dbc<span style=" ">&#40;</span>db,fld,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> f,l<br />
+dbc<span style=" ">&#40;</span>db,fld,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=l<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">7</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteShort</span> f,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>+l<br />
+stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style="color: #33ffdd;">+32</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> closeheader<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+f=dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span> f,<span style="color: #33ffdd;">13</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> f,<span style="color: #33ffdd;">8</span><br />
+stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> f,stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteShort</span> f,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> addrow<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SeekFile</span> dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,stpos<span style=" ">&#40;</span>db<span style=" ">&#41;</span>+fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span>*rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteBytes</span> dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,dbfile<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span>=rowq<span style=" ">&#40;</span>db<span style=" ">&#41;</span><span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> clearbnk<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CopyBank</span> dbbankc<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,dbbank<span style=" ">&#40;</span>db<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,fleng<span style=" ">&#40;</span>db<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/0/01/DBF.zip" class="internal" title="DBF.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 11675 bytes
+Post-expand include size: 481 bytes
+Template argument size: 14 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:462-0!1!0!!ru!2 and timestamp 20071110040738 -->
+<div class="printfooter">
+Получено с <a href="dltzoi6z.html">http://blitzetcetera.org/index.php/%D0%91%D0%B0%D0%B7%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85:_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82_DBF</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%91%D0%B0%D0%B7%D1%8B_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85:_%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%82_DBF by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

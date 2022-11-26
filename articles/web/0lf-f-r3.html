@@ -1,0 +1,365 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Делаем чат" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Делаем чат — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Делаем_чат";
+var wgTitle = "Делаем чат";
+var wgAction = "view";
+var wgArticleId = "584";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3560";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Делаем_чат">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Делаем чат</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D0.B5.2C_.D1.82.D0.B8.D0.BF.D1.8B"><span class="tocnumber">1</span> <span class="toctext">Переменные, типы</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D1.81.D0.B5.D1.82.D0.B8"><span class="tocnumber">2</span> <span class="toctext">Создание сети</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9E.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B8.D0.B3.D1.80.D0.BE.D0.BA.D0.BE.D0.B2"><span class="tocnumber">3</span> <span class="toctext">Обновление игроков</span></a></li>
+<li class="toclevel-1"><a href="#.D0.A0.D0.B8.D1.81.D1.83.D0.B5.D0.BC"><span class="tocnumber">4</span> <span class="toctext">Рисуем</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9E.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.81.D0.B5.D1.82.D0.B8"><span class="tocnumber">5</span> <span class="toctext">Обновление сети</span></a></li>
+<li class="toclevel-1"><a href="#.D0.93.D0.BB.D0.B0.D0.B2.D0.BD.D1.8B.D0.B9_.D1.86.D0.B8.D0.BA.D0.BB"><span class="tocnumber">6</span> <span class="toctext">Главный цикл</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9F.D0.BE.D0.BB.D0.BD.D1.8B.D0.B9_.D0.BA.D0.BE.D0.B4"><span class="tocnumber">7</span> <span class="toctext">Полный код</span></a></li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D0.BC.D0.B5.D0.BD.D0.BD.D1.8B.D0.B5.2C_.D1.82.D0.B8.D0.BF.D1.8B"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=1" title="Править секцию: Переменные, типы">править</a>]</span> <span class="mw-headline">Переменные, типы</span></h2>
+<p>Для начала объявим переменные:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> chat$=<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #ffee00">;Строка чата</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> name$=<span style="color: #00ff66;">&quot;noname&quot;</span> <span style="color: #ffee00">;Имя чувака</span></div>
+<p>Люди будут храниться в типе:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> Player<br />
+<p><span style="color: #aaffff; font-weight: bold;">Field</span> name$,net_id<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Type</span></div>
+<p>Базар тоже в тип:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> Info<br />
+<p><span style="color: #aaffff; font-weight: bold;">Field</span> txt$<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Type</span></div>
+<a name=".D0.A1.D0.BE.D0.B7.D0.B4.D0.B0.D0.BD.D0.B8.D0.B5_.D1.81.D0.B5.D1.82.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=2" title="Править секцию: Создание сети">править</a>]</span> <span class="mw-headline">Создание сети</span></h2>
+<p>Вот здесь создаётся сетевая игра:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">newGame = <span style="color: #aaffff; font-weight: bold;">StartNetGame</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">If</span> newGame = <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+<span style="color: #aaffff; font-weight: bold;">end</span><span style="color: #ffee00">;не получилось</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">EndIf</span></div>
+<p>Узнаём имя
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">.label1:<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<p>name$=<span style="color: #aaffff; font-weight: bold;">Input</span>$<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Ваше имя? &quot;</span> <span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Goto</span> label1</div>
+<p>Локальный плеер
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> player.Player=<span style="color: #aaffff; font-weight: bold;">New</span> Player<br />
+<p>player\name=name$<br />
+player\net_id=<span style="color: #aaffff; font-weight: bold;">CreateNetPlayer</span><span style=" ">&#40;</span> name$ <span style=" ">&#41;</span><br />
+</p>
+myid=player\net_id</div>
+<p>Командой CreateNetPlayer() создаётся новый игрок в сети. И всем уже подключенным игрокам отправляется сообщение с типом 100 (оно отправляется автоматически) 
+</p>
+<a name=".D0.9E.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D0.B8.D0.B3.D1.80.D0.BE.D0.BA.D0.BE.D0.B2"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=3" title="Править секцию: Обновление игроков">править</a>]</span> <span class="mw-headline">Обновление игроков</span></h2>
+<p>Теперь нам нужна эта функция:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> UpdatePlayers<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">For</span> p.Player=<span style="color: #aaffff; font-weight: bold;">Each</span> Player<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">NetPlayerLocal</span><span style=" ">&#40;</span> p\net_id <span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Если гамер локальный, то набираем текст</span><br />
+key=<span style="color: #aaffff; font-weight: bold;">GetKey</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> key<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> key=<span style="color: #33ffdd;">13</span><br />
+<span style="color: #ffee00">;13=ENTER ОТСЫЛАЕМ ВСЕМ СВОЙ БАЗАР</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> chat$&lt;&gt;<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">SendNetMsg</span> <span style="color: #33ffdd;">2</span>,chat$,p\net_id,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>:info<span style=" ">&#40;</span>name$+<span style="color: #00ff66;">&quot;: &quot;</span>+chat$<span style=" ">&#41;</span><br />
+chat$=<span style="color: #00ff66;">&quot;&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">If</span> key=<span style="color: #33ffdd;">8</span><br />
+<span style="color: #ffee00">;удаляем последнюю букву</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>chat$<span style=" ">&#41;</span>&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> chat$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>chat$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>chat$<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">If</span> key&gt;=<span style="color: #33ffdd;">32</span><br />
+<span style="color: #ffee00">;пишем букву</span><br />
+chat$=chat$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>key<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функции набирается текст, и если нажат ENTER, то отправляем сообщение всем!
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SendNetMsg</span> <span style="color: #33ffdd;">2</span>,chat$,p\net_id,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span></div>
+<p>Отправляется сообщение с типом 2, содержащее текст переменной chat$, от игрока p\net_id. Отправляется оно всем, об этом свидетельствует первый нуль (вместо нуля можно написать ID другого юзера и тогда сообщение будет отправлено только ему).
+</p><p>И печатаем 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">info<span style=" ">&#40;</span>name$+<span style="color: #00ff66;">&quot;: &quot;</span>+chat$<span style=" ">&#41;</span></div>
+<a name=".D0.A0.D0.B8.D1.81.D1.83.D0.B5.D0.BC"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=4" title="Править секцию: Рисуем">править</a>]</span> <span class="mw-headline">Рисуем</span></h2>
+<p>Добавление строчки в тип
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> info<span style=" ">&#40;</span>t$<span style=" ">&#41;</span><br />
+<p>i.Info=<span style="color: #aaffff; font-weight: bold;">New</span> Info<br />
+i\txt$=t$<br />
+<span style="color: #aaffff; font-weight: bold;">Insert</span> i <span style="color: #aaffff; font-weight: bold;">Before</span> <span style="color: #aaffff; font-weight: bold;">First</span> Info<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Эта функция просто рисует.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> RenderAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span>,chat$<br />
+y=<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span>*<span style="color: #33ffdd;">2</span><br />
+r=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">;255</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i.Info=<span style="color: #aaffff; font-weight: bold;">Each</span> Info<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> r&lt;<span style="color: #33ffdd;">15</span><span style="color: #ffee00">;максимальное количество ctpok</span><br />
+<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">8</span>,y,i\txt$<br />
+y=y+<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+r=r<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+<span style="color: #aaffff; font-weight: bold;">Delete</span> i<br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<a name=".D0.9E.D0.B1.D0.BD.D0.BE.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_.D1.81.D0.B5.D1.82.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=5" title="Править секцию: Обновление сети">править</a>]</span> <span class="mw-headline">Обновление сети</span></h2>
+<p>Теперь самая главная функция.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">RecvNetMsg</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Select</span> <span style="color: #aaffff; font-weight: bold;">NetMsgType</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span>:<br />
+<span style="color: #ffee00">;Сообщение принято!!</span><br />
+info<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetPlayerName</span>$<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+<span style="color: #aaffff; font-weight: bold;">NetMsgData</span>$<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">100</span>:<br />
+<span style="color: #ffee00">;новый чувак влез к нам!!...</span><br />
+p.Player=<span style="color: #aaffff; font-weight: bold;">New</span> Player<br />
+p\net_id=<span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+p\name=<span style="color: #aaffff; font-weight: bold;">NetPlayerName</span>$<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Входит &quot;</span>+p\name <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">101</span>:<br />
+<span style="color: #ffee00">;...и ушел</span><br />
+p.Player=FindPlayer<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> p&lt;&gt;Null<br />
+info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Вышел &quot;</span>+p\name <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Delete</span> p<br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">102</span>:<br />
+<span style="color: #ffee00">;сервак закрылся</span><br />
+info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Теперь я сервер&quot;</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">200</span>:<br />
+<span style="color: #ffee00">;Must Die сети</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndGraphics</span><br />
+<span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #00ff66;">&quot;Сессия прервана&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Эта функция проверяет, есть ли какие-нибудь сообщения. Если есть, то по типу сообщения выполняем соответствующие действия. 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span>:<br />
+<p><span style="color: #ffee00">;Сообщение принято!!</span><br />
+</p>
+info<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetPlayerName</span>$<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+<span style="color: #aaffff; font-weight: bold;">NetMsgData</span>$<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span></div>
+<p>Почему именно 2???. Потому что в функции UpdatePlayers() отправляется сообщение 2-го типа
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SendNetMsg</span> <span style="color: #33ffdd;">2</span>,chat$,p\net_id,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span></div>
+<p>Можно было и 17 и 56 (до 99) придумать.
+</p><p>Это стандартные типы сообщений: 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">100</span>:<br />
+<p><span style="color: #ffee00">;новый чувак влез к нам!!...</span><br />
+когда получено это сообщение, чувак добавляется в тип.<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">101</span>:<br />
+<span style="color: #ffee00">;...и ушел</span><br />
+когда получено это сообщение, чувак удаляется из типа.<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">102</span>:<br />
+<span style="color: #ffee00">;сервак закрылся</span><br />
+когда получено это сообщение, Вы становитесь сервером<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">200</span>:<br />
+<span style="color: #ffee00">;Сессия прервана</span><br />
+</p>
+когда получено это сообщение, сеть накрылась <span style="color: #33ffdd;">4</span></div>
+<a name=".D0.93.D0.BB.D0.B0.D0.B2.D0.BD.D1.8B.D0.B9_.D1.86.D0.B8.D0.BA.D0.BB"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=6" title="Править секцию: Главный цикл">править</a>]</span> <span class="mw-headline">Главный цикл</span></h2>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">Keyhit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+UpdatePlayers<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+RenderAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Wend</span></div>
+<a name=".D0.9F.D0.BE.D0.BB.D0.BD.D1.8B.D0.B9_.D0.BA.D0.BE.D0.B4"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82&amp;action=edit&amp;section=7" title="Править секцию: Полный код">править</a>]</span> <span class="mw-headline">Полный код</span></h2>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;**********************************************</span><br />
+<p><span style="color: #ffee00">;ЧАТ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span><br />
+<span style="color: #ffee00">;АВТОР: TankSoft &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *</span><br />
+<span style="color: #ffee00">;МЫЛО&nbsp;: TankSoft@rambler.ru &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *</span><br />
+<span style="color: #ffee00">;САЙТ&nbsp;: http://TankSoft.narod.ru &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span><br />
+<span style="color: #ffee00">;**********************************************</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> chat$=<span style="color: #00ff66;">&quot;&quot;</span> &nbsp;<span style="color: #ffee00">;Строка чата</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> name$=<span style="color: #00ff66;">&quot;noname&quot;</span><span style="color: #ffee00">;Имя чувака</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> Player<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> name$,net_id<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> Info<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> txt$<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #ffee00">;===================================</span><br />
+<span style="color: #ffee00">;Стартуем сетевую гаму</span><br />
+newGame = <span style="color: #aaffff; font-weight: bold;">StartNetGame</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> newGame = <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span><span style="color: #ffee00">;не получилось</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffee00">;===================================</span><br />
+<br />
+<span style="color: #ffee00">;===================================</span><br />
+<span style="color: #ffee00">;Узнаём имя</span><br />
+.label1:<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+name$=<span style="color: #aaffff; font-weight: bold;">Input</span>$<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Ваше имя? &quot;</span> <span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Goto</span> label1<br />
+<span style="color: #ffee00">;===================================</span><br />
+<br />
+<span style="color: #ffee00">;===================================</span><br />
+<span style="color: #ffee00">;Локальный плеер</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> player.Player=<span style="color: #aaffff; font-weight: bold;">New</span> Player<br />
+player\name=name$<br />
+player\net_id=<span style="color: #aaffff; font-weight: bold;">CreateNetPlayer</span><span style=" ">&#40;</span> name$ <span style=" ">&#41;</span><br />
+myid=player\net_id<br />
+<span style="color: #ffee00">;===================================</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+&nbsp;UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;UpdatePlayers<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<br />
+&nbsp;RenderAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">RecvNetMsg</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Select</span> <span style="color: #aaffff; font-weight: bold;">NetMsgType</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span>:<br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Сообщение принято!!</span><br />
+&nbsp; &nbsp;info<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetPlayerName</span>$<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+<span style="color: #aaffff; font-weight: bold;">NetMsgData</span>$<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">100</span>:<br />
+&nbsp; &nbsp;<span style="color: #ffee00">;новый чувак влез к нам!!...</span><br />
+&nbsp; &nbsp;p.Player=<span style="color: #aaffff; font-weight: bold;">New</span> Player<br />
+&nbsp; &nbsp;p\net_id=<span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;p\name=<span style="color: #aaffff; font-weight: bold;">NetPlayerName</span>$<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp;info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Входит &quot;</span>+p\name <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">101</span>:<br />
+&nbsp; &nbsp;<span style="color: #ffee00">;...и ушел</span><br />
+&nbsp; &nbsp;p.Player=FindPlayer<span style=" ">&#40;</span> <span style="color: #aaffff; font-weight: bold;">NetMsgFrom</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> p&lt;&gt;Null<br />
+&nbsp; &nbsp; info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Вышел &quot;</span>+p\name <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Delete</span> p<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">102</span>:<br />
+&nbsp; &nbsp;<span style="color: #ffee00">;сервак закрылся</span><br />
+&nbsp; &nbsp;info<span style=" ">&#40;</span> <span style="color: #00ff66;">&quot;Теперь я сервер&quot;</span> <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">200</span>:<br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Must Die сети</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">EndGraphics</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #00ff66;">&quot;Сессия прервана&quot;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">WaitKey</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> UpdatePlayers<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> p.Player=<span style="color: #aaffff; font-weight: bold;">Each</span> Player<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">NetPlayerLocal</span><span style=" ">&#40;</span> p\net_id <span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Если гамер локальный, то набираем текст</span><br />
+&nbsp; &nbsp;key=<span style="color: #aaffff; font-weight: bold;">GetKey</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> key<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> key=<span style="color: #33ffdd;">13</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;13=ENTER ОТСЫЛАЕМ ВСЕМ СВОЙ БАЗАР</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> chat$&lt;&gt;<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">SendNetMsg</span> <span style="color: #33ffdd;">2</span>,chat$,p\net_id,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>:info<span style=" ">&#40;</span>name$+<span style="color: #00ff66;">&quot;: &quot;</span>+chat$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;chat$=<span style="color: #00ff66;">&quot;&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">If</span> key=<span style="color: #33ffdd;">8</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;удаляем последнюю букву</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>chat$<span style=" ">&#41;</span>&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> chat$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>chat$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>chat$<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">If</span> key&gt;=<span style="color: #33ffdd;">32</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;пишем букву</span><br />
+&nbsp; &nbsp; &nbsp;chat$=chat$+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>key<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> info<span style=" ">&#40;</span>t$<span style=" ">&#41;</span><br />
+&nbsp;i.Info=<span style="color: #aaffff; font-weight: bold;">New</span> Info<br />
+&nbsp;i\txt$=t$<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Insert</span> i <span style="color: #aaffff; font-weight: bold;">Before</span> <span style="color: #aaffff; font-weight: bold;">First</span> Info<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> RenderAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span>,chat$<br />
+&nbsp;y=<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span>*<span style="color: #33ffdd;">2</span><br />
+&nbsp;r=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">;255</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> i.Info=<span style="color: #aaffff; font-weight: bold;">Each</span> Info<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> r&lt;<span style="color: #33ffdd;">15</span><span style="color: #ffee00">;максимальное количество ctpok</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">8</span>,y,i\txt$<br />
+&nbsp; &nbsp;y=y+<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;r=r<span style="color: #33ffdd;">+1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Delete</span> i<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> FindPlayer.Player<span style=" ">&#40;</span> id <span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> p.Player=<span style="color: #aaffff; font-weight: bold;">Each</span> Player<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> p\net_id=id <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> p<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/8/8f/Chat.bb" class="internal" title="Chat.bb">скачать исходный код</a></div>
+<hr />
+<p>Автор: TankSoft (tanksoft@rambler.ru)
+</p><!-- 
+Pre-expand include size: 3239 bytes
+Post-expand include size: 185 bytes
+Template argument size: 14 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:584-0!1!0!!ru!2 and timestamp 20071110040843 -->
+<div class="printfooter">
+Получено с <a href="0lf-f-r3.html">http://blitzetcetera.org/index.php/%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%94%D0%B5%D0%BB%D0%B0%D0%B5%D0%BC_%D1%87%D0%B0%D1%82 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

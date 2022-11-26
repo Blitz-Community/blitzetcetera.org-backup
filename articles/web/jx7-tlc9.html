@@ -1,0 +1,1206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Как сделать «Asteroids» за час,MANIAK dobrii" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Как сделать «Asteroids» за час — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Как_сделать_«Asteroids»_за_час";
+var wgTitle = "Как сделать «Asteroids» за час";
+var wgAction = "view";
+var wgArticleId = "637";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3541";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Как_сделать_«Asteroids»_за_час">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Как сделать «Asteroids» за час</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">1</span> <span class="toctext">Введение</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9E.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.B8.D0.B5_.D1.8D.D1.82.D0.B0.D0.BF.D0.BE.D0.B2_.D1.80.D0.B0.D0.B7.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B8"><span class="tocnumber">2</span> <span class="toctext">Описание этапов разработки</span></a></li>
+<li class="toclevel-1"><a href="#Asteroid_Wars_-_.D0.9E.D0.B1.D0.B7.D0.BE.D1.80"><span class="tocnumber">3</span> <span class="toctext">Asteroid Wars - Обзор</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.A3.D0.BF.D1.80.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">3.1</span> <span class="toctext">Управление</span></a></li>
+<li class="toclevel-2"><a href="#.D0.93.D0.B5.D0.B9.D0.BC.D0.BF.D0.BB.D1.8D.D0.B9"><span class="tocnumber">3.2</span> <span class="toctext">Геймплэй</span></a></li>
+<li class="toclevel-2"><a href="#.D0.A6.D0.B5.D0.BB.D1.8C"><span class="tocnumber">3.3</span> <span class="toctext">Цель</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.A1.D1.82.D1.80.D1.83.D0.BA.D1.82.D1.83.D1.80.D1.8B_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85:"><span class="tocnumber">4</span> <span class="toctext">Структуры данных:</span></a></li>
+<li class="toclevel-1"><a href="#.D0.9D.D0.B0.D1.87.D0.BD.D0.B5.D0.BC_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D1.82.D1.8C"><span class="tocnumber">5</span> <span class="toctext">Начнем программировать</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Ast-TSpaceObject.bmx"><span class="tocnumber">5.1</span> <span class="toctext">Ast-TSpaceObject.bmx</span></a></li>
+<li class="toclevel-2"><a href="#AsteroidWars.bmx"><span class="tocnumber">5.2</span> <span class="toctext">AsteroidWars.bmx</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShip.bmx"><span class="tocnumber">5.3</span> <span class="toctext">Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShip.bmx_2"><span class="tocnumber">5.4</span> <span class="toctext">Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShip.bmx_3"><span class="tocnumber">5.5</span> <span class="toctext">Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShip.bmx_4"><span class="tocnumber">5.6</span> <span class="toctext">Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#AsteroidWars.bmx_2"><span class="tocnumber">5.7</span> <span class="toctext">AsteroidWars.bmx</span></a></li>
+<li class="toclevel-2"><a href="#.D0.92_.D1.84.D0.B0.D0.B9.D0.BB.D0.B5_Ast-TShip.bmx"><span class="tocnumber">5.8</span> <span class="toctext">В файле Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#.D0.92_.D1.84.D0.B0.D0.B9.D0.BB.D0.B5_Ast-TShip.bmx_.2C.D0.BC.D0.B5.D1.82.D0.BE.D0.B4.D0.B5_Update.28.29"><span class="tocnumber">5.9</span> <span class="toctext">В файле Ast-TShip.bmx ,методе Update()</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShip.bmx_5"><span class="tocnumber">5.10</span> <span class="toctext">Ast-TShip.bmx</span></a></li>
+<li class="toclevel-2"><a href="#Ast-TShot.bmx"><span class="tocnumber">5.11</span> <span class="toctext">Ast-TShot.bmx</span></a></li>
+<li class="toclevel-2"><a href="#AsteroidWars.bmx_3"><span class="tocnumber">5.12</span> <span class="toctext">AsteroidWars.bmx</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.92.D0.B2.D0.B5.D0.B4.D0.B5.D0.BD.D0.B8.D0.B5"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=1" title="Править секцию: Введение">править</a>]</span> <span class="mw-headline">Введение</span></h2>
+<p>Тут ты узнаешь как сделать клон "asteroids" за час. Шаг за шагом, с подробными объяснениями описано программирование и разработка игры. Если ты новичок в BlitzMax, то эта  статья для тебя.
+</p><p>Для начала нам нужен план действий. Для нашей игры он будет не очень длинным. Во время разработки даже такого маленького плана, нужно быть очень внимательным, т.к. разработка плана это очень важный этап разработки игры, и если упустить какую-либо деталь, то, затем, в процессе программирования это может привести к переписыванию игры с самого начала.
+</p>
+<a name=".D0.9E.D0.BF.D0.B8.D1.81.D0.B0.D0.BD.D0.B8.D0.B5_.D1.8D.D1.82.D0.B0.D0.BF.D0.BE.D0.B2_.D1.80.D0.B0.D0.B7.D1.80.D0.B0.D0.B1.D0.BE.D1.82.D0.BA.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=2" title="Править секцию: Описание этапов разработки">править</a>]</span> <span class="mw-headline">Описание этапов разработки</span></h2>
+<ul><li>Визуальный (разработка)
+<ul><li>Описание того, как будет играться в игру 
+</li><li>Цель игры
+</li></ul>
+</li><li>Нарисовать на бумаге "скриншоты" будущей игры
+</li><li>Технический (Программирование)
+<ul><li>Описание типов
+</li><li>Описание методов и функций
+</li><li>Создать файлы медиа
+</li></ul>
+</li></ul>
+<p>В игре побольше, план был бы гораздо сложнее, с множеством различных стадий. Итак, запускай секундомер, и продолжай читать. 
+</p>
+<a name="Asteroid_Wars_-_.D0.9E.D0.B1.D0.B7.D0.BE.D1.80"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=3" title="Править секцию: Asteroid Wars - Обзор">править</a>]</span> <span class="mw-headline">Asteroid Wars - Обзор</span></h2>
+<p>О чем эта игра? Эта игра похожа на классический "asteroids". Наша версия будет простой и динамичной. 
+</p>
+<a name=".D0.A3.D0.BF.D1.80.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=4" title="Править секцию: Управление">править</a>]</span> <span class="mw-headline">Управление</span></h3>
+<p>Игрок может поворачивать корабль по и против часовой стрелки клавишами вправо и влево. Клавишами вверх и вниз управляется ускорение вперед и назад(80% от ускорения вперед). Корабль может стрелять вперед с помощью клавиши пробел. 
+</p>
+<a name=".D0.93.D0.B5.D0.B9.D0.BC.D0.BF.D0.BB.D1.8D.D0.B9"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=5" title="Править секцию: Геймплэй">править</a>]</span> <span class="mw-headline">Геймплэй</span></h3>
+<p>Что будет делать игрок? Игровое действие происходит на различных уровнях, на каждом из которых, главной целью является уничтожение камней. Камни бывают трех размеров: большой, средний и маленький. С началом каждого уровня у игрока есть всего один корабль. При попадании снаряда в камень, он разлетаются на камни меньшего размера, исключая самые маленькие камни - они превращаться в пыль. В первом уровне всего один камень среднего размера, но, с прохождением на следующие уровни, количество и размер камней увеличиваются. Число уровней бесконечно. Если корабль сталкивается с камнем, то игра заканчивается, "жизнь" только одна… 
+</p>
+<a name=".D0.A6.D0.B5.D0.BB.D1.8C"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=6" title="Править секцию: Цель">править</a>]</span> <span class="mw-headline">Цель</span></h3>
+<p>Главная цель игры - заработать наибольшее количество очков. 
+</p><p>Разработка первой половины плана закончена. Теперь нарисуй на листке бумаги несколько картинок того, что, как ты думаешь, должно происходить на экране во время игры - это пригодиться на следующих шагах. Я не буду рассказывать как рисовать картинки:. Теперь пришло время приступить к техническому этапу разработки.
+</p>
+<a name=".D0.A1.D1.82.D1.80.D1.83.D0.BA.D1.82.D1.83.D1.80.D1.8B_.D0.B4.D0.B0.D0.BD.D0.BD.D1.8B.D1.85:"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=7" title="Править секцию: Структуры данных:">править</a>]</span> <span class="mw-headline">Структуры данных:</span></h2>
+<p>TShip, TShot, TRock - все расширенные из TSpaceObject. Я решил, что для каждого из типов будет свой файл "ИмяТипа.bmx". Это не необходимо для маленькой игры, но даст коду "структурность" и спасет много времени отладки. В файле AsteroidWars, будет храниться основной цикл игры, его и надо будет запускать.
+</p><p>Методы и функции объекта SpaceObject: Create - Функция,  New,  Update,  UpdateAll - Функция,  Destroy,  Draw. Остальное мы добавим по мере надобности. 
+</p>
+<a name=".D0.9D.D0.B0.D1.87.D0.BD.D0.B5.D0.BC_.D0.BF.D1.80.D0.BE.D0.B3.D1.80.D0.B0.D0.BC.D0.BC.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D1.82.D1.8C"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=8" title="Править секцию: Начнем программировать">править</a>]</span> <span class="mw-headline">Начнем программировать</span></h2>
+<p>Начнем с того, что создадим все необходимые .bmx-файлы. Создай и открой "Ast-TSpaceObject.bmx".
+</p><p>Определим поля типа. Нам нужно:
+</p>
+<ul><li>X и Y - координаты
+</li><li>Direction - угол поворота
+</li><li>Thrust - скорость в текущем направлении.
+</li></ul>
+<p>Вставим методы, но пока оставим их пустыми. Не закрывай этот файл - потом можно будет быстро к нему обратиться. 
+</p>
+<a name="Ast-TSpaceObject.bmx"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=9" title="Править секцию: Ast-TSpaceObject.bmx">править</a>]</span> <span class="mw-headline">Ast-TSpaceObject.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TSpaceObject <span style="color: #ffff00; font-weight: bold;">Abstract</span><br />
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> X#,Y#<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> XSpeed#,YSpeed#<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> Direction<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Создай файлы Ast-TShip.bmx, Ast-TRock.bmx, Ast-TShot.bmx и AsteroidWars.bmx. Открой их все, переключись на AsteroidWars.bmx и подключи остальные(Ast-TSpaceObject, Ast-TShip, Ast-TRock и Ast-TShot). 
+</p>
+<a name="AsteroidWars.bmx"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=10" title="Править секцию: AsteroidWars.bmx">править</a>]</span> <span class="mw-headline">AsteroidWars.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TSpaceObject.bmx&quot;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShip.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShot.bmx&quot;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TRock.bmx&quot;</span></div>
+<p>Переключайся на TShip и декларируй там тип (угадай с каким именем), расширенный из(угадай опять). 
+</p>
+<a name="Ast-TShip.bmx"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=11" title="Править секцию: Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShip <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Будешь создавать свою игру - используй туже систему с несколькими файлами. Если бы игра была сделана в одном файле, то было бы гораздо трудней в ней разбираться.
+</p><p>Не думай, что в типе TShip чего-то недостаточно, TShip расширен из TSpaceObject и, следовательно, содержит все его поля. Я начну с функции Create() - она создает новый экземпляр типа корабля и добавляет его в список. Этот список надо где-то хранить, для этого в типе TShip создадим глобальную переменную List типа TList. При первом использовании списка его нужно создать. У нас в игре будет только один игрок, так что не обязательно создавать список и добавлять в него корабль, но, в случае, если кто-то собирается добавить ещё игроков, AI, врагов или даже мультиплэер то это необходимо. Необходимо также определить начальные координаты - начальныйX и начальныйY. Создай метод New() и впиши в него определение начальных координат. New() вызывается когда создается новый экземпляр типа, в котором он находится.
+</p>
+<a name="Ast-TShip.bmx_2"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=12" title="Править секцию: Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShip <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:Timage<br />
+&nbsp; <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; Ship:TShip = <span style="color: #ffff00; font-weight: bold;">New</span> TShip &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Ship <span style="color: #B1E7EB;">'Добавляем Ship в конец списка List</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> <span style="color: #ffff00; font-weight: bold;">New</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; X = <span style="color: #FFFFFF;">300</span><br />
+&nbsp; Y = <span style="color: #FFFFFF;">400</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Время передохнуть… Следующий этап может занять вечность, но я уверен, что если ты сосредоточишься, то успеешь завершить его за 20мин. 30сек. Запусти свой любимый редактор изображений. Под любимым я имею в виду тот, в котором ты умеешь работать лучше всего. Как создавать медиа - это твое дело, далее лишь советы. Создай новую картинку, по размеру с корабль, я сделаю её 25x25 пикселей. На черном фоне нарисуй космический корабль, смотрящий вправо. Сохрани его как "Ast-Ship.png", если не можешь в .png, то попробуй jpg или bmp. Осталось ещё две картинки - ракета и скала. Создай картинку 20x10, это будет наша ракета. Опять же на черном фоне рисуй ракету, смотрящую вправо, и сохрани её в ту же папку, что и "Ast-Ship.png" под именем "Ast-Missile.png". Теперь рисуем скалу, она должна быть гораздо больше корабля. Сделаем только одну большую скалу, а остальные получим масштабированием первой.  На черном фоне, 100x100, рисуем камень - текстура камня или что-нибудь ещё. Вот примеры:
+</p>
+<table class="gallery" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><div class="gallerybox" style="width: 150px;">
+			<div class="thumb" style="padding: 13px 0; width: 150px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Ast-Ship.png" title="Изображение:Ast-Ship.png"><img src="ji3zwyhc.png" width="120" height="120" alt="" /></a></div>
+			<div class="gallerytext">
+			</div>
+		</div></td>
+		<td><div class="gallerybox" style="width: 150px;">
+			<div class="thumb" style="padding: 43px 0; width: 150px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Ast-Missile.png" title="Изображение:Ast-Missile.png"><img src="86_cj7e5.png" width="120" height="60" alt="" /></a></div>
+			<div class="gallerytext">
+			</div>
+		</div></td>
+		<td><div class="gallerybox" style="width: 150px;">
+			<div class="thumb" style="padding: 13px 0; width: 150px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Ast-Rock.png" title="Изображение:Ast-Rock.png"><img src="aabmo546.png" width="120" height="120" alt="" /></a></div>
+			<div class="gallerytext">
+			</div>
+		</div></td>
+	</tr>
+</table>
+<p>Теперь пропишем загрузку и центровку(MidHandleImage( Image )) "Ast-Ship.png" в функции create(). Эта картинка - глобальная, и все "новоиспеченные" корабли будут выглядеть одинаково. Создай метод Draw(), который будет поворачивать, позиционировать и отображать наш корабль на экране.
+</p>
+<a name="Ast-TShip.bmx_3"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=13" title="Править секцию: Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShip <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span> <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:Timage<br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">New</span> TShip &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Ship <span style="color: #B1E7EB;">' Добавляем Ship в конец списка List</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image <br />
+&nbsp; &nbsp;Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Ship.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><span style="color: #B1E7EB;">'Центруем</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> <span style="color: #ffff00; font-weight: bold;">New</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Начальные значения</span><br />
+&nbsp; X = <span style="color: #FFFFFF;">300</span><br />
+&nbsp; Y = <span style="color: #FFFFFF;">400</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Direction <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Теперь поправим метод Update() и функцию UpdateAll(). В Update() мы будем обрабатывать ввод пользователя, рисовать корабль и обновлять его движение. Можно проверить работоспособность программы, добавив вызов Draw() в метод Update. В функции UpdateAll() мы будем перебирать каждый корабль, несмотря на то, что  он у нас всего один. Это пригодиться в будущем, если понадобиться добавить ещё несколько штук. Создадим Each-in-цикл со списком List и заставим каждый объект-корабль выполнять метод Update().
+</p>
+<a name="Ast-TShip.bmx_4"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=14" title="Править секцию: Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShip <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span> <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:Timage<br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">New</span> TShip &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Ship <span style="color: #B1E7EB;">' Добавляем Ship в конец списка List</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image <br />
+&nbsp; &nbsp;Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Ship.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><span style="color: #B1E7EB;">'Центруем</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> <span style="color: #ffff00; font-weight: bold;">New</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Начальные значения</span><br />
+&nbsp; X = <span style="color: #FFFFFF;">300</span><br />
+&nbsp; Y = <span style="color: #FFFFFF;">400</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Direction <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #B1E7EB;">'Нужно добавить:</span><br />
+&nbsp; <span style="color: #B1E7EB;">'GetInput, ввод пользователя</span><br />
+&nbsp; <span style="color: #B1E7EB;">'Update physics, движение корабля</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">EachIn</span> List<br />
+&nbsp; &nbsp;Ship.<span style="">Update</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Всё понятно? Вопросы есть? Не стесняйся спрашивать на форумах, только задавай конкретные вопросы и никогда не проси написать что-то за тебя (исключая случаи с небольшим куском кода, или алгоритма) (зам. Пер.).
+</p><p>Ок, посмотрим, что у нас уже есть. Переключись на главный файл. Установи графический режим (я выбрал 800,600,0). Вызови Create() из типа TShip. Помни, что чтобы запустить функцию, находящуюся в типе, нужно вызывать её из типа, т.е. ИмяТипа.Функция(), что в нашем случае будет TShip.Create(). Создай главный цикл, выход из которого происходит при нажатии на Escape. В центре этого цикла вставь вызов UpdateAll(), а в конце - Flip и Cls. 
+</p>
+<a name="AsteroidWars.bmx_2"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=15" title="Править секцию: AsteroidWars.bmx">править</a>]</span> <span class="mw-headline">AsteroidWars.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TSpaceObject.bmx&quot;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShip.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShot.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TRock.bmx&quot;</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">800</span>,<span style="color: #FFFFFF;">600</span>,<span style="color: #FFFFFF;">0</span><br />
+<br />
+TShip.<span style="">Create</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #B1E7EB;">'Главный цикл</span><br />
+<span style="color: #ffff00; font-weight: bold;">Repeat</span><span style="color: #B1E7EB;">' - - - - - - - - - - - - - - - - - </span><br />
+<br />
+&nbsp;TShip.<span style="">UpdateAll</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Escape<span style=" ">&#41;</span><span style="color: #B1E7EB;">'- - - - - - - -</span></div>
+<p>Запускай!  Пока всё, что ты можешь делать - это любоваться на свой, застывший в центре  экрана, корабль. Но это только начало дальше - лучше.
+</p><p>Теперь добавим интерактивности. Переключайся опять на Ast-TShip.bmx. Сейчас будем встраивать физическую модель и управление. Этот шаг не простой, но очень важный, я постараюсь объяснить всё настолько доступно, на сколько смогу. Тебе необходимы хотя бы минимальные знания о векторах, т.к. я о них тебе рассказывать не буду - тема для другой статьи. Шаг первый,  вот код метода Update():
+</p>
+<a name=".D0.92_.D1.84.D0.B0.D0.B9.D0.BB.D0.B5_Ast-TShip.bmx"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=16" title="Править секцию: В файле Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">В файле Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p>&nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #B1E7EB;">'Возможные действия</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Up,Down,<span style="color: #ffff00; font-weight: bold;">Left</span>,<span style="color: #ffff00; font-weight: bold;">Right</span>,Fire<br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Действиями управляет пользователь</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Up<span style=" ">&#41;</span> &nbsp; &nbsp; Up &nbsp; = <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Down<span style=" ">&#41;</span> &nbsp; Down &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Left<span style=" ">&#41;</span> &nbsp; <span style="color: #ffff00; font-weight: bold;">Left</span> &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Right<span style=" ">&#41;</span> &nbsp;<span style="color: #ffff00; font-weight: bold;">Right</span> &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span> <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Space<span style=" ">&#41;</span> &nbsp; Fire = <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">' ФИЗИЧЕСКАЯ МОДЕЛЬ </span><br />
+&nbsp; <span style="color: #B1E7EB;">'---------------------------------------</span><br />
+&nbsp; <span style="color: #B1E7EB;">'Добавь это, чтобы добавить физическую модель</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Acceleration# &nbsp; = <span style="color: #FFFFFF;">0.04</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Friction# &nbsp; &nbsp;= <span style="color: #FFFFFF;">0.014</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TopSpeed# &nbsp; &nbsp;= <span style="color: #FFFFFF;">2.0</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnAcceleration# = <span style="color: #FFFFFF;">0.18</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnFriction# &nbsp; = <span style="color: #FFFFFF;">0.06</span> &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnMax# &nbsp; &nbsp; = <span style="color: #FFFFFF;">3</span><br />
+&nbsp;<br />
+</p>
+&nbsp; <span style="color: #B1E7EB;">'---------------------------------------</span></div>
+<p><br />	
+Переменные Left,Right,Up,Down и Fire я добавил для того, чтобы отделить действия от клавиш. В нашем случае это не необходимо, но если добавить игроков или AI… Пока понятно, не так ли? Надеюсь, что да, потому что основное впереди. Шаг два:
+</p>
+<a name=".D0.92_.D1.84.D0.B0.D0.B9.D0.BB.D0.B5_Ast-TShip.bmx_.2C.D0.BC.D0.B5.D1.82.D0.BE.D0.B4.D0.B5_Update.28.29"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=17" title="Править секцию: В файле Ast-TShip.bmx ,методе Update()">править</a>]</span> <span class="mw-headline">В файле Ast-TShip.bmx ,методе Update()</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'ФИЗИКА ДВИЖЕНИЯ</span><br />
+<p>&nbsp; <span style="color: #B1E7EB;">'-------------------------------------- &nbsp; &nbsp; &nbsp; &nbsp;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Up<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Создаем и прибавляем вектор ускорения к</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'вектору скорости</span><br />
+&nbsp; &nbsp;XSpeed:+ <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; &nbsp;YSpeed:+ <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Down<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' Создаем и вычитаем вектор ускорения из</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' вектора скорости</span><br />
+&nbsp; &nbsp;XSpeed:- <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; &nbsp;YSpeed:- <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Считаем длину вектора скорости</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> SpeedVectorLength# = <span style="color: #ffff00; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>XSpeed*XSpeed + YSpeed*YSpeed<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Если движемся, то уменьшаем скорость на величину трения</span><br />
+&nbsp; &nbsp;XSpeed:- <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+&nbsp; &nbsp;YSpeed:- <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; TopSpeed<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Если скорость больше максимальной, то уменьшаем</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'её до максимальной, хранящейся в TopSpeed</span><br />
+&nbsp; &nbsp;XSpeed:+ <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;YSpeed:+ <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Двигаем</span><br />
+&nbsp; X:+ XSpeed<br />
+&nbsp; Y:+ YSpeed<br />
+&nbsp; &nbsp; &nbsp;<br />
+&nbsp; <span style="color: #B1E7EB;">'Rem 'Рисуем векторы &nbsp;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> <span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span> <span style="color: #B1E7EB;">'Красный </span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X,Y + YSpeed*<span style="color: #FFFFFF;">50</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span> <span style="color: #B1E7EB;">'Зеленый</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X+XSpeed*<span style="color: #FFFFFF;">50</span>,Y<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span> <span style="color: #B1E7EB;">'Синий</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Это длина вектора скорости</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Он построен сложением Красного и зеленого векторов</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X+XSpeed*<span style="color: #FFFFFF;">50</span>,Y+YSpeed*<span style="color: #FFFFFF;">50</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span><br />
+</p>
+&nbsp; <span style="color: #B1E7EB;">'EndRem</span></div>
+<p>Ниже будет объяснение всего кода, а сейчас о поворотах. Шаг три:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'ФИЗИКА ПОВОРОТА</span><br />
+<p>&nbsp; <span style="color: #B1E7EB;">'--------------------------------------</span><br />
+&nbsp; <span style="color: #B1E7EB;">' &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Left</span> TurnSpeed:-TurnAcceleration<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Right</span> TurnSpeed:+TurnAcceleration &nbsp; <br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Лимит скорости поворота в TurnMax</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &gt; &nbsp;TurnMax TurnSpeed = &nbsp;TurnMax<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; -TurnMax TurnSpeed = -TurnMax<br />
+&nbsp; &nbsp; <br />
+&nbsp; Direction:+TurnSpeed<br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Direction &gt; <span style="color: #FFFFFF;">360</span> &nbsp;Direction:- <span style="color: #FFFFFF;">360</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Direction &lt; <span style="color: #FFFFFF;">0</span> &nbsp;Direction:+ <span style="color: #FFFFFF;">360</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Применяем воздействие трения на скорость поворота</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &gt; &nbsp;TurnFriction TurnSpeed:- TurnFriction<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; -TurnFriction TurnSpeed:+ TurnFriction<br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Если трение больше скорости поворота, то прекращаем поворот</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; TurnFriction <span style="color: #ffff00; font-weight: bold;">And</span> TurnSpeed &gt; -TurnFriction TurnSpeed =<span style="color: #FFFFFF;">0</span><br />
+&nbsp; <br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span></div>
+<p>("если ты закончил 8-ой класс средней школы, то следующие 2 абзаца можно не читать" - прим. Пер.)
+Перед тем как разбираться с вышеприведенным кодом, я бы посоветовал тебе его запустить и посмотреть что получилось.
+</p><p>Всё вышеописанное можно обозначить одним словом: Векторы. Векторы - ключ к физике. Векторы работают и в 2D и в 3D. Я попытаюсь объяснить, что я натворил без объяснения того, что такое вектор, так что… ты поймешь. 
+</p><p>Когда мы жмем Вверх или Вниз, мы хотим, чтобы двигатель корабля подтолкнул его вперед (или назад). Этот "толчок", происходящий за некоторое время, называется силой. Что же такое сила? Сила - это что-то, что ускоряет физические тела (предметы). Ты, скорее всего, уже видел уравнение: Сила = Масса x Ускорение. Это значит, что двигатель придаст большее ускорение более легкому кораблю, чем тяжелому, если действовать на них он будет с одинаковой силой. Из вышеприведенного уравнения имеем: Ускорение = Сила/Масса. У нас в игре Масса равна 1, и её можно опустить в уравнении. Таким образом, в нашей игре двигатель придает кораблю ускорение равное силе. Посмотрим код:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> Up<br />
+<p>&nbsp;XSpeed:+ <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp;YSpeed:+ <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>XSpeed и YSpeed - это значения вектора скорости корабля. В этом случае ускорение - это "сила толчка двигателя" Я беру его (ускорения) значение и, учитывая, что это векторная величина, в зависимости от угла направления, прибавляю его к вектору скорости.
+Если бы я использовал какую-нибудь физическую библиотеку, то получилось бы что-то похожее на это: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> Up<br />
+<p>&nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Thruster:Vector = NewVector<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;Thruster.<span style="">SetLength</span><span style=" ">&#40;</span> Acceleration <span style=" ">&#41;</span><br />
+&nbsp;Thruster.<span style="">SetDir</span><span style=" ">&#40;</span> Direction <span style=" ">&#41;</span><br />
+&nbsp;Speed.<span style="">Add</span><span style=" ">&#40;</span> Thruster <span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>Чтобы уменьшить скорость нужно уменьшить длину вектора скорости, а не сами его значения (XSpeed и YSpeed). Чтобы получить длину вектора, используем теорему Пифагора. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Local</span> SpeedVectorLength# = <span style="color: #ffff00; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>XSpeed*XSpeed + YSpeed*YSpeed<span style=" ">&#41;</span></div>
+<p>Трение применяется к скорости так: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; <span style="color: #FFFFFF;">0</span><br />
+<p>&nbsp;XSpeed:- <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+&nbsp;YSpeed:- <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>Выражение XSpeed/SpeedVectorLength создает единичный вектор, сонаправленный вектору скорости. Это значит, что длина полученного вектора равна единице, а направление остается тем же. Затем я умножаю полученный вектор на силу Трения и получаю вектор, сонаправленный вектору скорости, но уже с длиной равной силе трения. После чего я вычитаю из вектора скорости полученный вектор. С библиотекой векторов это было бы похоже на это:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Speed.<span style="">Sub</span><span style=" ">&#40;</span> Speed.<span style="">Unit</span><span style=" ">&#40;</span><span style=" ">&#41;</span>.<span style="">Multiply</span><span style=" ">&#40;</span>Friction<span style=" ">&#41;</span> <span style=" ">&#41;</span></div>
+<p>Или
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Speed.<span style="">Decrease</span><span style=" ">&#40;</span> Friction <span style=" ">&#41;</span></div>
+<p>Нам также нужно ввести предел скорости. В реальном мире этот предел зависел бы от трения, которого нет в космосе. В мире нашей игры мы диктуем законы физики, так что мы будем использовать одновременно и трение и предел скорости.  
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; TopSpeed<br />
+<p>&nbsp;XSpeed:+ <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+&nbsp;YSpeed:+ <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>Если скорость превышает определенный предел, то мы вычитаем из неё ту величину, на которую она этот предел превышает, (TopSpeed - SpeedVectorLength). Это то же самое, что и трение, с одним замечанием, что сила трения зависит от скорости. С библиотекой векторов:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> Speed.<span style="">Length</span><span style=" ">&#40;</span><span style=" ">&#41;</span> &gt; MaxSpeed <span style="color: #ffff00; font-weight: bold;">Then</span> Speed.<span style="">SetLength</span><span style=" ">&#40;</span> MaxSpeed <span style=" ">&#41;</span></div>
+<p>Последний шаг - изменить позицию корабля в зависимости от скорости 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">X:+ XSpeed<br />
+Y:+ Yspeed</div>
+<p>С библиотекой векторов:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Position.<span style="">Add</span><span style=" ">&#40;</span> Speed <span style=" ">&#41;</span></div>
+<p>С поворотом дело обстоит проще, так что я не буду про него писать. Поиграй с шестью переменными (Acceleration# и т.д.), и выбери наилучший вариант. Такая физическая модель подходит для большинства игр с видом сверху. Если делаешь гонки, то я посоветую увеличить TurnAcceleration#, чтобы получить более поддающееся управление, сила трения поворота (TurnFriction#), в данном случае, будет равна качеству сцепления с дорогой. 
+</p>
+<a name="Ast-TShip.bmx_5"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=18" title="Править секцию: Ast-TShip.bmx">править</a>]</span> <span class="mw-headline">Ast-TShip.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShip <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:Timage<br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Field</span> TurnSpeed#<br />
+&nbsp; <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">New</span> TShip &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Ship <span style="color: #B1E7EB;">' Добавляем Ship в конец списка List</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image <br />
+&nbsp; &nbsp;Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Ship.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><span style="color: #B1E7EB;">'Центруем</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> <span style="color: #ffff00; font-weight: bold;">New</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Начальные значения</span><br />
+&nbsp; X = <span style="color: #FFFFFF;">300</span><br />
+&nbsp; Y = <span style="color: #FFFFFF;">400</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Direction <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #B1E7EB;">'Возможные действия</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Up,Down,<span style="color: #ffff00; font-weight: bold;">Left</span>,<span style="color: #ffff00; font-weight: bold;">Right</span>,Fire<br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">' Действиями управляет пользователь, Игрок 1</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Up<span style=" ">&#41;</span> &nbsp; &nbsp; Up &nbsp; = <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Down<span style=" ">&#41;</span> &nbsp; Down &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Left<span style=" ">&#41;</span> &nbsp; <span style="color: #ffff00; font-weight: bold;">Left</span> &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Right<span style=" ">&#41;</span> &nbsp;<span style="color: #ffff00; font-weight: bold;">Right</span> &nbsp;= <span style="color: #ffff00; font-weight: bold;">True</span> <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>Key_Space<span style=" ">&#41;</span> &nbsp;Fire = <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp;<br />
+&nbsp;<br />
+&nbsp; <span style="color: #B1E7EB;">' ФИЗИЧЕСКАЯ МОДЕЛЬ </span><br />
+&nbsp; <span style="color: #B1E7EB;">'---------------------------------------</span><br />
+&nbsp; <span style="color: #B1E7EB;">'Добавь это, чтобы добавить физическую модель</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Acceleration# &nbsp; = <span style="color: #FFFFFF;">0.04</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Friction# &nbsp; &nbsp;= <span style="color: #FFFFFF;">0.014</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TopSpeed# &nbsp; &nbsp;= <span style="color: #FFFFFF;">2.0</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnAcceleration# = <span style="color: #FFFFFF;">0.18</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnFriction# &nbsp; = <span style="color: #FFFFFF;">0.03</span> &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> TurnMax# &nbsp; &nbsp; = <span style="color: #FFFFFF;">5</span><br />
+&nbsp;<br />
+&nbsp; <span style="color: #B1E7EB;">'--------------------------------------- </span><br />
+&nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'ФИЗИКА ДВИЖЕНИЯ</span><br />
+&nbsp; <span style="color: #B1E7EB;">'--------------------------------------</span><br />
+&nbsp; <span style="color: #B1E7EB;">' &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Up<br />
+<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' Создаем и вычитаем вектор ускорения из</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' вектора скорости</span><br />
+&nbsp; &nbsp;XSpeed:+ <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; &nbsp;YSpeed:+ <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Down<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' Создаем и вычитаем вектор ускорения из</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">' вектора скорости</span><br />
+&nbsp; &nbsp;XSpeed:- <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; &nbsp;YSpeed:- <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*Acceleration<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Считаем длину вектора скорости</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> SpeedVectorLength# = <span style="color: #ffff00; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>XSpeed*XSpeed + YSpeed*YSpeed<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Если движемся, то уменьшаем скорость на величину трения</span><br />
+&nbsp; &nbsp;XSpeed:- <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+&nbsp; &nbsp;YSpeed:- <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*Friction<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> SpeedVectorLength &gt; TopSpeed<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Если скорость больше максимальной, то уменьшаем</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'её до максимальной, хранящейся в TopSpeed</span><br />
+&nbsp; &nbsp;XSpeed:+ <span style=" ">&#40;</span>XSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;YSpeed:+ <span style=" ">&#40;</span>YSpeed/SpeedVectorLength<span style=" ">&#41;</span>*<span style=" ">&#40;</span>TopSpeed - SpeedVectorLength<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Двигаем</span><br />
+&nbsp; X:+ XSpeed<br />
+&nbsp; Y:+ YSpeed<br />
+&nbsp; &nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Rem 'Рисуем векторы &nbsp;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> <span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span> <span style="color: #B1E7EB;">'Красный </span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X,Y + YSpeed*<span style="color: #FFFFFF;">50</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span> <span style="color: #B1E7EB;">'Зеленый</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X+XSpeed*<span style="color: #FFFFFF;">50</span>,Y<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span> <span style="color: #B1E7EB;">'Синий</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Это длина вектора скорости</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Он построен сложением красного и зеленого векторов</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawLine</span> X,Y,X+XSpeed*<span style="color: #FFFFFF;">50</span>,Y+YSpeed*<span style="color: #FFFFFF;">50</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span><br />
+&nbsp; <span style="color: #B1E7EB;">'EndRem </span><br />
+&nbsp; &nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'ФИЗИКА ПОВОРОТА</span><br />
+&nbsp; <span style="color: #B1E7EB;">'--------------------------------------</span><br />
+&nbsp; <span style="color: #B1E7EB;">' &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Left</span> TurnSpeed:-TurnAcceleration<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Right</span> TurnSpeed:+TurnAcceleration &nbsp; <br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Предел для TurnSpeed</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &gt; &nbsp;TurnMax TurnSpeed = &nbsp;TurnMax<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; -TurnMax TurnSpeed = -TurnMax<br />
+&nbsp; &nbsp; <br />
+&nbsp; Direction:+TurnSpeed<br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Direction &gt; <span style="color: #FFFFFF;">360</span> &nbsp;Direction:- <span style="color: #FFFFFF;">360</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Direction &lt; <span style="color: #FFFFFF;">0</span> &nbsp;Direction:+ <span style="color: #FFFFFF;">360</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Применяем силу трения для поворота</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &gt; &nbsp;TurnFriction TurnSpeed:- TurnFriction<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; -TurnFriction TurnSpeed:+ TurnFriction<br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Если сила трения больше скорости поворота, то прекращаем поворот</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TurnSpeed &lt; TurnFriction <span style="color: #ffff00; font-weight: bold;">And</span> TurnSpeed &gt; -TurnFriction TurnSpeed = <span style="color: #FFFFFF;">0</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Fire TShot.<span style="">Fire</span><span style=" ">&#40;</span> X, Y, Direction, XSpeed, YSpeed <span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> Ship = <span style="color: #ffff00; font-weight: bold;">EachIn</span> List<br />
+&nbsp; &nbsp;Ship.<span style="">Update</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Type</span></div>
+<p>Теперь добавим выстрелы. Открой Ast-TShot.bmx и создай в нем тип TShot, расширенный из TSpaceObject. Нам понадобиться список, чтобы хранить в нем все снаряды. Создай метод Create(), похожий на Create() из TShip. Для снаряда мы будем использовать картинку Ast-Missile.png.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Ast-Missile.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Ast-Missile.png" src="86_cj7e5.png" width="20" height="10" /></a></span></div></div>
+<a name="Ast-TShot.bmx"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=19" title="Править секцию: Ast-TShot.bmx">править</a>]</span> <span class="mw-headline">Ast-TShot.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShot <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:TImage<br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot = <span style="color: #ffff00; font-weight: bold;">New</span> TShot &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Shot <span style="color: #B1E7EB;">'Добавим созданный выстрел в список List</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image<br />
+&nbsp; &nbsp;Shot.<span style="">Image</span> = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Shot.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Shot.<span style="">Image</span> <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp; <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp;<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndType</span></div>
+<p>Теперь можно создавать снаряды, но откуда они будут появляться? При выстреле снаряды всегда должны появляться спереди стреляющего корабля. Придется добавить парочку параметров в функцию Create().
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> Create<span style=" ">&#40;</span> X, Y, Direction, XSpeed, YSpeed <span style=" ">&#41;</span><br />
+<p>&nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot = <span style="color: #ffff00; font-weight: bold;">New</span> TShot &nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;List.<span style="">AddLast</span> Shot <span style="color: #B1E7EB;">'Добавим созданный выстрел в список List</span><br />
+&nbsp; <br />
+&nbsp;Shot.<span style="">X</span> = X<br />
+&nbsp;Shot.<span style="">Y</span> = Y<br />
+&nbsp;Shot.<span style="">Direction</span> = Direction<br />
+&nbsp;Shot.<span style="">XSpeed</span> = XSpeed<br />
+&nbsp;Shot.<span style="">YSpeed</span> = YSpeed<br />
+&nbsp; <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image<br />
+&nbsp; Shot.<span style="">Image</span> = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Shot.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Shot.<span style="">Image</span> <span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp;<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndFunction</span></div>
+<p>Поправим сплагиатированные из Ast-TShip.bmx Update() и UpdateAll(), чтобы их можно было использовать со снарядами. Вот что должно получиться: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TShot <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Global</span> Image:TImage<br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> Fire<span style=" ">&#40;</span> X, Y, Direction, XSpeed, YSpeed &nbsp;<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot = <span style="color: #ffff00; font-weight: bold;">New</span> TShot &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> List = <span style="color: #ffff00; font-weight: bold;">Null</span> List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; List.<span style="">AddLast</span> Shot<br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image<span style="color: #B1E7EB;">'First Time</span><br />
+&nbsp; &nbsp; &nbsp; Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Missile.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> ShotSpeed#= <span style="color: #FFFFFF;">8</span><br />
+&nbsp; &nbsp; Shot.<span style="">X</span> &nbsp; &nbsp; &nbsp;= X<br />
+&nbsp; &nbsp; Shot.<span style="">Y</span> &nbsp; &nbsp; &nbsp;= Y<br />
+&nbsp; &nbsp; Shot.<span style="">Direction</span> &nbsp;= Direction<br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #B1E7EB;">'Add Shot Start Speed</span><br />
+&nbsp; &nbsp; Shot.<span style="">XSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*ShotSpeed + XSpeed<br />
+&nbsp; &nbsp; Shot.<span style="">YSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*ShotSpeed + YSpeed<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Direction <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; X:+ XSpeed<br />
+&nbsp; &nbsp; Y:+ YSpeed &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> X &gt; <span style="color: #FFFFFF;">800</span> <span style="color: #ffff00; font-weight: bold;">Or</span> Y &gt; <span style="color: #FFFFFF;">600</span> <span style="color: #ffff00; font-weight: bold;">Or</span> X &lt; <span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Or</span> Y &lt; <span style="color: #FFFFFF;">0</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> List <span style="color: #ffff00; font-weight: bold;">Return</span> <br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> Shot = <span style="color: #ffff00; font-weight: bold;">EachIn</span> List<br />
+&nbsp; &nbsp; &nbsp; Shot.<span style="">Update</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp; &nbsp; List.<span style="">remove</span><span style=" ">&#40;</span> <span style="color: #ffff00; font-weight: bold;">Self</span> <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; <br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndType</span></div>
+<p>Тут всё говорит само за себя, кроме этого:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;">Shot.<span style="">XSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*ShotSpeed + XSpeed<br />
+Shot.<span style="">YSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Direction<span style=" ">&#41;</span>*ShotSpeed + YSpeed</div>
+<p>Опять векторы =). Это то же самое, что и ускорение вперед. В нашей игре на выстрелы не действует сила трения, и они не могут поворачивать, так что код метода Update() у них гораздо проще, чем в Ast-TShip.bmx. 
+</p><p>Чтобы добавить возможность стрелять, нужно добавить в метод Update() типа TShip добавить: 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> Fire TShot.<span style="">Fire</span><span style=" ">&#40;</span> X, Y, Direction, XSpeed, YSpeed <span style=" ">&#41;</span></div>
+<p>Ок, круто - мы можем ездить по экрану и стрелять. Теперь нужно добавить чего-нибудь, по чему можно пострелять - камней. Но перед этим добавим границы, если вылететь за край экрана, то корабль появиться с другой стороны. 
+Добавь следующие строки в метод Update() файла Ast-TShip.bmx:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> X &gt; <span style="color: #FFFFFF;">800</span> X = <span style="color: #FFFFFF;">0</span><br />
+<p>&nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> Y &gt; <span style="color: #FFFFFF;">600</span> Y = <span style="color: #FFFFFF;">0</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> X &lt; <span style="color: #FFFFFF;">0</span> X = <span style="color: #FFFFFF;">800</span><br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> Y &lt; <span style="color: #FFFFFF;">0</span> Y = <span style="color: #FFFFFF;">600</span></div>
+<p>Переключайся на Ast-TRock.bmx. Этот тип очень похож на TShot. Нужно принять во внимание, что камни приходятся разных размеров. Для этого я добавил два поля - Size (размер - прим. пер.) и Rotation (поворот - прим. пер.).
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TRock <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Global</span> Image:TImage<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Field</span> Size<br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Field</span> Rotation#</div>
+<p>Я также добавлю три константы. Всякий раз, когда мне нужно определить размер, я могу написать: Size = 1 или 2. С использованием констант это будет выглядеть так: Size = SMALL or MEDIUM (small - маленький; medium-средний; - прим. пер.). Такой прием очень часто используется в программировании, т.к. упрощает код.  
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Const</span> LARGE &nbsp;= <span style="color: #FFFFFF;">3</span><br />
+<p>&nbsp;<span style="color: #ffff00; font-weight: bold;">Const</span> MEDIUM = <span style="color: #FFFFFF;">2</span><br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Const</span> SMALL &nbsp;= <span style="color: #FFFFFF;">1</span></div>
+<p>Вместо Create() я назову эту функцию Spawn(), она почти то же самое, что и Create() из TShot и TShip.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> Spawn<span style=" ">&#40;</span> X, Y ,Size <span style=" ">&#41;</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Rock:TRock = <span style="color: #ffff00; font-weight: bold;">New</span> TRock &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> List List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; List.<span style="">AddLast</span> Rock<br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image<span style="color: #B1E7EB;">'Нет ещё картинки</span><br />
+&nbsp; &nbsp;Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Rock.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> RockSpeed# = <span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> LARGE<span style="color: #B1E7EB;">'Большой &nbsp;</span><br />
+&nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">0.2</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Средний</span><br />
+&nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">0.5</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<span style="color: #B1E7EB;">'Маленький </span><br />
+&nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">1</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; <br />
+&nbsp; Rock.<span style="">X</span> &nbsp; &nbsp; = X<br />
+&nbsp; Rock.<span style="">Y</span> &nbsp; &nbsp; = Y<br />
+&nbsp; Rock.<span style="">Direction</span> &nbsp; = <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">360</span><span style=" ">&#41;</span><br />
+&nbsp; Rock.<span style="">Rotation</span> &nbsp; = Rock.<span style="">Direction</span><br />
+&nbsp; Rock.<span style="">Size</span> &nbsp; &nbsp;= Size<br />
+&nbsp; <br />
+&nbsp; <span style="color: #B1E7EB;">'Определяем начальную скорость</span><br />
+&nbsp; Rock.<span style="">XSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Rock.<span style="">Direction</span><span style=" ">&#41;</span>*RockSpeed<br />
+&nbsp; Rock.<span style="">YSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Rock.<span style="">Direction</span><span style=" ">&#41;</span>*RockSpeed<br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span></div>
+<p><br />	
+Код выше говорит сам за себя, камни летят с неизменной скоростью, пока их кто-нибудь не разнесет.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> <span style="color: #ffff00; font-weight: bold;">Self</span>.<span style="">Size</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> LARGE<span style="color: #B1E7EB;">'Большой &nbsp;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Средний</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<span style="color: #B1E7EB;">'Маленький </span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">0.5</span>, <span style="color: #FFFFFF;">0.5</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Rotation <span style=" ">&#41;</span><br />
+&nbsp; Rotation:<span style="color: #FFFFFF;">+0.5</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">1</span><br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span></div>
+<p><br />	
+Заметь - появился новый метод Collision(), я расскажу про него через секунду. 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p>&nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; X:+ XSpeed<br />
+&nbsp; Y:+ YSpeed &nbsp; <br />
+&nbsp; <br />
+&nbsp; Collision<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> X &gt; <span style="color: #FFFFFF;">800</span> X = <span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Y &gt; <span style="color: #FFFFFF;">600</span> Y = <span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> X &lt; <span style="color: #FFFFFF;">0</span> X = <span style="color: #FFFFFF;">800</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Y &lt; <span style="color: #FFFFFF;">0</span> Y = <span style="color: #FFFFFF;">600</span> &nbsp;<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> List <span style="color: #ffff00; font-weight: bold;">Return</span> <br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Rock:TRock = <span style="color: #ffff00; font-weight: bold;">EachIn</span> List<br />
+&nbsp; &nbsp;Rock.<span style="">Update</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Method</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp; List.<span style="color: #B1E7EB;">Remove( Self )<br />
+&nbsp;EndMethod<br />
+</p>
+</span></div>
+<p>До этого момента камни летали себе в космосе и никого не трогали. Нам нужно, чтобы они взаимодействовали с кораблем и снарядами, так чтобы они представляли опасность для корабля и могли быть уничтожены снарядами.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Method</span> Collision<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Radius<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> LARGE<span style="color: #B1E7EB;">'Большой &nbsp;</span><br />
+&nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Средний</span><br />
+&nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">50</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<span style="color: #B1E7EB;">'Маленький</span><br />
+&nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">20</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp;<br />
+&nbsp; <span style="color: #B1E7EB;">'Если камень попадает в корабль</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TShip.<span style="">List</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">EachIn</span> TShip.<span style="">List</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Distance<span style=" ">&#40;</span> X, Y, Ship.<span style="">X</span>, Ship.<span style="">Y</span> <span style=" ">&#41;</span> &lt; Radius<br />
+&nbsp; &nbsp; &nbsp;Ship.<span style="">Destroy</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Корабль = Мертв &nbsp;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+</p>
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>При проверке на столкновение корабля и камня я использовал тот факт, что если корабль ближе к камню, чем его (камня) радиус, то столкновение произошло. Камни в нашей игре круглые, так что это должно работать. Тот же метод мы будем использовать и для снарядов.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'Если снаряд попадает в камень</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> TShot.<span style="">List</span> <span style="color: #ffff00; font-weight: bold;">Return</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot = <span style="color: #ffff00; font-weight: bold;">EachIn</span> TShot.<span style="">List</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> Distance<span style=" ">&#40;</span> X, Y, Shot.<span style="">X</span>, Shot.<span style="">Y</span> <span style=" ">&#41;</span> &lt; Radius<br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; Shot.<span style="">Destroy</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> LARGE <br />
+&nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Разрушаем камень </span><br />
+&nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , MEDIUM <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , MEDIUM <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<br />
+&nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , SMALL <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , SMALL <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<br />
+&nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'</span><br />
+&nbsp; &nbsp; &nbsp; Score:<span style="color: #FFFFFF;">+1</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span> <br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndMethod</span></div>
+<p>Если снаряд раздолбал камень, то появляется два поменьше, исключая случай, если у раздолбанного камня размер - Small. Вот функция, которая вычисляет расстояние между двумя точками:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> Distance#<span style=" ">&#40;</span> X1, Y1, X2, Y2 <span style=" ">&#41;</span><br />
+<p>&nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> DX# = X2 - X1<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> DY# = Y2 - Y1<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>Dx*Dx + Dy*Dy<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndFunction</span></div>
+<p>Расстояние тут вычисляется по теореме Пифагора. Что… не знаешь такого? Ты верно в школе не учился? 
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Type</span> TRock <span style="color: #ffff00; font-weight: bold;">Extends</span> TSpaceObject<br />
+<p><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Global</span> List:<span style="color: #ffff00; font-weight: bold;">TList</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Global</span> Image:TImage<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> Size<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Field</span> Rotation#<br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Const</span> LARGE &nbsp;= <span style="color: #FFFFFF;">3</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Const</span> MEDIUM = <span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Const</span> SMALL &nbsp;= <span style="color: #FFFFFF;">1</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> Spawn<span style=" ">&#40;</span> X, Y ,Size <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Rock:TRock = <span style="color: #ffff00; font-weight: bold;">New</span> TRock&nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> List List = <span style="color: #ffff00; font-weight: bold;">CreateList</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List.<span style="">AddLast</span> Rock<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> Image<span style="color: #B1E7EB;">'First Time</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Image = <span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;Ast-Rock.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">MidHandleImage</span><span style=" ">&#40;</span> Image <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> RockSpeed# = <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> LARGE<span style="color: #B1E7EB;">'Large&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">0.5</span> + <span style="color: #ffff00; font-weight: bold;">Rnd</span><span style=" ">&#40;</span> <span style="color: #FFFFFF;">0</span>, <span style="color: #FFFFFF;">0.5</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Medium</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">1</span> + <span style="color: #ffff00; font-weight: bold;">Rnd</span><span style=" ">&#40;</span> <span style="color: #FFFFFF;">0</span>, <span style="color: #FFFFFF;">1.0</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<span style="color: #B1E7EB;">'Small&nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; RockSpeed = <span style="color: #FFFFFF;">1</span> &nbsp; + <span style="color: #ffff00; font-weight: bold;">Rnd</span><span style=" ">&#40;</span> <span style="color: #FFFFFF;">0</span>, <span style="color: #FFFFFF;">1.5</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">X</span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= X<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">Y</span> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= Y<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">Direction</span> &nbsp; = <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">360</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">Rotation</span> &nbsp; &nbsp;= Rock.<span style="">Direction</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">Size</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= Size<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Add Rock Start Speed</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">XSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Cos</span><span style=" ">&#40;</span>Rock.<span style="">Direction</span><span style=" ">&#41;</span>*RockSpeed<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">YSpeed</span>= <span style="color: #ffff00; font-weight: bold;">Sin</span><span style=" ">&#40;</span>Rock.<span style="">Direction</span><span style=" ">&#41;</span>*RockSpeed<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> <span style="color: #ffff00; font-weight: bold;">Self</span>.<span style="">Size</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> LARGE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rotation:+ <span style="color: #FFFFFF;">0.1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Medium</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rotation:+ <span style="color: #FFFFFF;">0.2</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<span style="color: #B1E7EB;">'Small&nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">0.5</span>, <span style="color: #FFFFFF;">0.5</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rotation:+ <span style="color: #FFFFFF;">0.7</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span><span style=" ">&#40;</span> Rotation <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetBlend</span> LIGHTBLEND<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span><span style=" ">&#40;</span> Image,X,Y <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> <span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetRotation</span> <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Update<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Draw<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; X:+ XSpeed<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Y:+ YSpeed&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Collision<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> X &gt; <span style="color: #FFFFFF;">800</span><span style="color: #FFFFFF;">+50</span> X = <span style="color: #FFFFFF;">-50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Y &gt; <span style="color: #FFFFFF;">600</span><span style="color: #FFFFFF;">+50</span> Y = <span style="color: #FFFFFF;">-50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> X &lt; <span style="color: #FFFFFF;">-50</span> X = <span style="color: #FFFFFF;">800</span><span style="color: #FFFFFF;">+50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Y &lt; <span style="color: #FFFFFF;">-50</span> Y = <span style="color: #FFFFFF;">600</span><span style="color: #FFFFFF;">+50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Function</span> UpdateAll<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> List <span style="color: #ffff00; font-weight: bold;">Return</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Rock:TRock = <span style="color: #ffff00; font-weight: bold;">EachIn</span> List<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Rock.<span style="">Update</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; List.<span style="">remove</span><span style=" ">&#40;</span> <span style="color: #ffff00; font-weight: bold;">Self</span> <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Method</span> Collision<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Rock vs Ship</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Rock vs Shot</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Radius<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> LARGE&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<span style="color: #B1E7EB;">'Medium</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">50</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Radius = <span style="color: #FFFFFF;">20</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'If a rock hit a ship</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TShip.<span style="">List</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = <span style="color: #ffff00; font-weight: bold;">EachIn</span> TShip.<span style="">List</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Distance<span style=" ">&#40;</span> X, Y, Ship.<span style="">X</span>, Ship.<span style="">Y</span> <span style=" ">&#41;</span> &lt; Radius<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ship.<span style="">Destroy</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Ship = Dead&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'If a shot hit a rock</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">Not</span> TShot.<span style="">List</span> <span style="color: #ffff00; font-weight: bold;">Return</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Shot:TShot = <span style="color: #ffff00; font-weight: bold;">EachIn</span> TShot.<span style="">List</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Distance<span style=" ">&#40;</span> X, Y, Shot.<span style="">X</span>, Shot.<span style="">Y</span> <span style=" ">&#41;</span> &lt; Radius<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Shot.<span style="">Destroy</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Size<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> LARGE&nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'Destory the rock&nbsp; &nbsp; &nbsp; </span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span>, Y+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span> , MEDIUM <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span>, Y+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span> , MEDIUM <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span>, Y+<span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">-20</span>,<span style="color: #FFFFFF;">20</span><span style=" ">&#41;</span> , MEDIUM <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> MEDIUM<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span>&nbsp; &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , SMALL <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Spawn<span style=" ">&#40;</span> X, Y , SMALL <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> SMALL<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Destroy<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #B1E7EB;">'</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'Spawn( X, Y , LARGE )</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Score:<span style="color: #FFFFFF;">+1</span> <span style="color: #B1E7EB;">'Global from Main</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Next</span>&nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndMethod</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+<span style="color: #ffff00; font-weight: bold;">EndType</span>&nbsp;<br />
+<br />
+<span style="color: #B1E7EB;">'Give the distance between two points</span><br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> Distance#<span style=" ">&#40;</span> X1, Y1, X2, Y2 <span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> DX# = X2 - X1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> DY# = Y2 - Y1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>Dx*Dx + Dy*Dy<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndFunction</span></div>
+<p>Всё, теперь время настроить параметры игры. Нужно чтобы всё соотносилось наилучшим образом. Пора делать игру из полученного движка. Вот что нужно для этого:
+</p>
+<ul><li>Стартовый экран - Жми пробел, чтобы начать игру; Q, чтобы выйти 
+</li><li>Если побил все камни начать новый уровень
+</li><li>Вести учет очков игрока. Только маленькие камни их приносят, по очку каждый.
+</li><li>Если игрок умирает, покажи ему его счет. Перезапуск игры - R, выход - Q. 
+</li></ul>
+<p>Чтобы всё это добавить нужно, для начала, переключиться на AsteroidWars.bmx
+</p><p>Создаем глобальную переменную Mode и три константы для каждого режима: Интро (Intro), Смерть (Death) и Игра (Playing). Плюс две глобальных переменных для хранения текущего и лучшего счета.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Const</span> Intro &nbsp;= <span style="color: #FFFFFF;">1</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Const</span> Death &nbsp;= <span style="color: #FFFFFF;">2</span><br />
+<span style="color: #ffff00; font-weight: bold;">Const</span> Playing = <span style="color: #FFFFFF;">3</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> Mode = Intro<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Global</span> Score, HighestScore</div>
+<p>Затем я прописал все режимы, ничего особенного, но потребовалось много всего отлаживать. Поэтому я не могу расписать этот этап пошагово. Вместо этого я выложу результат того, что у меня получилось. Я бы посоветовал тебе создать свою собственную версию, используя эту как основу. Геймплэй, который получился у меня, мягко говоря, неважный. Это ведь просто пример, и ничего больше! Надеюсь, этот пример поможет начинающим игрописателям. Удачи! 
+</p>
+<a name="AsteroidWars.bmx_3"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81&amp;action=edit&amp;section=20" title="Править секцию: AsteroidWars.bmx">править</a>]</span> <span class="mw-headline">AsteroidWars.bmx</span></h3>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Strict</span><br />
+<p><span style="color: #B1E7EB;">'AppTitle = &quot;Asteroid Wars Example&quot;</span><br />
+<br />
+<span style="color: #B1E7EB;">Rem<br />
+<br />
+&nbsp; Статья, для которой был написан этот исходник может быть найдена тут: &nbsp;www.blitzbasic.com - forums - blitzmax - tutorials<br />
+<br />
+EndRem</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TSpaceObject.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShip.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TShot.bmx&quot;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Include</span> <span style="color: #00FF66;">&quot;Ast-TRock.bmx&quot;</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">800</span>,<span style="color: #FFFFFF;">600</span>,<span style="color: #FFFFFF;">0</span><br />
+<br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Const</span> Intro &nbsp;= <span style="color: #FFFFFF;">1</span><br />
+<span style="color: #ffff00; font-weight: bold;">Const</span> Death &nbsp;= <span style="color: #FFFFFF;">2</span><br />
+<span style="color: #ffff00; font-weight: bold;">Const</span> Playing = <span style="color: #FFFFFF;">3</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> Mode = Intro<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> Score, HighestScore<br />
+<span style="color: #ffff00; font-weight: bold;">Global</span> Level , Rank$<br />
+<br />
+TRock.<span style="">Spawn</span><span style=" ">&#40;</span> <span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">50</span>, TRock.<span style="">LARGE</span> <span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> NR = <span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">To</span> <span style="color: #FFFFFF;">20</span><br />
+&nbsp;TRock.<span style="">Spawn</span><span style=" ">&#40;</span> <span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">300</span>, TRock.<span style="">SMALL</span> <span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+<br />
+&nbsp;<span style="color: #B1E7EB;">'Главный цикл</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Repeat</span><span style="color: #B1E7EB;">' - - - - - - - - - - - - - - - - - </span><br />
+&nbsp; TShot.<span style="">UpdateAll</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; TRock.<span style="">UpdateAll</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> Mode<br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> Intro<br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Welcome to Asteroids Wars Beta Version&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">100</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Highest Score this run: &quot;</span>+HighestScore+<span style="color: #00FF66;">&quot; rocks.&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">130</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Steer with LEFT, RIGHT &nbsp; &nbsp; &nbsp;&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">170</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Thrust with UP and DOWN &nbsp; &nbsp; &quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">190</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Fire with SPACE &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">210</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot; --------- &nbsp;P R E S S &nbsp; S P A C E &nbsp; T O &nbsp;S T A R T &nbsp;---------- &quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">260</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>Key_Space<span style=" ">&#41;</span> StartGame<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> Playing<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Score: &quot;</span>+Score, <span style="color: #FFFFFF;">20</span>, <span style="color: #FFFFFF;">20</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;Level: &quot;</span>+level, <span style="color: #FFFFFF;">20</span>, <span style="color: #FFFFFF;">40</span><br />
+&nbsp; &nbsp; TShip.<span style="">UpdateAll</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TShip.<span style="">List</span>.<span style="">Count</span><span style=" ">&#40;</span><span style=" ">&#41;</span> = <span style="color: #FFFFFF;">0</span> <br />
+&nbsp; &nbsp; &nbsp;Mode = Death<br />
+&nbsp; &nbsp; &nbsp;GetRanking<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;Level = <span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">FlushKeys</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TRock.<span style="">List</span>.<span style="">Count</span><span style=" ">&#40;</span><span style=" ">&#41;</span> = <span style="color: #FFFFFF;">0</span> StartGame<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Case</span> Death<br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;~~ You Lost Your Ship - G A M E &nbsp;O V E R ~~ &quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">100</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;You managed to destroy &quot;</span>+Score+<span style="color: #00FF66;">&quot; rocks in &quot;</span>+level+<span style="color: #00FF66;">&quot; different zones.&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">130</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;------------------------ &nbsp;&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">170</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot; Your RANK&nbsp;: &quot;</span>+Rank$ &nbsp; ,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">190</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot;------------------------ &nbsp;&quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">210</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawText</span> <span style="color: #00FF66;">&quot; --------- &nbsp;P R E S S &nbsp;[R] &nbsp;T O &nbsp; R E T R Y &nbsp;---------- &quot;</span>,<span style="color: #FFFFFF;">50</span>,<span style="color: #FFFFFF;">260</span><br />
+<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>Key_R<span style=" ">&#41;</span> Mode = Intro<br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>Key_Q<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">End</span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>Key_Escape<span style=" ">&#41;</span><span style="color: #B1E7EB;">'- - - - - - - - </span><br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">End</span> <br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> StartGame<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> TRock.<span style="">List</span>.<span style="">Count</span><span style=" ">&#40;</span><span style=" ">&#41;</span> &gt; <span style="color: #FFFFFF;">0</span> <span style="color: #B1E7EB;">'First Time</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Clear</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> Rock:TRock = <span style="color: #ffff00; font-weight: bold;">EachIn</span> TRock.<span style="">List</span><br />
+&nbsp; &nbsp; Rock.<span style="">Destroy</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Start</span><br />
+&nbsp; &nbsp;TShip.<span style="">Create</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Else</span><span style="color: #B1E7EB;">'In play</span><br />
+<br />
+&nbsp; &nbsp;Level:<span style="color: #FFFFFF;">+1</span><br />
+&nbsp; &nbsp;<span style="color: #B1E7EB;">'Score:+13</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<br />
+&nbsp; CreateRocks<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; Mode = Playing<br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> CreateRocks<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Danger = Level*<span style="color: #FFFFFF;">20</span> + <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">10</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Ship:TShip = TShip<span style=" ">&#40;</span> TShip.<span style="">List</span>.<span style="">First</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style=" ">&#41;</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Repeat</span> <br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> X,Y<br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Repeat</span> <br />
+&nbsp; &nbsp; X = <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">800</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; Y = <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">600</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Until</span> Distance<span style=" ">&#40;</span>Ship.<span style="">X</span>, Ship.<span style="">Y</span>, X, Y <span style=" ">&#41;</span> &gt; <span style="color: #FFFFFF;">200</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Select</span> <span style="color: #ffff00; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">2</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp;TRock.<span style="">Spawn</span><span style=" ">&#40;</span> X, Y, TRock.<span style="">LARGE</span> <span style=" ">&#41;</span> &nbsp;;Danger:- <span style="color: #FFFFFF;">5</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> <span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp; &nbsp;TRock.<span style="">Spawn</span><span style=" ">&#40;</span> X, Y, TRock.<span style="">MEDIUM</span> <span style=" ">&#41;</span>&nbsp;;Danger:- <span style="color: #FFFFFF;">3</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Until</span> Danger &lt;= <span style="color: #FFFFFF;">0</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span><br />
+<br />
+&nbsp;<span style="color: #ffff00; font-weight: bold;">Function</span> GetRanking<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; Rank$ = <span style="color: #00FF66;">&quot;Classified&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">1</span> Rank = <span style="color: #00FF66;">&quot;You didn't get a single one?!&quot;</span> <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">1</span> Rank = <span style="color: #00FF66;">&quot;ROFL&quot;</span> <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">2</span> Rank = <span style="color: #00FF66;">&quot;LOL&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">3</span> Rank = <span style="color: #00FF66;">&quot;Newbie&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">4</span> Rank = <span style="color: #00FF66;">&quot;Beginner&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">5</span> Rank = <span style="color: #00FF66;">&quot;Average&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">6</span> Rank = <span style="color: #00FF66;">&quot;Fair&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">7</span> Rank = <span style="color: #00FF66;">&quot;Almost got one&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">8</span> Rank = <span style="color: #00FF66;">&quot;Starfighter&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">9</span> Rank = <span style="color: #00FF66;">&quot;Rock Destroyer&quot;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> Level = <span style="color: #FFFFFF;">10</span> Rank = <span style="color: #00FF66;">&quot;Duplicator&quot;</span><br />
+&nbsp; <span style="color: #B1E7EB;">'...</span><br />
+&nbsp; <span style="color: #B1E7EB;">'....</span><br />
+<br />
+&nbsp; HighestScore = Score<br />
+</p>
+&nbsp;<span style="color: #ffff00; font-weight: bold;">EndFunction</span></div>
+<p>Оригинал статьи лежит <a href="http://www.blitzmax.com/Community/posts.php?topic=48800" class="external text" title="http://www.blitzmax.com/Community/posts.php?topic=48800" rel="nofollow">здесь</a>.
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/2/24/Asteroid_Wars.zip" class="internal" title="Asteroid Wars.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: Wave (e-mail: Truplos@msn.com)<br />
+Перевод: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:MANIAK_dobrii" title="Участник:MANIAK dobrii">MANIAK dobrii</a> (e-mail: MANIAK_dobrii@list.ru, сайт: <a href="http://www.maniak-dobrii.nm.ru/" class="external free" title="http://www.maniak-dobrii.nm.ru/" rel="nofollow">http://www.maniak-dobrii.nm.ru/</a>)
+</p><!-- 
+Pre-expand include size: 12218 bytes
+Post-expand include size: 618 bytes
+Template argument size: 31 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:637-0!1!0!!ru!2 and timestamp 20071110032311 -->
+<div class="printfooter">
+Получено с <a href="jx7-tlc9.html">http://blitzetcetera.org/index.php/%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%B0%D0%BA_%D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C_%C2%ABAsteroids%C2%BB_%D0%B7%D0%B0_%D1%87%D0%B0%D1%81 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B1%D0%B0%D0%B7%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:41 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Быстрый поиск в базе данных,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Быстрый поиск в базе данных — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Быстрый_поиск_в_базе_данных";
+var wgTitle = "Быстрый поиск в базе данных";
+var wgAction = "view";
+var wgArticleId = "665";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3585";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Быстрый_поиск_в_базе_данных">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Быстрый поиск в базе данных</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Иногда перед программистом встает следующая задача: найти элемент базы данных по его названию или другому идентификатору. Простейший вариант ее решения - просматривать по порядку все элементы и сравнивать их названия с данным, если совпадет - возвратить указатель на элемент. Но если при небольшом объеме данных этот метод еще можно применять, то когда записей больше десяти тысяч, на поиск может уйти непозволительно много времени (особенно, если запросов тоже много).
+</p><p>Выход в этой ситуации таков: структурировать данные особым, удобным для поиска по названию образом. Первое, что приходит в голову - сделать древовидную структуру по такому принципу: корневой элемент содержит ссылки на все возможные первые символы названий, каждый из них, в свою очередь - на все возможные вторые символы, идущие после него, эти символы содержат ссылки на следующие и т. д. Вот как это выглядит на рисунке (пусть в базе данных будут 6 слов: Книга, Автобус, Абажур, Часы, Автоген, Авто):
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search01.gif" src="2myh4h5p.gif" width="402" height="250" /></a></span></div></div>
+<p>Серым выделены вспомогательные элементы. Чтобы найти элемент по названию, выбираем корневой элемент, переходим по ссылке на другой элемент, соответствующий первому символу названия - с него по ссылке на третий (соответствующий второму символу) и т. д. Переходим по ссылкам до последней буквы - придем к искомому элементу. Поиск элемента Автобус: А-&gt;в-&gt;т-&gt;о-&gt;б-&gt;у-&gt;с. Если на каком-то шаге наткнулись на пустую ссылку, значит в базе данных нет элемента с таким названием. В итоге, для того, чтобы найти элемент с длиной названия в n символов нужно сделать n операций вместо m=кол-во элементов. Уже значительный выигрыш во времени. Но эту структуру можно оптимизировать.
+</p><p>В самом деле, почему бы вместо этого не использовать ссылки на куски строк, если в большинстве случаев от каждой буквы идет только одна ссылка? Вот как выглядит второй вариант структуры:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search02.gif" src="54w2qc_x.gif" width="268" height="250" /></a></span></div></div>
+<p>Здесь поиск проходит так: от корневого элемента переходим по ссылке соответствующей первому символу названия на следующий элемент, который содержит строку из одного или нескольких символов. Если эта строка совпадает с куском названия, вырезанным от начала, такой же длины, то идем дальше - отбрасываем этот кусок строки, переходим по ссылке на следующий символ и опять сравниваем со строкой. Теперь поиск таков: (А)-&gt;(в)то-&gt;(б)ус. Теперь количество шагов зависит от названий, но оно, обычно, гораздо меньше длины названия, да и кол-во элементов заметно сократилось.
+</p><p>Теперь рассмотрим, как форматируется данная структура. Каждый элемент имеет два поля - название и массив ссылок по количеству символов (управляющие символы (0-31) отбрасываем, остается 224 (96 для стандартной раскладки - только английский язык) ). Вначале необходимо создать корнеой элемент. Так как ни одной ссылки еще нет, то для добавления первого слова просто добавляем новый элемент с названием=слову и устанавливаем ссылку от корневого с номером, соответствующим первому символу (для слова "Autobus" номер=65(код английской "А")-32=33). В процессе добавления других слов возможны три варианта (после того, как программа дойдет до конца цепочки, проходя через совпадающие куски названия нового элемента):
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search03.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Search03.gif" src="oyjpgxqd.gif" width="389" height="221" /></a></span></div></div>
+<ul><li>Начало названия у существующего элемента совпадает с началом названия добавляемого. Тогда создается вспомогательный элемент с названием=началу, в нем устанавливаются ссылки на старый и новый элементы, названия этих элементов урезаются. Также устанавливается ссылка из предыдущего элемента к вспомогательному.
+</li><li>Название добавляемого элемента полностью совпадает с началом названия уже имеющегося - устанавливаются ссылки: из предыдущего элемента к новому, из нового - к старому, название старого урезается.
+</li><li>Начало названия добавляемого элемента полностью совпадает с названием уже имеющегося - название нового элемента урезается, устанавливается ссылка из старого элемента к новому.
+</li></ul>
+<p>Сформированную таким образом структуру, легко записать на диск в виде списка элементов, отсортированных по алфавиту. Вот программа-модуль для создания и работы с рассмотренной структурой:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> rootkey.key<br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_add.key<span style=" ">&#40;</span>name$,kfrom.key<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">DebugLog</span> name$<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span><br />
+rk.key=kfrom<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span> <br />
+&nbsp;k.key=dbkeylink<span style=" ">&#40;</span>rk,name$<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> k=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;nk.key=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+&nbsp; &nbsp;nk\name$=name$<br />
+&nbsp; &nbsp;dbkeylink_set rk,nk<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> nk<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; l=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>k\name$<span style=" ">&#41;</span><br />
+&nbsp; nl=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>name$<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=l+<span style=" ">&#40;</span>nl-l<span style=" ">&#41;</span>*<span style=" ">&#40;</span>nl&lt;l<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Step</span> <span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>name$,n<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>k\name$,n<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> n&lt;l <span style="color: #aaffff; font-weight: bold;">And</span> n&lt;nl <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;nk.key=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+&nbsp; &nbsp;nk\name$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>name$,n<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;dbkeylink_set rk,nk<br />
+&nbsp; &nbsp;rk=nk<br />
+&nbsp;<br />
+&nbsp; &nbsp;k\name$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>k\name$,n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;dbkeylink_set rk,k<br />
+<br />
+&nbsp; &nbsp;nk.key=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+&nbsp; &nbsp;nk\name$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>name$,n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;dbkeylink_set rk,nk<br />
+<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> nk<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">ElseIf</span> nl&lt;l <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;nk.key=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+&nbsp; &nbsp;nk\name$=name$<br />
+&nbsp; &nbsp;dbkeylink_set rk,nk<br />
+<br />
+&nbsp; &nbsp;k\name$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>k\name$,n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;dbkeylink_set nk,k<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> nk<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span> &nbsp; <br />
+&nbsp; &nbsp;name$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>name$,l<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> k<br />
+&nbsp; &nbsp;rk=k<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkeylink.key<span style=" ">&#40;</span>parent.key,name$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> parent\link<span style=" ">&#91;</span><span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>name$,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-32</span><span style=" ">&#93;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkeylink_set<span style=" ">&#40;</span>parent.key,k.key<span style=" ">&#41;</span><br />
+parent\link<span style=" ">&#91;</span><span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>k\name$,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-32</span><span style=" ">&#93;</span>=k<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> db_init<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Delete</span> <span style="color: #aaffff; font-weight: bold;">Each</span> key<br />
+rootkey=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> db_load<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+db_init<br />
+f=<span style="color: #aaffff; font-weight: bold;">ReadFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> f=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">DebugLog</span> <span style="color: #00ff66;">&quot;No access to file &quot;</span>+file$: <span style="color: #aaffff; font-weight: bold;">Return</span><br />
+dbkey_fromfile f,rootkey<br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_fromfile<span style=" ">&#40;</span>f,k.key<span style=" ">&#41;</span><br />
+k\name$=<span style="color: #aaffff; font-weight: bold;">ReadString</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+dbkey_read f,k<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;n=<span style="color: #aaffff; font-weight: bold;">ReadByte</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n=<span style="color: #33ffdd;">255</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;nk.key=<span style="color: #aaffff; font-weight: bold;">New</span> key<br />
+&nbsp;k\link<span style=" ">&#91;</span>n<span style=" ">&#93;</span>=nk<br />
+&nbsp;dbkey_fromfile f,nk<br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> db_save<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+f=<span style="color: #aaffff; font-weight: bold;">WriteFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbkey_tofile f,rootkey<br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_tofile<span style=" ">&#40;</span>f,k.key<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteString</span> f,k\name$<br />
+dbkey_write f,k<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">223</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> k\link<span style=" ">&#91;</span>n<span style=" ">&#93;</span>&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">WriteByte</span> f,n<br />
+&nbsp; dbkey_tofile f,k\link<span style=" ">&#91;</span>n<span style=" ">&#93;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteByte</span> f,<span style="color: #33ffdd;">255</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> textfile_load<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+db_init<br />
+f=<span style="color: #aaffff; font-weight: bold;">ReadFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> f=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">DebugLog</span> <span style="color: #00ff66;">&quot;No access to file &quot;</span>+file$: <span style="color: #aaffff; font-weight: bold;">Return</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">Eof</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+&nbsp;dbkey_add <span style="color: #aaffff; font-weight: bold;">ReadLine</span>$<span style=" ">&#40;</span>f<span style=" ">&#41;</span>,rootkey<br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> textfile_save<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+f=<span style="color: #aaffff; font-weight: bold;">WriteFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+dbkey_totextfile f,rootkey<br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_totextfile<span style=" ">&#40;</span>f,k.key,m$=<span style="color: #00ff66;">&quot;&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,m$+k\name$<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">223</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> k\link<span style=" ">&#91;</span>n<span style=" ">&#93;</span>&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> dbkey_totextfile f,k\link<span style=" ">&#91;</span>n<span style=" ">&#93;</span>,m$+k\name$<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>А вот тестовая программа (она загружает текст из файла (можно взять любой текстовый), создает структуру (добавив к каждому элементу контрольную сумму, вычисленную на основе названия), записывает ее на диск, стирает, загружает и выводит в текстовый файл элементы, отсортированные по алфавиту (вместе со вспомогательными)):
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> key<br />
+<p>&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> name$, link.key<span style=" ">&#91;</span><span style="color: #33ffdd;">223</span><span style=" ">&#93;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Include</span> <span style="color: #00ff66;">&quot;IndexedBase.bb&quot;</span><br />
+<br />
+textfile_load <span style="color: #00ff66;">&quot;test.txt&quot;</span><br />
+db_save <span style="color: #00ff66;">&quot;test.bdb&quot;</span><br />
+db_load <span style="color: #00ff66;">&quot;test.bdb&quot;</span><br />
+textfile_save <span style="color: #00ff66;">&quot;out.txt&quot;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_read<span style=" ">&#40;</span>f,k.key<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> dbkey_write<span style=" ">&#40;</span>f,k.key<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Попробуйте изменить программу так, чтобы вспомогательные элементы не выводились. И еще несколько слов о работе с модулем: вы можете добавлять поля в тип key, при этом изменяя процедуры "dbkey_write" и "dbkey_load" так, чтобы нужные элементы записывались / загружались из файла (либо формировались по ходу загрузки).
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/7/7b/Indexed_Base.zip" class="internal" title="Indexed Base.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 3096 bytes
+Post-expand include size: 414 bytes
+Template argument size: 23 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:665-0!1!0!!ru!2 and timestamp 20071110040721 -->
+<div class="printfooter">
+Получено с <a href="m5nah2n_.html">http://blitzetcetera.org/index.php/%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B1%D0%B0%D0%B7%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%91%D1%8B%D1%81%D1%82%D1%80%D1%8B%D0%B9_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA_%D0%B2_%D0%B1%D0%B0%D0%B7%D0%B5_%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C by HTTrack Website Copier/3.x [XR&CO'2007], Mon, 12 Nov 2007 11:20:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Инвентарь" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Инвентарь — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Инвентарь";
+var wgTitle = "Инвентарь";
+var wgAction = "view";
+var wgArticleId = "739";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3579";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Инвентарь">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Инвентарь</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Здрасьте. Сегодня я расскажу вам, как с помощью Blitz сделать инвентарь для вашей игры:
+</p><p>Инвентари бывают разные&nbsp;:). Мы будем делать один из самых простых, то есть размером n на m, в одну ячейку можно поместить только один предмет.
+</p><p>Для начало создадим файл БлицБейсика под любым именем, а затем создадим в той же директории ним папку и назовем её &lt;Data&gt;, в ней мы будем хранить данные о предметах инвентаря: В принципе, вы можете её и не делать и все картинки оставлять рядом с exe-файлом, но это не красиво. Вообще, по-хорошему, внутри этой папки нужно сделать папку для каждого типа предметов, например, для мечей, щитов, луков, доспехов и т. д. Начнем мы со следующих строчек:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> DataDir$=<span style="color: #aaffff; font-weight: bold;">SystemProperty</span>$<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;appdir&quot;</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;Data\&quot;</span><br />
+DataDir$=<span style="color: #00ff66;">&quot;.\Data\&quot;</span></div>
+<p>Здесь мы создадим строковую переменную DataDir$, сделаем её глобальной и присвоим ей значение текущего каталога (то есть путь к нашей программе плюс нашу папку с данными - &lt;Data&gt; ).
+</p>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Mouse.png" class="image" title="Изображение:Inventory2-Mouse.png"><img alt="Изображение:Inventory2-Mouse.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Mouse.png" src="h-7a-ud-.png" width="32" height="32" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item1.png" class="image" title="Изображение:Inventory2-Item1.png"><img alt="Изображение:Inventory2-Item1.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item1.png" src="q_dc-939.png" width="80" height="80" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item2.png" class="image" title="Изображение:Inventory2-Item2.png"><img alt="Изображение:Inventory2-Item2.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item2.png" src="7_uomc36.png" width="80" height="80" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item3.png" class="image" title="Изображение:Inventory2-Item3.png"><img alt="Изображение:Inventory2-Item3.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item3.png" src="2cs-fv68.png" width="80" height="80" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item4.png" class="image" title="Изображение:Inventory2-Item4.png"><img alt="Изображение:Inventory2-Item4.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Inventory2-Item4.png" src="a5weujbt.png" width="80" height="80" /></a>
+</p>
+</center>
+<p>Теперь займемся глобальными переменными:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> AplicationWidth,AplicationHeight,KolCell,SizeCellW,SizeCellH,KolCol,KolRow,InventarPozX,InventarPozY,MouseID</div>
+<p>Теперь разберем для чего нужна каждая из этих переменных:
+</p><p><br />
+</p>
+<ul><li>AplicationWidth, AplicationHeight - в этих переменных хранится значение высоты и ширины экрана, они нам понадобятся для вычисления координат инвентаря при различных разрешения экрана.
+</li><li>KolCell - нужно для хранения количества ячеек инвентаря
+</li><li>SizeCellW, SizeCellH - служат для хранения информации о размерности ячейки инвентаря (рекомендуется присваивать им значения высоты и ширины картинки объекта который будет в инвентаре)
+</li><li>KolCol,KolRow - служит для хранения количества столбцов и строк в инвентаре
+</li><li>InventarPozX,InventarPozY - служит для хранения координат начало рисования инвентаря.
+</li><li>MouseID - в этой переменной будет храниться ID (идентификатор объекта) предмета, который будет перемещаться с помощью мыши по инвентарю:
+</li></ul>
+<p>Далее мы задаем размерность экрана и указываем графический режим, в котором будем работать:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">AplicationWidth=<span style="color: #33ffdd;">800</span> <span style="color: #ffee00">;Ширина Экрана</span><br />
+<p>AplicationHeight=<span style="color: #33ffdd;">600</span> <span style="color: #ffee00">;Высота экрана</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics3D</span> AplicationWidth,AplicationHeight, <span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">2</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<p>Ну и наконец, начнем непосредственно описание программы:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">MouseID=<span style="color: #33ffdd;">0</span> &nbsp;<span style="color: #ffee00">;Обнуляем переменные</span><br />
+<p>MouseStatus=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;Переменная для хранения статуса мыши, служит для определения была ли нажата кнопка мыши...</span><br />
+MouseImage=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Mouse.png&quot;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Загрузка курсора мыши...</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> MouseImage,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;маска для мыши...</span></div>
+<p>Теперь опишем тип TСell (Клетка), так как инвентарь у нас состоит из клеток, следовательно, логично будет сделать ее описание. Так как у клетки инвентаря множество информации, которую нужно хранить, мы и будем использовать тип. Опишем подробно TСell и все её данные:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> TCell <span style="color: #ffee00">; Тип клетки для инвенторя</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> X <span style="color: #ffee00">;Координа &quot;Х&quot; клетки</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Y <span style="color: #ffee00">;Координа &quot;У&quot; клетки</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Status<span style="color: #ffee00">; Здесь хранится ID объекта, если его нет - значение = 0</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Type</span></div>
+<p>Так как клетка инвентаря будет рисоваться с помощью обычного квадрата, то нам больше не нужны данные, но, при желании, вы всегда можете добавить какие-либо поля (Field), например, если у вас в клетке будет рисоваться не обычный квадрат, а загружаемая картинка, то нужно добавить поле ImageCell. Надеюсь, то что ниже пояснять не нужно:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">KolCol=<span style="color: #33ffdd;">3</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Количество столбцов</span><br />
+<p>KolRow=<span style="color: #33ffdd;">3</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Количество строк</span><br />
+KolCell=KolCol*KolRow &nbsp;<span style="color: #ffee00">;Количество ячеек</span><br />
+<br />
+SizeCellW=<span style="color: #33ffdd;">80</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Ширина ячейки</span><br />
+SizeCellH=<span style="color: #33ffdd;">80</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Висота ячейки</span><br />
+<br />
+InventarPozX=AplicationWidth-<span style=" ">&#40;</span>KolCol*SizeCellW<span style=" ">&#41;</span> <span style="color: #ffee00">;Указываем откуда начинать рисовать инвентарь, координата &quot;X&quot;</span><br />
+</p>
+InventarPozY=<span style="color: #33ffdd;">0</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;Указываем откуда начинать рисовать инвентарь, координата &quot;Y&quot;</span></div>
+<p>Ну и, наконец, создаем массив, состоящий из нашего типа TCell, размерностью KolCell-1 (-1, так как в массивах нумерация начинается с 0, и если мы от KolCell не отнимем -1, то получится массив размерностью 10, а не 9)
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Dim</span> Inventar.TCell<span style=" ">&#40;</span>KolCell<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span></div>
+<p>Теперь приступим к описанию типа предметов инвентаря, я сделал все в одном типе, но это не совсем правильно и не очень красиво, хотя и проще и понятнее&nbsp;:) (Обычно нужно делать с помощью вложенных типов):
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> TObject &nbsp; &nbsp;<span style="color: #ffee00">; Тип для описания предметов инвентаря</span><br />
+<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> ID &nbsp; &nbsp;<span style="color: #ffee00">; &nbsp;Идентификатор предмета</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Image <span style="color: #ffee00">; &nbsp;Переменная для картинки предмета</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Name$ <span style="color: #ffee00">; &nbsp;Название предмета</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Description$ <span style="color: #ffee00">; Описание объекта</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Damage &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">; Повреждения наносимые объектом (Только у оружия)</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Guard &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ffee00">; Защита (только у щитов и у брони)</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Type</span></div>
+<p>Далее заполним данные о мечах и щитах (вообще, такие вещи должны храниться в файле):
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;------------------------ Мечи----1-99-----------------------</span><br />
+<p>Sword.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Sword\Damage=<span style="color: #33ffdd;">10</span><br />
+Sword\ID=<span style="color: #33ffdd;">1</span><br />
+Sword\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item1.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Sword\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Sword\Name$=<span style="color: #00ff66;">&quot;Меч&quot;</span><br />
+Sword\Description$=<span style="color: #00ff66;">&quot;Меч был выкован неизвестным кузнецом. В общем, ничего особого он не стоит...&quot;</span><br />
+<br />
+Sword.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Sword\Damage=<span style="color: #33ffdd;">15</span><br />
+Sword\ID=<span style="color: #33ffdd;">2</span><br />
+Sword\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item2.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Sword\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Sword\Name$=<span style="color: #00ff66;">&quot;Меч-2&quot;</span><br />
+Sword\Description$=<span style="color: #00ff66;">&quot;Меч-2 был выкован Великим Мастером.&quot;</span><br />
+<span style="color: #ffee00">;------------------------ Щиты--100-199-------------------------</span><br />
+Shield.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Shield\Guard=<span style="color: #33ffdd;">3</span><br />
+Shield\ID=<span style="color: #33ffdd;">100</span><br />
+Shield\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item3.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Shield\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Shield\Name$=<span style="color: #00ff66;">&quot;Щит титана&quot;</span><br />
+Shield\Description$=<span style="color: #00ff66;">&quot;Щит принадлежал одному из титанов, не каждому воину под силу унести его...&quot;</span><br />
+<br />
+Shield.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Shield\Guard=<span style="color: #33ffdd;">5</span><br />
+Shield\ID=<span style="color: #33ffdd;">101</span><br />
+Shield\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item4.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Shield\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Shield\Name$=<span style="color: #00ff66;">&quot;Щит Дракона&quot;</span><br />
+</p>
+Shield\Description$=<span style="color: #00ff66;">&quot;Щит, созданный из драконьей чешуи, один из лучших способов защиты от огня...&quot;</span></div>
+<p>Вы наверное заметили, что у мечей ID начинается с 1 а у щитов - со 100, Это сделано для того, чтобы ID предметов не пересекались, я предположил что в вашей игре больше 99 мечей не будет, если я ошибся, то просто измените начальное значение на тысячу и тогда уж точно ID никогда не пересекутся:
+Теперь установим шрифт:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">FntArial=<span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Arial&quot;</span>,<span style="color: #33ffdd;">14</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetFont</span> FntArial</div>
+<p>И, наконец, вызов первой функции InitInventar(). Процедура заполняет все клетки нулями и рассчитывает их координаты, а вообще здесь можно добавить загрузку данных для инвентаря из файла, чтобы при каждом запуске программы все вещи были на местах. Так как это совсем просто, я не стал писать, оставив вам возможность попрограммировать самим&nbsp;:). Код функций InitInventar() смотрите ниже.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> InitInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Создаем инвентарь</span><br />
+<p>K=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolRow<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> J=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCol<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>= <span style="color: #aaffff; font-weight: bold;">New</span> TCell<br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\X=InventarPozX+<span style=" ">&#40;</span><span style=" ">&#40;</span>SizeCellW<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>*J<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\Y=InventarPozY+<span style=" ">&#40;</span><span style=" ">&#40;</span>SizeCellH<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>*I<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp;K=K<span style="color: #33ffdd;">+1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Ну и, наконец, мы дожили до основного цикла программы:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Выход из программы если нажали Esc</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<br />
+&nbsp; &nbsp; DrawInventar<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Функция рисования инвентаря</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 1 то в инвентарь добавится меч</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">3</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 2 то в инвентарь добавится 2-ой меч</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">4</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 3 то в инвентарь добавится Щит титана</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">5</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">101</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 4 то в инвентарь добавится Щит Дракона</span><br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> GetInfoInventar<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">; По нажатию правой кнопки мыши на объекте, в инвентаре выводится информация об этом предмете</span><br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Then</span> MoveElementToInventar<span style=" ">&#40;</span><span style=" ">&#41;</span>:MouseStatus=<span style="color: #33ffdd;">1</span> <span style="color: #ffee00">; По нажатию левой - перемещение предмета</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> MouseStatus=<span style="color: #33ffdd;">2</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span>MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span>,MouseID<span style=" ">&#41;</span>:MouseStatus=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;Если отпустили мышь с предметом, то он добавляется в инвентарь</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> MouseStatus&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> MouseStatus=<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; необходимо для того, чтобы отпущенный предмет добавился только один раз</span><br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> MouseImage,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Рисуем курсор мыши</span><br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Flip</span><span style="color: #ffee00">;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End</span></div>
+<p>Теперь разберем все подробнее, начнем с DrawInventar(): это процедура нужна для прорисовки инвентаря, рассмотрим ее подробнее:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> DrawInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования инвентаря</span><br />
+<p>&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span><span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,SizeCellW,SizeCellH,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #ffee00">; Рисуем квадрат для инвентаря (здесь можно квадрат заменить на картинку)</span><br />
+&nbsp; &nbsp;DrawElementInventar<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status,I<span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования предметов инвентаря</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функции используется еще одна функция DrawElementInventar(), она рисует предметы инвентаря, ее код можно посмотреть ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> DrawElementInventar<span style=" ">&#40;</span>ID,Element<span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования предметов инвентаря</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> ID&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ячейка не пустая, то</span><br />
+&nbsp; &nbsp; Temp.TObject=FindObjectInInventar<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> <span style="color: #ffee00">;Функция возвращает данные об объекте, который находится в ячейке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> Temp\image,Inventar.TCell<span style=" ">&#40;</span>Element<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>Element<span style=" ">&#41;</span>\Y <span style="color: #ffee00">;Рисуем предмет из инвентаря</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функции использовалась функция FindObjectInInventar() она возвращает данные об объекте, который находится в ячейке, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> FindObjectInInventar.TObject<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> <span style="color: #ffee00">;Функция возвращает данные об объекте, который находится в ячейке.</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&gt;=<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>ID&lt;=<span style="color: #33ffdd;">99</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ID (идентификатор объекта) попал в интервал от 1 до 99 то это меч</span><br />
+&nbsp; Sword.TObject = <span style="color: #aaffff; font-weight: bold;">First</span> TObject <span style="color: #ffee00">; Устанавливаем список мечей на первый меч</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> Sword.TObject= <span style="color: #aaffff; font-weight: bold;">Each</span> TObject <span style="color: #ffee00">;Перебираем все мечи в поисках нужного</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;Temp=Sword\ID <span style="color: #ffee00">;Присваиваем переменной Temp ID перебираемого объекта</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp =ID <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> Sword: <span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">; Смотрим: если ID (Temp) = ID искомого предмета, то возвращаем о нем данные и выходим из цикла</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&gt;=<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>ID&lt;=<span style="color: #33ffdd;">199</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ID (идентификатор объекта) попал в интервал от 100 до 199, то это щит</span><br />
+&nbsp; Shield.TObject = <span style="color: #aaffff; font-weight: bold;">First</span> TObject <span style="color: #ffee00">;Устанавливаем список щитов на первый щит</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> Shield.TObject= <span style="color: #aaffff; font-weight: bold;">Each</span> TObject<span style="color: #ffee00">;Перебираем все щиты в поисках нужного</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;Temp=Shield\ID &nbsp;<span style="color: #ffee00">;Присваеваем переменной Temp ID перебираемого объекта</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp =ID <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> Shield: <span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">;Смотрим, если ID (Temp) = ID искомого предмета, то возвращаем о нем данные и выходим из цикла</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #ffee00">; Можно добавить и еще подобные проверки, если у вас больше предметов...</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Далее, рассмотрим следующую строчку из основного цикла программы: If KeyHit(2) Then AddElementToInventar(1,1). Значит, при нажатии на кнопку, в инвентарь добавляется предмет с помощью процедуры AddElementToInventar, давайте рассмотрим её более подробно:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> AddElementToInventar<span style=" ">&#40;</span>Poz,ID<span style=" ">&#41;</span><span style="color: #ffee00">; Функция добавляет предмет в инвентарь, Poz-в какую ячейку, ID-какой предмет</span><br />
+<p>&nbsp; &nbsp; TempEmptyCell=FindEmptyCellInInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; Поиск свободной клетки</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Poz=<span style="color: #33ffdd;">-1</span> &nbsp; <span style="color: #aaffff; font-weight: bold;">Then</span> Poz=TempEmptyCell<span style="color: #ffee00">; Если предмет вы бросаете вне клеток инвентаря, то предмет попадет в первую свободную клетку</span><br />
+&nbsp; &nbsp; Temp=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">;Здесь запоминается идентификатор (ID) предмета в клетке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> TempEmptyCell&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; смотрим, есть ли пустые клетки, если есть, то идем дальше</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Temp&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; Если клетка не пустая, то</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Inventar.TCell<span style=" ">&#40;</span>TempEmptyCell<span style=" ">&#41;</span>\Status=ID <span style="color: #ffee00">; присваиваем предмет найденной пустой клетке</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; Указываем, что предмет опущен в клетку и мышь пустая</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Temp=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #ffee00">; Если клетка пустая,</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status=ID <span style="color: #ffee00">;то присваиваем предмет текущей клетке</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; Указываем, что предмет опущен в клетку и мышь пустая</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span>,<span style="color: #00ff66;">&quot;Инвентарь переполнен&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функции использовалась функция FindEmptyCellInInventar(), она возвращает номер первой попавшейся свободной ячейки, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> FindEmptyCellInInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Ищет первую свободную ячейку в инвентаре</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> I:<span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">;Перебираем все клетки в поисках пустой, если нашли, то возвращаем её номер и выходим...</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">-1</span> <span style="color: #ffee00">;Если нет пустых клеток то, возвращаем -1</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Далее рассмотрим следующую строчку из основного цикла программы: If MouseDown(2) Then GetInfoInventar(). Эта функция по нажатию правой кнопки мыши на объекте в инвентаре выводит информацию об этом предмете, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> GetInfoInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; По нажатию правой кнопки мыши на объекте, в инвентаре выводится информация об этом предмете</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; ID=Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Перебираем все клетки и смотрим ID объектов клетки</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>MouseOverlap<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X+SizeCellW,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y+SizeCellH<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #ffee00">; Смотрим: если клетка не пустая и мышь находится над этой клеткой, то</span><br />
+&nbsp; &nbsp; &nbsp; TempDan.TObject=FindObjectInInventar<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">; Ищем данные об объекте</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">10</span>, TempDan\Name$ &nbsp; &nbsp;<span style="color: #ffee00">; Выводим название объекта</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">30</span>, TempDan\Description$ <span style="color: #ffee00">;Описание объекта</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> TempDan\ID&lt;=<span style="color: #33ffdd;">99</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">50</span>,<span style="color: #00ff66;">&quot;Урон:&quot;</span>+TempDan\Damage <span style="color: #ffee00">;Если это оружие, значит выводим значение урона</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> TempDan\ID&gt;=<span style="color: #33ffdd;">100</span> <span style="color: #aaffff; font-weight: bold;">And</span> TempDan\ID&lt;=<span style="color: #33ffdd;">199</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">50</span>,<span style="color: #00ff66;">&quot;Защита:&quot;</span>+TempDan\Guard &nbsp; <span style="color: #ffee00">;Если это щит, значит выводим значение защиты</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функции использовалась функция MouseOverlap(X,Y,X1,Y1), X,Y-начало прямоугольника, X1,Y1-нижняя правая граница прямоугольника, она возвращает номер первой попавшейся свободной ячейки, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> MouseOverlap<span style=" ">&#40;</span>X,Y,X1,Y1<span style=" ">&#41;</span> <span style="color: #ffee00">; Функция возвращает TRUE, если мышка попадает в квадрат и False, если не попадает</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt;X<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt;X1<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> &nbsp;<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt;Y<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt;Y1<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">Else</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">False</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Далее расмотрим следующую строчку из основного цикла программы: If MouseDown(1) Then MoveElementToInventar():MouseStatus=1. Если вы нажали левую кнопку мыши на предмете и держите её, то выполняется MoveElementToInventar() (перемещение предмета), код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> MoveElementToInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;перемещение предмета</span><br />
+<p>&nbsp; Poz=MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; Смотрим, где взяли предмет (в какой ячейке)</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>Poz&gt;=<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> <span style=" ">&#40;</span>MouseID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Проверяем, чтобы предмет брался из инвентаря или мышь была не пустая</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp; ID=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Если мышь пустая, то берем ID предмета в текущей клетке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> &nbsp;ID&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> MouseID=ID: DeleteElementToInventar<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span> <span style="color: #ffee00">; Если предмет есть в клетке, то мышь берет его и клетка очищается</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>MouseID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp; &nbsp; <span style="color: #ffee00">; Если мышь не пустая, то</span><br />
+&nbsp; &nbsp; &nbsp; Temp.TObject=FindObjectInInventar<span style=" ">&#40;</span>MouseID<span style=" ">&#41;</span> <span style="color: #ffee00">; ищем данные объекта по ID, который, у нас в мыши</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> Temp\image,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-SizeCellW/<span style="color: #33ffdd;">2</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-SizeCellH/<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; Рисуем картинку объекта вместе с мышью...</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>В этой функций использовались две функции: DeleteElementToInventar(Poz),  Poz - номер клетки, в которой нужно удалить объект, эта функция удаляет из инвентаря предмет в заданной клетке, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> DeleteElementToInventar<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span><span style="color: #ffee00">; Удаление &nbsp;предмета из инвентаря</span><br />
+<p>&nbsp; &nbsp;Temp=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Сохраняем в переменную значение клетки</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; Смотрим, если клетка не пустая, то делаем ее пустой</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Следующая функция MouseDownInventar() смотрит, в какой ячейке находится мышь, код её смотрите ниже:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; смотрим в какой ячейке находится мышь</span><br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>MouseOverlap<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X+SizeCellW,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y+SizeCellH<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><span style="color: #ffee00">; Смотрим где находится мышь и если она попадает в клетку инвентаря, возвращаем его номер и выходим</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> I:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">-1</span> <span style="color: #ffee00">; Если мышь не попадает ни в одну клетку</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Полный код:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> DataDir$=<span style="color: #aaffff; font-weight: bold;">SystemProperty</span>$<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;appdir&quot;</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;Data\&quot;</span><br />
+<p>DataDir$=<span style="color: #00ff66;">&quot;.\Data\&quot;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> AplicationWidth,AplicationHeight,KolCell,SizeCellW,SizeCellH,KolCol,KolRow,InventarPozX,InventarPozY,MouseID<br />
+<br />
+AplicationWidth=<span style="color: #33ffdd;">800</span> <span style="color: #ffee00">;Ширина Экрана</span><br />
+AplicationHeight=<span style="color: #33ffdd;">600</span> <span style="color: #ffee00">;Высота экрана</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics3D</span> AplicationWidth,AplicationHeight, <span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+MouseID=<span style="color: #33ffdd;">0</span> &nbsp;<span style="color: #ffee00">;Обнуляем переменные</span><br />
+MouseStatus=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;Переменная для хранения статуса мыши, служит для определения была ли нажата кнопка мыши...</span><br />
+MouseImage=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Mouse.png&quot;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Загрузка курсора мыши...</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> MouseImage,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;маска для мыши...</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> TCell <span style="color: #ffee00">; Тип клетки для инвенторя</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> X <span style="color: #ffee00">;Координа &quot;Х&quot; клетки</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> Y <span style="color: #ffee00">;Координа &quot;У&quot; клетки</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> Status<span style="color: #ffee00">; Здесь хранится ID объекта, если его нет - значение = 0</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+KolCol=<span style="color: #33ffdd;">3</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Количество столбцов</span><br />
+KolRow=<span style="color: #33ffdd;">3</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Количество строк</span><br />
+KolCell=KolCol*KolRow &nbsp;<span style="color: #ffee00">;Количество ячеек</span><br />
+<br />
+SizeCellW=<span style="color: #33ffdd;">80</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Ширина ячейки</span><br />
+SizeCellH=<span style="color: #33ffdd;">80</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">;Висота ячейки</span><br />
+<br />
+InventarPozX=AplicationWidth-<span style=" ">&#40;</span>KolCol*SizeCellW<span style=" ">&#41;</span> <span style="color: #ffee00">;Указываем откуда начинать рисовать инвентарь, координата &quot;X&quot;</span><br />
+InventarPozY=<span style="color: #33ffdd;">0</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ffee00">;Указываем откуда начинать рисовать инвентарь, координата &quot;Y&quot;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> Inventar.TCell<span style=" ">&#40;</span>KolCell<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> TObject &nbsp; &nbsp;<span style="color: #ffee00">; Тип для описания предметов инвентаря</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> ID &nbsp; &nbsp;<span style="color: #ffee00">; &nbsp;Идентификатор предмета</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Image <span style="color: #ffee00">; &nbsp;Переменная для картинки предмета</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Name$ <span style="color: #ffee00">; &nbsp;Название предмета</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Description$ <span style="color: #ffee00">; Описание объекта</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Damage &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">; Повреждения наносимые объектом (Только у оружия)</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> Guard &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ffee00">; Защита (только у щитов и у брони)</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #ffee00">;------------------------ Мечи----1-99-----------------------</span><br />
+Sword.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Sword\Damage=<span style="color: #33ffdd;">10</span><br />
+Sword\ID=<span style="color: #33ffdd;">1</span><br />
+Sword\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item1.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Sword\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Sword\Name$=<span style="color: #00ff66;">&quot;Меч&quot;</span><br />
+Sword\Description$=<span style="color: #00ff66;">&quot;Меч был выкован неизвестным кузнецом. В общем, ничего особого он не стоит...&quot;</span><br />
+<br />
+Sword.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Sword\Damage=<span style="color: #33ffdd;">15</span><br />
+Sword\ID=<span style="color: #33ffdd;">2</span><br />
+Sword\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item2.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Sword\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Sword\Name$=<span style="color: #00ff66;">&quot;Меч-2&quot;</span><br />
+Sword\Description$=<span style="color: #00ff66;">&quot;Меч-2 был выкован Великим Мастером.&quot;</span><br />
+<span style="color: #ffee00">;------------------------ Щиты--100-199-------------------------</span><br />
+Shield.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Shield\Guard=<span style="color: #33ffdd;">3</span><br />
+Shield\ID=<span style="color: #33ffdd;">100</span><br />
+Shield\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item3.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Shield\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Shield\Name$=<span style="color: #00ff66;">&quot;Щит титана&quot;</span><br />
+Shield\Description$=<span style="color: #00ff66;">&quot;Щит принадлежал одному из титанов, не каждому воину под силу унести его...&quot;</span><br />
+<br />
+Shield.TObject=<span style="color: #aaffff; font-weight: bold;">New</span> TObject<br />
+Shield\Guard=<span style="color: #33ffdd;">5</span><br />
+Shield\ID=<span style="color: #33ffdd;">101</span><br />
+Shield\Image=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span>DataDir$+<span style="color: #00ff66;">&quot;Inventory2-Item4.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">MaskImage</span> Shield\Image,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><br />
+Shield\Name$=<span style="color: #00ff66;">&quot;Щит Дракона&quot;</span><br />
+Shield\Description$=<span style="color: #00ff66;">&quot;Щит, созданный из драконьей чешуи, один из лучших способов защиты от огня...&quot;</span><br />
+<br />
+FntArial=<span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Arial&quot;</span>,<span style="color: #33ffdd;">14</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetFont</span> FntArial<br />
+<br />
+InitInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Выход из программы если нажали Esc</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<br />
+&nbsp; &nbsp; DrawInventar<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Функция рисования инвентаря</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 1 то в инвентарь добавится меч</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">3</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 2 то в инвентарь добавится 2-ой меч</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">4</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 3 то в инвентарь добавится Щит титана</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">5</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">101</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Если нажать на кнопку 4 то в инвентарь добавится Щит Дракона</span><br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> GetInfoInventar<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">; По нажатию правой кнопки мыши на объекте, в инвентаре выводится информация об этом предмете</span><br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Then</span> MoveElementToInventar<span style=" ">&#40;</span><span style=" ">&#41;</span>:MouseStatus=<span style="color: #33ffdd;">1</span> <span style="color: #ffee00">; По нажатию левой - перемещение предмета</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> MouseStatus=<span style="color: #33ffdd;">2</span> <span style="color: #aaffff; font-weight: bold;">Then</span> AddElementToInventar<span style=" ">&#40;</span>MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span>,MouseID<span style=" ">&#41;</span>:MouseStatus=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">;Если отпустили мышь с предметом, то он добавляется в инвентарь</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> MouseStatus&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> MouseStatus=<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; необходимо для того, чтобы отпущенный предмет добавился только один раз</span><br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">DrawImage</span> MouseImage,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #ffee00">;Рисуем курсор мыши</span><br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Flip</span><span style="color: #ffee00">;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> InitInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Создаем инвентарь</span><br />
+K=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolRow<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> J=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCol<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>= <span style="color: #aaffff; font-weight: bold;">New</span> TCell<br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\X=InventarPozX+<span style=" ">&#40;</span><span style=" ">&#40;</span>SizeCellW<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>*J<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\Y=InventarPozY+<span style=" ">&#40;</span><span style=" ">&#40;</span>SizeCellH<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>*I<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;Inventar.TCell<span style=" ">&#40;</span>K<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp;K=K<span style="color: #33ffdd;">+1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> DrawInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования инвентаря</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span><span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,SizeCellW,SizeCellH,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #ffee00">; Рисуем квадрат для инвентаря (здесь можно квадрат заменить на картинку)</span><br />
+&nbsp; &nbsp;DrawElementInventar<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status,I<span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования предметов инвентаря</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> DrawElementInventar<span style=" ">&#40;</span>ID,Element<span style=" ">&#41;</span><span style="color: #ffee00">;Функция рисования предметов инвентаря</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> ID&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ячейка не пустая, то</span><br />
+&nbsp; &nbsp; Temp.TObject=FindObjectInInventar<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> <span style="color: #ffee00">;Функция возвращает данные об объекте, который находится в ячейке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> Temp\image,Inventar.TCell<span style=" ">&#40;</span>Element<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>Element<span style=" ">&#41;</span>\Y <span style="color: #ffee00">;Рисуем предмет из инвентаря</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> FindObjectInInventar.TObject<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> <span style="color: #ffee00">;Функция возвращает данные об объекте, который находится в ячейке.</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&gt;=<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>ID&lt;=<span style="color: #33ffdd;">99</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ID (идентификатор объекта) попал в интервал от 1 до 99 то это меч</span><br />
+&nbsp; Sword.TObject = <span style="color: #aaffff; font-weight: bold;">First</span> TObject <span style="color: #ffee00">; Устанавливаем список мечей на первый меч</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> Sword.TObject= <span style="color: #aaffff; font-weight: bold;">Each</span> TObject <span style="color: #ffee00">;Перебираем все мечи в поисках нужного</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;Temp=Sword\ID <span style="color: #ffee00">;Присваиваем переменной Temp ID перебираемого объекта</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp =ID <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> Sword: <span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">; Смотрим: если ID (Temp) = ID искомого предмета, то возвращаем о нем данные и выходим из цикла</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&gt;=<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>ID&lt;=<span style="color: #33ffdd;">199</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Если ID (идентификатор объекта) попал в интервал от 100 до 199, то это щит</span><br />
+&nbsp; Shield.TObject = <span style="color: #aaffff; font-weight: bold;">First</span> TObject <span style="color: #ffee00">;Устанавливаем список щитов на первый щит</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> Shield.TObject= <span style="color: #aaffff; font-weight: bold;">Each</span> TObject<span style="color: #ffee00">;Перебираем все щиты в поисках нужного</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;Temp=Shield\ID &nbsp;<span style="color: #ffee00">;Присваеваем переменной Temp ID перебираемого объекта</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp =ID <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> Shield: <span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">;Смотрим, если ID (Temp) = ID искомого предмета, то возвращаем о нем данные и выходим из цикла</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #ffee00">; Можно добавить и еще подобные проверки, если у вас больше предметов...</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> AddElementToInventar<span style=" ">&#40;</span>Poz,ID<span style=" ">&#41;</span><span style="color: #ffee00">; Функция добавляет предмет в инвентарь, Poz-в какую ячейку, ID-какой предмет</span><br />
+&nbsp; &nbsp; TempEmptyCell=FindEmptyCellInInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; Поиск свободной клетки</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Poz=<span style="color: #33ffdd;">-1</span> &nbsp; <span style="color: #aaffff; font-weight: bold;">Then</span> Poz=TempEmptyCell<span style="color: #ffee00">; Если предмет вы бросаете вне клеток инвентаря, то предмет попадет в первую свободную клетку</span><br />
+&nbsp; &nbsp; Temp=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">;Здесь запоминается идентификатор (ID) предмета в клетке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> TempEmptyCell&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; смотрим, есть ли пустые клетки, если есть, то идем дальше</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Temp&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; Если клетка не пустая, то</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Inventar.TCell<span style=" ">&#40;</span>TempEmptyCell<span style=" ">&#41;</span>\Status=ID <span style="color: #ffee00">; присваиваем предмет найденной пустой клетке</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; Указываем, что предмет опущен в клетку и мышь пустая</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Temp=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #ffee00">; Если клетка пустая,</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status=ID <span style="color: #ffee00">;то присваиваем предмет текущей клетке</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; Указываем, что предмет опущен в клетку и мышь пустая</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span>,<span style="color: #00ff66;">&quot;Инвентарь переполнен&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> FindEmptyCellInInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;Ищет первую свободную ячейку в инвентаре</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> I:<span style="color: #aaffff; font-weight: bold;">Exit</span> <span style="color: #ffee00">;Перебираем все клетки в поисках пустой, если нашли, то возвращаем её номер и выходим...</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">-1</span> <span style="color: #ffee00">;Если нет пустых клеток то, возвращаем -1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> GetInfoInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; По нажатию правой кнопки мыши на объекте, в инвентаре выводится информация об этом предмете</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; ID=Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Перебираем все клетки и смотрим ID объектов клетки</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>ID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span>MouseOverlap<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X+SizeCellW,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y+SizeCellH<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp;<span style="color: #ffee00">; Смотрим: если клетка не пустая и мышь находится над этой клеткой, то</span><br />
+&nbsp; &nbsp; &nbsp;TempDan.TObject=FindObjectInInventar<span style=" ">&#40;</span>ID<span style=" ">&#41;</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffee00">; Ищем данные об объекте</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">10</span>, TempDan\Name$ &nbsp; &nbsp;<span style="color: #ffee00">; Выводим название объекта</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">30</span>, TempDan\Description$ <span style="color: #ffee00">;Описание объекта</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> TempDan\ID&lt;=<span style="color: #33ffdd;">99</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">50</span>,<span style="color: #00ff66;">&quot;Урон:&quot;</span>+TempDan\Damage <span style="color: #ffee00">;Если это оружие, значит выводим значение урона</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> TempDan\ID&gt;=<span style="color: #33ffdd;">100</span> <span style="color: #aaffff; font-weight: bold;">And</span> TempDan\ID&lt;=<span style="color: #33ffdd;">199</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">50</span>,<span style="color: #00ff66;">&quot;Защита:&quot;</span>+TempDan\Guard &nbsp; <span style="color: #ffee00">;Если это щит, значит выводим значение защиты</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> MouseOverlap<span style=" ">&#40;</span>X,Y,X1,Y1<span style=" ">&#41;</span> <span style="color: #ffee00">; Функция возвращает TRUE, если мышка попадает в квадрат и False, если не попадает</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt;X<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt;X1<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> &nbsp;<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&gt;Y<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&lt;Y1<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">Else</span> &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">False</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> MoveElementToInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;перемещение предмета</span><br />
+&nbsp; Poz=MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; Смотрим, где взяли предмет (в какой ячейке)</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>Poz&gt;=<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> <span style=" ">&#40;</span>MouseID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">;Проверяем, чтобы предмет брался из инвентаря или мышь была не пустая</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> MouseID=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp; ID=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Если мышь пустая, то берем ID предмета в текущей клетке</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> &nbsp;ID&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> MouseID=ID: DeleteElementToInventar<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span> <span style="color: #ffee00">; Если предмет есть в клетке, то мышь берет его и клетка очищается</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>MouseID&lt;&gt;<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> &nbsp; &nbsp; <span style="color: #ffee00">; Если мышь не пустая, то</span><br />
+&nbsp; &nbsp; &nbsp; Temp.TObject=FindObjectInInventar<span style=" ">&#40;</span>MouseID<span style=" ">&#41;</span> <span style="color: #ffee00">; ищем данные объекта по ID, который, у нас в мыши</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> Temp\image,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-SizeCellW/<span style="color: #33ffdd;">2</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-SizeCellH/<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; Рисуем картинку объекта вместе с мышью...</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> DeleteElementToInventar<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span><span style="color: #ffee00">; Удаление &nbsp;предмета из инвентаря</span><br />
+&nbsp; &nbsp;Temp=Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status <span style="color: #ffee00">; Сохраняем в переменную значение клетки</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> Temp&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> Inventar.TCell<span style=" ">&#40;</span>Poz<span style=" ">&#41;</span>\Status=<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; Смотрим, если клетка не пустая, то делаем ее пустой</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> MouseDownInventar<span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; смотрим в какой ячейке находится мышь</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> I=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> KolCell<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style=" ">&#40;</span>MouseOverlap<span style=" ">&#40;</span>Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\X+SizeCellW,Inventar.TCell<span style=" ">&#40;</span>I<span style=" ">&#41;</span>\Y+SizeCellH<span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><span style="color: #ffee00">; Смотрим где находится мышь и если она попадает в клетку инвентаря, возвращаем его номер и выходим</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Return</span> I:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">-1</span> <span style="color: #ffee00">; Если мышь не попадает ни в одну клетку</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/3/3f/Inventory_2.zip" class="internal" title="Inventory 2.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: WaReZ_MEN
+</p><!-- 
+Pre-expand include size: 13829 bytes
+Post-expand include size: 155 bytes
+Template argument size: 15 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:739-0!1!0!!ru!2 and timestamp 20071112105910 -->
+<div class="printfooter">
+Получено с <a href="epy_lzhh.html">http://blitzetcetera.org/index.php/%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%98%D0%BD%D0%B2%D0%B5%D0%BD%D1%82%D0%B0%D1%80%D1%8C by HTTrack Website Copier/3.x [XR&CO'2007], Mon, 12 Nov 2007 11:20:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

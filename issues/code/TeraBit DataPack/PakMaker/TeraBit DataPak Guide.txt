@@ -1,0 +1,93 @@
+DataPak Functions & GUI Packer
+Copyright Lee Page
+TeraBit Software 
+2000 - 2002
+
+Version 2.7
+
+Dear Blitz Basic User,
+
+The TeraBit DataPacker and Extraction functions habe been designed to allow you to incorporate all your data into packs along with minor encryption.
+It's not primarily designed as a security measure, more of a side effect.
+
+The Package consists of:
+
+* A GUI Packer, tooled to make the Packing of your investment as painless as possible. 
+* A Include file 'Bones.bb' - Which contains the functions you will need to include in your project to make use of the Data.Pak etc.
+* 4 Demonstration Projects which show how to use most of the functions
+* A DLL required to run the GUI Packmaker on Windows 2000 & Earlier
+
+FUNCTIONS
+
+PakInit myfile$,mykey,APND$,headermask
+
+PakInit is the function you call to initialise a Data.pak or a pak contained in an .exe. The First Parameter is the FileName (Often Data.pak or the name of your .exe). Then you have your 32 Bit encryption Key (The part that the data is encrypted with), then the Temporary file designator (APND$) which is appended to any file unpacked by the DataPak system (usually "TMP"). Then the HeaderMask, a separate 32 Bit Key used to encrypt separately the Header and directory listings. If you specify 0 for both encryption keys, it's a relatively easy matter to carve files out of a Pak, but it will load and Pack the data faster, so speed vs security.
+
+
+The initialisation line is shown at the bottom of the GUI Packmaker and can be Cut/Paste into Blitz to save time.
+
+
+
+Pak "Filename"
+
+This is the routine that actually recreates a packed file. Use it where you would a filename: eg..
+
+Pic = LoadImage("Wombat.png")
+
+Becomes
+
+Pic = LoadImage(Pak("Wombat.Png"))
+
+This needs to be used AFTER initialising the Pak using PakInit.
+
+NOTE: If you unpack a 3D model file (.x .3ds .b3d etc.) then it will be scanned for texture references and attempt to unpack these in advance of the model, so that it can be textured correctly by blitz.
+
+
+DLPak() 
+
+DL stands for Delete Last. You can use this to remove the Temporary file created when you unpack Data.
+
+eg.  Pic = LoadImage(Pak("Wombat.Png")) : DLPak() ; Note this does not apply to 'Exploaded' Textures
+
+
+PakClean() 
+
+This cleans out all files that have been unpacked to date, but have not been cleaned up yet. You could use this after a heavy loading session. It also clears up Textures which are automatically unpacked (Multiple texture upacking I call exploding) in advance of a 3D-Model.
+
+
+
+CreatePakFile "Filename", Encryption Key, headerMask
+AddtoPak "SomeFile.png"
+CloseCreatedPak()
+AppendToExe "MyExe.exe","Data.Pak"
+
+
+This allows you to make your own packs from within Blitz. See the Pack Creation Demo for details as to ho w to use them.
+
+NOTE: You may use the PACKING functions to make your own PACKERS, but not to sell these PACKERS on a commercial basis (or shareware etc.). I put many hours into this project, and would like all related Packers for the format to be free for all.
+
+You are free to use them in all other projects commercial or not and this in no way restricts the use of the unpacking functions. 
+
+PakOutputDir "C:\somewhere2
+
+Sets out where DataPak put's it's temporary files. If the location doesn't exist, it will attempt to create it! as will all unpacking functions with a relative path in the name.
+
+Hence
+
+Pak("\media\elmo.png2")  
+
+will attempt to create a subdirectory called Media and unpack the elmo.png into it!
+
+When apending data to an .exe file, I recommend compressing the .exe BEFORE attaching the data to it. I prefer to use UPX for this job 
+
+http://upx.sourceforge.net/
+
+Then Pak with the Append to EXE checked to finish the job!
+
+It is sensible to copy the PackMaker.exe into the root folder of your project. When run, it will scan subfolders to find files for you to add to a pack.
+
+Have fun! The best way to learn is to play around with it, see what it can do! Take the demo's apart and see what they do and why!
+
+Bug reports / suggestions to:
+
+TeraBit@Btinternet.com

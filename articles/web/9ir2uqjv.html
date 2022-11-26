@@ -1,0 +1,434 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC_GUI_%C2%AB%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8%C2%BB by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Создаем GUI «руками»,Avel" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Создаем GUI «руками» — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Создаем_GUI_«руками»";
+var wgTitle = "Создаем GUI «руками»";
+var wgAction = "view";
+var wgArticleId = "674";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3580";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Создаем_GUI_«руками»">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Создаем GUI «руками»</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<div align="right">- Чем отличается начинающий программист от законченного?<br />
+<p>- Начинающий считает, что в килобайте 1000 байт,<br />
+</p>
+а законченный - что в килограмме 1024 грамма.&nbsp;:)</div>
+<p><br />
+</p>
+<div align="right">Человек даже сам себя не всегда понимает, чего уж говорить о других. (Липкан А. В.)</div>
+<p><br />
+Lectori benevolo salutem. (лат. Привет благосклонному читателю.) Вообще для создания GUI (graphics user interface, если кто не знает.) обычно используют всякие программы, flash анимацию, HTML и др. Но мы не ищем легких путей! Мы с вами создадим все сами, программно. Я на простых примерах покажу, как можно создать привлекательную картинку с разными эффектами. В работе мы будем использовать разные программы для разных целей. Наличие всех из них не обязательно, но желательно. Конечно, я не буду детально описывать работу этих программ (если есть проблемы goto основы), но на необходимых основных моментах я остановлюсь. Если будет время, то я расскажу, как можно сделать простую программу «с кнопочками» в Delphi – там это удобно очень и просто! Итак, приступим.
+</p>
+<a name=".D0.93.D0.BB.D0.B0.D0.B2.D0.B0_.D0.BF.D0.B5.D1.80.D0.B2.D0.B0.D1.8F._.D0.A2.D0.B8.D0.BF.D0.B0_.D0.BE.D1.81.D0.BD.D0.BE.D0.B2.D0.BD.D1.8B.D0.B5_.D0.BC.D0.BE.D0.BC.D0.B5.D0.BD.D1.82.D1.8B."></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC_GUI_%C2%AB%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8%C2%BB&amp;action=edit&amp;section=1" title="Править секцию: Глава первая. Типа основные моменты.">править</a>]</span> <span class="mw-headline">Глава первая. Типа основные моменты.</span></h2>
+<p>Все должно быть логично и понятно, т. е. не так: Keyboard not found. Press F1 to continue... Представьте, что пользователь полный идиот, когда будете разрабатывать логику интерфейса. И только после этого начинайте набрасывать примерную схему на бумаге. Да, да именно на бумаге, ну, в крайнем случае, в paint’e или в блокноте. И лишь когда будете полностью представлять, как и что у вас будет, начинайте программировать рисовать и т. д. Для отделения разных частей программы обычно используют оператор
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Select</span> <br />
+<p>&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span><br />
+&nbsp; …<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> n<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End select</span></div>
+<p>Программа будет состоять из 2 частей как минимум: сама прога и меню. Введем переменную game:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;изначально = 1</span><br />
+<p>game=<span style="color: #33ffdd;">1</span><br />
+<br />
+<span style="color: #ffee00">; основа</span><br />
+<span style="color: #aaffff; font-weight: bold;">Select</span> game<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span><br />
+<span style="color: #ffee00">; здесь будет игра</span><br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span><br />
+<span style="color: #ffee00">; здесь меню</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Select</span></div>
+<p>Основа готова можно заполнять! Меню будем создавать потом. Сначала что-нибудь попроще. Скажем, создадим экранную рамку в фотошопе.
+</p>
+<ul><li>Шаг первый: создаем новый файл с размерами будущего разрешения экрана нашей игры. Это в меню «файл».
+</li></ul>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-01.gif" src="d0dt912o.gif" width="400" height="300" /></a></span></div></div>
+<ul><li>Шаг второй: окрашиваем фон в черный цвет с помощью заливки.
+</li></ul>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-02.gif" src="370wsdzq.gif" width="400" height="475" /></a></span></div></div>
+<ul><li>Шаг третий: создаем новый слой. Меню: Слой -&gt; новый слой.
+</li><li>Шаг четвертый: рисуем чего-нибудь на этом слое, например рамку.
+</li></ul>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-03.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI1-03.gif" src="5_6avy-g.gif" width="500" height="375" /></a></span></div></div>
+<ul><li>Шаг пятый: сохраняем картинку в формате png (<a href="dojwi5hi.png" class="internal" title="GUI-Screen.png">Медиа:GUI-Screen.png</a>) через меню файл.
+</li></ul>
+<p>Все, готово! Можно вставить команду DrawImage картинка, x, y перед flip. Черный фон будет не видно.Вот код проги с рамкой:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;(c) Agnislav Lipcan</span><br />
+<p><span style="color: #ffee00">;e-mail: avelnet[@]yandex.ru</span><br />
+<br />
+<span style="color: #ffee00">;изначально = 1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> game=<span style="color: #33ffdd;">1</span><br />
+<br />
+<span style="color: #ffee00">; основа</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span> <br />
+<span style="color: #aaffff; font-weight: bold;">Select</span> game<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span><br />
+<span style="color: #ffee00">; начало тела игры</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Cls</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-очищаем экран</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Graphics3D</span> <span style="color: #33ffdd;">1024</span>,<span style="color: #33ffdd;">768</span>,<span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">1</span><span style="color: #ffee00">;&lt;-инициализируем графику</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; ekran=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Screen.png&quot;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-загружаем картинку</span><br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span><span style="color: #ffee00">;&lt;-начало главного цикла</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> game=<span style="color: #33ffdd;">2</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">UpdateWorld</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">RenderWorld</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> ekran,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Until</span> game=<span style="color: #33ffdd;">2</span><span style="color: #ffee00">;&lt;-конец главного цикла</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span><br />
+<span style="color: #ffee00">; здесь меню</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Cls</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-очищаем экран</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">1024</span>,<span style="color: #33ffdd;">768</span>,<span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">1</span><span style="color: #ffee00">;&lt;-инициализируем графику</span><br />
+&nbsp; &nbsp;font=<span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Arial Cyr&quot;</span>,<span style="color: #33ffdd;">24</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">SetFont</span> font<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">FlushKeys</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-очищаем клавиатуру (всмысле нажатые клавиши)</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">430</span>,<span style="color: #33ffdd;">300</span>,<span style="color: #00ff66;">&quot;здесь будет меню&quot;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">WaitKey</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #ffee00">;&lt;-конец, выходим</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Forever</span></div>
+<p>Приступим. Из чего же, из чего же, из чего же  сделан наш интерфейс, как поется в песни (хотя, нет, там не так поется, ну ладно.&nbsp;:) ), а он сделан из менюшек, кнопок, курсоров, лист боксов, выпадающих меню, окон, дверей&nbsp;: ) и много чего еще. Допустим, что у нас есть программа, для которой нужно разработать интерфейс, например та, которую мы сделали в прошлый раз. Что обычно происходит на экране? Вначале главное меню, из него вы попадаете в игру (или другую программу, чего там у вас есть), там есть много всяких способов управления прогой вообще и тем, что твориться на экране конкретно, помимо всего прочего, там есть кнопка вызова контекстного меню, из которого можно опять попасть в главное. Из вышесказанного следует, что наш интерфейс делится на три части как минимум: главное меню, контекстное меню и экран рабочего поля со всем, что к нему прилагается. Контекстное меню можно реализовать по-разному. Это может быть отдельная часть программы или часть той части программы, где реализуется рабочий экран. При вызове контекстного меню основная программа останавливается. В первом варианте это реализуется автоматически, но необходимо сохранять текущий результат, а во втором случае сохранять ничего не требуется, но необходимо останавливать работу основной программы. Кроме того, важен внешний вид этого меню. Оно может быть выведено поверх рабочего экрана (например, как полупрозрачное меню в Quake 3 arena) или же занимать весь экран полностью. Если оно является частью экрана, то в случае, когда меню – отдельная часть программы придется реализовывать сохранение вида экрана. Обо всем этом следует подумать заранее. Вы можете спросить, зачем вообще нужно контекстное меню. Тут есть несколько причин: оно дает возможность быстро сделать, что-либо, например, сохраниться, не выходя из основной программы, оно может использоваться, чтобы временно остановить программу, сделать паузу, оно косвенным образом заставляет пользователя подольше оставаться в вашей программе (не в том смысле, что он будет тратить лишнее время на загрузку этого меню, оно, конечно, должно грузиться быстро, а в смысле пользователь не будет иметь предлога выйти из программы, до того, как она ему действительно надоест, чтобы выйти в главное меню и оттуда уже выгрузиться окончательно), оно улучшает внешний вид, дружелюбие и структурность программы. При разработке интерфейса подумайте, каким бы вы сами хотели его видеть, будь вы пользователем этой программы. Главным фактором тут, пожалуй, является удобство пользования.
+</p><p>Теперь займемся практической составляющей. Я расскажу вам, как сделать из той нелепости, что получилась у нас в прошлый раз (по крайней мере, у меня), что-то стоящее.
+Но для начала добавим в нашу программу немного действия, чтобы это был не просто черный фон. Вставьте вот этот код в тело оператора "Case 1" после строки загрузки картинки экрана "ekran=LoadImage("GUI-Screen.png")":
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">camera=<span style="color: #aaffff; font-weight: bold;">CreateCamera</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; создаем камеру</span><br />
+<p>&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">PositionEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; размещаем камеру</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">CameraClsColor</span> camera,<span style="color: #33ffdd;">50</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">180</span><span style="color: #ffee00">; цвет фона</span><br />
+<br />
+&nbsp; &nbsp; plane= <span style="color: #aaffff; font-weight: bold;">CreatePlane</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; pltex=<span style="color: #aaffff; font-weight: bold;">LoadTexture</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;trava.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">ScaleTexture</span> pltex,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EntityTexture</span> plane,pltex<br />
+</p>
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeTexture</span> pltex</div>
+<p>А в главный цикл добавьте строку поворота камеры: 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">TurnEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span></div>
+<p>Тут вроде все ясно, поэтому особо останавливаться на этом не буду. В папку с программой добавьте вот эту или другую текстуру:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Grass.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Grass.png" src="_mkhda1-.png" width="256" height="256" /></a></span></div></div>
+<p>Теперь открываем фотошоп и делаем следующее:
+</p>
+<ul><li>Повторяем шаги 1-3 с прошлого раза.
+</li><li>Выбираем подходящий цвет и заливаем им новый слой.
+</li></ul>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-04.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-04.jpg" src="a3r809by.jpg" width="512" height="384" /></a></span></div></div>
+<p>С помощью инструмента «выделение» выделяем лишние области и удаляем их. Чтобы выделить несколько областей одновременно используйте клавиши Shift и Alt. Должно получиться что-то вроде этого:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-05.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-05.jpg" src="izhi92p6.jpg" width="512" height="384" /></a></span></div></div>
+<p>Воспользуйтесь каким-нибудь фильтром из меню фильтр, а также инструментами «затемнение» и «осветление» для придания рамке неоднородности. После чего, воспользуемся фильтром «рассеивание» из вкладки «стилизация» в меню «фильтр» для того, чтобы наша рамка не была такой ровной. Потом выделим внутренние границы рамки и в меню (изображение -&gt; регулировки -&gt; яркость / контраст) настроим их чуть темнее, чем основная рамка. Это придаст объемность.  Добавляем драгоценные камни или другие спецэффекты, вырезанные из других картинок, и получается что-то вроде этого:
+</p>
+<center><table class="gallery" cellspacing="0" cellpadding="0">
+	<tr>
+		<td><div class="gallerybox" style="width: 150px;">
+			<div class="thumb" style="padding: 28px 0; width: 150px;"><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Screen2.png" title="Изображение:GUI-Screen2.png"><img src="1yvuzxio.png" width="120" height="90" alt="" /></a></div>
+			<div class="gallerytext">
+			</div>
+		</div></td>
+	</tr>
+</table></center>
+<p>Экранная рамка готова. Теперь сделаем кнопку вызова контекстного меню, в качестве которого у нас пока будет главное меню. Вначале программно:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> RefreshButton<span style=" ">&#40;</span>ImBtn,x,y,txt$,n<span style=" ">&#41;</span><br />
+<p>mx=<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&nbsp;: my=<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;координаты мыши </span><br />
+MHit=<span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #ffee00">;проверяем нажатие левой мыши </span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">RectsOverlap</span><span style=" ">&#40;</span>x<span style="color: #33ffdd;">+2</span>,y<span style="color: #33ffdd;">+2</span>,<span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>,<span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>,mx,my,<span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><span style="color: #ffee00">; наведение</span><br />
+&nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> MHit=<span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; нажатие мыши</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">2</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; сдвигаем текст кнопки ниже на 2 пикселя</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Buttons<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #ffee00">; записываем в массив, что кнопка нажата</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">EndIf</span> <br />
+<span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #ffee00">; иначе кнопка неактивна</span><br />
+&nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span> <br />
+<span style="color: #aaffff; font-weight: bold;">DrawImage</span> ImBtn,x,y,f <span style="color: #ffee00">; рисуем кнопку в нужном положении</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; цвет текста</span><br />
+<span style="color: #aaffff; font-weight: bold;">Text</span> x<span style="color: #33ffdd;">+0.5</span>*<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">+4</span>-<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>txt$<span style=" ">&#41;</span>*<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span>*<span style="color: #33ffdd;">0.5</span><span style=" ">&#41;</span>, y<span style="color: #33ffdd;">+0.5</span>*<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>-<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>+y2, txt$<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Эта функция, которую я разработал для удобства, рисует в определенном месте экрана кнопку и проверяет два условия: наведения и нажатия при наведении левой кнопки мыши. Она достаточно универсальна и может использоваться несколько раз. Для нее также необходим массив buttons()  число элементов, которого, равно количеству кнопок. Есть возможность того, чтобы несколько кнопок ссылались на один элемент массива, это бывает полезно. Текст на кнопке центрируется. Входные параметры следующие:
+</p><p>ImBtn – картинка кнопки (загружается через LoadAnimImage, состоит из 3 фреймов, размер любой)
+</p>
+<ul><li>x, y – координаты верхнего угла кнопки.
+</li><li>txt$ - текст на кнопке.
+</li><li>n – номер элемента массива на который ссылается кнопка.
+</li></ul>
+<p>Описывать саму функцию я не буду, потому, что там есть комментарии и все достаточно просто и понятно.
+</p><p>Теперь о том, как нарисовать кнопку. Можно воспользоваться одной из специальных программ, которых достаточно много, например, программой ImageReady CS, которая поставляется вместе с фотошопом, или другой. Но мы сделаем все сами в фотошопе.
+</p><p>Откроем файл с экранной рамкой, возьмем инструмент «волшебная палочка» и выделим область внутри круглой фигни в правом верхнем углу. Скопируем эту область и вставим в новый файл, размеры которого автоматически подгоняться под нашу область. Если они (размеры) по каким-то причинам иные, то измените их в меню (изображение -&gt; размер холста) так, чтобы края области точно совпадали с краями холста. Теперь рисуем кнопку, например, так:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-06.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-06.gif" src="eztx8ell.gif" width="64" height="70" /></a></span></div></div>
+<p>Далее делаем копию изображения и пока сворачиваем. Это будет нажатая кнопка. А в исходной кнопке затемняем нижнюю часть и помещаем блик, инструментами «затемнение» и «осветление».
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-07.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-07.gif" src="_qhq9ca_.gif" width="64" height="70" /></a></span></div></div>
+<p>Делаем копию и настраиваем яркость выше, чем у исходной, через меню. Это будет кнопка во время наведения.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-08.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-08.gif" src="_kxrbqsn.gif" width="64" height="70" /></a></span></div></div>
+<p>Разворачиваем первую копию и затемняем ее верхнюю часть, а также помещаем блик. Все как у исходной кнопки, но наоборот.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-09.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI2-09.gif" src="ffdlsqt7.gif" width="64" height="70" /></a></span></div></div>
+<p>Теперь заливаем фон всех трех кнопок черным цветом. Создаем новый файл с высотой такой же, как у файла с кнопкой, а шириной в три раза больше, чем ширина файла с кнопкой. Копируем все изображения в него и располагаем по порядку.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Button1.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Button1.png" src="w3sce_mx.png" width="192" height="70" /></a></span></div></div>
+<p>Все! Кнопка готова.
+Сделайте еще одну кнопку для главного меню, например, такую:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Button2.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI-Button2.png" src="ms9wms59.png" width="300" height="40" /></a></span></div></div>
+<p>Вызываем в программе функцию в нужных местах и добавляем код обработки нажатия функции. Вот весь код:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;(c) Agnislav Lipcan</span><br />
+<p><span style="color: #ffee00">;e-mail: avelnet@yandex.ru</span><br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics3D</span> <span style="color: #33ffdd;">1024</span>,<span style="color: #33ffdd;">768</span>,<span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">1</span><span style="color: #ffee00">;&lt;-инициализируем графику</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;изначально = 2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> game=<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> font=<span style="color: #aaffff; font-weight: bold;">LoadFont</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;courier&quot;</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetFont</span> font<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> kn1=<span style="color: #aaffff; font-weight: bold;">LoadAnimImage</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Button1.png&quot;</span>,<span style="color: #33ffdd;">64</span>,<span style="color: #33ffdd;">70</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> kn2=<span style="color: #aaffff; font-weight: bold;">LoadAnimImage</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Button2.png&quot;</span>,<span style="color: #33ffdd;">100</span>,<span style="color: #33ffdd;">40</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> kursor=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Cursor.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">; основа</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span> <br />
+<span style="color: #aaffff; font-weight: bold;">Select</span> game<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span><br />
+<span style="color: #ffee00">; начало тела игры</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Cls</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-очищаем экран</span><br />
+<br />
+&nbsp; &nbsp; &nbsp;ekran=<span style="color: #aaffff; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Screen2.png&quot;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-загружаем картинку</span><br />
+<br />
+&nbsp; &nbsp; camera=<span style="color: #aaffff; font-weight: bold;">CreateCamera</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; создаем камеру</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">PositionEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; размещаем камеру</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">CameraClsColor</span> camera,<span style="color: #33ffdd;">50</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">180</span><span style="color: #ffee00">; цвет фона</span><br />
+<br />
+&nbsp; &nbsp; plane= <span style="color: #aaffff; font-weight: bold;">CreatePlane</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; pltex=<span style="color: #aaffff; font-weight: bold;">LoadTexture</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Grass.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">ScaleTexture</span> pltex,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EntityTexture</span> plane,pltex<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeTexture</span> pltex<br />
+<br />
+&nbsp; &nbsp; lit=<span style="color: #aaffff; font-weight: bold;">CreateLight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span><span style="color: #ffee00">;&lt;-начало главного цикла</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> game=<span style="color: #33ffdd;">2</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">TurnEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; поворачиваем камеру</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">UpdateWorld</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">RenderWorld</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> ekran,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp; RefreshButton<span style=" ">&#40;</span>kn1,<span style="color: #33ffdd;">952</span>,<span style="color: #33ffdd;">12</span>,<span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> kursor,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+&nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Until</span> game=<span style="color: #33ffdd;">2</span><span style="color: #ffee00">;&lt;-конец главного цикла</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> camera<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> plane <br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> lit <br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeImage</span> ekran<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span><br />
+<span style="color: #ffee00">; здесь меню</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Cls</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;&lt;-очищаем экран</span><br />
+<br />
+&nbsp; &nbsp; camera=<span style="color: #aaffff; font-weight: bold;">CreateCamera</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">; создаем камеру</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">PositionEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; размещаем камеру</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">CameraFogMode</span> camera,<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">CameraFogRange</span> camera,.<span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">50</span><br />
+<br />
+&nbsp; &nbsp; plane= <span style="color: #aaffff; font-weight: bold;">CreatePlane</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <br />
+&nbsp; &nbsp; pltex=<span style="color: #aaffff; font-weight: bold;">LoadTexture</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;GUI-Grass.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">ScaleTexture</span> pltex,<span style="color: #33ffdd;">10</span>,<span style="color: #33ffdd;">10</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EntityTexture</span> plane,pltex<br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">FreeTexture</span> pltex<br />
+<br />
+&nbsp; &nbsp; lit=<span style="color: #aaffff; font-weight: bold;">CreateLight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp;<br />
+<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span> <br />
+&nbsp; &nbsp;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> exitprog=<span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #ffee00">;&lt;-конец, выходим</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> exitprog=<span style="color: #aaffff; font-weight: bold;">True</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> &nbsp;Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> game=<span style="color: #33ffdd;">1</span> Buttons<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">TurnEntity</span> camera,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">0</span><span style="color: #ffee00">; поворачиваем камеру</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">UpdateWorld</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">RenderWorld</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;RefreshButton<span style=" ">&#40;</span>kn2,<span style="color: #33ffdd;">462</span>,<span style="color: #33ffdd;">300</span>,<span style="color: #00ff66;">&quot;старт&quot;</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; RefreshButton<span style=" ">&#40;</span>kn2,<span style="color: #33ffdd;">462</span>,<span style="color: #33ffdd;">450</span>,<span style="color: #00ff66;">&quot;выход&quot;</span>,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">230</span>,<span style="color: #33ffdd;">230</span>,<span style="color: #33ffdd;">230</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">430</span>,<span style="color: #33ffdd;">150</span>,<span style="color: #00ff66;">&quot;здесь будет меню&quot;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DrawImage</span> kursor,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Flip</span> <br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Until</span> game=<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> camera<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> plane <br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">FreeEntity</span> lit <br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+<span style="color: #aaffff; font-weight: bold;">Until</span> &nbsp;exitprog=<span style="color: #aaffff; font-weight: bold;">True</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> RefreshButton<span style=" ">&#40;</span>ImBtn,x,y,txt$,n<span style=" ">&#41;</span><br />
+mx=<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>&nbsp;: my=<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #ffee00">;координаты мыши </span><br />
+MHit=<span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #ffee00">;проверяем нажатие левой мыши </span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">RectsOverlap</span><span style=" ">&#40;</span>x<span style="color: #33ffdd;">+2</span>,y<span style="color: #33ffdd;">+2</span>,<span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>,<span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>,mx,my,<span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><span style="color: #ffee00">; наведение</span><br />
+&nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> MHit=<span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #ffee00">; нажатие мыши</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">2</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">2</span> <span style="color: #ffee00">; сдвигаем текст кнопки ниже на 2 пикселя</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Buttons<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #ffee00">; записываем в массив, что кнопка нажата</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">EndIf</span> <br />
+<span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #ffee00">; иначе кнопка неактивна</span><br />
+&nbsp; &nbsp; &nbsp;f=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp;y2=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span> <br />
+<span style="color: #aaffff; font-weight: bold;">DrawImage</span> ImBtn,x,y,f <span style="color: #ffee00">; рисуем кнопку в нужном положении</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; цвет текста</span><br />
+<span style="color: #aaffff; font-weight: bold;">Text</span> x<span style="color: #33ffdd;">+0.5</span>*<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">+4</span>-<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>txt$<span style=" ">&#41;</span>*<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span>*<span style="color: #33ffdd;">0.5</span><span style=" ">&#41;</span>, y<span style="color: #33ffdd;">+0.5</span>*<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>ImBtn<span style=" ">&#41;</span><span style="color: #33ffdd;">-4</span>-<span style="color: #aaffff; font-weight: bold;">FontHeight</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>+y2, txt$<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Как выяснилось, интерфейс игровой программы состоит как минимум из трех частей, но в законченном приложении их обычно гораздо больше. Для настройки приложения существует экран опций и консоль. Для разъяснения пользователю тонкостей интерфейса существует система справки и подсказок. Причем если консоль обычно существует как часть основной программы, то окна справки и опций (настроек) могут находиться вообще в других файлах. Так же обычно все разработчики включают в программу информацию о себе, которая может быть частью хелпа, а может быть отдельно. Часто в играх существуют различные экраны карьеры и тому подобное. В начале работы приложения обычно показывается картинка или видео с логотипом разработчиков, а в играх это используется повсеместно. Отдельной частью программы можно назвать систему управления курсором (видом, положением и т. д.), особенно это актуально для РПГ и стратегий. Основную программу тоже можно разделить на части: движок, создание виртуального мира, создание игрока, управление частицами, физический движок, система боя, система искусственного интеллекта, триггерная система, и т. д. Впрочем, это деление уже чисто условное. 
+</p>
+<a name=".D0.93.D0.BB.D0.B0.D0.B2.D0.B0_.D0.B2.D1.82.D0.BE.D1.80.D0.B0.D1.8F_-_.D1.8D.D0.BB.D0.B5.D0.BC.D0.B5.D0.BD.D1.82.D1.8B_.D1.83.D0.BF.D1.80.D0.B0.D0.B2.D0.BB.D0.B5.D0.BD.D0.B8.D1.8F"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC_GUI_%C2%AB%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8%C2%BB&amp;action=edit&amp;section=2" title="Править секцию: Глава вторая - элементы управления">править</a>]</span> <span class="mw-headline">Глава вторая - элементы управления</span></h2>
+<p>Надеюсь, что из прошлой главы вы поняли, из каких основных частей состоит программа. Теперь остановимся более подробно на основном рабочем поле программы и элементах его составляющих. 
+</p><p>Рабочее поле - это та часть экрана, где пользователь производит все свои манипуляции и видит результат их выполнения. В случае игр там отображается игровое пространство. По краям рабочего поля находятся кнопки, меню, поля ввода и т. д. Теперь подробнее об элементах. В описании я буду пользоваться терминологией языка программирования Delphi, поэтому названия могут не совпадать с теми, что вы привыкли слышать. Но суть элементов от их названия не меняется, поэтому это не должно вас смущать. Элементы бывают следующие:
+</p>
+<ul><li>Button (кнопка) - ну это понятно, кнопка она и в Африке кнопка.
+</li><li>Label (метка) - элемент использующийся для вывода текста на экран.
+</li><li>Edit (текстовое поле) - поле ввода, служащее для введения текстовой информации с клавиатуры.
+</li><li>CheckBox (флажок) - элемент принимающий два значения: выбран, не выбран.
+</li><li>RadioGroup (группа радио кнопок) - похоже на флажок, но выбирается один элемент из*существующих.
+</li><li>ComboBox (раскрывающийся список) - в этом элементе можно выбрать одно значение из*нескольких или ввести свое. 
+</li><li>Panel (панель) - элемент на котором могут находиться другие элементы. Нужен для красоты*и удобства.
+</li><li>MaskEdit (парольное поле) - тоже, что и Edit, но вводимые символы скрываются звездочками или еще чем.
+</li><li>Image (изображение) - для отображения на экране какой-либо картинки.
+</li><li>ProgressBar (индикатор загрузки) - показывает сколько процентов чего-либо выполнено. 
+</li><li>PageControl (группа панелей) - несколько панелей между которыми можно переключаться.
+</li><li>TrackBar (бегунок) - можно взять за бегунок и переместить его горизонтально в заданных границах.
+</li><li>UpDown (счетчик) - прибавляет или отнимает шаг (обычно 1) по нажатию.
+</li><li>Form (форма) - обычное окно.
+</li></ul>
+<p>На рисунке показаны все эти элементы:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI3-01.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:GUI3-01.png" src="qpchjkwr.png" width="369" height="463" /></a></span></div></div>
+<p>Это список основных визуальных элементов, но кроме них существует множество других элементов. 
+</p><p>Теперь посмотрим, как можно создать некоторые из этих элементов в блице.
+</p><p>Элементы label и image в блице уже реализованы, а Panel приобретает чисто визуальное значение и реализуется легко, поэтому мы их рассматривать не будем. Как сделать кнопку мы уже разобрались. Создадим индикатор загрузки и группу радио кнопок:
+</p><p>Функция для группы радио кнопок:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> RefreshRadioGroup<span style=" ">&#40;</span>x,y,n,k<span style=" ">&#41;</span> <br />
+<p>r=<span style="color: #33ffdd;">10</span><span style="color: #ffee00">;радиус, он должен быть &gt; 6</span><br />
+<span style="color: #ffee00">;проверяем мышь</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> k <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">RectsOverlap</span><span style=" ">&#40;</span>x<span style="color: #33ffdd;">+1</span>,y<span style="color: #33ffdd;">+1.5</span>*i*r,r<span style="color: #33ffdd;">-1</span>,r<span style="color: #33ffdd;">-1</span>,<span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #aaffff; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> Radio<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=i<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span> <br />
+<span style="color: #ffee00">;рисуем </span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> k &nbsp;<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">100</span>,<span style="color: #33ffdd;">100</span>,<span style="color: #33ffdd;">100</span> <span style="color: #ffee00">;цвет фона </span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Oval</span> x<span style="color: #33ffdd;">-2</span>,y<span style="color: #33ffdd;">-2</span><span style="color: #33ffdd;">+1.5</span>*i*r,r<span style="color: #33ffdd;">+2</span>,r<span style="color: #33ffdd;">+2</span> <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">250</span>,<span style="color: #33ffdd;">250</span>,<span style="color: #33ffdd;">250</span> <span style="color: #ffee00">;цвет фона </span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Oval</span> x,y<span style="color: #33ffdd;">+1.5</span>*i*r,r,r<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span> <span style="color: #ffee00">; цвет внутреннего кружка</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> i=Radio<span style=" ">&#40;</span>n<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Oval</span> x<span style="color: #33ffdd;">+0.10</span>*r,y<span style="color: #33ffdd;">+1.5</span>*i*r<span style="color: #33ffdd;">+0.10</span>*r,<span style="color: #33ffdd;">0.75</span>*r,<span style="color: #33ffdd;">0.75</span>*r <span style="color: #ffee00">;если совпадает, закрашиваем</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span> <br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Необходим массив:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Dim</span> Radio<span style=" ">&#40;</span>n<span style=" ">&#41;</span></div>
+<p>Входные параметры:
+</p>
+<ul><li>x, y - координаты
+</li><li>n - номер элемента массива, куда будет записываться значение
+</li><li>k - количество радио-кнопок в группе
+</li></ul>
+<p>Функция для индикатора загрузки:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> RefreshLoadingBar<span style=" ">&#40;</span>ilx,ily,im,bim,proc<span style=" ">&#41;</span><br />
+<p><span style="color: #ffee00">;Cls; если надо очищать фон, то оставить. </span><br />
+<span style="color: #aaffff; font-weight: bold;">DrawImage</span> bim,ilx,ily <span style="color: #ffee00">;рисуем фон и полосу:</span><br />
+<span style="color: #aaffff; font-weight: bold;">DrawImageRect</span> im,ilx,ily,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>im<span style=" ">&#41;</span>*<span style="color: #33ffdd;">0.01</span>*proc,<span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>im<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Flip</span> <br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Входные параметры:
+</p>
+<ul><li>ilx, ily - координаты
+</li><li>im, bim - картинка полосы загрузки и фоновая картинка
+</li><li>proc - процент загрузки от 0 до 100 
+</li></ul>
+<p>функция вставляется в нужных местах кода с соответствующим количеством процентов.
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/1/10/GUI.zip" class="internal" title="GUI.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Avel" title="Участник:Avel">Агнислав Липкан</a> (e-mail: avelnet@yandex.ru)
+</p><!-- 
+Pre-expand include size: 5016 bytes
+Post-expand include size: 351 bytes
+Template argument size: 14 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:674-0!1!0!!ru!2 and timestamp 20071110033654 -->
+<div class="printfooter">
+Получено с <a href="9ir2uqjv.html">http://blitzetcetera.org/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC_GUI_%C2%AB%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8%C2%BB</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%B5%D0%BC_GUI_%C2%AB%D1%80%D1%83%D0%BA%D0%B0%D0%BC%D0%B8%C2%BB by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

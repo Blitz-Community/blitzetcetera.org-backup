@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+  <STYLE TYPE="text/css">
+  <!--
+    A:visited {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:active {text-decoration: underline; color="#0055FF"; font-weight: bold}
+    A:link {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:hover {text-decoration: underline; color: #ACACD7; font-weight: bold}
+  -->  
+  </STYLE>
+  <TITLE>Modeling tutorial - Как создавать модели, и что для этого нужно</TITLE>
+  <META NAME="Description" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; Charset=Windows-1251">
+  <META NAME="author" CONTENT="Stanislav Serov (yxo), E-Mail: neotropic@halflife.ru">
+  <META NAME="copyright" CONTENT="R.M.C.">
+</HEAD>
+<BODY BGCOLOR="#4F4958"><FONT FACE="Arial">
+<A NAME="up"></A>
+<TABLE ALIGN="center" WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1" BORDERCOLOR="Silver" HEIGHT="100%">
+
+<TD ALIGN="justify" VALIGN="top" BGCOLOR="Black" BORDERCOLOR="Silver">
+<FONT SIZE="2" COLOR="White">
+  <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR><TD BGCOLOR="#BFD9DF" ALIGN="center"><FONT SIZE="2"><B>Modeling tutorial - Введение.</A></B></FONT></TD>
+ </TR>
+  </TABLE>
+<BR>
+
+<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% >
+<p align="center"><font size="3" color="#ACACD7"><strong>Моделирование для игр.</strong></font></p><font size="2" color="#ACACD7">
+Итак вы решились сделать модель для своей игры.
+Для начала определитесь в какой програмке вы будете
+творить ваши модели, в 3D MAX или Milkshape 3D.<br>
+Мне лично кажется что в 3D MAX'е делать всё намного удобней и быстрее, да и посмотрев на многие модели сделанные в MilkShape я понял что красивую модель в ней сделать ну просто невозможно.<br>
+Теперь в двух словах от том что вам нужно чтобы начать моделировать, и как это сделать:<br><br>
+Итак чтобы моделировать в 3D MAX'e вам нужно:<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% ><font size="2" color="#ACACD7">
+1.Достать <a href="http://www.ktx.com/html/products.html" target=_blank>3D MAX</a> любой версии.
+<br>2.Достать Character Studio для 3D MAX.
+<br>3.Скачать нужные плюгины для 3D MAX.
+</td>
+</table>
+Для того чтобы моделировать в Milkshape 3D нужно:<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% ><font size="2" color="#ACACD7">
+1.Скачать последнюю версию милкшейпа <a href="http://www.swissquake.ch/chumbalum-soft/ms3d/index.html" target=_blank>здесь</a>.
+<br>2.Крякнуть её, кряки искать <a href="../../../../../www.astalavista.box.sk/_default.htm" target=_blank>тут</a>.
+</td>
+</table>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR>
+  <TD WIDTH="100%" ALIGN="center"><FONT SIZE="2" COLOR="White"><A HREF="../../tut.shtml">Назад</A></FONT></TD></TR>
+  </TABLE>
+
+</DIV>
+
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

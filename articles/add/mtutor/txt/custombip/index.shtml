@@ -1,0 +1,73 @@
+<HTML>
+<HEAD>
+  <STYLE TYPE="text/css">
+  <!--
+    A:visited {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:active {text-decoration: underline; color="#0055FF"; font-weight: bold}
+    A:link {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:hover {text-decoration: underline; color: #ACACD7; font-weight: bold}
+  -->  
+  </STYLE>
+  <TITLE>Modeling tutorial - Создаём свой скелет в 3D MAX</TITLE>
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; Charset=Windows-1251">
+  <META NAME="author" CONTENT="Stanislav Serov (yxo), E-Mail: neotropic@halflife.ru">
+  <META NAME="copyright" CONTENT="R.M.C.">
+</HEAD>
+<BODY BGCOLOR="#4F4958"><FONT FACE="Arial">
+<A NAME="up"></A>
+<TABLE ALIGN="center" WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1" BORDERCOLOR="Silver" HEIGHT="100%">
+
+<TR>
+<TD ALIGN="justify" VALIGN="top" BGCOLOR="Black" BORDERCOLOR="Silver">
+<FONT SIZE="2" COLOR="White">
+  <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR><TD BGCOLOR="#BFD9DF" ALIGN="center"><FONT SIZE="2"><B>Modeling tutorial - Cоздаём свой скелет.</A></B></FONT></TD>
+ </TR>
+  </TABLE>
+<BR>
+
+<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% >
+<p align="center"><font size="3" color="#ACACD7"><strong>ДВУНОГИЕ<br>
+... Краткий краткий обзор</strong></font></p>
+
+<font size="2" color="#ACACD7">
+Что за двуногие (далее в тексте слово двуногие будет заменятся на слово Bipeds)? Скажем полигоны и вершины вашей модели - тело, то bipeds - скелет. <br>
+Bipeds используется игрой, чтобы искажать сеточную оболочку в реальном времени вместо записанных заранее мультипликаций как в Quake2 или Quake. 
+Этот метод имеют свои достоинства и недостатки.<br>
+Как скелетная анимация работает? <br>
+Вы уже знаете к настоящему времени, что модель состоит из нескольких сотен полигонов, соединенных в их углах. 
+Место где они соеденнены, является точкой называемой вершиной. Когда модель будет присоеденнена к скелету, 
+каждая из тех вершин будет назначена на определенную кость в скелете (см. 'Присоединяем модель к скелету'). Потом скелет анимируется 
+, и при каждом движении кости скелета, и сеть будет искажатся соответственно тому как она прикреплена к скелету. <br>
+<br>
+Этот обучающий текст покажет вам как создать или изменить скелет совершенно другой формы для вашей модели. <br>
+<p align="center"><font size="3"><strong>СОЗДАНИЕ НОВОГО СКЕЛЕТА</strong></font></p>
+Итак начнём, для начала создадим простой скелет, хотя необязательно создавать новый можно просто открыть стандартный скелет из Player Models SDK от Valve и удалить сетчатую оболочку присоеденённую к скелету. <br>
+Если вам легче модифицировать уже готовый скелет то пропустите следующий текст и нажмите кнопку ДАЛЕЕ, если же нет то читайте: <br>
+Чтобы создать новый скелет, нажмите кнопку 'Creation', и жмите на кнопку 'Systems'. 
+На панельке появится кнопка 'Biped'. 
+<p align=center><img src="create_biped.jpg"></p>
+Щелкните эту кнопку, и затем в 'front' области просмотра зажмите мышь и продвиньте её на определённое расстояние которое будет равнятся высоте вашего скелета , подобно тому как вы создаёте обьект 'Box'. На экране появится синий прямоугольник, когда вы отпустите клавишу, вы создадите новый скелет. <br>
+ОБРАТИТЕ ВНИМАНИЕ: на старых машинах типа пентиум 133 для создания скелета программе потребуется некоторое время, будте терпеливы подождите когда она закончит свои расчёты. <br>Ура ура вот и готов скелет.
+<p align=center><img src="new_biped.jpg"></p>
+<br><p align="center">
+<a href="custombip.shtml">ДАЛЕЕ</a></p>
+
+</td>
+</table>
+
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR>
+  <TD WIDTH="100%" ALIGN="center"><FONT SIZE="2" COLOR="White"><A HREF="../../tut.shtml">Назад</A></FONT></TD></TR>
+  </TABLE>
+</font>
+</DIV>
+
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

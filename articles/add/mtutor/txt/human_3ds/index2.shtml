@@ -1,0 +1,131 @@
+<HTML>
+<HEAD>
+  <STYLE TYPE="text/css">
+  <!--
+    A:visited {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:active {text-decoration: underline; color="#0055FF"; font-weight: bold}
+    A:link {text-decoration: none; color="#0055FF"; font-weight: bold}
+    A:hover {text-decoration: underline; color: #ACACD7; font-weight: bold}
+  -->  
+  </STYLE>
+  <TITLE>Modeling tutorial - Создаём модели людей в 3D MAX</TITLE>
+  <META NAME="Description" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META HTTP-EQUIV="Content-type" CONTENT="text/html; Charset=Windows-1251">
+  <META NAME="author" CONTENT="Stanislav Serov (yxo), E-Mail: neotropic@halflife.ru">
+  <META NAME="copyright" CONTENT="R.M.C.">
+</HEAD>
+<BODY BGCOLOR="#4F4958"><FONT FACE="Arial">
+<A NAME="up"></A>
+<TABLE ALIGN="center" WIDTH="100%" CELLSPACING="0" CELLPADDING="4" BORDER="1" BORDERCOLOR="Silver" HEIGHT="100%">
+
+<TD ALIGN="justify" VALIGN="top" BGCOLOR="Black" BORDERCOLOR="Silver">
+<FONT SIZE="2" COLOR="White">
+  <TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR><TD BGCOLOR="#BFD9DF" ALIGN="center"><FONT SIZE="2"><B>Modeling tutorial - Создаём модели людей.</A></B></FONT></TD>
+ </TR>
+  </TABLE>
+<BR>
+
+<table width=100% border=0 align=center cellspacing=0 cellpadding=20>
+<td width=100% ><p align="center"><font size="3" color="#ACACD7"><strong>РАЗМЕРЫ</strong></font></p><font size="2" color="#ACACD7">
+Хорошо, на данный момент мы имеем фигуру чемто похожую на человека, но уж слишком "кубическую". Теперь пора немного подвигать вершины, пока модель не станет более похожей на то что нам нужно. <br> 
+Настало время немного изучить различные журналы и книги посвящённые 3D моделированию, в основном по созданию людей. В интернете есть много различных иностранных сайтов где разписанные все проблемы создания моделей людей. Также весма полезны будут данные картинки. 
+<p align="center">
+<img src="bloke_front.jpg"></p><p align="center">
+<img src="bloke_side.jpg"></p><p align="center">
+<img src="bloke_top.jpg"></p>
+С помощью которых далее мы сделаем нашу модель более "человечной".
+<p align="center"><font size="3" color="#ACACD7"><strong>
+УСТАНОВКА ФОНА ДЛЯ ОБЛАСТИ ПРОСМОТРА</strong></font></p>
+
+Для того чтобы было удобно редактировать далее нашу модель, мы вставим одну из изображений человека, для этого: 
+Сначала сохраните эти изображения на жесткий диск.<br> 
+Теперь в 3D MAX выбирете переднюю 'front' область просмотра, щелкнув правой кнопкой мыши на неё, затем жмём на 'Views' и далее на 'Background Image'. Вот так: 
+<p align="center">
+<img src="bckimage.jpg"></p>
+Появится вот такое окно: 
+<p align="center">
+<img src="bckimg2.jpg"></p>
+Сначала нажмите кнопку 'Files', наверху и выберите картинку для 'front' области просмотра 'bloke_front.jpg'.<br>
+Теперь отметьте 'Match Bitmap' менюшку. Если включенна опция 'Match Viewport' тогда изображение будет разтянуто на всю область просмотра, это нам не нужно так что отключите данную опцию. <br>
+Опция 'Show Background' должна быть включенна, и 'Lock Zoom and Pan' опция должна быть также включенна, не то картинка будет изменять свои размеры или крутится когда вы будете приближать или удалять модель от вас. 
+Щелкните "OK". Если все сделанно правильно, то 'front' область просмотра должна выглядеть вот так: 
+<p align="center">
+<img src="backmess.jpg"></p>
+Очевидно что сетка 'grid' будет нам мешать, отключите её вот так: <p align="center">
+<img src="showgrid.jpg"></p>
+
+Вот так должно получится. 
+
+<p align="center">
+<img src="nogrid.jpg"></p>
+Хорошо, теперь нужно немного изучить инструментальные средства 3D MAX. Находятся они в правом нижнем углу: 
+<p align="center">
+<img src="viewtools.jpg"></p>
+Они не модифицируют модель вообще о все действия происходят только с областями просмотра. С включённой опцией 'Lock Zoom/Pan', вы можете использовать 'Pan' инструмент, чтобы перемещать вашу модель по экрану и при этом фоновый рисунок не будет двигатся. Также полезно будет развернуть 'front' область просмотра на весь экран, для этого выбирете её и нажмите кнопку 'maximise' : 
+<p align="center">
+<img src="maxbtn.jpg"></p>
+Передняя область просмотра теперь заполняет весь экран. Теперь нужно настроить модель точно под картинку для этого используйте 'Pan' инструмент. 
+<p align="center">
+<img src="panbtn.jpg"></p>
+Переместите область просмотра так чтобы ваша модель была точно по центру фонового изображения. 
+<p align="center">
+<img src="modelover.jpg"></p>
+
+Скорей всего ваша модель немного большая или наоборот маленькая для изображения. Для точной настройки воспользуйтесь инструментом 'zoom': 
+
+<p align="center">
+<img src="zoombtn.jpg"></p>
+После использования всех этих инструментов модель должна выглядеть вот так: 
+<p align="center">
+
+<img src="blokecenter.jpg"></p>
+<p align="center"><font size="3" color="#ACACD7"><strong>ПРИДАНИЕ ФОРМЫ</strong></font></p>
+
+Хорошо, теперь будем редактировать вершины модели непосредственно по картинке. Для этого в панели модификаторов жмём на кнопку под-обьекты и выбираем 'Vertex'. 
+<p align="center">
+<img src="subvert.jpg"></p>
+Теперь нужно выбирать каждую вершину или определённый набор вершин, и инструментами 'Move' и 'Scale' расположить их по рисунку. <br><br>
+
+СОВЕТ: Чтобы модель оставалась симметричной, чеще используйте инструмент 'Scale': 
+
+<p align="center">
+<img src="nlinscalbtn.jpg"></p>
+И ограничивайте масштабирование по определённым осям для более точного редактирования. 
+
+<p align="center">
+<img src="xyzbtn.jpg"></p>
+Когда вы закончите, ваша модель должна выглядеть следующим образом: 
+<p align="center">
+<img src="tweakfront.jpg"></p>
+Теперь тоже самое нужно проделать с вершинами на виде сбоку к примеру 'Left'. Также как и для области просмотра 'Front' загрузите картинку только уже bloke_side.jpg, ностройте картинку так чтобы она точно совпадала с моделью, и темже самым путём редактируйте вершины. Вот что у вас должно получится. 
+
+<p align="center">
+<img src="tweakside.jpg"></p>
+Также сделаем и в 'top' области просмотра.
+<p align="center">
+<img src="tweaktop.jpg"></p>
+В окне 'Perespective' модель должна выглядеть следующим образом: 
+
+<p align="center">
+<img src="finishedged.jpg"></p>
+<br><br><div align="center">
+<a href="index3.shtml">ДАЛЕЕ</a></div>
+</td>
+</table>
+</font>
+<TABLE CELLSPACING="0" CELLPADDING="0" BORDER="1" WIDTH="100%" BORDERCOLOR="#BFD9DF">
+  <TR>
+  <TD WIDTH="100%" ALIGN="center"><FONT SIZE="2" COLOR="White"><A HREF="index.shtml">Назад</A></FONT></TD></TR>
+  </TABLE>
+
+</DIV>
+
+</FONT>
+</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

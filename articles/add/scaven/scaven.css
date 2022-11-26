@@ -1,0 +1,72 @@
+@font-face {font-family:Wingdings; panose-1:5 0 0 0 0 0 0 0 0 0; mso-font-charset:2; mso-generic-font-family:auto; mso-font-pitch:variable; mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face {font-family:Blitz; panose-1:0 0 0 0 0 0 0 0 0 0; mso-font-alt:"Lucida Console"; mso-font-charset:0; mso-generic-font-family:modern;	mso-font-format:other; mso-font-pitch:fixed; mso-font-signature:3 0 0 0 1 0;}
+a:link, span.MsoHyperlink {color:lime; text-decoration:underline; text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed {color:#FFCC00; text-decoration:underline; text-underline:single;}
+p,li,div {mso-style-parent:""; margin:0cm; margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman";}
+#t1 {background-color:#003300; tab-interval:35.4pt}
+#t3 {border-width:0; padding:0; border-collapse:collapse; mso-padding-alt:0cm 5.4pt 0cm 5.4pt}
+#t4 {height:339.2pt}
+#t5 {vetrical-align:top; width:603.35pt; padding:0cm 5.4pt 0cm 5.4pt; height:339.2pt}
+#t7 {font-size:24.0pt; mso-bidi-font-size:12.0pt; color:lime}
+#t8 {text-align:justify}
+#t9 {color:#FFCC00}
+#t10 {font-family:Wingdings; mso-ascii-font-family:"Times New Roman"; mso-hansi-font-family:"Times New Roman"; color:FFCC00; mso-char-type:symbol; mso-symbol-font-family:Wingdings}
+#t11 {mso-char-type:symbol; mso-symbol-font-family:Wingdings}
+#t12 {margin:0cm; margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; color:#FFFF99; text-align:justify; text-indent:0cm}
+#t13 {color:lime}
+#t14 {vertical-align:top; width:134.25pt; padding:0cm 5.4pt 0cm 5.4pt; height:339.2pt}
+#t16 {font-size:16.0pt; mso-bidi-font-size:12.0pt; color:lime}
+#t17{margin-left:12.2pt; text-indent:-9.0pt; mso-list:l0 level1 lfo2; tab-stops:list 12.2pt 36.0pt}
+#t18 {font-size:10.0pt; mso-bidi-font-size:12.0pt; color:FFCC00}
+#t19 {font:7.0pt "Times New Roman"}
+#t21 {margin-left:21.2pt; text-align:justify; text-indent:-18.0pt; mso-list:l0 level1 lfo2; tab-stops:list 21.2pt 36.0pt}
+#t22 {height:285.0pt}
+#t23 {vertical-align:top; width:603.35pt; padding:0cm 5.4pt 0cm 5.4pt; height:285.0pt}
+#t24 {border-width:0; background-color:#003366; border-collapse:collapse; border:none; mso-border-alt:solid windowtext .5pt; mso-padding-alt:0cm 5.4pt 0cm 5.4pt}
+#t25 {height:90.25pt}
+#t26 {vertical-align:top; width:530.6pt; border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt; height:90.25pt}
+#t27 {text-align:justify; tab-stops:0cm 24.0pt 48.0pt 72.0pt 96.0pt 120.0pt; 144.0pt; 168.0pt; 192.0pt; 216.0pt; 240.0pt; 264.0pt; 288.0pt; 312.0pt; 336.0pt; 360.0pt; 384.0pt; 408.0pt; 432.0pt; 456.0pt; 480.0pt; 504.0pt; 528.0pt; 552.0pt; 576.0pt; 600.0pt; 624.0pt; 648.0pt; 672.0pt; 696.0pt; 720.0pt; 744.0pt; mso-layout-grid-align:none; text-autospace:none}
+#t28 {font-size:10.0pt; font-family:Blitz; color:AAFFFF}
+#t29 {font-size:10.0pt; font-family:Blitz; color:33FFDD}
+#t30 {font-size:10.0pt; font-family:Blitz; color:EEEEEE}
+#t31 {font-size:10.0pt; font-family:Blitz; color:white}
+#t32 {font-size:10.0pt; color:EEEEEE}
+#t33 {font-size:10.0pt; color:AAFFFF}
+#t34 {color:CCFFFF}
+#t35 {color:aqua}
+#t36 {margin-left:3.2pt; text-align:justify; tab-stops:0cm; 30.2pt; 48.0pt; 72.0pt; 96.0pt; 120.0pt; 144.0pt; 168.0pt; 192.0pt; 216.0pt; 240.0pt; 264.0pt; 288.0pt; 312.0pt; 336.0pt; 360.0pt; 384.0pt; 408.0pt; 432.0pt; 456.0pt; 480.0pt; 504.0pt; 528.0pt; 552.0pt; 576.0pt; 600.0pt; 624.0pt; 648.0pt; 672.0pt; 696.0pt; 720.0pt; 744.0pt; mso-layout-grid-align:none; text-autospace:none}
+#t37 {vertical-align:top; width:134.25pt; padding:0cm; 5.4pt; 0cm; 5.4pt; height:285.0pt}
+#t38 {height:32.55pt}
+#t39 {vertical-align:top; width:530.6pt; border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt; height:32.55pt}
+#t40 {font-size:10.0pt; color:white}
+#t41 {height:10.35pt}
+#t42 {vertical-align:top; width:530.6pt; border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt; height:10.35pt}
+#t43 {color:FFFF99}
+#t44 {height:37.2pt}
+#t45 {vertical-align:top; width:530.6pt; border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt; height:37.2pt}
+#t46 {height:8.1pt}
+#t47 {vertical-align:top; width:530.6pt; border:solid windowtext .5pt; padding:0cm 5.4pt 0cm 5.4pt; height:8.1pt}
+#t48 {text-align:justify; mso-line-height-alt:8.1pt; tab-stops:0cm 24.0pt 48.0pt 72.0pt 96.0pt 120.0pt 144.0pt 168.0pt 192.0pt 216.0pt 240.0pt 264.0pt 288.0pt 312.0pt 336.0pt 360.0pt 384.0pt 408.0pt 432.0pt 456.0pt 480.0pt 504.0pt 528.0pt 552.0pt 576.0pt 600.0pt 624.0pt 648.0pt 672.0pt 696.0pt 720.0pt 744.0pt; mso-layout-grid-align:none; text-autospace:none}
+#t49 {mso-tab-count:1}
+#t50 {font-size:10.0pt; font-family:Blitz; color:#FFEE00}
+#t51{margin:0cm; margin-bottom:.0001pt; text-align:justify; mso-pagination:widow-orphan; font-size:24.0pt; mso-bidi-font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; color:lime;}
+#t52 {font-size:10.0pt; font-family:Blitz; color:00FF66}
+#t53 {margin:0cm; margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:24.0pt; mso-bidi-font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; color:lime;}
+#t54 {text-align:justify; mso-line-height-alt:8.1pt; mso-layout-grid-align:none; text-autospace:none}
+#t55 {height:152.75pt}
+#t56 {vertical-align:top; width:603.35pt; padding:0cm 5.4pt 0cm 5.4pt; height:152.75pt}
+#t57 {font-family:Wingdings; mso-ascii-font-family:"Times New Roman"; mso-hansi-font-family:"Times New Roman"; color:#FFFF99; mso-char-type:symbol; mso-symbol-font-family:Wingdings}
+#t58 {vertical-align:top; width:134.25pt; padding:0cm 5.4pt 0cm 5.4pt; height:152.75pt}
+#t59 {mso-bidi-font-size:9.0pt; color:#FFCC00}
+#t60 {text-align:justify; mso-layout-grid-align:none; text-autospace:none}
+#t61{margin:0cm; margin-bottom:.0001pt; mso-pagination:widow-orphan; font-size:12.0pt; font-family:"Times New Roman"; mso-fareast-font-family:"Times New Roman"; color:FFFF99; text-align:justify}
+#t62 {font-family:Blitz; color:#AAFFFF}
+#t63 {font-family:Blitz; color:#EEEEEE}
+#t64 {font-family:Blitz; color:white}
+#t65 {font-family:Blitz; color:#33FFDD}
+#t66 {font-family:Blitz; color:#00FF66}
+#t67 {color:#EEEEEE}
+#t68 {color:#33FFDD}
+#t69 {color:#AAFFFF}
+#t70 {font-family:Blitz; color:#FFEE00}
+#t71 {margin-left:36.0pt; text-align:justify; text-indent:-18.0pt; mso-list:l1 level1 lfo3; tab-stops:list 36.0pt}

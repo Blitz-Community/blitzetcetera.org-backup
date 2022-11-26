@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/BlitzMax_%D0%B8_LUA by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="BlitzMax и LUA" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>BlitzMax и LUA — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "BlitzMax_и_LUA";
+var wgTitle = "BlitzMax и LUA";
+var wgAction = "view";
+var wgArticleId = "758";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3033";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-BlitzMax_и_LUA">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">BlitzMax и LUA</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<a name=".D0.A0.D0.B0.D0.B1.D0.BE.D1.82.D0.B0_.D1.81_LUA_.D0.B2_BlitzMax"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=BlitzMax_%D0%B8_LUA&amp;action=edit&amp;section=1" title="Править секцию: Работа с LUA в BlitzMax">править</a>]</span> <span class="mw-headline">Работа с LUA в BlitzMax</span></h2>
+<p>1. Инициализация LUA. Для инициализация LUA можно использовать следующий код:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Local LUA:Byte Ptr<br />
+<p>LUA = lua_open<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span><br />
+luaopen_base<span style="color: #66cc66;">&#40;</span>LUA<span style="color: #66cc66;">&#41;</span><br />
+luaopen_io<span style="color: #66cc66;">&#40;</span>LUA<span style="color: #66cc66;">&#41;</span><br />
+luaopen_string<span style="color: #66cc66;">&#40;</span>LUA<span style="color: #66cc66;">&#41;</span><br />
+</p>
+luaopen_math<span style="color: #66cc66;">&#40;</span>LUA<span style="color: #66cc66;">&#41;</span></div>
+где LUA - дескриптор скриптового движка. После завершения работы можно закрыть LUA, используя команду lua_close(индификатор_движка), например: <div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Local LUA:Byte Ptr 'тут какие-то команды lua_close<span style="color: #66cc66;">&#40;</span>LUA<span style="color: #66cc66;">&#41;</span></div>
+<p>2. Выполнение файла со скриптом. Для выполнения файла содержащего скрипт написанный на LUA используется команда lua_dofile(идентификатор_движка, имя_файла), например для выполнения файла test.lua:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">lua_dofile<span style="color: #66cc66;">&#40;</span>LUA, <span style="color: #ff0000;">&quot;test.lua&quot;</span>.ToCString<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>ToCString() добавлять обязательно, т.к. обычные строки функция не принимает. Также имеются функции lua_dostring() и lua_dobuffer() но в BlitzMax 1.14 их нет.
+</p><p>3. Регистрация функций Блица в LUA Для этого используется функция lua_register(идентификатор_движка, имя_функции_в_ЛУА, имя_регистрируемой_функции_в_Блице). Наример функция DrawText:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Function Draw_Text:Int<span style="color: #66cc66;">&#40;</span>lua:Byte Ptr<span style="color: #66cc66;">&#41;</span><br />
+<p>Local text$ = String.FromCString<span style="color: #66cc66;">&#40;</span>lua_tostring<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span><br />
+Local x = lua_tonumber<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#41;</span><br />
+Local y = lua_tonumber<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">3</span><span style="color: #66cc66;">&#41;</span><br />
+DrawText text$, x, y<br />
+</p>
+End Function</div>
+<p>регистрируем так:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">lua_register<span style="color: #66cc66;">&#40;</span>LUA, <span style="color: #ff0000;">&quot;draw_text&quot;</span>.ToCString<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span>, draw_text<span style="color: #66cc66;">&#41;</span></div>
+<p>4. Импорт переменной из Блица в LUA. Для этого надо 1) поместить значения переменной в Блице в стек 2) считать его оттуда в переменную LUA. Для этого используем функции:
+</p>
+<ul><li> lua_pushnumber(индификатор_движка, число) - для чисел
+</li><li> lua_pushstring(индификатор_движка, строка) - для строк
+</li><li> lua_setglobal(индификатор_движка, имя_переменной_в_ЛУА) - для считывания  Т.к. LUA может преобразовывать строки в числа автоматически, то можно использовать lua_pushstring и для чисел. Например, перенесем переменные a1=10 и a2="qwerty" в LUA:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">lua_pushnumber<span style="color: #66cc66;">&#40;</span>LUA, a1<span style="color: #66cc66;">&#41;</span><br />
+<p>lua_setglobal<span style="color: #66cc66;">&#40;</span>LUA, <span style="color: #ff0000;">&quot;a1&quot;</span><span style="color: #66cc66;">&#41;</span><br />
+lua_pushstring<span style="color: #66cc66;">&#40;</span>LUA, a2<span style="color: #66cc66;">&#41;</span><br />
+</p>
+lua_setglobal<span style="color: #66cc66;">&#40;</span>LUA, <span style="color: #ff0000;">&quot;a2&quot;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>5. Создание функций для регистрации в LUA. В LUA получиться зарегистрировать не любую функцию. Например такую:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Function SimpleFunction<span style="color: #66cc66;">&#40;</span>first, second<span style="color: #66cc66;">&#41;</span><br />
+<p>Print first + second<br />
+</p>
+End Function</div>
+<p>не получится. Для создания функции предназначенной для регистрации в LUA можно использовать такой шаблон:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Function имя_функции:Int<span style="color: #66cc66;">&#40;</span>lua:Byte Ptr<span style="color: #66cc66;">&#41;</span> 'обработка параметров функции<br />
+<p>'сам текст функции<br />
+</p>
+End Function</div>
+<p>Параметры функции можно будет получить используя их индексы, например функция вызывалась из LUA так: function("qwerty", 12345), тогда строка qwerty имеет индекс 1, а число 12345 индекс 2. Получить их для использования в функции можно так:
+</p>
+<ul><li> Для строки - Local text$ = String.FromCString(lua_tostring(lua, 1))
+</li><li> Для числа - Local number = lua_tonumber(lua, 2)
+</li></ul>
+<p>Можно конечно для чисел использовать и
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Local text$ = String.FromCString<span style="color: #66cc66;">&#40;</span>lua_tostring<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>а потом
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">number = text$.ToInt<span style="color: #66cc66;">&#40;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>но зачем? Вообще функции при вызове из LUA могут иметь любое количество параметров, например предыдущую функцию можно вызвать так:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #b1b100;">function</span><span style="color: #66cc66;">&#40;</span><span style="color: #ff0000;">&quot;qwerty&quot;</span>, <span style="color: #cc66cc;">12345</span>, <span style="color: #ff0000;">&quot;second string&quot;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>Но если параметры функции будут обрабатываться так:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Local text$ = String.FromCString<span style="color: #66cc66;">&#40;</span>lua_tostring<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span><br />
+Local number = lua_tonumber<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#41;</span></div>
+<p>То строка "second string" не будет принята во внимание, для ее обработки надо добавить строку:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">Local text2$ = String.FromCString<span style="color: #66cc66;">&#40;</span>lua_tostring<span style="color: #66cc66;">&#40;</span>lua, <span style="color: #cc66cc;">3</span><span style="color: #66cc66;">&#41;</span><span style="color: #66cc66;">&#41;</span></div>
+<p>т. е. обработать параметр с индексом 3. Ну а после обработки делайте что хотите с этими параметрами.
+</p>
+<a name=".D0.A1.D0.B8.D0.BD.D1.82.D0.B0.D0.BA.D1.81.D0.B8.D1.81_LUA"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=BlitzMax_%D0%B8_LUA&amp;action=edit&amp;section=2" title="Править секцию: Синтаксис LUA">править</a>]</span> <span class="mw-headline">Синтаксис LUA</span></h2>
+<p>1. В LUA имеется 6 типов данных: nil, number (число), string (строка), function (функция), userdata (пользовательские данные) и table (таблица). Какой тип для чего, думаю, объяснять не надо. Замечу только что table это есть массивы, но дело в том, что LUA поддерживает ассоциативные массивы, наример данные о пользователе - a["name"],a["email"],a["birthday"] и т.д., т.е. элементы могут индексироваться не только числами, но и какими-либо строками, что может облегчить работу с ними.
+</p><p>2. Идентификатором в LUA может быть любая строка символов, цифр и символов подчеркивания, не начинающаяся цифрой. Вообще индификаторы в LUA могут состоять и из русских букв, но если в системе русский не установлен, то произойдет ошибка, поэтому лучше использовать только латинские буквы. Следующие слова зарезервированы, и не могут использоваться как идентификаторы: and, break, do, else, elseif, return, end, for, function, if, in, then, local, nil, not, or, repeat, until, while - в общем, стандартный набор. Язык LUA чувтвителен к регистру и, например, and это не одно и то же, что и AND или And.
+</p>
+<ul><li> Комментарии в LUA начинаются с двух тире '--' и продолжаются до конца строки.
+</li><li> Строки могут быть разграничены одиночными или двойными кавычками, и могут содержать C-подобные управляющие последовательности: \a (bell), \b (backspace), \f (form feed), \n (newline), \r (carriage return), \t (horizontal tab), \v (vertical tab), \\ (backslash), \" (double quote), \' (single quote), и \newline. Символ в строке может также быть определен числовым значением, через управляющую последовательность \ddd, где ddd последовательность до трех десятичных цифр. Строки в LUA могут содержать любое 8-разрядное значение, включая вложенные нули, которые могут быть определены как \000.
+</li><li> Строки могут также быть разграничены парами [[ ... ]]. Символы в этой форме в скобках могут занимать по несколько строк, содержать вложенные пары скобок [[ ... ]] и не интерпретировать управляющие последовательности. Например, выражения 
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #ff0000;">&quot;qwerty<span style="color: #000099; font-weight: bold;">\n</span>123&quot;</span></div>
+<p>и
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #66cc66;">&#91;</span><span style="color: #66cc66;">&#91;</span>qwerty <span style="color: #cc66cc;">123</span><span style="color: #66cc66;">&#93;</span><span style="color: #66cc66;">&#93;</span></div> идентичны.
+<p>3. Блоки. Блоком является список инструкций. Синтаксис такой: "do инструкции end". Блоки можно использовать для прекращения выполнения инструкций в любом месте, также блоки могут быть использованы для управления областью видимости локальных переменных.
+</p><p>4. В LUA поддерживаются многократные присваивания. Т.е. в левой части вы пишите список переменных, а в правой список значений, оба этих списка разделяются запятыми. Например
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a,b,c=<span style="color: #cc66cc;">1</span>,<span style="color: #cc66cc;">2</span>,<span style="color: #cc66cc;">3</span></div>
+<p>равносильно:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a=<span style="color: #cc66cc;">1</span> b=<span style="color: #cc66cc;">2</span> c=<span style="color: #cc66cc;">3</span></div>
+<p>Надо заметить, что сначала оцениваются все индексы слева и все значения справа, а только потом делается присваивание, например:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a=<span style="color: #cc66cc;">3</span><br />
+a,b<span style="color: #66cc66;">&#91;</span>a<span style="color: #66cc66;">&#93;</span>=<span style="color: #cc66cc;">1</span>,<span style="color: #cc66cc;">2</span></div>
+<p>Здесь b[3] будет присвоено 2, а b[1] не будет затронуто, т.к. b[a] оценен до того как a было присвоено значение 1. Многократное присваивание можно использовать, чтобы поменять значения двух переменных:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a,b=b,a</div>
+<p>5. Условия, циклы
+</p>
+<ul><li> Инструкция if. Синтаксис стандартен:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #b1b100;">if</span> условие <span style="color: #b1b100;">then</span> инструкции <span style="color: #b1b100;">else</span> инструкции <span style="color: #b1b100;">end</span></div> Можно использовать и elseif.
+<ul><li> Инструкция while. Синтаксис:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #b1b100;">while</span> условие <span style="color: #b1b100;">do</span> инструкции <span style="color: #b1b100;">end</span></div>
+<ul><li> Инструкция repeat. Синтаксис:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #b1b100;">repeat</span> инструкции <span style="color: #b1b100;">until</span> условие</div>
+<ul><li> Инструкция for. Синтаксис:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;"><span style="color: #b1b100;">for</span> переменная=начальное_значение,конечное_значение<span style="color: #66cc66;">&#91;</span>,шаг<span style="color: #66cc66;">&#93;</span> <span style="color: #b1b100;">do</span> инструкции <span style="color: #b1b100;">end</span></div>
+<p>Параметр "шаг" можно опустить и тогда будет использоваться 1.
+</p><p>6. LUA поддерживает обычные арифметические операторы: двоичный + (сложение), - (вычитание), * (умножение), / (деление), ^ (возведение в степень).
+</p><p>7. Реляционные операторы: ==, ~=, &lt;, &gt;, &lt;=, &gt;=. Они возвращают nil как ложь и любое другое значение как истину.
+</p><p>8. Логические операторы: and, or, not
+</p><p>9. Оператором объединения являются две точки '..', если операнд - число, то он преобразуется в строку.
+</p><p>10. Таблицы (массивы). Для создания таблицы используется конструкция типа:
+</p>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a=<span style="color: #66cc66;">&#123;</span><span style="color: #ff0000;">&quot;qwerty&quot;</span>,<span style="color: #cc66cc;">1</span>,<span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#125;</span></div>
+НО! Строка qwerty будет 1 а не 0 элементом! Для того чтобы добавить 0 элемент можно использовать конструкцию типа: <div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a=<span style="color: #66cc66;">&#123;</span><span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">0</span><span style="color: #66cc66;">&#93;</span>=<span style="color: #ff0000;">&quot;qwerty&quot;</span>,<span style="color: #cc66cc;">1</span>,<span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#125;</span></div> и тогда строка qwerty будет нулевым элементом. Соответственно так можно устанавливать любой элемент таблицы. Для создания ассоциативного массива используется конструкция типа: <div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">a=<span style="color: #66cc66;">&#123;</span>f=<span style="color: #cc66cc;">1</span>,s=<span style="color: #cc66cc;">2</span>,t=<span style="color: #cc66cc;">3</span><span style="color: #66cc66;">&#125;</span></div> Таблицы в LUA могут содержать разные типы данных одновременно.
+<p>11. LUA имеет несколько базисных функций:
+</p>
+<ul><li> call(func,arg) - вызывает функцию func с параметрами заданными в таблице arg, это равносильно следующему коду:
+</li></ul>
+<div class="lua" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;">func<span style="color: #66cc66;">&#40;</span>arg<span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">1</span><span style="color: #66cc66;">&#93;</span>,arg<span style="color: #66cc66;">&#91;</span><span style="color: #cc66cc;">2</span><span style="color: #66cc66;">&#93;</span>,etc<span style="color: #66cc66;">&#41;</span></div>
+<ul><li> dofile(filename) - откроет файл filename и выполнит его содержимое как LUA код.
+</li><li> dostring(string) - выполнит полученную строку как LUA код.
+</li><li> foreach(table, func) - выполнит функцию func для каждого элемента таблицы table, используя индексы и их значения как параметры функции.
+</li><li> foreachi(table, func) - похожа на предыдущую, но использует только числовые индексы.
+</li><li> getglobal(name) - получает значение глобальной переменной name.
+</li><li> getn(table) - возвращает размер таблицы.
+</li><li> print(строка1,строка2...) - получает любое количество параметров и печатает их значения.
+</li><li> setglobal(name, value) - присваивает глобально переменной name значение value.
+</li><li> sort(table) - отсортирует таблицу table
+</li><li> tinsert(table[,pos],value) - вставляет в таблицу table значение value в позицию pos, сдвигая остальные элементы. Если pos не задано, то значение вставляется, как последний элемент.
+</li><li> tremove(table[,pos]) - удалит из таблицы table элемент pos, сдвинув остальные элементы. Если pos не задан, то удалится последний элемент.
+</li><li> type(var) - возвращает тип переменной var, как строку("nil", "number", "string", "table", "function", "userdata").
+</li></ul>
+<p>12. Работа со строками.
+</p>
+<ul><li> strbyte (str[,n]) - возвращает числовой код n-го элемента строки str.
+</li><li> strlen(str) - вернет длину строки.
+</li><li> strlower(str) - вернет строку в нижнем регистре.
+</li><li> strrep(str,n) - вернет строку являющуюся суммой n копий строки str.
+</li><li> strsub(str,s[,e]) - вернет часть строки str начинающуюся с символа s и заканчивающегося символом e (s и e - номера символов в строке). Если написать strsub(str,-n) то функция вернет n последних символов строки.
+</li><li> strupper(str) - вернет строку в верхнем регистре.
+</li></ul>
+<p>13. Математические функции: abs, acos, asin, atan, atan2, ceil, cos, deg, exp, floor, log, log10, max, min, mod, rad, sin, sqrt, tan, frexp, ldexp, random, randomseed
+</p><p>14. Работа с файлами:
+</p>
+<ul><li> openfile(filename,mode) - Откроет файл filename в режиме mode. Возможные режимы:
+<ul><li> r - режим чтения.
+</li><li> w - режим записи.
+</li><li> a - режим добавления к концу.
+</li><li> r+ - режим обновления, все ранее записанные данные сохраняются.
+</li><li> w+ - режим обновления, все ранее записанные данные уничтожаются.
+</li><li> a+ - режим модификации, предыдущие данные сохраняются, запись позволяется только в конце файла.
+</li></ul>
+</li><li> closefile(handle) - закроет файл.
+</li><li> remove(filename) - удаляет файл.
+</li><li> rename(name1,name2) - переименовывает из name1 в name2.
+</li><li> readfrom(filename) - читает из файла.
+</li><li> writeto(filename) - пишет в файл, старые данные не сохраняются.
+</li><li> appendto(filename) - пишет в файл, старые данные сохраняются.
+</li><li> flush (filehandle) - сохраняет все изменения в открытом файле.
+</li><li> write(filehandle,value1,...) - Пишет все полученные значения в файл.
+</li></ul>
+<p>В конце скажу, что файлы с LUA кодом могут быть 2х форматов: прекомпилированные или просто текстовые. При загрузке LUA автоматически определит формат. Для компиляции байт-кода необходимо скачать LUA с офф. сайта и скомпилировать lua.exe, используемый для перегона текстовых файлов в бинарные. Офф. сайт - <a href="http://www.lua.org/" class="external free" title="http://www.lua.org" rel="nofollow">http://www.lua.org</a>
+</p>
+<!-- Saved in parser cache with key db1:pcache:idhash:758-0!1!0!!ru!2 and timestamp 20071110040755 -->
+<div class="printfooter">
+Получено с <a href="5o0s8a-y.html">http://blitzetcetera.org/index.php/BlitzMax_%D0%B8_LUA</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/BlitzMax_%D0%B8_LUA by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

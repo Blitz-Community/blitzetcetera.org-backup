@@ -1,0 +1,497 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4_%D0%B2_Blitz3D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Скорость команд в Blitz3D,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Скорость команд в Blitz3D — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Скорость_команд_в_Blitz3D";
+var wgTitle = "Скорость команд в Blitz3D";
+var wgAction = "view";
+var wgArticleId = "460";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3193";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Скорость_команд_в_Blitz3D">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Скорость команд в Blitz3D</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Программа, которая здесь рассмотрена, относится к группе так называемых "бенчмарков", то есть тестеров возможностей системы. В данном случае поставлена цель сравнения скорости основных команд Blitz (операции с переменными и массивами, функции и типы) для определения, какие из них предпочтительнее в написании программ с максимальным быстродействием. В программе-тестере использован следующий алгоритм: случайным образом выбирается одна из тестируемых команд. Засекается время и команда повторяется заданное кол-во раз (константа cq) в цикле. Программа построена так, что каждая команда тестируется определенное кол-во раз (константа times). Значения времени складываются и делятся на обе константы. Полученное время в наносекундах (10<sup>-9</sup>с) печатается на экране и является приблизительной скоростью выполнения команды в цикле (в большинстве случаев, без учета обработки цикла и приравнивания).
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> T<br />
+<p>&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> i,f#,s$<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> tq=<span style="color: #33ffdd;">91</span>, cq=<span style="color: #33ffdd;">1000000</span>, times=<span style="color: #33ffdd;">10</span>, symq=<span style="color: #33ffdd;">20</span><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> dtim#=<span style="color: #33ffdd;">1000000.0</span>/cq<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> ns#<span style=" ">&#40;</span>tq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> name$<span style=" ">&#40;</span>tq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> tms<span style=" ">&#40;</span>tq<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> im<span style=" ">&#40;</span>symq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> fm#<span style=" ">&#40;</span>symq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> sm$<span style=" ">&#40;</span>symq<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> typ.T<span style=" ">&#40;</span>cq<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">SeedRnd</span> <span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> tq<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Read</span> name$<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> times*tq<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; num=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,tq<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Until</span> tms<span style=" ">&#40;</span>num<span style=" ">&#41;</span>&lt;times<br />
+&nbsp;tms<span style=" ">&#40;</span>num<span style=" ">&#41;</span>=tms<span style=" ">&#40;</span>num<span style=" ">&#41;</span><span style="color: #33ffdd;">+1</span><br />
+&nbsp;ns#<span style=" ">&#40;</span>num<span style=" ">&#41;</span>=ns#<span style=" ">&#40;</span>num<span style=" ">&#41;</span>+dtim#*benchmark<span style=" ">&#40;</span>name$<span style=" ">&#40;</span>num<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+n=<span style="color: #33ffdd;">1</span><br />
+f=<span style="color: #aaffff; font-weight: bold;">WriteFile</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;btable.htm&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,<span style="color: #00ff66;">&quot;&lt;TABLE&gt;&quot;</span><br />
+m$=<span style="color: #00ff66;">&quot;&lt;TR&gt;&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> n&lt;=tq<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> x=<span style="color: #33ffdd;">900</span> <span style="color: #aaffff; font-weight: bold;">Or</span> n=<span style="color: #33ffdd;">2</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; x=<span style="color: #33ffdd;">0</span><br />
+&nbsp; y=y<span style="color: #33ffdd;">+12</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,m$<br />
+&nbsp; &nbsp; m$=<span style="color: #00ff66;">&quot;&lt;/TR&gt;&lt;TR&gt;&quot;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span> <br />
+&nbsp;v#=ns#<span style=" ">&#40;</span>n<span style=" ">&#41;</span>/times<br />
+&nbsp;m$=m$+<span style="color: #00ff66;">&quot;&lt;TD&gt;&quot;</span>+name$<span style=" ">&#40;</span>n<span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;: &quot;</span>+v#+<span style="color: #00ff66;">&quot; ns&lt;/TD&gt;&quot;</span><br />
+&nbsp;x=x<span style="color: #33ffdd;">+300</span><br />
+&nbsp;n=n<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,m$+<span style="color: #00ff66;">&quot;&lt;/TR&gt;&lt;/TABLE&gt;&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+<span style="color: #aaffff; font-weight: bold;">ExecFile</span> <span style="color: #00ff66;">&quot;btable.htm&quot;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;template&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#&quot;</span>,<span style="color: #00ff66;">&quot;I.T=J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B+C&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#+F#&quot;</span>,<span style="color: #00ff66;">&quot;I.T=New T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B-C&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#-F#&quot;</span>,<span style="color: #00ff66;">&quot;Delete I.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B*C&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#*F#&quot;</span>,<span style="color: #00ff66;">&quot;I.T=Before J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B/C&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#/F#&quot;</span>,<span style="color: #00ff66;">&quot;I.T=After J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B^P&quot;</span>,<span style="color: #00ff66;">&quot;D#=E#^F#&quot;</span>,<span style="color: #00ff66;">&quot;I.T=First T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Abs(B)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Abs(E#)&quot;</span>,<span style="color: #00ff66;">&quot;I.T=Last T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Sgn(B)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Sgn(E#)&quot;</span>,<span style="color: #00ff66;">&quot;Insert I.T Before J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Floor(E#)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Sin(E#)&quot;</span>,<span style="color: #00ff66;">&quot;Insert I.T After J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Int(E#)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Cos(E#)&quot;</span>,<span style="color: #00ff66;">&quot;For I.T=Each T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Ceil(E#)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Tan(E#)&quot;</span>,<span style="color: #00ff66;">&quot;Delete Each T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B And C&quot;</span>,<span style="color: #00ff66;">&quot;D#=ASin(R#)&quot;</span>,<span style="color: #00ff66;">&quot;A=Handle(J.T)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B Or C&quot;</span>,<span style="color: #00ff66;">&quot;D#=ACos(R#)&quot;</span>,<span style="color: #00ff66;">&quot;I.T=Object(Handle)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B Xor C&quot;</span>,<span style="color: #00ff66;">&quot;D#=ATan(E#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=M$&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B Mod PP&quot;</span>,<span style="color: #00ff66;">&quot;D#=ATan2(E#,F#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=M$+S$&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B Shl PP&quot;</span>,<span style="color: #00ff66;">&quot;D#=Sqr(E#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=Left$(M$,SQ)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=B Sar PP&quot;</span>,<span style="color: #00ff66;">&quot;D#=Log(G#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=Right$(M$,SQ)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Asc(S$)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Log10(G#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=Chr$(SYM)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Len(M$)&quot;</span>,<span style="color: #00ff66;">&quot;D#=Exp(O#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=Mid$(M$,SPOS,SQ)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Instr(M$,S$)&quot;</span>,<span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #00ff66;">&quot;L$=String$(S$,SYMQ)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=Rand()&quot;</span>,<span style="color: #00ff66;">&quot;D#=Rnd()&quot;</span>,<span style="color: #00ff66;">&quot;L$=Replace$(M$,S$,' ')&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=INTF(B)&quot;</span>,<span style="color: #00ff66;">&quot;D#=FLOATF#(E#)&quot;</span>,<span style="color: #00ff66;">&quot;L$=STRINGF$(M$)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=im(spos)&quot;</span>,<span style="color: #00ff66;">&quot;D#=fm#(spos)&quot;</span>,<span style="color: #00ff66;">&quot;L$=sm$(spos)&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=J\i&quot;</span>,<span style="color: #00ff66;">&quot;D#=J\f#&quot;</span>,<span style="color: #00ff66;">&quot;L$=J\s$&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;PokeByte&quot;</span>,<span style="color: #00ff66;">&quot;PokeFloat&quot;</span>,<span style="color: #00ff66;">&quot;PokeInt&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;PeekByte&quot;</span>,<span style="color: #00ff66;">&quot;PeekFloat&quot;</span>,<span style="color: #00ff66;">&quot;PeekInt&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;A=D#&quot;</span>,<span style="color: #00ff66;">&quot;D#=S$&quot;</span>,<span style="color: #00ff66;">&quot;S$=A&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;D#=A&quot;</span>,<span style="color: #00ff66;">&quot;S$=D#&quot;</span>,<span style="color: #00ff66;">&quot;A=S$&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;IF B=C&quot;</span>,<span style="color: #00ff66;">&quot;IF E#=F#&quot;</span>,<span style="color: #00ff66;">&quot;IF I.T=J.T&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;IF B&gt;C&quot;</span>,<span style="color: #00ff66;">&quot;IF E#&gt;F#&quot;</span>,<span style="color: #00ff66;">&quot;IF M$=L$&quot;</span><br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> benchmark<span style=" ">&#40;</span>name$<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">First</span> t=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; I.T=<span style="color: #aaffff; font-weight: bold;">New</span> T<br />
+&nbsp; typ<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=I<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<br />
+B=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-2000000000</span>,<span style="color: #33ffdd;">2000000000</span><span style=" ">&#41;</span><br />
+C=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-2000000000</span>,<span style="color: #33ffdd;">2000000000</span><span style=" ">&#41;</span><br />
+P=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-20</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+PP=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+SYM=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><span style=" ">&#41;</span><br />
+E#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-2000000000</span>,<span style="color: #33ffdd;">2000000000</span><span style=" ">&#41;</span><br />
+F#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-2000000000</span>,<span style="color: #33ffdd;">2000000000</span><span style=" ">&#41;</span><br />
+G#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,<span style="color: #33ffdd;">2000000000</span><span style=" ">&#41;</span><br />
+O#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-20</span>,<span style="color: #33ffdd;">20</span><span style=" ">&#41;</span><br />
+R#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+I.T=typ<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,cq<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+J.T=typ<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,cq<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Or</span> j=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Stop</span><br />
+SPOS=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,SYMQ<span style=" ">&#41;</span><br />
+s$=<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>sym<span style=" ">&#41;</span><br />
+bnk=<span style="color: #aaffff; font-weight: bold;">CreateBank</span><span style=" ">&#40;</span>symq<span style="color: #33ffdd;">+4</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> SYMQ<br />
+&nbsp;L$=<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">255</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> nn=SPOS <span style="color: #aaffff; font-weight: bold;">Then</span> S$=L$<br />
+&nbsp;M$=M$+L$<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;I.T=New T&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Delete</span> <span style="color: #aaffff; font-weight: bold;">Each</span> T<br />
+<br />
+k=<span style="color: #33ffdd;">1</span><br />
+tim=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Select</span> name$<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;template&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B:A=C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B:D#=E#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=E#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B:A=E#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=B&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B:D#=B:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B+C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B+C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#+F#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=E#+F#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B-C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B-C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#-F#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=E#-F#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B*C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B*C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#*F#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=E#*F#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B/C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B/C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#/F#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=E#/F#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B^P&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:A=B^P:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=E#^F#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:D#=E#^F#:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Floor(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Int(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Int</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Ceil(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Ceil</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Abs(B)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Abs</span><span style=" ">&#40;</span>B<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Abs(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Abs</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Sgn(B)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Sgn</span><span style=" ">&#40;</span>B<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Sgn(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Sgn</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B Mod PP&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">Mod</span> PP:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B And C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">And</span> C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B Or C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">Or</span> C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B Xor C&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">Xor</span> C:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B Shl PP&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">Shl</span> PP:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=B Sar PP&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=B <span style="color: #aaffff; font-weight: bold;">Sar</span> PP:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Sin(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Sin</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Cos(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Cos</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Tan(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Tan</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=ASin(R#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">ASin</span><span style=" ">&#40;</span>R#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=ACos(R#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">ACos</span><span style=" ">&#40;</span>R#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=ATan(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">ATan</span><span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=ATan2(E#,F#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">ATan2</span><span style=" ">&#40;</span>E#,F#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Rand()&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Rnd()&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">0.0</span><span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=INTF(B)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=INTF<span style=" ">&#40;</span>B<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=FLOATF#(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=FLOATF#<span style=" ">&#40;</span>E#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=J.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=J.T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=New T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=<span style="color: #aaffff; font-weight: bold;">New</span> T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;Delete I.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">Delete</span> typ<span style=" ">&#40;</span>n<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=Before J.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=<span style="color: #aaffff; font-weight: bold;">Before</span> J.T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=After J.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=<span style="color: #aaffff; font-weight: bold;">After</span> J.T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=First T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=<span style="color: #aaffff; font-weight: bold;">First</span> T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=Last T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=<span style="color: #aaffff; font-weight: bold;">Last</span> T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;Insert I.T Before J.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">Insert</span> I.T <span style="color: #aaffff; font-weight: bold;">Before</span> J.T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;Insert I.T After J.T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">Insert</span> I.T <span style="color: #aaffff; font-weight: bold;">After</span> J.T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;For I.T=Each T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> I.T=<span style="color: #aaffff; font-weight: bold;">Each</span> T:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Handle(J.T)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=Handle<span style=" ">&#40;</span>J.T<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;I.T=Object(Handle)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:I.T=Object.T<span style=" ">&#40;</span>Handle<span style=" ">&#40;</span>J.T<span style=" ">&#41;</span><span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;Delete Each T&quot;</span>:<span style="color: #aaffff; font-weight: bold;">Delete</span> <span style="color: #aaffff; font-weight: bold;">Each</span> T<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=M$&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=M$:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=M$+S$&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=M$+S$:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=Mid$(M$,SPOS,SQ)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>M$,SPOS,SymQ<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Sqr(E#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Sqr</span><span style=" ">&#40;</span>G#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=Left$(M$,SQ)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>M$,SymQ<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Log(G#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Log</span><span style=" ">&#40;</span>G#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=Right$(M$,SQ)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">Right</span>$<span style=" ">&#40;</span>M$,SymQ<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Asc(S$)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span>S$<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Log10(G#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Log10</span><span style=" ">&#40;</span>G#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=String$(S$,SYMQ)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">String</span>$<span style=" ">&#40;</span>S$,SYMQ<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Len(M$)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:A=<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>M$<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=Exp(O#)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=<span style="color: #aaffff; font-weight: bold;">Exp</span><span style=" ">&#40;</span>O#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=Chr$(SYM)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>SYM<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=Instr(M$,S$)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:A=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>M$,S$<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=Replace$(M$,S$,' ')&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=<span style="color: #aaffff; font-weight: bold;">Replace</span>$<span style=" ">&#40;</span>M$,S$,<span style="color: #00ff66;">&quot; &quot;</span><span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=STRINGF$(M$)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:L$=STRINGF$<span style=" ">&#40;</span>M$<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PokeByte&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">PokeByte</span><span style=" ">&#40;</span>bnk,spos,sym<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PokeInt&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">PokeInt</span><span style=" ">&#40;</span>bnk,spos,a<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PokeFloat&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:<span style="color: #aaffff; font-weight: bold;">PokeFloat</span><span style=" ">&#40;</span>bnk,spos,e#<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PeekByte&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:a=<span style="color: #aaffff; font-weight: bold;">PeekByte</span><span style=" ">&#40;</span>bnk,spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PeekInt&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:a=<span style="color: #aaffff; font-weight: bold;">PeekInt</span><span style=" ">&#40;</span>bnk,spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;PeekFloat&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:d#=<span style="color: #aaffff; font-weight: bold;">PeekFloat</span><span style=" ">&#40;</span>bnk,spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=im(spos)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:a=im<span style=" ">&#40;</span>spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=fm#(spos)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:d#=fm#<span style=" ">&#40;</span>spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=sm$(spos)&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:l$=sm$<span style=" ">&#40;</span>spos<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=J\i&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:a=J\i:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=J\f#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:d#=J\f#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;L$=J\s$&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:l$=J\s$:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=D#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=D#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=S$&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=S$:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;S$=A&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:S$=A:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;D#=A&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:D#=A:<span style="color: #aaffff; font-weight: bold;">Next</span>:k=<span style="color: #33ffdd;">10</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;S$=D#&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq/<span style="color: #33ffdd;">10</span>:S$=D#:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;A=S$&quot;</span>:<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq:A=S$:<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF B=C&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> B=C <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF E#=F#&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> E#=F# <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF I.T=J.T&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> I.T=J.T <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF B&gt;C&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> B&gt;C <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF E#&gt;F#&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> E#&gt;F# <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #00ff66;">&quot;IF M$=L$&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> M$=L$ <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+tim=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-tim<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> name$=<span style="color: #00ff66;">&quot;I.T=New T&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;i.t=<span style="color: #aaffff; font-weight: bold;">First</span> t<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> cq<br />
+&nbsp; typ<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=i<br />
+&nbsp; i=<span style="color: #aaffff; font-weight: bold;">After</span> i<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> tim*k<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> INTF<span style=" ">&#40;</span>N<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> N<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> FLOATF#<span style=" ">&#40;</span>N#<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> N#<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> STRINGF$<span style=" ">&#40;</span>S$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> S$<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Результаты тестов для Pentium 4, 2.8GHz:
+</p>
+<table border="2" align="center">
+<tr>
+<td> template: 2.2 ns
+</td></tr>
+<tr align="right">
+<td> A=B: 2.2 ns
+</td><td> D#=E#: 2.3 ns
+</td><td> I.T=J.T: 10.4 ns
+</td></tr>
+<tr align="right">
+<td> A=B+C: 2.2 ns
+</td><td> D#=E#+F#: 5.9 ns
+</td><td> I.T=New T: 49.6 ns
+</td></tr>
+<tr align="right">
+<td> A=B-C: 2.6 ns
+</td><td> D#=E#-F#: 6.2 ns
+</td><td> Delete I.T: 53.3 ns
+</td></tr>
+<tr align="right">
+<td> A=B*C: 2.1 ns
+</td><td> D#=E#*F#: 6.3 ns
+</td><td> I.T=Before J.T: 14.1 ns
+</td></tr>
+<tr align="right">
+<td> A=B/C: 15.1 ns
+</td><td> D#=E#/F#: 12.0 ns
+</td><td> I.T=After J.T: 14.4 ns
+</td></tr>
+<tr align="right">
+<td> A=B^P: 463.0 ns
+</td><td> D#=E#^F#: 1287.0 ns
+</td><td> I.T=First T: 14.4 ns
+</td></tr>
+<tr align="right">
+<td> A=Abs(B): 5.2 ns
+</td><td> D#=Abs(E#): 8.6 ns
+</td><td> I.T=Last T: 14.3 ns
+</td></tr>
+<tr align="right">
+<td> A=Sgn(B): 5.7 ns
+</td><td> D#=Sgn(E#): 11.7 ns
+</td><td> Insert I.T Before J.T: 12.1 ns
+</td></tr>
+<tr align="right">
+<td> A=Floor(E#): 100.0 ns
+</td><td> D#=Sin(E#): 69.9 ns
+</td><td> Insert I.T After J.T: 13.3 ns
+</td></tr>
+<tr align="right">
+<td> A=Int(E#): 4.9 ns
+</td><td> D#=Cos(E#): 67.1 ns
+</td><td> For I.T=Each T: 36.3 ns
+</td></tr>
+<tr align="right">
+<td> A=Ceil(E#): 100.0 ns
+</td><td> D#=Tan(E#): 99.2 ns
+</td><td> Delete Each T: 51.8 ns
+</td></tr>
+<tr align="right">
+<td> A=B And C: 2.4 ns
+</td><td> D#=ASin(R#): 219.1 ns
+</td><td> A=Handle(J.T): 15.7 ns
+</td></tr>
+<tr align="right">
+<td> A=B Or C: 2.1 ns
+</td><td> D#=ACos(R#): 223.8 ns
+</td><td> I.T=Object(Handle): 40.6 ns
+</td></tr>
+<tr align="right">
+<td> A=B Xor C: 2.7 ns
+</td><td> D#=ATan(E#): 109.9 ns
+</td><td> L$=M$: 126.0 ns
+</td></tr>
+<tr align="right">
+<td> A=B Mod PP: 17.8 ns
+</td><td> D#=ATan2(E#,F#): 85.3 ns
+</td><td> L$=M$+S$: 546.0 ns
+</td></tr>
+<tr align="right">
+<td> A=B Shl PP: 2.4 ns
+</td><td> D#=Sqr(E#): 12.1 ns
+</td><td> L$=Left$(M$,SQ): 191.0 ns
+</td></tr>
+<tr align="right">
+<td> A=B Sar PP: 2.4 ns
+</td><td> D#=Log(G#): 45.4 ns
+</td><td> L$=Right$(M$,SQ): 187.0 ns
+</td></tr>
+<tr align="right">
+<td> A=Asc(S$): 398.7 ns
+</td><td> D#=Log10(G#): 45.4 ns
+</td><td> L$=Chr$(SYM): 389.0 ns
+</td></tr>
+<tr align="right">
+<td> A=Len(M$): 125.0 ns
+</td><td> D#=Exp(O#): 76.9 ns
+</td><td> L$=Mid$(M$,SPOS,SQ): 460.0 ns
+</td></tr>
+<tr align="right">
+<td> A=Instr(M$,S$): 254.0 ns
+</td><td>&nbsp;: 0.0 ns
+</td><td> L$=String$(S$,SYMQ): 1303.0 ns
+</td></tr>
+<tr align="right">
+<td> A=Rand(): 62.3 ns
+</td><td> D#=Rnd(): 42.6 ns
+</td><td> L$=Replace$(M$,S$,' '): 722.0 ns
+</td></tr>
+<tr align="right">
+<td> A=INTF(B): 7.5 ns
+</td><td> D#=FLOATF#(E#): 9.7 ns
+</td><td> L$=STRINGF$(M$): 247.0 ns
+</td></tr>
+<tr align="right">
+<td> A=im(spos): 2.9 ns
+</td><td> D#=fm#(spos): 2.9 ns
+</td><td> L$=sm$(spos): 101.2 ns
+</td></tr>
+<tr align="right">
+<td> A=J\i: 2.8 ns
+</td><td> D#=J\f#: 2.6 ns
+</td><td> L$=J\s$: 102.3 ns
+</td></tr>
+<tr align="right">
+<td> PokeByte: 9.6 ns
+</td><td> PokeFloat: 9.2 ns
+</td><td> PokeInt: 9.4 ns
+</td></tr>
+<tr align="right">
+<td> PeekByte: 8.6 ns
+</td><td> PeekFloat: 11.1 ns
+</td><td> PeekInt: 8.5 ns
+</td></tr>
+<tr align="right">
+<td> A=D#: 5.0 ns
+</td><td> D#=S$: 212.9 ns
+</td><td> S$=A: 498.0 ns
+</td></tr>
+<tr align="right">
+<td> D#=A: 48.0 ns
+</td><td> S$=D#: 210.5 ns
+</td><td> A=S$: 136.5 ns
+</td></tr>
+<tr align="right">
+<td> IF B=C: 2.4 ns
+</td><td> IF E#=F#: 9.1 ns
+</td><td> IF I.T=J.T: 8.4 ns
+</td></tr>
+<tr align="right">
+<td> IF B&gt;C: 2.5 ns
+</td><td> IF E#&gt;F#: 9.2 ns
+</td><td> IF M$=L$: 264.3 ns
+</td></tr></table>
+<p>Однако, результаты часто отличаются (в частности, почему-то иногда пустой цикл обрабатывается дольше, чем цикл с командой). Тем не менее, сравнивать можно. Например, операции для целых чисел +, -, *, SHL, SHR, AND, OR, XOR являются самыми быстрыми (и, соответственно, предпочтительными). Возьмем их за эталон. Операции +, -, * для чисел с плавающей точкой медленнее в 2.5 раза. Деление медленнее раз в 4-6, причем деление чисел с плавающей точкой быстрее.  Примерно столько же времени занимает вычисление остатка (MOD), а возведение в степень вообще одна из самых медленных функций (в 150-500 раз медленнее эталона). Из часто используемых функций, наиболее быстрыми являются ABS, SGN, SQR. Раз в 4-10 медленнее RND, RAND, LOG, EXP, SIN, COS, TAN, ATAN, ATAN2 (ATAN2 быстрее, чем ATAN). ASIN и ACOS медленнее раз в 20. Стоит заметить, что INT быстрее, чем FLOOR и CEIL в 20 раз и всего в 2 раза медленнее эталона. Что же касается строк, операции с ними гораздо медленнее (раз в 50), чем с числами (то же относится и к функциям, оперирующим со строками). Вот преимущества структур данных:
+</p>
+<ul><li>Массив: высокая скорость операций.
+</li><li>Типы: высокая скорость оперирования с полями элементов, средняя (в 2-3 раза ниже) скорость операций с элементами и низкая (в 10 раз ниже) скорость добавления / удаления элементов, зато динамический объем и удобство работы.
+</li><li>Банки: средняя (к моему удивлению) скорость операций, неудобство в работе, но есть возможность быстрого перемещения больших объемов данных (в том числе из файла / в файл).
+</li></ul>
+<p>Как видим, кубок скорости принадлежит массивам. Вызов Function отнимает не так уж много времени, так что их использование не намного замедлит работу программы. Еще нужно отметить трату ресурсов при конверсии данных (особенно с участием строк).
+</p><p>Исходя из результатов теста, можно сделать следующий вывод: в тех местах программы, где требуется максимизировать скорость исполнения команд, широко используйте целые числа и массивы, по возможности старайтесь избегать смешения типов переменных и применения медленных функций. Не используйте строки.
+</p><p>Вот некоторые приемы:
+</p>
+<ul><li>Натуральную степень можно заменить умножением:
+<ul><li>X<sup>2</sup> = X * X
+</li><li>X<sup>3</sup> = X * X * X
+</li><li>X<sup>9</sup> = XX * XX * XX (XX = X * X * X)
+</li></ul>
+</li></ul>
+<ul><li>Если в функции используются дробные переменные, используйте только их, а также дробные константы:
+<ul><li>r# = Sqr(4.0 * dx# * dx# + dy# * dy#) вместо r = Sqr(4 * dx# * dx# + dy * dy)
+</li></ul>
+</li></ul>
+<ul><li>Избегайте функций FLOOR и CEIL:
+<ul><li>Floor(x#) = Int(x# - 0.5)
+</li><li>Ceil(x#) = Int(x# + 0.4999999)
+</li></ul>
+</li></ul>
+<ul><li>Для тригонометрических и других медленных функции можно сделать предварительный расчет:
+<ul><li>Dim isin#(359): For n=0 To 359: isin#(n)=Sin(n): Next
+</li></ul>
+</li></ul>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 8093 bytes
+Post-expand include size: 257 bytes
+Template argument size: 7 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:460-0!1!0!!ru!2 and timestamp 20071110040950 -->
+<div class="printfooter">
+Получено с <a href="w02rwzzb.html">http://blitzetcetera.org/index.php/%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4_%D0%B2_Blitz3D</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A1%D0%BA%D0%BE%D1%80%D0%BE%D1%81%D1%82%D1%8C_%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4_%D0%B2_Blitz3D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:51 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

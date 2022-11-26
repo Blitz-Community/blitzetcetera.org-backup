@@ -1,0 +1,573 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%BE%D0%B4:BPTurmit.bb by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:56:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Код:BPTurmit.bb" />
+		<link rel="shortcut icon" href="http://localhost/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://localhost/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Код:BPTurmit.bb — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://localhost/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Код:BPTurmit.bb";
+var wgTitle = "Код:BPTurmit.bb";
+var wgAction = "view";
+var wgArticleId = "1636";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "2439";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://localhost/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://localhost/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://localhost/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://localhost/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Код_BPTurmit_bb">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Код:BPTurmit.bb</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Const</span> fw=<span style="color: #33ffdd;">150</span>,fw2=fw/<span style="color: #33ffdd;">2</span>,fw4=fw2/<span style="color: #33ffdd;">2</span>,fh=<span style="color: #33ffdd;">20</span>,maxsiz=<span style="color: #33ffdd;">512</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Global</span> kr$=<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #33ffdd;">10</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> fld<span style=" ">&#40;</span>maxsiz<span style="color: #33ffdd;">-1</span>,maxsiz<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> com<span style=" ">&#40;</span><span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">15</span>,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> win=CreateWindow<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">640</span>,<span style="color: #33ffdd;">480</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">5</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> lastfile$=<span style="color: #00ff66;">&quot;untitled.prg&quot;</span><br />
+seltitle <br />
+MaximizeWindow win<br />
+<br />
+filemenu=CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Программа&quot;</span>,<span style="color: #33ffdd;">0</span>,WindowMenu<span style=" ">&#40;</span>win<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+helpmenu=CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Помощь&quot;</span>,<span style="color: #33ffdd;">1</span>,WindowMenu<span style=" ">&#40;</span>win<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Новая&quot;</span>,<span style="color: #33ffdd;">0</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Загрузить...&quot;</span>,<span style="color: #33ffdd;">1</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сохранить...&quot;</span>,<span style="color: #33ffdd;">2</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сохранить как...&quot;</span>,<span style="color: #33ffdd;">3</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #33ffdd;">-1</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Параметры...&quot;</span>,<span style="color: #33ffdd;">4</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #33ffdd;">-1</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Выход&quot;</span>,<span style="color: #33ffdd;">5</span>,filemenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Справка&quot;</span>,<span style="color: #33ffdd;">10</span>,helpmenu<span style=" ">&#41;</span><br />
+CreateMenu<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;О программе&quot;</span>,<span style="color: #33ffdd;">11</span>,helpmenu<span style=" ">&#41;</span><br />
+UpdateWindowMenu Win<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> runslowb=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Выполнять медленно&quot;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,fw,fh,win<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> runfastb=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Выполнять быстро&quot;</span>,<span style="color: #33ffdd;">0</span>,fh,fw,fh,win<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> clrb=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сброс&quot;</span>,<span style="color: #33ffdd;">0</span>,fh*<span style="color: #33ffdd;">2</span>,fw,fh,win<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> txta=CreateTextArea<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,fh*<span style="color: #33ffdd;">3</span>,fw,ClientHeight<span style=" ">&#40;</span>win<span style=" ">&#41;</span>-fh*<span style="color: #33ffdd;">4</span>,win<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> current=CreateLabel<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span>,<span style="color: #33ffdd;">0</span>,ClientHeight<span style=" ">&#40;</span>win<span style=" ">&#41;</span>-fh,fw,fh,win,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> xres=<span style="color: #33ffdd;">64</span>,yres=<span style="color: #33ffdd;">64</span>,skip=<span style="color: #33ffdd;">9</span>,sqs,mdelay=<span style="color: #33ffdd;">200</span>,reset=<span style="color: #33ffdd;">0</span>,begpos=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> cnv,tx,ty,tdir,change,sym,col<br />
+<br />
+createfield<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;id=WaitEvent<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">803</span> <span style="color: #aaffff; font-weight: bold;">Then</span> exitprogram<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">1001</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Select</span> EventData<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">0</span>:SetTextAreaText txta,<span style="color: #00ff66;">&quot;&quot;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span>:loadfile RequestFile<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Загрузка файла...&quot;</span>,<span style="color: #00ff66;">&quot;prg&quot;</span>,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span>:savefile lastfile$<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">3</span>:savefile RequestFile<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сохранение файла...&quot;</span>,<span style="color: #00ff66;">&quot;prg&quot;</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">4</span>:params<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">5</span>:exitprogram<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">10</span> &nbsp; &nbsp;<br />
+&nbsp; &nbsp; file$=<span style="color: #aaffff; font-weight: bold;">SystemProperty</span>$<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;appdir&quot;</span><span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;temp.htm&quot;</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Restore</span><br />
+&nbsp; &nbsp; f=<span style="color: #aaffff; font-weight: bold;">WriteFile</span> <span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Read</span> m$<br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp; &nbsp; i=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>m$,<span style="color: #00ff66;">&quot;^&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp; &nbsp; m$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>m$,i<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #33ffdd;">34</span><span style=" ">&#41;</span>+<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,i<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span> <br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,m$<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+&nbsp; &nbsp; x=ClientWidth<span style=" ">&#40;</span>Desktop<span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span><span style="color: #33ffdd;">-300</span><br />
+&nbsp; &nbsp; y=ClientHeight<span style=" ">&#40;</span>Desktop<span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span><span style="color: #33ffdd;">-200</span><br />
+&nbsp; &nbsp; w=CreateWindow <span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Справка&quot;</span>,x,y,<span style="color: #33ffdd;">600</span>,<span style="color: #33ffdd;">400</span>,Desktop<span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; h=CreateHtmlView<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,ClientWidth<span style=" ">&#40;</span>w<span style=" ">&#41;</span>,ClientHeight<span style=" ">&#40;</span>w<span style=" ">&#41;</span>,w<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffee00">;Stop</span><br />
+&nbsp; &nbsp; HtmlViewGo h,<span style="color: #00ff66;">&quot;file://&quot;</span>+file$<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> ActiveWindow<span style=" ">&#40;</span><span style=" ">&#41;</span>=win <span style="color: #aaffff; font-weight: bold;">Then</span> ActivateWindow w<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Until</span> WaitEvent<span style=" ">&#40;</span><span style=" ">&#41;</span>=$<span style="color: #33ffdd;">803</span> <span style="color: #aaffff; font-weight: bold;">And</span> EventSource<span style=" ">&#40;</span><span style=" ">&#41;</span>=w<br />
+&nbsp; &nbsp; FreeGadget w<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">DeleteFile</span> file$<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">11</span>:Notify <span style="color: #00ff66;">&quot;BlitzPlus Turmit&quot;</span>+kr$+<span style="color: #00ff66;">&quot;Автор программы: Матвей Меркулов&quot;</span>+kr$+<span style="color: #00ff66;">&quot;MattMerk@mail.ru&quot;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">401</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Select</span> EventSource<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> txta<br />
+&nbsp; &nbsp; change=<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> runslowb,runfastb<br />
+&nbsp; &nbsp; runprog EventSource<span style=" ">&#40;</span><span style=" ">&#41;</span>=runslowb<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> clrb<br />
+&nbsp; &nbsp; tdir=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; clearfield<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">201</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; x=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>EventX<span style=" ">&#40;</span><span style=" ">&#41;</span>/sqs<span style=" ">&#41;</span><br />
+&nbsp; y=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>EventY<span style=" ">&#40;</span><span style=" ">&#41;</span>/sqs<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> x&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">And</span> x&lt;xres <span style="color: #aaffff; font-weight: bold;">And</span> y&gt;=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">And</span> y&lt;yres <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;paintsq<br />
+&nbsp; &nbsp;tx=x<br />
+&nbsp; &nbsp;ty=y<br />
+&nbsp; &nbsp;showturmit<br />
+&nbsp; &nbsp;FlipCanvas cnv<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Data</span> <span style="color: #00ff66;">&quot;&lt;HTML&gt;&lt;BODY&gt;&lt;CENTER&gt;&lt;h2&gt;BlitzPlus Turmit&lt;/h2&gt;&lt;h3&gt;Автор программы: &lt;A HREF=mailto:MattMerk@mail.ru&gt;Матвей Меркулов&lt;/A&gt;&lt;/h3&gt;&lt;h3&gt;Сайт программы: &lt;A HREF=^http:\\blitzetc.boolean.name^ TARGET=^_blank^&gt;http:\\blitzetc.boolean.name&lt;/A&gt;&lt;/h3&gt;&lt;h3&gt;Принцип работы&lt;/h3&gt;&lt;P ALIGN=JUSTIFY&gt;Изначально дано клеточное поле NxM клеток. Все его клетки закрашены белым цветом (номер 15). В одной из них находится Turmit, он изображается синей стрелкой и направлен вправо. Turmit работает по программе и может перемещаться по полю и закрашивать клетки в один из 16 цветов, создавая узор. Поле зациклено (как тор), то есть, выходя за его пределы, Turmit появляется с другой стороны.&lt;/P&gt;&lt;h3&gt;Программирование Turmit'а&lt;/h3&gt;&lt;P ALIGN=JUSTIFY&gt;Программы для Turmit'а просты по структуре и состоят из набора строк. Каждая строка состоит из 5 элементов, идущих через пробел: символ, текущий цвет, новый цвет, код поворота, следующий символ. Выполнение начинается с первой строки: первые два элемента пропускаются, Turmit красит клетку, на которой находится в ^новый цвет^, поворачивается на 90 градусов влево (код поворота = -1), вправо (код поворота = 1), не меняет направление (код поворота = 0) и перемещается вперед. После этого в программе ищется строка с символом, равным ^следующему символу^, у которой также ^текущий цвет^ равен цвету клетки под Turmit'ом. Если такая строка найдена, то она выполняется аналогично, если нет - программа завершается.&lt;/P&gt;&lt;h3&gt;Клавиши&lt;/h3&gt;&lt;P ALIGN=JUSTIFY&gt;Если во время выполнения программы нажать клавишу пробела, Turmit перейдет в режим пошагового выполнения - остановится и будет ждать следующего нажатия пробела. Выход из этого режима - ESC. Клавишей ESC можно также прервать выполнение программы.&lt;/P&gt;&lt;/CENTER&gt;&lt;/BODY&gt;&lt;/HTML&gt;&quot;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> seltitle<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp;filename$=lastfile$<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; i=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>filename$,<span style="color: #00ff66;">&quot;\&quot;</span>,i<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; ii=i<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> ii&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> filename$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>filename$,ii<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+&nbsp;SetGadgetText win,<span style="color: #00ff66;">&quot;BlitzPlus Turmit: &quot;</span>+filename$<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> createfield<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+xsiz=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span><span style=" ">&#40;</span>ClientWidth<span style=" ">&#40;</span>win<span style=" ">&#41;</span>-fw<span style=" ">&#41;</span>/xres<span style=" ">&#41;</span>*xres<br />
+ysiz=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>ClientHeight<span style=" ">&#40;</span>win<span style=" ">&#41;</span>/yres<span style=" ">&#41;</span>*yres<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> xsiz&lt;ysiz <span style="color: #aaffff; font-weight: bold;">Then</span> <br />
+&nbsp;sqs=xsiz/xres<br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;sqs=ysiz/yres<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> sqs&lt;<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> sqs=<span style="color: #33ffdd;">1</span><br />
+xsiz=sqs*xres<br />
+ysiz=sqs*yres<br />
+<br />
+x=<span style=" ">&#40;</span>ClientWidth<span style=" ">&#40;</span>win<span style=" ">&#41;</span>+fw-xsiz<span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span><br />
+y=<span style=" ">&#40;</span>ClientHeight<span style=" ">&#40;</span>win<span style=" ">&#41;</span>-ysiz<span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> cnv&lt;&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> FreeGadget cnv<br />
+cnv=CreateCanvas<span style=" ">&#40;</span>x,y,xsiz<span style="color: #33ffdd;">+1</span>,ysiz<span style="color: #33ffdd;">+1</span>,win,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> CanvasBuffer<span style=" ">&#40;</span>cnv<span style=" ">&#41;</span><br />
+ActivateGadget cnv<br />
+<span style="color: #aaffff; font-weight: bold;">Delay</span> <span style="color: #33ffdd;">100</span><br />
+clearfield<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> showturmit<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">128</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> sqs&gt;=<span style="color: #33ffdd;">3</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> sqs<span style="color: #33ffdd;">-1</span><br />
+&nbsp; d=<span style="color: #aaffff; font-weight: bold;">Abs</span><span style=" ">&#40;</span>n*<span style="color: #33ffdd;">2</span>-sqs<span style=" ">&#41;</span><br />
+&nbsp; k=<span style=" ">&#40;</span>tdir&gt;=<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <br />
+&nbsp; d=sqs-d+<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>*d-sqs<span style=" ">&#41;</span>*k<span style="color: #33ffdd;">-1</span><br />
+&nbsp; k=<span style="color: #33ffdd;">1</span>+<span style=" ">&#40;</span>sqs<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>*k<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> tdir <span style="color: #aaffff; font-weight: bold;">Mod</span> <span style="color: #33ffdd;">2</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;x1=n<br />
+&nbsp; &nbsp;y1=k<br />
+&nbsp; &nbsp;x2=n<br />
+&nbsp; &nbsp;y2=d<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp;x1=k<br />
+&nbsp; &nbsp;y1=n<br />
+&nbsp; &nbsp;x2=d<br />
+&nbsp; &nbsp;y2=n<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Line</span> tx*sqs+x1,ty*sqs+y1,tx*sqs+x2,ty*sqs+y2<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span> tx*sqs,ty*sqs,sqs,sqs<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> loadfile<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> file$&lt;&gt;<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;SetTextAreaText txta,<span style="color: #00ff66;">&quot;&quot;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> file$&lt;&gt;<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; seltitle<br />
+&nbsp; f=<span style="color: #aaffff; font-weight: bold;">ReadFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp;m$=<span style="color: #aaffff; font-weight: bold;">ReadLine</span>$<span style=" ">&#40;</span>f<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Eof</span><span style=" ">&#40;</span>f<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; AddTextAreaText txta,m$<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp; AddTextAreaText txta,m$+kr$<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;lastfile$=file$<br />
+&nbsp;seltitle<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> savefile<span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> file$&lt;&gt;<span style="color: #00ff66;">&quot;&quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;seltitle<br />
+&nbsp;f=<span style="color: #aaffff; font-weight: bold;">WriteFile</span><span style=" ">&#40;</span>file$<span style=" ">&#41;</span><br />
+&nbsp;m$=TextAreaText<span style=" ">&#40;</span>txta<span style=" ">&#41;</span><br />
+&nbsp;i=<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; i=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>m$,kr$,i<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; m$=<span style="color: #aaffff; font-weight: bold;">Left</span>$<span style=" ">&#40;</span>m$,i<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>+<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span><span style="color: #33ffdd;">13</span><span style=" ">&#41;</span>+<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,i<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">WriteLine</span> f,m$<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">CloseFile</span> f<br />
+&nbsp;lastfile$=file$<br />
+&nbsp;change=<span style="color: #33ffdd;">0</span><br />
+&nbsp;seltitle<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> runprog<span style=" ">&#40;</span>dl<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> reset <span style="color: #aaffff; font-weight: bold;">Then</span> tdir=<span style="color: #33ffdd;">0</span>: clearfield<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n1=<span style="color: #33ffdd;">33</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">255</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> n2=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">15</span><br />
+&nbsp; com<span style=" ">&#40;</span>n1,n2,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+m$=TextAreaText<span style=" ">&#40;</span>txta<span style=" ">&#41;</span>+kr$<br />
+<span style="color: #ffee00">;Stop</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;i=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>m$,kr$<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">-1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;m1$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,<span style="color: #33ffdd;">1</span>,i<span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot; &quot;</span> <br />
+&nbsp;m$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m$,i<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span><br />
+&nbsp;ii=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> m1$&lt;&gt;<span style="color: #00ff66;">&quot; &quot;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">5</span> &nbsp;<br />
+&nbsp; &nbsp;i=<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>m1$,<span style="color: #00ff66;">&quot; &quot;</span>,ii<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp;m2$=<span style="color: #aaffff; font-weight: bold;">Mid</span>$<span style=" ">&#40;</span>m1$,ii,i-ii<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Select</span> n<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span>:n1=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span>m2$<span style=" ">&#41;</span>:<span style="color: #aaffff; font-weight: bold;">If</span> outbounds<span style=" ">&#40;</span>n1,<span style="color: #33ffdd;">34</span>,<span style="color: #33ffdd;">255</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">2</span>:n2=m2$:<span style="color: #aaffff; font-weight: bold;">If</span> outbounds<span style=" ">&#40;</span>n2,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">15</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">3</span>,<span style="color: #33ffdd;">4</span>:com<span style=" ">&#40;</span>n1,n2,n<span style="color: #33ffdd;">-3</span><span style=" ">&#41;</span>=m2$<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">5</span>:com<span style=" ">&#40;</span>n1,n2,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">Asc</span><span style=" ">&#40;</span>m2$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+&nbsp; &nbsp;ii=i<span style="color: #33ffdd;">+1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> i=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> outbounds<span style=" ">&#40;</span>com<span style=" ">&#40;</span>n1,n2,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">15</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> outbounds<span style=" ">&#40;</span>com<span style=" ">&#40;</span>n1,n2,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> outbounds<span style=" ">&#40;</span>com<span style=" ">&#40;</span>n1,n2,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">34</span>,<span style="color: #33ffdd;">255</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> sym=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> sym=n1: col=n2<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> ex <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<br />
+<span style="color: #ffee00">;Stop</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> ex <span style="color: #aaffff; font-weight: bold;">Then</span> Notify <span style="color: #00ff66;">&quot;Ошибка в программе (&quot;</span>+m1$+<span style="color: #00ff66;">&quot;)&quot;</span>,<span style="color: #aaffff; font-weight: bold;">True</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+<br />
+&nbsp;tdir=<span style=" ">&#40;</span>tdir+com<span style=" ">&#40;</span>sym,col,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">+4</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Mod</span> <span style="color: #33ffdd;">4</span><br />
+&nbsp;fld<span style=" ">&#40;</span>tx,ty<span style=" ">&#41;</span>=com<span style=" ">&#40;</span>sym,col,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+&nbsp;paintsq<br />
+&nbsp;d1=<span style=" ">&#40;</span>tdir <span style="color: #aaffff; font-weight: bold;">Mod</span> <span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp;d2=<span style="color: #33ffdd;">1</span>-<span style=" ">&#40;</span>tdir <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp;tx=<span style=" ">&#40;</span>xres+tx+<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>-d1<span style=" ">&#41;</span>*d2<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Mod</span> xres<br />
+&nbsp;ty=<span style=" ">&#40;</span>yres+ty+d1*d2<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Mod</span> yres<br />
+<br />
+&nbsp;h=<span style=" ">&#40;</span>h<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Mod</span> <span style=" ">&#40;</span>skip<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span><br />
+<br />
+&nbsp;ActivateGadget cnv<br />
+&nbsp;<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sbs <span style="color: #aaffff; font-weight: bold;">Or</span> dl <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; tim=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span>+mdelay<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> <span style=" ">&#40;</span>dl <span style="color: #aaffff; font-weight: bold;">And</span> tim&lt;MilliSecs<span style=" ">&#40;</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> sbs=<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> sbs <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp;sbs=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span>:<span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Exit</span> <br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span> &nbsp; <br />
+&nbsp; &nbsp;ActivateGadget cnv<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">57</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> sbs=<span style="color: #33ffdd;">1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">57</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Repeat</span>:<span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">57</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">0</span><br />
+&nbsp; h=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<br />
+&nbsp;newsym=com<span style=" ">&#40;</span>sym,col,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> newsym=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> h=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> h=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <br />
+&nbsp; showturmit<br />
+&nbsp; SetGadgetText current,<span style="color: #aaffff; font-weight: bold;">Chr</span>$<span style=" ">&#40;</span>sym<span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot; &quot;</span>+col<br />
+&nbsp; FlipCanvas cnv <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;sym=newsym<br />
+&nbsp;col=fld<span style=" ">&#40;</span>tx,ty<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sym=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span> Notify <span style="color: #00ff66;">&quot;Программа завершена&quot;</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">57</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span> sbs=<span style="color: #33ffdd;">1</span><br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+FlipCanvas cnv<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> clearfield<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+sym=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> x=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> xres<span style="color: #33ffdd;">-1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> y=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> yres<span style="color: #33ffdd;">-1</span><br />
+&nbsp; fld<span style=" ">&#40;</span>x,y<span style=" ">&#41;</span>=<span style="color: #33ffdd;">15</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">ClsColor</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span><br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> sqs&gt;<span style="color: #33ffdd;">2</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> y=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> yres<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Line</span> <span style="color: #33ffdd;">0</span>,y*sqs,ClientWidth<span style=" ">&#40;</span>cnv<span style=" ">&#41;</span>,y*sqs<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> x=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> xres<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Line</span> x*sqs,<span style="color: #33ffdd;">0</span>,x*sqs,ClientHeight<span style=" ">&#40;</span>cnv<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> begpos <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;tx=<span style="color: #33ffdd;">0</span><br />
+&nbsp;ty=<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;tx=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>xres/<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+&nbsp;ty=<span style="color: #aaffff; font-weight: bold;">Floor</span><span style=" ">&#40;</span>yres/<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+showturmit<br />
+FlipCanvas cnv<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> setcol<span style=" ">&#40;</span>col<span style=" ">&#41;</span><br />
+dcol=<span style="color: #33ffdd;">85</span>*<span style=" ">&#40;</span>col&gt;=<span style="color: #33ffdd;">8</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> dcol<span style="color: #33ffdd;">+170</span>*<span style=" ">&#40;</span><span style=" ">&#40;</span>col <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #33ffdd;">4</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Sar</span> <span style="color: #33ffdd;">2</span><span style=" ">&#41;</span>,dcol<span style="color: #33ffdd;">+170</span>*<span style=" ">&#40;</span><span style=" ">&#40;</span>col <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #33ffdd;">2</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Sar</span> <span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>,dcol<span style="color: #33ffdd;">+170</span>*<span style=" ">&#40;</span>col <span style="color: #aaffff; font-weight: bold;">And</span> <span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> bounds<span style=" ">&#40;</span>v,v1,v2<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> v&lt;v1 <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> v1<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> v&gt;v2 <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> v2<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> v<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> paintsq<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+setcol fld<span style=" ">&#40;</span>tx,ty<span style=" ">&#41;</span> &nbsp; <br />
+<span style="color: #aaffff; font-weight: bold;">If</span> sqs&lt;<span style="color: #33ffdd;">3</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span> tx*sqs,ty*sqs,sqs,sqs<br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span> tx*sqs<span style="color: #33ffdd;">+1</span>,ty*sqs<span style="color: #33ffdd;">+1</span>,sqs<span style="color: #33ffdd;">-1</span>,sqs<span style="color: #33ffdd;">-1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> params<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+xsiz=<span style="color: #33ffdd;">320</span><br />
+ysiz=<span style="color: #33ffdd;">175</span><br />
+pwin=CreateWindow<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Параметры&quot;</span>,<span style=" ">&#40;</span>GadgetWidth<span style=" ">&#40;</span>Desktop<span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>-xsiz<span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span>,<span style=" ">&#40;</span>GadgetHeight<span style=" ">&#40;</span>Desktop<span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span>-xsiz<span style=" ">&#41;</span>/<span style="color: #33ffdd;">2</span>,xsiz,ysiz,win,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+CreateLabel<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Разрешение поля:&quot;</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">95</span>,<span style="color: #33ffdd;">20</span>,pwin<span style=" ">&#41;</span><br />
+CreateLabel<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Положение turmit'а при сбросе:&quot;</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">25</span>,<span style="color: #33ffdd;">165</span>,<span style="color: #33ffdd;">20</span>,pwin<span style=" ">&#41;</span><br />
+CreateLabel<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Задержка при медленном выполнении:&quot;</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">45</span>,<span style="color: #33ffdd;">205</span>,<span style="color: #33ffdd;">20</span>,pwin<span style=" ">&#41;</span><br />
+CreateLabel<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Кол-во невидимых ходов при быстром выполнении:&quot;</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">65</span>,<span style="color: #33ffdd;">265</span>,<span style="color: #33ffdd;">20</span>,pwin<span style=" ">&#41;</span><br />
+resetb=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сброс перед выполнением&quot;</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">85</span>,<span style="color: #33ffdd;">250</span>,<span style="color: #33ffdd;">20</span>,pwin,<span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+SetButtonState resetb,reset<br />
+<br />
+xresf=CreateTextField<span style=" ">&#40;</span><span style="color: #33ffdd;">105</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">16</span>,pwin<span style=" ">&#41;</span><br />
+yresf=CreateTextField<span style=" ">&#40;</span><span style="color: #33ffdd;">140</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">16</span>,pwin<span style=" ">&#41;</span><br />
+SetGadgetText xresf,xres<br />
+SetGadgetText yresf,yres<br />
+incorner=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;в углу&quot;</span>,<span style="color: #33ffdd;">170</span>,<span style="color: #33ffdd;">25</span>,<span style="color: #33ffdd;">50</span>,<span style="color: #33ffdd;">16</span>,pwin,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+incenter=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;в центре&quot;</span>,<span style="color: #33ffdd;">225</span>,<span style="color: #33ffdd;">25</span>,<span style="color: #33ffdd;">70</span>,<span style="color: #33ffdd;">16</span>,pwin,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span><br />
+SetButtonState incorner*<span style=" ">&#40;</span>begpos=<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>+incenter*<span style=" ">&#40;</span>begpos=<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">True</span><br />
+delayf=CreateTextField<span style=" ">&#40;</span><span style="color: #33ffdd;">215</span>,<span style="color: #33ffdd;">45</span>,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">16</span>,pwin<span style=" ">&#41;</span><br />
+SetGadgetText delayf,mdelay<br />
+skipf=CreateTextField<span style=" ">&#40;</span><span style="color: #33ffdd;">275</span>,<span style="color: #33ffdd;">65</span>,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">16</span>,pwin<span style=" ">&#41;</span><br />
+SetGadgetText skipf,skip<br />
+okbutton=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Сохранить&quot;</span>,<span style="color: #33ffdd;">55</span>,<span style="color: #33ffdd;">115</span>,<span style="color: #33ffdd;">80</span>,<span style="color: #33ffdd;">25</span>,pwin<span style=" ">&#41;</span><br />
+cancelbutton=CreateButton<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Отменить&quot;</span>,<span style="color: #33ffdd;">185</span>,<span style="color: #33ffdd;">115</span>,<span style="color: #33ffdd;">80</span>,<span style="color: #33ffdd;">25</span>,pwin<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;id=WaitEvent<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">803</span> <span style="color: #aaffff; font-weight: bold;">Then</span> ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> id=$<span style="color: #33ffdd;">401</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; e=EventSource<span style=" ">&#40;</span><span style=" ">&#41;</span> <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Select</span> e<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> okbutton:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Case</span> cancelbutton:ex=<span style="color: #33ffdd;">1</span>:<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> ex=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;newxres=bounds<span style=" ">&#40;</span>TextFieldText<span style=" ">&#40;</span>xresf<span style=" ">&#41;</span>,<span style="color: #33ffdd;">2</span>,min<span style=" ">&#40;</span>maxsiz,ClientWidth<span style=" ">&#40;</span>cnv<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;newyres=bounds<span style=" ">&#40;</span>TextFieldText<span style=" ">&#40;</span>yresf<span style=" ">&#41;</span>,<span style="color: #33ffdd;">2</span>,min<span style=" ">&#40;</span>maxsiz,ClientHeight<span style=" ">&#40;</span>cnv<span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> xres&lt;&gt;newxres <span style="color: #aaffff; font-weight: bold;">Or</span> yres&lt;&gt;newyres <span style="color: #aaffff; font-weight: bold;">Then</span> <br />
+&nbsp; xres=newxres<br />
+&nbsp; yres=newyres<br />
+&nbsp; createfield<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<br />
+&nbsp;newskip=bounds<span style=" ">&#40;</span>TextFieldText<span style=" ">&#40;</span>skipf<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">1000</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> newskip&lt;&gt;skip <span style="color: #aaffff; font-weight: bold;">Then</span> skip=newskip<br />
+<br />
+&nbsp;newdelay=bounds<span style=" ">&#40;</span>TextFieldText<span style=" ">&#40;</span>delayf<span style=" ">&#41;</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">1000</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> newdelay&lt;&gt;mdelay <span style="color: #aaffff; font-weight: bold;">Then</span> mdelay=newdelay<br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> ButtonState<span style=" ">&#40;</span>incorner<span style=" ">&#41;</span>&lt;&gt;begpos <span style="color: #aaffff; font-weight: bold;">Then</span> begpos=ButtonState<span style=" ">&#40;</span>incorner<span style=" ">&#41;</span> <br />
+<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> ButtonState<span style=" ">&#40;</span>resetb<span style=" ">&#41;</span>&lt;&gt;reset <span style="color: #aaffff; font-weight: bold;">Then</span> reset=ButtonState<span style=" ">&#40;</span>resetb<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+FreeGadget pwin<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> min<span style=" ">&#40;</span>v1,v2<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> v1&lt;v2 <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> v1 <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">Return</span> v2<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> exitprogram<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> change <span style="color: #aaffff; font-weight: bold;">Then</span> <br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Select</span> Proceed<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Текущая программа не сохранена!&quot;</span>+kr$+<span style="color: #00ff66;">&quot;Хотите ли Вы сохранить ее?&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">0</span>:ex=<span style="color: #33ffdd;">1</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">1</span>:savefile lastfile$:ex=<span style="color: #33ffdd;">1</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;ex=<span style="color: #33ffdd;">1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> ex <span style="color: #aaffff; font-weight: bold;">Then</span> FreeGadget win:<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> outbounds<span style=" ">&#40;</span>v,v1,v2<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> v&lt;v1 <span style="color: #aaffff; font-weight: bold;">Or</span> v&gt;v2 <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #33ffdd;">1</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">; 4-line RND -------------------------------------------------------------------</span><br />
+<br />
+<span style="color: #ffee00">;A 15 2 0 B</span><br />
+<span style="color: #ffee00">;B 15 2 1 A</span><br />
+<span style="color: #ffee00">;A 2 15 -1 B</span><br />
+<span style="color: #ffee00">;B 2 15 0 A</span><br />
+<br />
+<span style="color: #ffee00">; 3-Color Rnd ------------------------------------------------------------------</span><br />
+<br />
+<br />
+<span style="color: #ffee00">;A 15 9 1 A</span><br />
+<span style="color: #ffee00">;A 9 12 -1 A</span><br />
+<span style="color: #ffee00">;A 12 15 0 A</span><br />
+<br />
+<span style="color: #ffee00">; fractal ----------------------------------------------------------------------</span><br />
+<br />
+<span style="color: #ffee00">;Z 15 15 -1 Y</span><br />
+<span style="color: #ffee00">;Y 15 15 -1 X</span><br />
+<span style="color: #ffee00">;X 15 7 -1 W</span><br />
+<span style="color: #ffee00">;W 15 14 -1 V</span><br />
+<span style="color: #ffee00">;V 15 6 0 M</span><br />
+<br />
+<span style="color: #ffee00">;M 15 12 0 A</span><br />
+<span style="color: #ffee00">;M 14 13 0 A</span><br />
+<span style="color: #ffee00">;M 10 10 1 N</span><br />
+<span style="color: #ffee00">;M 8 8 1 N</span><br />
+<span style="color: #ffee00">;M 7 7 1 N</span><br />
+<span style="color: #ffee00">;M 2 2 1 N</span><br />
+<span style="color: #ffee00">;N 15 15 1 N</span><br />
+<span style="color: #ffee00">;N 14 14 1 N</span><br />
+<span style="color: #ffee00">;N 10 10 1 N</span><br />
+<span style="color: #ffee00">;N 8 8 1 N</span><br />
+<span style="color: #ffee00">;N 7 7 1 N</span><br />
+<span style="color: #ffee00">;N 6 5 0 M</span><br />
+<span style="color: #ffee00">;N 5 4 0 M</span><br />
+<span style="color: #ffee00">;N 4 3 0 M</span><br />
+<span style="color: #ffee00">;N 3 2 0 K</span><br />
+<span style="color: #ffee00">;N 2 2 1 N</span><br />
+<br />
+<span style="color: #ffee00">;K 15 15 0 L</span><br />
+<span style="color: #ffee00">;K 14 15 1 O</span><br />
+<span style="color: #ffee00">;K 10 2 1 O</span><br />
+<span style="color: #ffee00">;K 8 7 1 O</span><br />
+<span style="color: #ffee00">;K 7 9 1 R</span><br />
+<span style="color: #ffee00">;K 2 2 0 L</span><br />
+<span style="color: #ffee00">;L 15 15 0 K</span><br />
+<span style="color: #ffee00">;L 8 7 0 T</span><br />
+<span style="color: #ffee00">;L 7 9 0 Q</span><br />
+<span style="color: #ffee00">;L 2 6 0 M</span><br />
+<br />
+<span style="color: #ffee00">;T 15 15 0 O</span><br />
+<span style="color: #ffee00">;T 2 2 1 O</span><br />
+<br />
+<span style="color: #ffee00">;O 15 15 -1 P</span><br />
+<span style="color: #ffee00">;O 2 2 -1 P</span><br />
+<span style="color: #ffee00">;O 7 9 -1 Q</span><br />
+<span style="color: #ffee00">;P 15 14 0 L</span><br />
+<span style="color: #ffee00">;P 7 9 0 R</span><br />
+<span style="color: #ffee00">;P 2 10 0 L</span><br />
+<br />
+<span style="color: #ffee00">;A 15 15 -1 B</span><br />
+<span style="color: #ffee00">;A 14 14 -1 B</span><br />
+<span style="color: #ffee00">;A 10 10 -1 C</span><br />
+<span style="color: #ffee00">;A 8 8 -1 B</span><br />
+<span style="color: #ffee00">;A 7 7 -1 B</span><br />
+<span style="color: #ffee00">;A 2 2 -1 C</span><br />
+<span style="color: #ffee00">;B 15 15 -1 A</span><br />
+<span style="color: #ffee00">;B 14 14 -1 A</span><br />
+<span style="color: #ffee00">;B 12 15 0 D</span><br />
+<span style="color: #ffee00">;B 13 14 0 D</span><br />
+<span style="color: #ffee00">;B 10 10 -1 A</span><br />
+<span style="color: #ffee00">;B 8 8 -1 A</span><br />
+<span style="color: #ffee00">;B 7 7 -1 A</span><br />
+<span style="color: #ffee00">;B 2 2 -1 A</span><br />
+<span style="color: #ffee00">;C 15 15 -1 C</span><br />
+<span style="color: #ffee00">;C 14 14 -1 C</span><br />
+<span style="color: #ffee00">;C 13 14 0 N</span><br />
+<span style="color: #ffee00">;C 12 15 0 N</span><br />
+<span style="color: #ffee00">;C 10 10 -1 C</span><br />
+<span style="color: #ffee00">;C 8 8 -1 C</span><br />
+<span style="color: #ffee00">;C 7 7 -1 C</span><br />
+<span style="color: #ffee00">;C 2 2 -1 C</span><br />
+<span style="color: #ffee00">;D 15 15 -1 E</span><br />
+<span style="color: #ffee00">;D 14 14 -1 E</span><br />
+<span style="color: #ffee00">;D 10 10 1 N</span><br />
+<span style="color: #ffee00">;D 8 8 -1 E</span><br />
+<span style="color: #ffee00">;D 7 7 -1 E</span><br />
+<span style="color: #ffee00">;D 2 2 1 N</span><br />
+<span style="color: #ffee00">;E 15 15 -1 F</span><br />
+<span style="color: #ffee00">;E 8 8 -1 F</span><br />
+<span style="color: #ffee00">;E 7 7 -1 F</span><br />
+<span style="color: #ffee00">;E 2 2 -1 F</span><br />
+<span style="color: #ffee00">;F 15 15 -1 G</span><br />
+<span style="color: #ffee00">;F 14 14 -1 G</span><br />
+<span style="color: #ffee00">;F 10 10 -1 G</span><br />
+<span style="color: #ffee00">;F 8 8 -1 G</span><br />
+<span style="color: #ffee00">;F 7 7 -1 G</span><br />
+<span style="color: #ffee00">;F 2 2 -1 G</span><br />
+<span style="color: #ffee00">;G 15 2 -1 N</span><br />
+<span style="color: #ffee00">;G 14 10 -1 N</span><br />
+<br />
+<span style="color: #ffee00">;Q 15 15 0 Q</span><br />
+<span style="color: #ffee00">;Q 14 15 0 Q</span><br />
+<span style="color: #ffee00">;Q 10 2 0 Q</span><br />
+<span style="color: #ffee00">;Q 9 8 0 L</span><br />
+<span style="color: #ffee00">;Q 2 2 0 Q</span><br />
+<span style="color: #ffee00">;R 15 15 0 R</span><br />
+<span style="color: #ffee00">;R 14 15 0 R</span><br />
+<span style="color: #ffee00">;R 10 2 0 R</span><br />
+<span style="color: #ffee00">;R 9 8 0 K</span><br />
+</p>
+<span style="color: #ffee00">;R 2 2 0 R</span></div>
+
+<!-- Saved in parser cache with key db1:pcache:idhash:1636-0!1!0!!ru!2 and timestamp 20071110055340 -->
+<div class="printfooter">
+Получено с <a href="u2zbe7pg.html">http://localhost/index.php/%D0%9A%D0%BE%D0%B4:BPTurmit.bb</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%BE%D0%B4:BPTurmit.bb by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:56:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

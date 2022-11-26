@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/2D_%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-%D0%BA%D0%B0%D0%BF%D0%BB%D0%B8_%D0%B2_Max2D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="2D Объекты-капли в Max2D,MANIAK dobrii" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>2D Объекты-капли в Max2D — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "2D_Объекты-капли_в_Max2D";
+var wgTitle = "2D Объекты-капли в Max2D";
+var wgAction = "view";
+var wgArticleId = "614";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3571";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-2D_Объекты-капли_в_Max2D">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">2D Объекты-капли в Max2D</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Этот тьюториал поможет тебе научиться рисовать объекты-капли, используя простые команды Max2D.
+</p><p>Обычно, когда ты рисуешь картинку на экране, ты видишь её, как она есть, пиксель в пиксель. Если эта картинка была кругом, то, после того, как ты её нарисуешь, на экране ты увидишь круг. Форма картинки не изменилась, т.к. она зафиксирована в памяти попиксельно. Добавление картинок на экран не изменит форму других картинок.
+</p><p>Объекты-капли от других отличаются тем, что их форма, которая обычно - круг, меняется в зависимости от того, как близко такие объекты расположены друг от друга. Два отдельных объекта могут слиться в один (на самом деле их два, но смотрится, как один). Классная это штука - объекты-капли!
+</p><p>Как только ты нарисуешь несколько объектов-капель на достаточно близком расстоянии, они начнут влиять друг на друга. Чем ближе они друг к другу, тем сильнее они "выпучиваются" в сторону друг друга, как будто стягиваемые гравитационной силой. Когда же они совсем близко они начинают смешиваться в одну "гладкую фигуру"(похожую на знак бесконечность, если объекта два). Приемлемо называть такую фигуру "каплей". Если объекты находятся в одной точке, то образуется одна сфера побольше. Иногда объекты-капли называют "меташарами" (metaballs), поскольку это название хорошо объясняет их поведение - "это что-то большее, чем просто шар ".
+</p><p>Можно представлять отдельный объект-каплю как ядро атома с энергетическим полем вокруг. Чем ближе подбираемся к нему - тем сильнее энергетическое поле. Сферообразная форма атома получается из-за "размытия" электронов, летящих вокруг него на огромной скорости. С приближением атомов друг к другу, такая форма меняется, т.к. на электроны одного атома влияет соседний(и наоборот). В конечном счете электроны вырываются из орбиты "своего" атома и перелетают на другой, потом, возможно, возвращаясь и т.д. Это ,в основном, и создает "каплю". Вот почему объекты-капли используются в науке для моделирования поведения атомов и молекул.
+</p><p>Для нас вопрос в том, чтобы научиться рисовать фигуры, которые будут менять фигуру по заданному закону в зависимости от того, как близко они расположены друг к другу. Другой вопрос - это как рисовать классные "гладкие" фигуры, и как это делать быстро .
+</p><p>Изобретено много алгоритмов по рисованию объектов капель. Самый известный из них - "движущиеся кубы"("marching cubes"). Про него можно почитать в Интернете. Алгоритм этот патентованный, так что мы не можем полностью его использовать(фигуры).
+</p><p>Однако, получено несколько "побочных эффектов", например "движущиеся треугольники" ("marching triangles"). Основная идея такого алгоритма в том, чтобы подразделять данный набор "атомов" и их объединенные энергетические поля в кубы. Затем ты работаешь на очень маленьком уровне, когда внутри куба создается полигон, перпендикулярный поверхности энергетического поля. Тебе не нужно понимать, как это работает (в нашем случае), так как этот алгоритм мы использовать не будем. Он обычно используется для генерирования 3D полигональных мешей с определенным уровнем детализации.
+</p><p>Чаще всего, по такому алгоритму, полигон будет создан в любой точке энергетического поля, где его интенсивность приблизительно равна половине силы. Это понимается, как порог. Т. к. алгоритму нужно знать все возможные места, где энергетический уровень на своем "пороге" в половину силы, требуется большое количество вычислений, особенно работая в 3D. Одна из областей использования объектов-капель - это моделирование органических форм в 3D, и это фича самых навороченных 3D редакторов. Главным образом тяжело это сделать в реальном времени - приходиться разрабатывать специфический системный код.
+</p><p>Сперва нужно разобраться, как выглядит объединенное энергетическое поле нескольких объектов-капель или атомов. Представь несколько атомов, висящих в воздухе неподалеку друг от друга. Они испускают энергетические поля заданной силы, рассеивающиеся с расстоянием. В пространстве, где энергетические поля пересекаются, сила энергетического поля равна сумме энергий пересеченных "кусочков".
+</p><p>Что хочется сделать в первую очередь - это по данным положениям атомов определить, количество энергии в каждой точке пространства. Очевидно, что в 3D таких точек очень много. В 2D всё проще, особенно с фиксированным количеством пикселей на экране. Так что нам нужно знать только что такое энергетическое поле на пиксельной основе.
+</p><p>Традиционные алгоритмы, такие как "движущиеся кубы", используют "много математики" чтобы узнать где располагается энергетическое поле. Поскольку они обычно работают в 3D, они должны задать трехмерную систему точек заданного разрешения и построить энергетическое поле в нем. Это достигается множеством формул и, в случае алгоритма "движущихся кубов", пытается ограничить вычисления ссылкой на возможное кол-во перестановок результата. Но всё это считает процессор.
+</p><p>Поскольку мы собираемся создавать двумерные объекты-капли, нам нужно знать как выглядит объединенное энергетическое поле нескольких объектов в 2D. Начнем с рисования картинки энергетического поля в оттенках серого. 
+</p><p>Всё что нам нужно - это нарисовать энергетическое поле каждого атома и убедится, что в области их пересечения энергия пересеченных "кусочков" складывается. Поскольку мы работаем в 2D и вычисляем положение точек "меша" за один шаг, каждый пиксель можно использовать как точка энергетического поля. Мы просто делаем кадр всех энергетических полей вокруг всех атомов.
+</p><p>Вместо использования массива для хранения поля, или использования математики для работы в реальном времени, мы будем использовать картинку на экране. Экран - это массив данных, преобразуемых железом в цвет в зависимости от содержания данных. А фрукт в том, что используя картинку в качестве объекта-капли, мы можем спихнуть вычисления на видеокарту. Видеокарта = скорость видео.
+</p><p>BlitzMax позволяет рисовать картинки разными способами. Установить способ рисования можно командой SetBlend. Обычно картинки рисуются непрозрачными, с использованием режима SOLIDBLEND, установленного по умолчанию. При таком режиме содержание картинки полностью заменяет содержимое экрана под собой. Но нам нужно другое - LIGHTBLEND. Это режим "прибавления". В таком режиме цвет каждого пикселя картинки складывается с соответствующем пикселем экрана. Когда цвет складываемых пикселей получается больше 255(в цвете) или 1.0(в цвете, выраженным числом с плавающей точкой), то сумма обрезается, соответственно до 255 и 1.0. Таким образом мы можем использовать режим LIGHTBLEND для определения пересекающихся частей каждого поля. Ничего, что непересекающиеся участки полей рисуются в таком режиме - позади этих областей черный экран, так что картинка нарисуется так, как она нарисуется в режиме SOLIDBLEND .
+</p><p>Итак, мы можем использовать режим LIGHTBLEND для комбинирования энергий каждого атома. Мы будем использовать обычную DrawImage , чтобы нарисовать энергию каждого атома. Энергетическое поле будет просчитываться до использования и храниться в картинке. Пре-просчитывание картинки - это важный фактор, позволяющий нам в реальном времени, с нормальной скоростью создавать эффект капли. Если просчитывать каждое поле, комбинировать его с другими полями, причем делать всё это в реальном времени, то наша прога будет жутко тормозить.
+</p><p>Итак, теперь вопрос в том, чтобы сгенерировать энергетическое поле атома и сохранить его как картинка в оттенках серого. Ну, как я уже говорил, чем дальше мы от атома - тем слабее сила энергетического поля. Следовательно, энергетическое поле атома представляет собой шар, с убывающей к краям плотностью. Центр шара - яркий, края шара - почти невидимы. Будем рисовать каждый уровень энергетического поля разным цветом и, поскольку мы работаем в оттенках серого, мы будем использовать 256 оттенков серого.
+</p><p>Нарисовать энергетическое поле атома очень легко, скажешь ты. Начать нужно с установки цвета черным, затем нарисовать большой круг, по размеру равный энергетическому полю. Затем нужно повторять этот цикл, уменьшая размер круга, и добавляя 1 к его цвету(и к красному, и к зеленому, и к синему). Получиться круг, залитый градиентом от белого до черного, из центра к краям. Это выглядит так:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs01.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs01.jpg" src="bdh2roew.jpg" width="400" height="277" /></a></span></div></div>
+<p>Если положить это в картинку и нарисовать её несколько раз, получим это:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs02.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs02.jpg" src="2k45-2cm.jpg" width="400" height="278" /></a></span></div></div>
+<p>Эффекта капли не получилось. Пока энергии пересеченных кусочков не складываются, нет эффекта гладкой поверхности. Это становится более очевидным, если выделить некоторые кусочки поля одного цвета контрастным, например красным:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs03.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs03.jpg" src="wuacp34l.jpg" width="400" height="278" /></a></span></div></div>
+<p>Далее можно увидеть, какая, собственно, фигура получилась. Получился почти прямой  "мост" между двумя полями. Но почему? Эта прямолинейность - результат приращения цвета исходной картинки.  Градиент получился полностью "линейным". Его изменение показано на графике:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs04.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs04.jpg" src="uu_gzii0.jpg" width="512" height="257" /></a></span></div></div>
+<p>Так как цвет изменяется от черного к белому, существует устойчивый шаг его увеличения, пропорциональный диаметру нарисованных кругов. Из-за "линейного" градиента ничего не получается. Технически энергетические поля комбинируются, но делают они это не так, как нам надо. Нам не подходит такой способ представления объектов-капель.
+</p><p>Нам нужно сгенерировать искривленную поверхность. Нам нужно, чтобы объекты взаимодействовали постепенно, чтобы образовалась гладкая искривленная поверхность, а не все сразу рывком. Чтобы этого достичь, нужно изменить форму градиента, чтобы он был нелинейным. Это значит, что вместо увеличения цвета на 1 с каждым шагом, нужно медленно увеличивать изменение цвета (до этого оно всегда было 1).
+</p><p>Электрону из такого энергетического поля, на краю поля будет очень легко вылететь, когда при приближении к центру это становится почти невозможным.
+</p><p>Рисование изогнутого градиента включено в исходник ниже. Нам нужно увеличивать интенсивность цвета квадратично. Пока число маленькое - кривая не сильно гнется, но с его увеличением, она становится очень изогнутой. Выглядит такая кривая так:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs05.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs05.jpg" src="_gvfiw2u.jpg" width="512" height="257" /></a></span></div></div>
+<p>Так выглядит энергетическое поле атома, заданное картинкой, залитой квадратичным градиентом:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs06.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs06.jpg" src="y7ktgxfl.jpg" width="400" height="277" /></a></span></div></div>
+<p>У новой картинки больше проявляется центр, где максимум яркости и прозрачность краев.  Яркость быстро спадает по направлению от центра к краям. Это идеальная форма для объекта-капли.
+</p><p>Такой градиент подходит больше всего, т.к. его кривизна также показывает, как взаимодействуют два поля друг на друга в зависимости от расстояния между ними. При рисовании нескольких таких картинок в режиме LIGHTBLEND образуются не только гладкоизогнутые формы, но и различные углы кривизны, зависящие от близости атомов. С линейным градиентом получается резкое образование "моста" между двумя атомами, когда как при изогнутом градиенте мы получаем различную степень выгнутости.
+</p><p>Итак, вот что получается при рисовании двух энергетических полей новым способом:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs07.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs07.jpg" src="l7t46rw9.jpg" width="400" height="278" /></a></span></div></div>
+<p>Теперь это совсем не похоже на то, что у нас получилось в начале. Опять же, выделив "кусочки" поля красным, видим кривые, но теперь такие, как нам надо:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs08.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs08.jpg" src="0oe-641k.jpg" width="400" height="276" /></a></span></div></div>
+<p>Получился нормальный объект-капля. Области ближе к центру ещё не "вытянулись", т.к. ещё не находятся во влиянии друг друга. Области, которые влияют друг на друга (пересекаясь) начинают выгибаться в сторону друг друга и объединяться. Только из-за квадратичного градиента у нас всё получилось.
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs09.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs09.jpg" src="8z0-7p7v.jpg" width="442" height="358" /></a></span></div></div>
+<p>Всё, теперь у тебя есть объект-капля, нарисованный на экране! 
+</p><p>Самое классное это то, что это очень-очень простая техника по сравнению с "движущимися кубами". Особенно классно то, что мы все преобразования производим, используя данные картинки и, следовательно, используем ускорение видеокарты. Простая комбинация пре-просчитанной картинки, с использованием правильного градиента и "прибавительного" режима рисования обеспечивает нам эффект объекта-капли.
+</p><p>Существуют и другие кривые градиента, основанные на других формулах. Формула ЧИСЛОxЧИСЛО - самая простая и производит стандартный эффект. Другие формулы дают более плоские кривые, или подчеркивают центр. Изменение кривой таким способом могут сделать объекты-капли более "липкими".
+</p><p>Главная идея получения объектов-капель в том, что сперва генерируется объединенное поле, официально называемое "изоповерхность"("isosurface") и, затем рисуется с определенным порогом. В моем примере выше(про выделение красным) я взял программу рисования, включил потоковую заливку, шириной в 5 пикселей и тыкнул мышкой в нескольких местах. Можно определить порог цвета, который будет рисоваться.
+</p><p>Обычно объекты-капли так и рисуются, рисуя только пиксели цветом, скажем, между 120 и 140. Получится полоска, похожая на одну из красных на картинках выше.
+</p><p>В этом тьюториале я всего лишь показываю тебе основы генерации объектов-капель. Твоя задача в том, чтобы преобразовать сгенерированную картинку в ту, что тебе надо. В следующем, более продвинутом примере, я перевел весь код в прямой OpenGL. Это позволяет мне устанавливать режимы рисования, не имеющиеся в оригинальном Max2D. Используя дополнительные режимы, я  несколько раз покрывал экран заполненным треугольником, и с каждым разом производились различные математические преобразования над цветами пикселей. В конечном результате можно получить несколько полосок цвета.
+</p><p>В примере этого тьюториала есть встроенный порог в 255, т.е. в любой точке экрана яркость не может быть больше 255. Посредством различных манипуляций можно сделать объект-каплю полностью белым. В добавление можно нарисовать прямоугольник над экраном в режиме LIGHTBLEND с цветом $80,$80,$80 (наполовину серый), который приведет к изменению порога так, что он будет равен половине силы поля - что гораздо лучше смотрится, чем белый. Немного умных манипуляций и может получиться что-нибудь, похожее на это:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs10.jpg" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Blobs10.jpg" src="i_-wxnre.jpg" width="640" height="480" /></a></span></div></div>
+<p>Пока всё что мы сделали - это сферический объект-капля. Мы работаем с пре-просчитанной картинкой в качестве поля. Можно её сохранить в файл и, затем изменить в любом графическом редакторе. Потом нужно будет просто загрузить её в начале программы, вместо генерации. Изменяя форму, или добавляете что-либо в начальную картинку, можно достичь классных эффектов!
+</p><p>Можно закрашивать картинки при рендеринге, используя SetColor для каждой. Так можно получить эффект, похожий на изображенный выше.
+</p><p>Этот алгоритм поддерживает неограниченное количество объектов! Повеселись!
+</p><p>Надеюсь всё написано чётко и понятно (я тоже - прим. всеп. пер.).
+</p><p>Вот очень маленький исходник, просто скопируй, вставь в свой IDE и запусти! Тут реализовано создание сферических объектов-капель диаметром 512, 256 и 128 пикселей. Возможны и другие размеры, но для них нужно определить значения balldivider и lineardivider - уверен, что существует формула их вычисления, но я пока не смог её вывести.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #B1E7EB;">'Объекты-капли в BlitzMax, используя только Max2D </span><br />
+<p><br />
+<span style="color: #B1E7EB;">'Диаметр шара и его половина</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> ballsize:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">512</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> ballsizehalf:<span style="color: #ffff00; font-weight: bold;">Int</span>=ballsize/<span style="color: #FFFFFF;">2</span> <br />
+<br />
+<span style="color: #B1E7EB;">'Устанавливаем графический режим</span><br />
+<span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">800</span>,<span style="color: #FFFFFF;">600</span>,<span style="color: #FFFFFF;">0</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span> <br />
+<br />
+<span style="color: #B1E7EB;">'Вычисляем делители для разных диаметров шара</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> balldivider:<span style="color: #ffff00; font-weight: bold;">Float</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">128</span> <span style="color: #ffff00; font-weight: bold;">Then</span> balldivider=<span style="color: #FFFFFF;">64</span> <span style="color: #B1E7EB;">'8x8</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">256</span> <span style="color: #ffff00; font-weight: bold;">Then</span> balldivider=<span style="color: #FFFFFF;">256</span> <span style="color: #B1E7EB;">'16x16</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">512</span> <span style="color: #ffff00; font-weight: bold;">Then</span> balldivider=<span style="color: #FFFFFF;">1024</span> <span style="color: #B1E7EB;">'32x32</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> lineardivider:<span style="color: #ffff00; font-weight: bold;">Float</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">128</span> <span style="color: #ffff00; font-weight: bold;">Then</span> lineardivider=<span style="color: #FFFFFF;">0.5</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">256</span> <span style="color: #ffff00; font-weight: bold;">Then</span> lineardivider=<span style="color: #FFFFFF;">1</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> ballsize=<span style="color: #FFFFFF;">512</span> <span style="color: #ffff00; font-weight: bold;">Then</span> lineardivider=<span style="color: #FFFFFF;">2</span><br />
+<br />
+<span style="color: #B1E7EB;">'Генерация картинки с полем</span><br />
+<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> r:<span style="color: #ffff00; font-weight: bold;">Float</span>=<span style="color: #FFFFFF;">1</span> <span style="color: #ffff00; font-weight: bold;">To</span> ballsize<span style="color: #FFFFFF;">-1</span> <span style="color: #ffff00; font-weight: bold;">Step</span> <span style="color: #FFFFFF;">0.5</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> level:<span style="color: #ffff00; font-weight: bold;">Float</span>=r<br />
+&nbsp; &nbsp; &nbsp; &nbsp; level:*level<br />
+&nbsp; &nbsp; &nbsp; &nbsp; level=level/balldivider<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetColor</span> level,level,level <span style="color: #B1E7EB;">'Нужный градиент</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #B1E7EB;">'SetColor r/lineardivider,r/lineardivider,r/lineardivider 'Для линейных градиентов</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+<span style="color: #ffff00; font-weight: bold;">DrawOval</span> r/<span style="color: #FFFFFF;">2</span>,r/<span style="color: #FFFFFF;">2</span>,ballsize-r,ballsize-r &nbsp;<br />
+<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #B1E7EB;">'Собираем в картинку</span><br />
+<span style="color: #ffff00; font-weight: bold;">AutoMidHandle</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> img:TImage=<span style="color: #ffff00; font-weight: bold;">CreateImage</span><span style=" ">&#40;</span>ballsize,ballsize,<span style="color: #FFFFFF;">1</span>,FILTEREDIMAGE<span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">GrabImage</span><span style=" ">&#40;</span>img,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+<br />
+<br />
+<span style="color: #B1E7EB;">'Устанавливаем режим рисования</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetBlend</span> LIGHTBLEND<br />
+<br />
+<span style="color: #B1E7EB;">'Рисуем картинку, пока не нажмут на escape</span><br />
+<span style="color: #ffff00; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> img,<span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">300</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> img,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>KEY_ESCAPE<span style=" ">&#41;</span></div>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">;Blobby Objects для Blitz3D</span><br />
+<p><span style="color: #ffee00">;Портировал на Блитз: Солодовниченко Михаил ака MANIAK_dobrii</span><br />
+<span style="color: #ffee00">;Нужна картинка, и установленный графический режим</span><br />
+<span style="color: #ffee00">;В главном цикле BlobBlend(картинка,Х-координата,Y-координата)</span><br />
+<span style="color: #ffee00">;Картинка должна входить в экран по Y, т.е. если хоть кусочек картинки</span><br />
+<span style="color: #ffee00">; выйдет за верхний/нижний край экрана, то прога вылетит</span><br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">640</span>,<span style="color: #33ffdd;">480</span>,<span style="color: #33ffdd;">32</span>,<span style="color: #33ffdd;">2</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+BlobSize = <span style="color: #33ffdd;">128</span><br />
+BlobDivider = <span style="color: #33ffdd;">64</span><br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> blob = <span style="color: #aaffff; font-weight: bold;">CreateImage</span><span style=" ">&#40;</span>BlobSize,BlobSize<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">ImageBuffer</span><span style=" ">&#40;</span>blob<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i#=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> BlobSize<span style="color: #33ffdd;">-1</span> <span style="color: #aaffff; font-weight: bold;">Step</span> .<span style="color: #33ffdd;">5</span><br />
+&nbsp; lev# = i<br />
+&nbsp; lev = lev*lev<br />
+&nbsp; lev = lev/BlobDivider<br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Color</span> lev,lev,lev<br />
+<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Oval</span> i/<span style="color: #33ffdd;">2</span>,i/<span style="color: #33ffdd;">2</span>,BlobSize-i,BlobSize-i<br />
+&nbsp; <br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+msX = <span style="color: #aaffff; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>:msy = <span style="color: #aaffff; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+BlobBlend<span style=" ">&#40;</span>blob,<span style="color: #33ffdd;">256</span>,<span style="color: #33ffdd;">176</span><span style=" ">&#41;</span><br />
+BlobBlend<span style=" ">&#40;</span>blob,msX<span style="color: #33ffdd;">-64</span>,msY<span style="color: #33ffdd;">-64</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+<span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #ffee00">;Рисует blob в X и Y</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> BlobBlend<span style=" ">&#40;</span>Blob,x,y<span style=" ">&#41;</span><br />
+BlobBlendEx<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">ImageBuffer</span><span style=" ">&#40;</span>Blob<span style=" ">&#41;</span>,x,y,<span style="color: #aaffff; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>Blob<span style=" ">&#41;</span>,<span style="color: #aaffff; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>blob<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Тоже, что и BlobBlend(), но расширенная</span><br />
+<span style="color: #ffee00">;[буфер &quot;под картинкой&quot;][буфер картинки][X-коорд.][Y-коорд.]</span><br />
+<span style="color: #ffee00">;[ширина картинки][высота картинки][прозрачность][маска]</span><br />
+<span style="color: #ffee00">;ширина и высота картинки может быть меньше реальных высоты и ширины</span><br />
+<span style="color: #ffee00">;Цвет, определенный в маске не будет рисоваться</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> BlobBlendEx<span style=" ">&#40;</span>Back_Buffer,BlobBuffer,x,y,BlobWidth,BlobHeight,alpha=<span style="color: #33ffdd;">1500</span>,mask=<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Local</span> yy,xx,xn,yn,argb<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Local</span> back_buffer_red, Blob_Buffer_red, result_red, back_buffer_green, <br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Local</span> Blob_Buffer_green, result_green, back_buffer_blue, Blob_Buffer_blue, result_blue<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">LockBuffer</span> Back_Buffer<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">LockBuffer</span> BlobBuffer<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> yy = <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> BlobHeight<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> xx = <span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> BlobWidth<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp; &nbsp; xn = x+xx<br />
+&nbsp; &nbsp; &nbsp; yn = y+yy<br />
+&nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; argb = <span style="color: #aaffff; font-weight: bold;">ReadPixelFast</span><span style=" ">&#40;</span>xx,yy,BlobBuffer<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> argb &lt;&gt; mask<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blob_Buffer_red = <span style=" ">&#40;</span>argb <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">16</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blob_Buffer_green = <span style=" ">&#40;</span>argb <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">8</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; &nbsp; &nbsp; &nbsp; Blob_Buffer_blue = argb <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; argb = <span style="color: #aaffff; font-weight: bold;">ReadPixelFast</span><span style=" ">&#40;</span>xn,yn,Back_Buffer<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; back_buffer_red = <span style=" ">&#40;</span>argb <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">16</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; &nbsp; &nbsp; &nbsp; back_buffer_green = <span style=" ">&#40;</span>argb <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">8</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; &nbsp; &nbsp; &nbsp; back_buffer_blue = argb <span style="color: #aaffff; font-weight: bold;">And</span> $ff<br />
+&nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; result_red = <span style=" ">&#40;</span>alpha * Blob_Buffer_red<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">8</span> + back_buffer_red<br />
+&nbsp; &nbsp; &nbsp; &nbsp; result_green = <span style=" ">&#40;</span>alpha * Blob_Buffer_green<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">8</span> + back_buffer_green<br />
+&nbsp; &nbsp; &nbsp; &nbsp; result_blue = <span style=" ">&#40;</span>alpha * Blob_Buffer_blue<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Shr</span> <span style="color: #33ffdd;">8</span> + back_buffer_blue<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> result_red &gt; <span style="color: #33ffdd;">255</span> <span style="color: #aaffff; font-weight: bold;">Then</span> result_red = <span style="color: #33ffdd;">255</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> result_green &gt; <span style="color: #33ffdd;">255</span> <span style="color: #aaffff; font-weight: bold;">Then</span> result_green = <span style="color: #33ffdd;">255</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> result_blue &gt; <span style="color: #33ffdd;">255</span> <span style="color: #aaffff; font-weight: bold;">Then</span> result_blue = <span style="color: #33ffdd;">255</span><br />
+&nbsp; <br />
+&nbsp; &nbsp; &nbsp; &nbsp; argb_pix = <span style=" ">&#40;</span><span style=" ">&#40;</span><span style=" ">&#40;</span>result_red <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> result_green<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Or</span> result_blue<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">WritePixelFast</span> xn,yn,argb_pix,Back_Buffer<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">UnlockBuffer</span> Back_Buffer<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">UnlockBuffer</span> BlobBuffer<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/c/c9/Blobs.zip" class="internal" title="Blobs.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: AngelDaniel (worklog: http://www.blitzbasic.com/logs/userlog.php?log=436&amp;user=8053)<br />
+Перевод: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:MANIAK_dobrii" title="Участник:MANIAK dobrii">MANIAK dobrii</a> (e-mail: MANIAK_dobrii@list.ru, сайт: <a href="http://www.maniak-dobrii.nm.ru/" class="external free" title="http://www.maniak-dobrii.nm.ru/" rel="nofollow">http://www.maniak-dobrii.nm.ru/</a>)
+</p><!-- 
+Pre-expand include size: 5449 bytes
+Post-expand include size: 561 bytes
+Template argument size: 23 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:614-0!1!0!!ru!2 and timestamp 20071110033625 -->
+<div class="printfooter">
+Получено с <a href="1wyp1dg2.html">http://blitzetcetera.org/index.php/2D_%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-%D0%BA%D0%B0%D0%BF%D0%BB%D0%B8_%D0%B2_Max2D</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/2D_%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B-%D0%BA%D0%B0%D0%BF%D0%BB%D0%B8_%D0%B2_Max2D by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

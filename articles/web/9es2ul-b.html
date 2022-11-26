@@ -1,0 +1,287 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Кубическая интерполяция,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Кубическая интерполяция — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Кубическая_интерполяция";
+var wgTitle = "Кубическая интерполяция";
+var wgAction = "view";
+var wgArticleId = "547";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3549";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Кубическая_интерполяция">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Кубическая интерполяция</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<a name=".D0.9C.D0.B5.D1.82.D0.BE.D0.B4.D1.8B_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D0.BF.D0.BE.D0.BB.D1.8F.D1.86.D0.B8.D0.B8"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F&amp;action=edit&amp;section=1" title="Править секцию: Методы интерполяции">править</a>]</span> <span class="mw-headline">Методы интерполяции</span></h2>
+<p>Интерполяцией называется процесс нахождения функции (в классическом случае - типа y = f(x)), график которой проходит через заданные точки (все они должны иметь различные координаты x). При этом, используют формулы исходя из целей и ресурсов: одни методы позволяют получить идеально плавную кривую, но требуют большого количества вычислений, которое значительно возрастает при увеличении количества точек, другие работают значительно быстрее, но результат более груб. Один из комплексных методов - метод Лагранжа. Пусть дан набор из n точек (x<sub>i</sub>, y<sub>i</sub>). Интерполирующая функция Лагранжа выглядит так:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Interpolation01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Interpolation01.gif" src="hd9m4165.gif" width="426" height="58" /></a></span></div></div>
+<p>Как видно, если подставить в нее одно из значений x<sub>i</sub>, то все слагаемые формулы будут равны 0, кроме одного, в котором все множители сократятся и останется  y<sub>i</sub>. Вот программа, демонстрирующая метод Лагранжа (кстати, виден еще один недостаток этого метода - график слишком "колеблется"):
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SeedRnd</span> <span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> i=<span style="color: #33ffdd;">10</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> c#<span style=" ">&#40;</span>i,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span>,<span style="color: #33ffdd;">16</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> j=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> i<br />
+&nbsp;<span style="color: #ffee00">;Проверка на совпадение x-координат</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp; <span style="color: #ffee00">;Шаг, чтобы точки отстояли друг от друга</span><br />
+&nbsp; x#=<span style="color: #33ffdd;">5</span>*<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">159</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffee00">;Цикл по всем предыдущим точкам</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> j<span style="color: #33ffdd;">-1</span><br />
+&nbsp; &nbsp;<span style="color: #ffee00">;Если координаты совпадают - цикл прерывается</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> c#<span style=" ">&#40;</span>k,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=x# <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #ffee00">;Если цикл не был прерван, то k=(j-1)+1=j, иначе задаем новое значение x</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> k=j <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+&nbsp;c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=x#<br />
+&nbsp;c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">200</span>,<span style="color: #33ffdd;">400</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Oval</span> c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-5</span>,c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-5</span>,<span style="color: #33ffdd;">11</span>,<span style="color: #33ffdd;">11</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> x#=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">799</span><br />
+&nbsp;<span style="color: #ffee00">;Вычисление значения формулы</span><br />
+&nbsp;y#=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> j=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> i<br />
+&nbsp; m#=c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> k=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> i<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> k&lt;&gt;j <span style="color: #aaffff; font-weight: bold;">Then</span> m#=m#*<span style=" ">&#40;</span>x#-c#<span style=" ">&#40;</span>k,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span>c#<span style=" ">&#40;</span>j,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>-c#<span style=" ">&#40;</span>k,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; y#=y#+m#<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+&nbsp;<span style="color: #ffee00">;Корректное построение части графика (иначе будут разрывы)</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> x#&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; y1#=y#<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> y1#&lt;<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y1#=<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">ElseIf</span> y1#&gt;<span style="color: #33ffdd;">602</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y1#=<span style="color: #33ffdd;">602</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> y2#&lt;<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y2#=<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">ElseIf</span> y2#&gt;<span style="color: #33ffdd;">602</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y2#=<span style="color: #33ffdd;">602</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> y2#&lt;y1# <span style="color: #aaffff; font-weight: bold;">Then</span> z#=y1#:y1#=y2#:y2#=z#<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> yy#=y1# <span style="color: #aaffff; font-weight: bold;">To</span> y2#<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Oval</span> x#<span style="color: #33ffdd;">-2</span>,yy#<span style="color: #33ffdd;">-2</span>,<span style="color: #33ffdd;">5</span>,<span style="color: #33ffdd;">5</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;y2#=y#<br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span></div>
+<p>Чтобы упростить вычисления, ось x разбивают на отрезки так, чтобы каждый из них был ограничен x-координатами двух точек и не содержал в себе x-координат других точек. Затем для каждого отрезка находят интерполирующую функцию. Простейший вариант показан на рисунке:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Interpolation02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Interpolation02.gif" src="eiepno96.gif" width="442" height="278" /></a></span></div></div>
+<p>Полученная функция обладает минимумом требований: она соединяет заданные точки и только. Этого бывает достаточно, но, как видите, такая функция обладает явным недостатком - острыми углами. В этом случае, интерполирующая функция - линейная (вида y = kx + b),
+</p><p>Трехмерная интерполирующая поверхность задается по схожим принципам. Хороший пример такой интерполяции - terrain в Blitz. Задаются только высоты точек на пересечении сетки, высоты всех остальных точек вычисляются по формуле (каждый квадрат этой сетки представлен двумя треугольниками) - в итоге из набора точек мы получаем поверхность.
+</p>
+<a name=".D0.9A.D1.83.D0.B1.D0.B8.D1.87.D0.B5.D1.81.D0.BA.D0.B0.D1.8F_.D0.B8.D0.BD.D1.82.D0.B5.D1.80.D0.BF.D0.BE.D0.BB.D1.8F.D1.86.D0.B8.D1.8F"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F&amp;action=edit&amp;section=2" title="Править секцию: Кубическая интерполяция">править</a>]</span> <span class="mw-headline">Кубическая интерполяция</span></h2>
+<p>Но, вернемся к двумерной функции: для того, чтобы избавиться от острых углов, смежные интерполирующие функции должны иметь в общих точках одинаковую производную (она определяет касательную к функции в этой точке). В итоге получается система из четырех уравнений:
+</p>
+<ul><li>f(x<sub>1</sub>) = y<sub>1</sub>
+</li><li>f(x<sub>2</sub>) = y<sub>2</sub>
+</li><li>f'(x<sub>1</sub>) = y<sub>1</sub>'
+</li><li>f'(x<sub>2</sub>) = y<sub>2</sub>'
+</li></ul>
+<p>Чтобы функция могла быть определена для любых возможных значений, она должна иметь четыре параметра (по числу уравнений). Простейший вариант - кубический многочлен: y = ax<sup>3</sup> + bx<sup>2</sup> + cx + d. Путем введения вспомогательной формулы x' = x + x<sub>1</sub>, переменной x<sub>3</sub>=x<sub>2</sub>-x<sub>1</sub> и преобразований, получаем:
+</p>
+<ul><li>d = y<sub>1</sub>
+</li><li>c = y<sub>1</sub>'
+</li><li>b = (3y<sub>2</sub> - y<sub>2</sub>'x<sub>3</sub> - 2cx<sub>3</sub> - 3d) / x<sub>3</sub><sup>2</sup>
+</li><li>a = (y<sub>2</sub>' - 2bx<sub>3</sub> - c) / 3x<sub>3</sub><sup>2</sup>
+</li></ul>
+<p>Производные можно выбирать следующим образом: проведем прямую через две точки, смежные с данной; касательная к кривой в этой точке будет параллельна этой прямой и, соответственно, иметь тот же коэффициент, равный производной. Коэффициент прямой - это k в уравнении прямой y = kx + b. Для прямой, проходящей через две заданные точки он будет равен (y<sub>2</sub> - y<sub>1</sub>) / (x<sub>2</sub> - x<sub>1</sub>). Естественно, x<sub>2</sub> &lt;&gt; x<sub>1</sub>.
+</p><p>Одно условие: точки должны быть отсортированы по возрастанию координаты x. А вот программа построения интерполяционной кривой:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SeedRnd</span> <span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> ptx#<span style=" ">&#40;</span><span style="color: #33ffdd;">81</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> pty#<span style=" ">&#40;</span><span style="color: #33ffdd;">81</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span><br />
+<br />
+<span style="color: #ffee00">;Создается цепь из точек</span><br />
+x#=<span style="color: #33ffdd;">0</span><br />
+y#=<span style="color: #33ffdd;">300</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;q=q<span style="color: #33ffdd;">+1</span><br />
+&nbsp;ptx#<span style=" ">&#40;</span>q<span style=" ">&#41;</span>=x#<br />
+&nbsp;pty#<span style=" ">&#40;</span>q<span style=" ">&#41;</span>=y#<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Oval</span> x#<span style="color: #33ffdd;">-4</span>,y#<span style="color: #33ffdd;">-4</span>,<span style="color: #33ffdd;">9</span>,<span style="color: #33ffdd;">9</span><br />
+&nbsp;x#=x#+<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span><br />
+&nbsp;y#=y#+<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">-100</span>,<span style="color: #33ffdd;">100</span><span style=" ">&#41;</span> <br />
+<span style="color: #aaffff; font-weight: bold;">Until</span> x#&gt;=<span style="color: #33ffdd;">800</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span><br />
+<span style="color: #ffee00">;Цикл по всем отрезкам (для крайней правой точки отрезка нет)</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> q<span style="color: #33ffdd;">-1</span><br />
+&nbsp;d#=pty#<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; <span style="color: #ffee00">;Если берется начальный отрезок, то производная равна 0 (т.к. смежная точка</span><br />
+&nbsp; <span style="color: #ffee00">; слева, необходимая для определения коэффициента отсутствует</span><br />
+&nbsp; c#=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; <span style="color: #ffee00">;Вычисление коэффициента, равного производной N1 по формуле</span><br />
+&nbsp; c#=<span style=" ">&#40;</span>pty#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-pty#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span>ptx#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-ptx#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #ffee00">;Аналогично вычисляется производная N2</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> n=q <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; dy2#=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp; dy2#=<span style=" ">&#40;</span>pty#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span>-pty#<span style=" ">&#40;</span>n<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span>ptx#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span>-ptx#<span style=" ">&#40;</span>n<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #ffee00">;Вычисление остальных коэффициентов многочлена</span><br />
+&nbsp;x3#=ptx#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-ptx#<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+&nbsp;xx3#=x3#*x3#<br />
+&nbsp;b#=<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span>*pty#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-dy2#*x3#<span style="color: #33ffdd;">-2</span>*c#*x3#<span style="color: #33ffdd;">-3</span>*d#<span style=" ">&#41;</span>/xx3#<br />
+&nbsp;a#=<span style=" ">&#40;</span>dy2#<span style="color: #33ffdd;">-2</span>*b#*x3#-c#<span style=" ">&#41;</span>/<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span>*xx3#<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffee00">;Построение отрезка кривой</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> x#=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> x3#<br />
+&nbsp; xx#=x#*x#<br />
+&nbsp; y#=a#*xx#*x#+b#*xx#+c#*x#+d#<br />
+&nbsp; x1#=x#+ptx#<span style=" ">&#40;</span>n<span style=" ">&#41;</span> &nbsp;<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> x1#&gt;<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;y1#=y#<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> y1#&lt;<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y1#=<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">ElseIf</span> y1#&gt;<span style="color: #33ffdd;">602</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y1#=<span style="color: #33ffdd;">602</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> y2#&lt;<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y2#=<span style="color: #33ffdd;">-3</span> <span style="color: #aaffff; font-weight: bold;">ElseIf</span> y2#&gt;<span style="color: #33ffdd;">602</span> <span style="color: #aaffff; font-weight: bold;">Then</span> y2#=<span style="color: #33ffdd;">602</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> y2#&lt;y1# <span style="color: #aaffff; font-weight: bold;">Then</span> z#=y1#:y1#=y2#:y2#=z#<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> yy#=y1# <span style="color: #aaffff; font-weight: bold;">To</span> y2#<br />
+&nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Rect</span> x1#<span style="color: #33ffdd;">-1</span>,yy#<span style="color: #33ffdd;">-1</span>,<span style="color: #33ffdd;">3</span>,<span style="color: #33ffdd;">3</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; y2#=y#<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">WaitKey</span></div>
+<p>Интерполяция применяется не только для построения визуальных кривых и изогнутых поверхностей, но и для описания траекторий, то есть создания функций, где ось OX определяет время. В программе, приведенной ниже, объект, изображенный в виде круга, должен достигнуть заданных точек в определенное время и вернуться в начало. Для этого, зададим две интерполирующие функции x = f<sub>1</sub>(t) и y = f<sub>2</sub>(t) по принципу, изложенному выше:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SeedRnd</span> <span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">Const</span> q=<span style="color: #33ffdd;">10</span><br />
+<br />
+<span style="color: #ffee00">;Так как координаты x и y обрабатываются одинаково, создаются массивы, где</span><br />
+<span style="color: #ffee00">; хранятся эти координаты и коэффициенты для функций на текущем отрезке времени</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> ptc#<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+2</span>,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> a#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> b#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> c#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> d#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Массив для времени, в которое объект должен посетить заданную точку</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> tim<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Массив координат объекта</span><br />
+<span style="color: #aaffff; font-weight: bold;">Dim</span> oc#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetFont</span> <span style="color: #aaffff; font-weight: bold;">LoadFont</span> <span style=" ">&#40;</span><span style="color: #00ff66;">&quot;Arial&quot;</span>,<span style="color: #33ffdd;">16</span><span style=" ">&#41;</span><br />
+<br />
+x#=<span style="color: #33ffdd;">0</span><br />
+y#=<span style="color: #33ffdd;">300</span><br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> q<br />
+&nbsp;x#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">50</span>,<span style="color: #33ffdd;">750</span><span style=" ">&#41;</span><br />
+&nbsp;y#=<span style="color: #aaffff; font-weight: bold;">Rnd</span><span style=" ">&#40;</span><span style="color: #33ffdd;">50</span>,<span style="color: #33ffdd;">550</span><span style=" ">&#41;</span> <br />
+&nbsp;ptc#<span style=" ">&#40;</span>n,<span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=x#<br />
+&nbsp;ptc#<span style=" ">&#40;</span>n,<span style="color: #33ffdd;">1</span><span style=" ">&#41;</span>=y#<br />
+&nbsp;tim<span style=" ">&#40;</span>n<span style=" ">&#41;</span>=t<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Oval</span> x#<span style="color: #33ffdd;">-4</span>,y#<span style="color: #33ffdd;">-4</span>,<span style="color: #33ffdd;">9</span>,<span style="color: #33ffdd;">9</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> x#,y#<span style="color: #33ffdd;">+4</span>,.<span style="color: #33ffdd;">001</span>*t+<span style="color: #00ff66;">&quot;s&quot;</span>,<span style="color: #aaffff; font-weight: bold;">True</span><br />
+&nbsp;t=t+<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1000</span>,<span style="color: #33ffdd;">3000</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #ffee00">;Задаются значения параметров крайних точек для обеспечения цикличности</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> nn=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">1</span><br />
+&nbsp;ptc#<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span>,nn<span style=" ">&#41;</span>=ptc#<span style=" ">&#40;</span>q,nn<span style=" ">&#41;</span><br />
+&nbsp;ptc#<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+1</span>,nn<span style=" ">&#41;</span>=ptc#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,nn<span style=" ">&#41;</span><br />
+&nbsp;ptc#<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+2</span>,nn<span style=" ">&#41;</span>=ptc#<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span>,nn<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+tim<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>=t<br />
+tim<span style=" ">&#40;</span>q<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span>=t+tim<span style=" ">&#40;</span><span style="color: #33ffdd;">2</span><span style=" ">&#41;</span><br />
+tim<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span>=tim<span style=" ">&#40;</span>q<span style=" ">&#41;</span>-t<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span><br />
+<span style="color: #ffee00">;Сохраняем фон</span><br />
+i=<span style="color: #aaffff; font-weight: bold;">CreateImage</span><span style=" ">&#40;</span><span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">GrabImage</span> i,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffee00">;Cчетчик времени устанавливается за пределами интервала цикла, чтобы</span><br />
+<span style="color: #ffee00">; вычислить коэффициенты для начального отрезка времени, пройдя через условие</span><br />
+t=t<span style="color: #33ffdd;">+1</span><br />
+n=q<span style="color: #33ffdd;">+1</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> t&gt;tim<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; n=n<span style="color: #33ffdd;">+1</span><br />
+&nbsp; <span style="color: #ffee00">;Если номер узла вышел за пределы массива - возврат на узел 1, обнуление</span><br />
+&nbsp; <span style="color: #ffee00">; счетчика времени</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> n&gt;q <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp;n=<span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp;ms=<span style="color: #33ffdd;">0</span><br />
+&nbsp; &nbsp;tbeg=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> nn=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">1</span><br />
+&nbsp; &nbsp;d#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>=ptc#<span style=" ">&#40;</span>n,nn<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;c#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>=<span style=" ">&#40;</span>ptc#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span>,nn<span style=" ">&#41;</span>-ptc#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">-1</span>,nn<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span>tim<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-tim<span style=" ">&#40;</span>n<span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;dy2#=<span style=" ">&#40;</span>ptc#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+2</span>,nn<span style=" ">&#41;</span>-ptc#<span style=" ">&#40;</span>n,nn<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span>tim<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+2</span><span style=" ">&#41;</span>-tim<span style=" ">&#40;</span>n<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;x3#=tim<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span><span style=" ">&#41;</span>-tim<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;xx3#=x3#*x3#<br />
+&nbsp; &nbsp;b#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>=<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span>*ptc#<span style=" ">&#40;</span>n<span style="color: #33ffdd;">+1</span>,nn<span style=" ">&#41;</span>-dy2#*x3#<span style="color: #33ffdd;">-2</span>*c#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>*x3#<span style="color: #33ffdd;">-3</span>*d#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span><span style=" ">&#41;</span>/xx3#<br />
+&nbsp; &nbsp;a#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>=<span style=" ">&#40;</span>dy2#<span style="color: #33ffdd;">-2</span>*b#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>*x3#-c#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span><span style=" ">&#41;</span>/<span style=" ">&#40;</span><span style="color: #33ffdd;">3</span>*xx3#<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<br />
+&nbsp;<span style="color: #ffee00">;Вычисление координат объекта</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">For</span> nn=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">1</span><br />
+&nbsp; v#=t-tim<span style=" ">&#40;</span>n<span style=" ">&#41;</span><br />
+&nbsp; vv#=v#*v#<br />
+&nbsp; oc#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>=a#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>*vv#*v#+b#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>*vv#+c#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span>*v#+d#<span style=" ">&#40;</span>nn<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+&nbsp;<span style="color: #ffee00">;Отображение фона, объекта и текущего времени</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">DrawBlock</span> i,<span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Oval</span> oc#<span style=" ">&#40;</span><span style="color: #33ffdd;">0</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-9</span>,oc#<span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-9</span>,<span style="color: #33ffdd;">19</span>,<span style="color: #33ffdd;">19</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Text</span> <span style="color: #33ffdd;">0</span>,<span style="color: #33ffdd;">0</span>,<span style="color: #00ff66;">&quot;Time:&quot;</span>+<span style=" ">&#40;</span>.<span style="color: #33ffdd;">001</span>*t<span style=" ">&#41;</span>+<span style="color: #00ff66;">&quot;s&quot;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Flip</span> <br />
+<br />
+&nbsp;t=<span style="color: #aaffff; font-weight: bold;">MilliSecs</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-tbeg<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Until</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/4/40/Interpolation.zip" class="internal" title="Interpolation.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 5976 bytes
+Post-expand include size: 455 bytes
+Template argument size: 24 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:547-0!1!0!!ru!2 and timestamp 20071110033054 -->
+<div class="printfooter">
+Получено с <a href="9es2ul-b.html">http://blitzetcetera.org/index.php/%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9A%D1%83%D0%B1%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BF%D0%BE%D0%BB%D1%8F%D1%86%D0%B8%D1%8F by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:06 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

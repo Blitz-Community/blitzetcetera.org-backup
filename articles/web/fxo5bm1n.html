@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:15:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Коллизии в BlitzMax,JohnK" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Коллизии в BlitzMax — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Коллизии_в_BlitzMax";
+var wgTitle = "Коллизии в BlitzMax";
+var wgAction = "view";
+var wgArticleId = "736";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3543";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Коллизии_в_BlitzMax">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Коллизии в BlitzMax</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<table id="toc" class="toc" summary="Содержание"><tr><td><div id="toctitle"><h2>Содержание</h2></div>
+<ul>
+<li class="toclevel-1"><a href="#.D0.9F.D0.B5.D1.80.D0.B2.D0.B0.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"><span class="tocnumber">1</span> <span class="toctext">Первая часть</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"><span class="tocnumber">1.1</span> <span class="toctext">Вступление</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9F.D0.B5.D1.80.D0.B5.D1.81.D0.B5.D1.87.D0.B5.D0.BD.D0.B8.D0.B5_.D0.9F.D1.80.D1.8F.D0.BC.D0.BE.D1.83.D0.B3.D0.BE.D0.BB.D1.8C.D0.BD.D0.B8.D0.BA.D0.B0_.D0.B8_.D0.9A.D1.80.D1.83.D0.B3.D0.B0"><span class="tocnumber">1.2</span> <span class="toctext">Пересечение Прямоугольника и Круга</span></a></li>
+<li class="toclevel-2"><a href="#.D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B9_.D0.B2_BlitzMax"><span class="tocnumber">1.3</span> <span class="toctext">Функции коллизий в BlitzMax</span></a></li>
+<li class="toclevel-2"><a href="#ImagesCollide"><span class="tocnumber">1.4</span> <span class="toctext">ImagesCollide</span></a></li>
+<li class="toclevel-2"><a href="#ImagesCollide_.D1.81_.D0.90.D0.BD.D0.B8.D0.BC.D0.B0.D1.86.D0.B8.D0.B5.D0.B9"><span class="tocnumber">1.5</span> <span class="toctext">ImagesCollide с Анимацией</span></a></li>
+<li class="toclevel-2"><a href="#ImagesCollide_.D1.81_.D0.9C.D0.B0.D1.81.D1.88.D1.82.D0.B0.D0.B1.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5.D0.BC"><span class="tocnumber">1.6</span> <span class="toctext">ImagesCollide с Масштабированием</span></a></li>
+<li class="toclevel-2"><a href="#ImagesCollide_.D1.81_.D0.92.D1.80.D0.B0.D1.89.D0.B5.D0.BD.D0.B8.D0.B5.D0.BC"><span class="tocnumber">1.7</span> <span class="toctext">ImagesCollide с Вращением</span></a></li>
+<li class="toclevel-2"><a href="#.D0.98.D1.82.D0.BE.D0.B3.D0.B8"><span class="tocnumber">1.8</span> <span class="toctext">Итоги</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.92.D1.82.D0.BE.D1.80.D0.B0.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"><span class="tocnumber">2</span> <span class="toctext">Вторая часть</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_2"><span class="tocnumber">2.1</span> <span class="toctext">Вступление</span></a></li>
+<li class="toclevel-2"><a href="#CollideImage"><span class="tocnumber">2.2</span> <span class="toctext">CollideImage</span></a></li>
+<li class="toclevel-2"><a href="#.D0.A1.D0.BB.D0.BE.D0.B9_.D0.9A.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B8"><span class="tocnumber">2.3</span> <span class="toctext">Слой Коллизии</span></a></li>
+<li class="toclevel-2"><a href="#.D0.92.D0.BE.D0.B7.D0.B2.D1.80.D0.B0.D1.89.D0.B5.D0.BD.D0.B8.D0.B5_.D0.9C.D0.B0.D1.81.D1.81.D0.B8.D0.B2.D0.BE.D0.B2_.D0.9E.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BE.D0.B2_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D1.8F.D0.BC.D0.B8"><span class="tocnumber">2.4</span> <span class="toctext">Возвращение Массивов Объектов коллизиями</span></a></li>
+<li class="toclevel-2"><a href="#.D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80_.D1.81.D0.BB.D0.BE.D1.8F_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B9"><span class="tocnumber">2.5</span> <span class="toctext">Пример слоя коллизий</span></a></li>
+<li class="toclevel-2"><a href="#.D0.98.D1.82.D0.BE.D0.B3.D0.B8_2"><span class="tocnumber">2.6</span> <span class="toctext">Итоги</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.D0.A2.D1.80.D0.B5.D1.82.D1.8C.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"><span class="tocnumber">3</span> <span class="toctext">Третья часть</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_3"><span class="tocnumber">3.1</span> <span class="toctext">Вступление</span></a></li>
+<li class="toclevel-2"><a href="#CollideRect"><span class="tocnumber">3.2</span> <span class="toctext">CollideRect</span></a></li>
+<li class="toclevel-2"><a href="#AutoMidHandle"><span class="tocnumber">3.3</span> <span class="toctext">AutoMidHandle</span></a></li>
+<li class="toclevel-2"><a href="#.D0.92.D1.8B.D0.B1.D0.BE.D1.80_.D1.89.D0.B5.D0.BB.D1.87.D0.BA.D0.BE.D0.BC_.D0.BC.D1.8B.D1.88.D0.B8.2C_.D1.81_.D0.BF.D0.BE.D0.BC.D0.BE.D1.89.D1.8C.D1.8E_CollideRect"><span class="tocnumber">3.4</span> <span class="toctext">Выбор щелчком мыши, с помощью CollideRect</span></a></li>
+<li class="toclevel-2"><a href="#.D0.98.D1.82.D0.BE.D0.B3.D0.B8_3"><span class="tocnumber">3.5</span> <span class="toctext">Итоги</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table><script type="text/javascript"> if (window.showTocToggle) { var tocShowText = "показать"; var tocHideText = "убрать"; showTocToggle(); } </script>
+<a name=".D0.9F.D0.B5.D1.80.D0.B2.D0.B0.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=1" title="Править секцию: Первая часть">править</a>]</span> <span class="mw-headline">Первая часть</span></h2>
+<a name=".D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=2" title="Править секцию: Вступление">править</a>]</span> <span class="mw-headline">Вступление</span></h3>
+<p>Играть в игру, где разные движущиеся объекты пролетают сквозь друг друга, не интересно. Даже в такой простой игре как Пинг Понг есть механизм столкновения.
+</p><p>Простейший способ определения коллизии - это когда два объекта "накладываются" друг на друга. Существует много способов проверки на столкновение, но лучше начинать с простых.
+Пересечение Прямоугольников
+Самый простой способ проверки коллизии - это пересечение прямоугольников.
+</p><p>Давайте рассмотрим пример:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-01.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-01.png" src="dqriiirk.png" width="500" height="396" /></a></span></div></div>
+<p>Как вы могли заметить из кода выше, при пересечении прямоугольников ничего не происходит. Это из-за того, что в коде нет проверки коллизии.
+</p><p>Давайте добавим ее, используя команду RectsOverlap (Пересечение прямоугольников) И при столкновении сменим цвет синего прямоугольника.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> RectsOverlap<span style=" ">&#40;</span><span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> RectsOverlap:<span style="color: #ffff00; font-weight: bold;">Int</span><span style=" ">&#40;</span>x0, y0, w0, h0, x2, y2, w2, h2<span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> x0 &gt; <span style=" ">&#40;</span>x2 + w2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style=" ">&#40;</span>x0 + w0<span style=" ">&#41;</span> &lt; x2 <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">False</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> y0 &gt; <span style=" ">&#40;</span>y2 + h2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style=" ">&#40;</span>y0 + h0<span style=" ">&#41;</span> &lt; y2 <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">False</span><br />
+<span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-02.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-02.png" src="yp077pfn.png" width="420" height="200" /></a></span></div></div>
+<p>Как вы могли заметить, синий прямоугольник становится красным каждый раз, когда происходит пересечение (коллизия).
+</p>
+<a name=".D0.9F.D0.B5.D1.80.D0.B5.D1.81.D0.B5.D1.87.D0.B5.D0.BD.D0.B8.D0.B5_.D0.9F.D1.80.D1.8F.D0.BC.D0.BE.D1.83.D0.B3.D0.BE.D0.BB.D1.8C.D0.BD.D0.B8.D0.BA.D0.B0_.D0.B8_.D0.9A.D1.80.D1.83.D0.B3.D0.B0"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=3" title="Править секцию: Пересечение Прямоугольника и Круга">править</a>]</span> <span class="mw-headline">Пересечение Прямоугольника и Круга</span></h3>
+<p>Давайте немного изменим код, дабы вместо прямоугольника появился овал:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> RectsOverlap<span style=" ">&#40;</span><span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawOval</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">-50</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">-50</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> RectsOverlap:<span style="color: #ffff00; font-weight: bold;">Int</span><span style=" ">&#40;</span>x0, y0, w0, h0, x2, y2, w2, h2<span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> x0 &gt; <span style=" ">&#40;</span>x2 + w2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style=" ">&#40;</span>x0 + w0<span style=" ">&#41;</span> &lt; x2 <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">False</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> y0 &gt; <span style=" ">&#40;</span>y2 + h2<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style=" ">&#40;</span>y0 + h0<span style=" ">&#41;</span> &lt; y2 <span style="color: #ffff00; font-weight: bold;">Then</span> <span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">False</span><br />
+<span style="color: #ffff00; font-weight: bold;">Return</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<p>Как вы заметили, функция больше не работает должным образом. Нам нужна другая функция, которая поможет нам определить коллизию между овалом и прямоугольником. Вот она:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> CircRectsOverlap<span style=" ">&#40;</span><span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">50</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">255</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawOval</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">-50</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style="color: #FFFFFF;">-50</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+<span style="color: #ffff00; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Function</span> CircRectsOverlap<span style=" ">&#40;</span>x0, y0, w0, h0, cx, cy, r<span style=" ">&#41;</span><br />
+testX=cX<br />
+testY=cY<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> TestX &lt; x0 <span style="color: #ffff00; font-weight: bold;">Then</span> TestX=x0<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> TestX &gt; <span style=" ">&#40;</span>x0+w0<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> TestX=<span style=" ">&#40;</span>x0+w0<span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> TestY &lt; y0 <span style="color: #ffff00; font-weight: bold;">Then</span> Testy=y0<br />
+<span style="color: #ffff00; font-weight: bold;">If</span> TestY &gt; <span style=" ">&#40;</span>y0+h0<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Testy=<span style=" ">&#40;</span>y0+h0<span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Return</span> <span style=" ">&#40;</span><span style=" ">&#40;</span>cX-TestX<span style=" ">&#41;</span>*<span style=" ">&#40;</span>cX-TestX<span style=" ">&#41;</span>+<span style=" ">&#40;</span>cY-TestY<span style=" ">&#41;</span>*<span style=" ">&#40;</span>cY-TestY<span style=" ">&#41;</span><span style=" ">&#41;</span>&lt;r*r<br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Function</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-03.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-03.png" src="duhuadi3.png" width="420" height="200" /></a></span></div></div>
+<a name=".D0.A4.D1.83.D0.BD.D0.BA.D1.86.D0.B8.D0.B8_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B9_.D0.B2_BlitzMax"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=4" title="Править секцию: Функции коллизий в BlitzMax">править</a>]</span> <span class="mw-headline">Функции коллизий в BlitzMax</span></h3>
+<p>Если нам захочется использовать отдельную функцию для каждой пары различных объектов, у нас будут проблемы. Так же если это не функция RectsOverlap можно заметить, что математика в функциях на проверку столкновений становиться сложнее.
+</p><p>К счастью, BlitzMax (а точнее Max2D) предоставляет пару функций, которые облегчат нам жизнь. А теперь давайте посмотрим, как можно использовать встроенные в Max2D функции.
+</p>
+<a name="ImagesCollide"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=5" title="Править секцию: ImagesCollide">править</a>]</span> <span class="mw-headline">ImagesCollide</span></h3>
+<p>Самая простая функция в BlitzMax это ImagesCollide. Она имеет следующий синтаксис:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>image1:TImage,x1,y1,frame1,image2:TImage,x2,y2,frame2<span style=" ">&#41;</span></div>
+<p>Функции требуется два изображения, которые надо проверить, а так же их положение на экране. Мы можем игнорировать параметр Frame, указав вместо значения - ноль.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">0</span>,Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span></div>
+<p>Итак, позиция НЛО = (150,200), а позиция игрока равна позиции мыши. Скомпилируйте код, что бы увидеть функцию в действии:
+</p>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" class="image" title="Изображение:BMax-BlobShip.png"><img alt="Изображение:BMax-BlobShip.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" src="y-4ybzg0.png" width="64" height="64" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" class="image" title="Изображение:BMax-UFO.png"><img alt="Изображение:BMax-UFO.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" src="54w2qc_x.png" width="160" height="128" /></a>
+</p>
+</center>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Local</span> Player:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> Alien:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">0</span>,Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-04.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-04.png" src="ql-7rqt_.png" width="420" height="200" /></a></span></div></div>
+<p>Как вы могли заметить, использовать эту функцию очень просто.
+</p>
+<a name="ImagesCollide_.D1.81_.D0.90.D0.BD.D0.B8.D0.BC.D0.B0.D1.86.D0.B8.D0.B5.D0.B9"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=6" title="Править секцию: ImagesCollide с Анимацией">править</a>]</span> <span class="mw-headline">ImagesCollide с Анимацией</span></h3>
+<p>Давайте разберемся с параметром Frame, который мы пропустили ранее. Что бы коллизия работала с анимационным изображением нужно немного изменить код:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-Explosion.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-Explosion.png" src="im-1swz5-2.png" width="256" height="256" /></a></span></div></div>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Local</span> Player:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> Alien:TImage=<span style="color: #ffff00; font-weight: bold;">LoadAnimImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-Explosion.png&quot;</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">16</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> Frame:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> AnimDelay:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">10</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>, Frame<br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,Frame,Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> AnimDelay&lt;<span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+Frame&nbsp;:+ <span style="color: #FFFFFF;">1</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> Frame&gt;<span style="color: #FFFFFF;">15</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Frame=<span style="color: #FFFFFF;">0</span><br />
+AnimDelay=<span style="color: #FFFFFF;">10</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+AnimDelay&nbsp;:- <span style="color: #FFFFFF;">1</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-05.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-05.png" src="sbe1a2yq.png" width="420" height="200" /></a></span></div></div>
+<p>Чтобы использовать ImagesCollide с анимационными изображениями, нам нужен параметр, характеризующий кадр анимации, что бы потом использовать в функции ImagesCollide. А увеличение параметров AnimDelay и Frame сделано для того, что бы анимация проигрывалась должным образом.
+</p>
+<a name="ImagesCollide_.D1.81_.D0.9C.D0.B0.D1.81.D1.88.D1.82.D0.B0.D0.B1.D0.B8.D1.80.D0.BE.D0.B2.D0.B0.D0.BD.D0.B8.D0.B5.D0.BC"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=7" title="Править секцию: ImagesCollide с Масштабированием">править</a>]</span> <span class="mw-headline">ImagesCollide с Масштабированием</span></h3>
+<p>Blitzmax позволяет масштабировать изображения в реальном времени. Это можно сделать с помощью функции SetScale, ее синтаксис таков:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">SetScale</span><span style=" ">&#40;</span> scale_x#,scale_y# <span style=" ">&#41;</span></div>
+<p>К сожалению, если используется функция SetScale, ImagesCollide не работает должным образом. Что бы убедится в этом, скомпилируйте этот код:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">Local</span> Player:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> Alien:TImage=<span style="color: #ffff00; font-weight: bold;">LoadAnimImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-Explosion.png&quot;</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">16</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> Frame:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> AnimDelay:<span style="color: #ffff00; font-weight: bold;">int</span>=<span style="color: #FFFFFF;">10</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> PlayerSize:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">1</span><br />
+<span style="color: #ffff00; font-weight: bold;">Local</span> AlienSize:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">2</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetScale</span> AlienSize,AlienSize<br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame<br />
+<span style="color: #ffff00; font-weight: bold;">SetScale</span> PlayerSize,PlayerSize<br />
+<span style="color: #ffff00; font-weight: bold;">DrawImage</span> Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame,Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">Else</span><br />
+<span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> AnimDelay&lt;<span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+Frame&nbsp;:+ <span style="color: #FFFFFF;">1</span><br />
+<span style="color: #ffff00; font-weight: bold;">If</span> Frame&gt;<span style="color: #FFFFFF;">15</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Frame=<span style="color: #FFFFFF;">0</span><br />
+AnimDelay=<span style="color: #FFFFFF;">10</span><br />
+<span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+AnimDelay&nbsp;:- <span style="color: #FFFFFF;">1</span><br />
+<br />
+<span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">End</span></div>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-06.png" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll1-06.png" src="ql-7rqt_-2.png" width="500" height="396" /></a></span></div></div>
+<p>К счастью в BlitzMax есть еще одна функция, которая позволяет работать с масштабированными изображениями, чудо функция зовется ImagesCollide2,ее синтаксис таков:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide2</span><span style=" ">&#40;</span>image1:TImage, x1, y1, frame1, rot1#, scalex1#, scaley1#, image2:TImage, x2, y2, frame2, rot2#, scalex2#, scaley2#<span style=" ">&#41;</span></div>
+<p>(Прим. Переводчика: Запомните! Функция не будет вращать или масштабировать изображение! Она лишь учитывает эти факторы, для определения коллизии!)
+</p><p>Итак, все, что нам нужно чтобы использовать ImagesCollide2, это добавить:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide2</span><span style=" ">&#40;</span>Alien, <span style="color: #FFFFFF;">150</span>, <span style="color: #FFFFFF;">100</span>, Frame, <span style="color: #FFFFFF;">0</span>, AlienSize, AlienSize, Player, <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>, <span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>, <span style="color: #FFFFFF;">0</span>, <span style="color: #FFFFFF;">0</span>, PlayerSize, PlayerSize<span style=" ">&#41;</span></div>
+<p>Теперь вы можете смело заменять ImagesCollide на ImagesCollide2, только не забудьте учитывать фактор вращения и масштабирования.
+</p>
+<a name="ImagesCollide_.D1.81_.D0.92.D1.80.D0.B0.D1.89.D0.B5.D0.BD.D0.B8.D0.B5.D0.BC"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=8" title="Править секцию: ImagesCollide с Вращением">править</a>]</span> <span class="mw-headline">ImagesCollide с Вращением</span></h3>
+<p>Этот пункт я оставил вам, как упражнение, чтобы вы выяснили, что нужно ввести, чтобы функция заработала&nbsp;:)
+</p>
+<a name=".D0.98.D1.82.D0.BE.D0.B3.D0.B8"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=9" title="Править секцию: Итоги">править</a>]</span> <span class="mw-headline">Итоги</span></h3>
+<p>Сначала в этом туториале мы разобрали два простых (и быстрых) способа проверки на коллизии. Жаль, что они работают только с кругами и прямоугольниками.
+</p><p>А так как многие игры полностью состоят из изображений, мы рассмотрели и разобрали функции ImagesCollide и ImagesCollide2.
+</p><p>Далее мы рассмотрим более сложную систему коллизий в BlitzMax.
+</p>
+<a name=".D0.92.D1.82.D0.BE.D1.80.D0.B0.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=10" title="Править секцию: Вторая часть">править</a>]</span> <span class="mw-headline">Вторая часть</span></h2>
+<a name=".D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_2"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=11" title="Править секцию: Вступление">править</a>]</span> <span class="mw-headline">Вступление</span></h3>
+<p>В прошлой части мы увидели, как проверить объекты на коллизию, используя простые команды RectOverlaps и CircRectOverlaps. Так же рассмотрели пиксель-совершенные команды на проверку коллизий - ImagesCollide и ImagesCollide2.
+</p><p>В этой части мы рассмотрим другие команды, на проверку коллизий.
+</p>
+<a name="CollideImage"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=12" title="Править секцию: CollideImage">править</a>]</span> <span class="mw-headline">CollideImage</span></h3>
+<p>Давайте попробуем решить проблему неправильного определения коллизий, путем использования этой функции. Синтаксис этой функции вводит в заблуждение. Он представлен ниже, а теперь давайте заменим код таким образом, что бы он работал, мы не будем сейчас вникать в подробности, просто будем использовать CollideImage:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span>:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span><span style=" ">&#40;</span>image:TImage,x,y,frame,collidemask%,writemask%,id:<span style="color: #ffff00; font-weight: bold;">Object</span>=<span style="color: #ffff00; font-weight: bold;">Null</span><span style=" ">&#41;</span></div>
+<p>Заметьте, изменения выделены (серый текст это то, что осталось без изменения с прошлого раза)
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Player:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Alien:TImage=<span style="color: #ffff00; font-weight: bold;">LoadAnimImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-Explosion.png&quot;</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">64</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">16</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> Frame:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AnimDelay:<span style="color: #ffff00; font-weight: bold;">int</span>=<span style="color: #FFFFFF;">10</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> PlayerSize:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">1</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienSize:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">2</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">While</span> <span style="color: #ffff00; font-weight: bold;">Not</span> <span style="color: #ffff00; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span>key_escape<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">ResetCollisions</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> AlienSize,AlienSize<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">2</span><span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetScale</span> PlayerSize,PlayerSize<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">DrawImage</span> Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> AnimDelay&lt;<span style="color: #FFFFFF;">0</span> <span style="color: #ffff00; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;Frame&nbsp;:+ <span style="color: #FFFFFF;">1</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">If</span> Frame&gt;<span style="color: #FFFFFF;">15</span> <span style="color: #ffff00; font-weight: bold;">Then</span> Frame=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp;AnimDelay=<span style="color: #FFFFFF;">10</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+&nbsp; &nbsp; AnimDelay&nbsp;:- <span style="color: #FFFFFF;">1</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Wend</span><br />
+</p>
+&nbsp; <span style="color: #ffff00; font-weight: bold;">End</span></div>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" class="image" title="Изображение:BMax-BlobShip.png"><img alt="Изображение:BMax-BlobShip.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" src="y-4ybzg0.png" width="64" height="64" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" class="image" title="Изображение:BMax-UFO.png"><img alt="Изображение:BMax-UFO.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" src="54w2qc_x.png" width="160" height="128" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-Explosion.png" class="image" title="Изображение:BMax-Explosion.png"><img alt="Изображение:BMax-Explosion.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-Explosion.png" src="im-1swz5-2.png" width="256" height="256" /></a>
+</p>
+</center>
+<p>Если вы скомпилируете этот код, то заметите, что коллизии все так же точно определяются, как и в прошлой части туториала.
+</p>
+<a name=".D0.A1.D0.BB.D0.BE.D0.B9_.D0.9A.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B8"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=13" title="Править секцию: Слой Коллизии">править</a>]</span> <span class="mw-headline">Слой Коллизии</span></h3>
+<p>Новая система коллизий в BlitzMax основана на слоях, для того чтобы использовать ее, вы должны проделать следующие шаги:
+</p>
+<ul><li>Для начала, нужно удостовериться, что нужный слой - пуст.
+</li><li>Записать изображение, которое будет проверяться на коллизии, в нужный слой.
+</li><li>Проверять изображение на коллизии.
+</li></ul>
+<p>Вы можете использовать 32 слоя. В примере выше мы использовали первый слой. Так же, в пример, мы прошли все 3 шага:
+</p><p>Функция ResetCollisions() очищает все слои коллизий. Можно так же очистить только желаемый слой, например, для очищения второго слоя, мы должны написать так - ResetCollision(2)
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">ResetCollisions</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<p>Первое CollideImage-выражение приписывает изображение инопланетянина ко второму слою коллизий.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">2</span><span style=" ">&#41;</span></div>
+<p>А это CollideImage выражение проверяет весь второй слой, а следовательно и изображение инопланетянина, с изображением Игрока.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span></div>
+<p>А вот что Марк Сибли говорит о новой системе коллизий:
+</p><p><i>Главная идея параметров collidemask и writemask в том, что они являются "битмасками" (т.е.: 1,2,4,8,16 и т.д.) это дает вам до 32 'слоев' для проверки на коллизии. Например, вы можете создать следующие слои:</i>
+</p><p>background=0, monsters=1, pickups=2, player=3.
+</p><p>Для этих слоев битмаски 1,2,4,8 соответственно.
+</p><p>Использование битмасок, в отличие от просто номера слоя, дает преимущество в том, что вы можете обозначить несколько слоев, например: битмаска с номером 3 означает два слоя: нулевой и первый (2+1).
+</p><p>Функция CollideImage одновременно записывает изображение в слой, в диапазоне от 0 до 31 (это зависит от параметра writemask) и проверяет на коллизии со слоями в диапазоне от 0 до 31 (это зависит от параметра collidemask).
+</p><p>'Запись Изображения' несет в себе включение всего, что связано с изображением, а так же вращение и масштабирование. Или же проще - физическая 'запись' изображения.
+</p><p>Как вы помните, Марк говорил о параметрах collidemask% и writemask%:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span>:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span><span style=" ">&#40;</span>image:TImage,x,y,frame,collidemask%,writemask%,id:<span style="color: #ffff00; font-weight: bold;">Object</span>=<span style="color: #ffff00; font-weight: bold;">Null</span><span style=" ">&#41;</span></div>
+<p>Чтобы приписать изображение к первому слою, мы должны записать так:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span></div>
+<p>Так же мы можем приписать наше изображением к двум слоям одновременно. Здесь мы записываем в первый и второй слои:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Alien,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">100</span>,Frame,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">3</span><span style=" ">&#41;</span></div>
+<p>Примерно также мы можем проверить слой на коллизии, манипулируя параметром collidemask%:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span></div>
+<p>Или же проверить два слоя сразу:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Player,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">3</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span></div>
+<p>Прелесть слоев коллизий в том, что мы можем проверять на коллизии только нужные нам слои. Прежде чем рассмотреть пример этого, давайте разберем еще одну важную часть этой системы:
+</p>
+<a name=".D0.92.D0.BE.D0.B7.D0.B2.D1.80.D0.B0.D1.89.D0.B5.D0.BD.D0.B8.D0.B5_.D0.9C.D0.B0.D1.81.D1.81.D0.B8.D0.B2.D0.BE.D0.B2_.D0.9E.D0.B1.D1.8A.D0.B5.D0.BA.D1.82.D0.BE.D0.B2_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D1.8F.D0.BC.D0.B8"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=14" title="Править секцию: Возвращение Массивов Объектов коллизиями">править</a>]</span> <span class="mw-headline">Возвращение Массивов Объектов коллизиями</span></h3>
+<p>Как вы помните, если происходят коллизии, то функция проверки на коллизию, возвращает значение true (истина)
+</p><p>Функция CollideImage имеет больше возможностей в плане проверки на коллизии. Давайте рассмотрим до сих пор не знакомые нам параметры в синтаксисе этой функции, а именно Object[ ] и id:Object.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span>:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span><span style=" ">&#40;</span>image:TImage,x,y,frame,collidemask%,writemask%,id:<span style="color: #ffff00; font-weight: bold;">Object</span>=<span style="color: #ffff00; font-weight: bold;">Null</span><span style=" ">&#41;</span></div>
+<p>Запомните, что существует два вида функции CollideImage,
+</p>
+<ul><li>Первая, для записи, с использованием параметра writemask
+</li><li>Вторая, для чтения, с использованием collidemask
+</li></ul>
+<p>Когда мы записываем изображение в слой, параметр id:Object позволяет опознавать изображение.
+</p><p>После записи, при чтении, функция вернет все объекты, вовлеченные в коллизию в виде массива объектов.
+</p><p>Вот простой пример, иллюстрирующий это:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Strict</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">AutoMidHandle</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> SpaceShip:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip1:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip2:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> R:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> G:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> B:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">ResetCollisions</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip1, <span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip1,<span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,AlienShip1<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip2, <span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip2,<span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,AlienShip2<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> p:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span>=<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Spaceship,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> i:TImage=<span style="color: #ffff00; font-weight: bold;">EachIn</span> &nbsp; p<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> i<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> AlienShip1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> &nbsp; AlienShip2<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Select</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> R,G,B &nbsp; &nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> SpaceShip,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+&nbsp; <br />
+</p>
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>KEY_ESCAPE<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<p>В этом примере, при коллизии, происходит смена цвета. Мы так же можем провести проверку на коллизии между двумя кораблями, просто используя выражение CollideImage, в результате мы бы получили массив.
+</p>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll2-01.png" class="image" title="Изображение:Coll2-01.png"><img alt="Изображение:Coll2-01.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll2-01.png" src="bdh2roew.png" width="500" height="396" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll2-02.png" class="image" title="Изображение:Coll2-02.png"><img alt="Изображение:Coll2-02.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll2-02.png" src="banoz8m5.png" width="500" height="396" /></a>
+</p>
+</center>
+<p>Если для объекта AlienShip1 вы не напишете последний параметр в функции CollideImage, вы не сможете провести проверку коллизий. Попробуйте, и вы увидите:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip1, <span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span> <span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip1,<span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #ffff00; font-weight: bold;">Null</span><span style=" ">&#41;</span></div>
+<p>Если вы проделаете подобное и для объекта SpaceShip то в массиве объектов, возвращаемого функцией, его не будет, это важно понять, так как при проверки на коллизии результат может быть не тем, что нужен. Так что вы можете просто написать лишний код, а желательно, избавлять себя от него.
+</p>
+<a name=".D0.9F.D1.80.D0.B8.D0.BC.D0.B5.D1.80_.D1.81.D0.BB.D0.BE.D1.8F_.D0.BA.D0.BE.D0.BB.D0.BB.D0.B8.D0.B7.D0.B8.D0.B9"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=15" title="Править секцию: Пример слоя коллизий">править</a>]</span> <span class="mw-headline">Пример слоя коллизий</span></h3>
+<p>Ниже, пример определения коллизий между разными слоями:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Strict</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">AutoMidHandle</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> SpaceShip:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip1:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip2:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> R:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> G:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> B:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">ResetCollisions</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">3</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip1, <span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip1,<span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,AlienShip1<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip2, <span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip2,<span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">2</span>,AlienShip2<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> Collision_Layer:<span style="color: #ffff00; font-weight: bold;">int</span>=<span style="color: #FFFFFF;">2</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> p:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span>=<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>Spaceship,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span>,Collision_Layer,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> i:TImage=<span style="color: #ffff00; font-weight: bold;">EachIn</span> p<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> i<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> AlienShip1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> AlienShip2<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Select</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> R,G,B &nbsp; &nbsp;<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> SpaceShip,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+&nbsp; <br />
+</p>
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>KEY_ESCAPE<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<p>Скомпилировав, вы увидите, что коллизия происходит только между одинаковыми слоями. Чтобы сделать проверку между двумя кораблями, вы должны присвоить переменной Collision_Layer значение 3.
+</p>
+<a name=".D0.98.D1.82.D0.BE.D0.B3.D0.B8_2"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=16" title="Править секцию: Итоги">править</a>]</span> <span class="mw-headline">Итоги</span></h3>
+<p>В этой части мы рассмотрели способ проверки коллизий с помощью функции CollideImage.
+</p><p>Стоит запомнить, что BlitzMax предоставляет 32 слоя коллизий. Следует повторить:
+</p>
+<ul><li>Сначала очищаем слои коллизий или один, нужный нам слой с помощью функции ResetCollisions(слой#)
+</li><li>Записать в слой(и) изображение, которое мы будем проверять
+</li><li>Считывать слой(и) для проверки на коллизии
+</li></ul>
+<p>И не забудьте, что слои являются битмасковыми
+</p>
+<a name=".D0.A2.D1.80.D0.B5.D1.82.D1.8C.D1.8F_.D1.87.D0.B0.D1.81.D1.82.D1.8C"></a><h2><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=17" title="Править секцию: Третья часть">править</a>]</span> <span class="mw-headline">Третья часть</span></h2>
+<a name=".D0.92.D1.81.D1.82.D1.83.D0.BF.D0.BB.D0.B5.D0.BD.D0.B8.D0.B5_3"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=18" title="Править секцию: Вступление">править</a>]</span> <span class="mw-headline">Вступление</span></h3>
+<p>В предыдущей части мы узнали, как проверять коллизии с помощью функции CollideImage. При использовании CollideImage, проверка - пиксель-совершенная. Это можно проверить путем медленного движения игрока на корабль.
+</p><p>Но, к сожалению, пиксель-совершенные коллизии тратят много ресурсов компьютера, что, естественно, приведет к падению FPS.
+</p><p>BlitzMax предоставляет еще одну функцию, похожую на CollideImage- CollideRect. Давайте рассмотрим принцип ее работы.
+</p>
+<a name="CollideRect"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=19" title="Править секцию: CollideRect">править</a>]</span> <span class="mw-headline">CollideRect</span></h3>
+<p>Синтаксис CollideRect схож с синтаксисом функции CollideImage
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Function</span> <span style="color: #ffff00; font-weight: bold;">CollideRect</span>:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span><span style=" ">&#40;</span>x,y,w,h,collidemask%,writemask%,id:<span style="color: #ffff00; font-weight: bold;">Object</span>=<span style="color: #ffff00; font-weight: bold;">Null</span><span style=" ">&#41;</span></div>
+<p>Давайте перепишем код, с использованием функции CollideRect.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Strict</span><br />
+<p>&nbsp; <span style="color: #ffff00; font-weight: bold;">Graphics</span> <span style="color: #FFFFFF;">640</span>,<span style="color: #FFFFFF;">480</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">AutoMidHandle</span> <span style="color: #ffff00; font-weight: bold;">True</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> SpaceShip:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-BlobShip.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip1:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> AlienShip2:TImage=<span style="color: #ffff00; font-weight: bold;">LoadImage</span><span style=" ">&#40;</span><span style="color: #00FF66;">&quot;BMax-UFO.png&quot;</span><span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> w:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #ffff00; font-weight: bold;">ImageWidth</span><span style=" ">&#40;</span>SpaceShip<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Local</span> h:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #ffff00; font-weight: bold;">ImageHeight</span><span style=" ">&#40;</span>SpaceShip<span style=" ">&#41;</span><br />
+<br />
+&nbsp; <br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Repeat</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> R:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> G:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">0</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> B:<span style="color: #ffff00; font-weight: bold;">Int</span>=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">ResetCollisions</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip1, <span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip1,<span style="color: #FFFFFF;">250</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,AlienShip1<span style=" ">&#41;</span><br />
+&nbsp; <br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> AlienShip2, <span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">CollideImage</span><span style=" ">&#40;</span>AlienShip2,<span style="color: #FFFFFF;">400</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">1</span>,AlienShip2<span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Local</span> p:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span>=<span style="color: #ffff00; font-weight: bold;">CollideRect</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-w,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-h,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> i:TImage=<span style="color: #ffff00; font-weight: bold;">EachIn</span> p<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> i<br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> AlienShip1<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; R=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> AlienShip2<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G=<span style="color: #FFFFFF;">255</span><br />
+&nbsp; &nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">End</span> <span style="color: #ffff00; font-weight: bold;">Select</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Next</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">SetColor</span> R,G,B <br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawRect</span> <span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-w,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-h,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span><br />
+<br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">DrawImage</span> &nbsp; SpaceShip,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp;<span style="color: #ffff00; font-weight: bold;">Flip</span><br />
+&nbsp; <br />
+</p>
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Until</span> <span style="color: #ffff00; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span>KEY_ESCAPE<span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">Or</span> <span style="color: #ffff00; font-weight: bold;">AppTerminate</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" class="image" title="Изображение:BMax-BlobShip.png"><img alt="Изображение:BMax-BlobShip.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-BlobShip.png" src="y-4ybzg0.png" width="64" height="64" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" class="image" title="Изображение:BMax-UFO.png"><img alt="Изображение:BMax-UFO.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:BMax-UFO.png" src="54w2qc_x.png" width="160" height="128" /></a>
+</p>
+</center>
+<p>Обратите внимание, что коллизия происходит тогда, когда прямоугольник соприкасается с кораблем. Попробуйте запустить эту программу, без использования выражения DrawRect, и вы увидите, что коллизия ведет себя, так же как и раньше, при использовании функции CollideRect.
+</p>
+<center>
+<p><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll3-01.png" class="image" title="Изображение:Coll3-01.png"><img alt="Изображение:Coll3-01.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll3-01.png" src="096nivay.png" width="500" height="396" /></a>
+<a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll3-02.png" class="image" title="Изображение:Coll3-02.png"><img alt="Изображение:Coll3-02.png" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:Coll3-02.png" src="n3hyad9-.png" width="500" height="396" /></a>
+</p>
+</center>
+<p>Самое классное в функции CollideRect - это то, что она возвращает массив объектов, которые "накрыл" прямоугольник. Используя этот массив, вы можете провести пиксель - совершенную проверку на коллизию, между объектами в этом массиве. Вот демонстрация этого:
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Local</span> p:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span>=<span style="color: #ffff00; font-weight: bold;">CollideRect</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-w,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>-h,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">100</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> i:TImage=<span style="color: #ffff00; font-weight: bold;">EachIn</span> p<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">ImagesCollide</span><span style=" ">&#40;</span>i,<span style="color: #FFFFFF;">150</span>,<span style="color: #FFFFFF;">200</span>,<span style="color: #FFFFFF;">0</span>,SpaceShip,<span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">255</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Else</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">SetClsColor</span> <span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span>,<span style="color: #FFFFFF;">0</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndIf</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Next</span></div>
+<a name="AutoMidHandle"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=20" title="Править секцию: AutoMidHandle">править</a>]</span> <span class="mw-headline">AutoMidHandle</span></h3>
+<p>Обратите внимание, что локальное начало координат рисуемого изображения является очень важным аспектом, при проверке на коллизии. Не забывайте, что функции CollideImage/CollideRect и DrawImage используют x- и y-координаты изображения, а так же MidHandle-фактор, то есть, для точного определения коллизий вы должны использовать одинаковые данные.
+</p>
+<a name=".D0.92.D1.8B.D0.B1.D0.BE.D1.80_.D1.89.D0.B5.D0.BB.D1.87.D0.BA.D0.BE.D0.BC_.D0.BC.D1.8B.D1.88.D0.B8.2C_.D1.81_.D0.BF.D0.BE.D0.BC.D0.BE.D1.89.D1.8C.D1.8E_CollideRect"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=21" title="Править секцию: Выбор щелчком мыши, с помощью CollideRect">править</a>]</span> <span class="mw-headline">Выбор щелчком мыши, с помощью CollideRect</span></h3>
+<p>Вот небольшой пример, как можно использовать CollideRect для определения выбора. Не забывайте 'записывать' в слой коллизии изображения, которые будут выбраны.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">If</span> <span style="color: #ffff00; font-weight: bold;">CollideRect</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span><br />
+<p>&nbsp; <span style=" ">&#40;</span>Ваш Код<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">EndIf</span></div>
+<p>Вот версия для искушенных: возвращенный объект вы можете использовать для дальнейших действий.
+</p>
+<div class="bmx" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#01516B;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffff00; font-weight: bold;">Local</span> p:<span style="color: #ffff00; font-weight: bold;">Object</span><span style=" ">&#91;</span><span style=" ">&#93;</span>=<span style="color: #ffff00; font-weight: bold;">CollideRect</span><span style=" ">&#40;</span><span style="color: #ffff00; font-weight: bold;">MouseX</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #ffff00; font-weight: bold;">MouseY</span><span style=" ">&#40;</span><span style=" ">&#41;</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">2</span>,<span style="color: #FFFFFF;">1</span>,<span style="color: #FFFFFF;">0</span><span style=" ">&#41;</span> <span style="color: #ffff00; font-weight: bold;">And</span> <span style="color: #ffff00; font-weight: bold;">MouseDown</span><span style=" ">&#40;</span><span style="color: #FFFFFF;">1</span><span style=" ">&#41;</span><br />
+<p><span style="color: #ffff00; font-weight: bold;">For</span> <span style="color: #ffff00; font-weight: bold;">Local</span> i:TImage=<span style="color: #ffff00; font-weight: bold;">EachIn</span> p<br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">Select</span> i<br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> Alien<br />
+&nbsp; &nbsp; &nbsp; <span style=" ">&#40;</span>Ваш Код<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; <span style="color: #ffff00; font-weight: bold;">Case</span> Player<br />
+&nbsp; &nbsp; &nbsp; <span style=" ">&#40;</span>Ваш Код<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #ffff00; font-weight: bold;">EndSelect</span><br />
+</p>
+<span style="color: #ffff00; font-weight: bold;">Next</span></div>
+<a name=".D0.98.D1.82.D0.BE.D0.B3.D0.B8_3"></a><h3><span class="editsection">[<a href="http://blitzetcetera.org/index.php?title=%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax&amp;action=edit&amp;section=22" title="Править секцию: Итоги">править</a>]</span> <span class="mw-headline">Итоги</span></h3>
+<p>Третья часть этого туториала продемонстрировала вам, как можно провести проверку на коллизии быстрым и простым путем - используя функцию CollideRect. Вы вольны экспериментировать и именно вы должны определить, где использование этой функции для вас оптимально. А если вам непонятно, как использовать ее, воспользуйтесь функцией CollideImage.
+</p><p>Вот и всё. Надеюсь, вы поняли, как делать проверку на коллизии в BlitzMax.
+</p>
+<div align="right"><a href="http://blitzetcetera.org/images/9/94/BlitzMax_Collisions.zip" class="internal" title="BlitzMax Collisions.zip">скачать архив с файлами к статье</a></div>
+<hr />
+<p>Автор: Assari, 2006<br />
+Перевод: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:JohnK" title="Участник:JohnK">JohnK</a> (e-mail: JohnK_08@mail.ru, ICQ: 438-180-831), 2007
+</p><!-- 
+Pre-expand include size: 6383 bytes
+Post-expand include size: 603 bytes
+Template argument size: 30 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:736-0!1!0!!ru!2 and timestamp 20071110033036 -->
+<div class="printfooter">
+Получено с <a href="fxo5bm1n.html">http://blitzetcetera.org/index.php/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%9A%D0%BE%D0%BB%D0%BB%D0%B8%D0%B7%D0%B8%D0%B8_%D0%B2_BlitzMax by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%94%D1%80%D0%B5%D0%B2%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Древовидная структура,Matt Merkulov" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Древовидная структура — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Древовидная_структура";
+var wgTitle = "Древовидная структура";
+var wgAction = "view";
+var wgArticleId = "624";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3562";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Древовидная_структура">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Древовидная структура</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>В прошлом выпуске в статье о "Жизни" рассматривался один из видов древовидной структуры данных (двоичной), хорошо подходящей для алгоритма "Жизни". Это очень частный случай, имеющий много ограничений, особенно для абстрактных систем, не предназначеных для отображения. Рассмотрим более общий вариант, который использован в структуре директорий. Возьмем только папки: это система объектов, которые могут включать в себя группу объектов, каждый из которых может, в свою очередь, включать в себя еще объекты и т. д:
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:TreeStructure01.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:TreeStructure01.gif" src="8v4e5ava.gif" width="220" height="340" /></a></span></div></div>
+<p>Определим соотношения: для каждого элемента могут существовать:"корневой" элемент (элемент, включающий группу в которую входит данный), следующий и предыдущий элементы в группе, а также ссылка на первый элемент "вложенной" группы для данного (группа может состоять из единственного элемента). Для удобства лучше создать вначале "корень" структуры - один элемент, не имеющий предыдущего, следующего и корневого. Он будет содержать в себе все элементы структуры и с ним нельзя проводить никаких манипуляций. Таким образом, все остальные элементы будут иметь корневой. Вот пример ссылок 
+</p>
+<div class="center"><div class="floatnone"><span><a href="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:TreeStructure02.gif" class="image" title=""><img alt="" longdesc="http://blitzetcetera.org/index.php/%D0%98%D0%B7%D0%BE%D0%B1%D1%80%D0%B0%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5:TreeStructure02.gif" src="3zc1y5xb.gif" width="223" height="338" /></a></span></div></div>
+<p>Вот базовые операции для манипуляций со структурой: добавление элемента (перед, после данного, "вложение" в данный), перемещение элемента и его удаление. Перемещение можно разделить на два этапа - удаление его из структуры и вставка его в заданное место структуры. Добавление нового элемента - создание нового объекта и его вставка. Как видно, процедуры перемещения и создание элемента можно объединить. Что касается удаления, то необходимо не просто разорвать цепь, но и удалить все вложенные элементы и группы - ветвь, исходящую от элемента. Тут можно эффективно использовать рекурсию (ее можно использовать также при создании и отображении структуры на экране):
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> element<br />
+<p>&nbsp;<span style="color: #ffee00">;Пользовательские поля элемента</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> r,g,b<br />
+&nbsp;<span style="color: #ffee00">;Вспомогательные поля элемента</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Field</span> root.element,prev.element,nxt.element,sub.element<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #ffee00">;Корневой элемент</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> root.element=<span style="color: #aaffff; font-weight: bold;">New</span> element<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> ex,ey,sel.element<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Graphics</span> <span style="color: #33ffdd;">800</span>,<span style="color: #33ffdd;">600</span><br />
+branchcreate root,<span style="color: #33ffdd;">9</span><br />
+sel=root\sub<br />
+<span style="color: #aaffff; font-weight: bold;">SetBuffer</span> <span style="color: #aaffff; font-weight: bold;">BackBuffer</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Repeat</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+&nbsp;ex=<span style="color: #33ffdd;">0</span>:ey=<span style="color: #33ffdd;">0</span><br />
+&nbsp;branchview root<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Flip</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Select</span> <span style="color: #aaffff; font-weight: bold;">WaitKey</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">3</span><span style="color: #ffee00">;Ins</span><br />
+&nbsp; &nbsp;sel=einsertin<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Null</span>,sel<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">4</span><span style="color: #ffee00">;Del</span><br />
+&nbsp; &nbsp;sel2.element=<span style="color: #aaffff; font-weight: bold;">Null</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel\prev&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; sel2=sel\prev<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">ElseIf</span> sel\nxt&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; sel2=sel\nxt<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">ElseIf</span> sel\root&lt;&gt;root<br />
+&nbsp; &nbsp; sel2=sel\root<br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel2&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> eremove sel:sel=sel2<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">5</span><span style="color: #ffee00">;Page Up</span><br />
+&nbsp; &nbsp;sel=einsertbefore<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Null</span>,sel<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">6</span><span style="color: #ffee00">;Page Down</span><br />
+&nbsp; &nbsp;sel=einsertafter<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Null</span>,sel<span style=" ">&#41;</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">27</span><span style="color: #ffee00">;Esc</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">Exit</span><br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">28</span><span style="color: #ffee00">;стрелка вверх</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel\prev&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> sel=sel\prev<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">29</span><span style="color: #ffee00">;стрелка вниз</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel\nxt&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> sel=sel\nxt<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">30</span><span style="color: #ffee00">;стрелка вправо</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel\sub&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> sel=sel\sub<br />
+&nbsp; <span style="color: #aaffff; font-weight: bold;">Case</span> <span style="color: #33ffdd;">31</span><span style="color: #ffee00">;стрелка влево</span><br />
+&nbsp; &nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> sel\root&lt;&gt;root <span style="color: #aaffff; font-weight: bold;">Then</span> sel=sel\root<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End Select</span><br />
+<span style="color: #aaffff; font-weight: bold;">Forever</span><br />
+<br />
+<span style="color: #ffee00">;Функция, создающая ветвь с элементами от элемента e (k-максимум элементов)</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> branchcreate<span style=" ">&#40;</span>e.element,k<span style=" ">&#41;</span><br />
+q=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,k<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Создаем n элементов</span><br />
+<span style="color: #aaffff; font-weight: bold;">For</span> n=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> q<br />
+&nbsp;e2.element=einsertin<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">Null</span>,e<span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #ffee00">;В трети случаев создаем ответвление от данного элемента, уменьшая максимум</span><br />
+&nbsp;<span style="color: #ffee00">; вложений на 2</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">3</span><span style=" ">&#41;</span>=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">Then</span> branchcreate e2,k<span style="color: #33ffdd;">-2</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Отображение ветви (используется рекурсия)</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> branchview<span style=" ">&#40;</span>e.element<span style=" ">&#41;</span><br />
+ex=ex<span style="color: #33ffdd;">+35</span><br />
+e=e\sub<br />
+ey1=ey<span style="color: #33ffdd;">-6</span><br />
+ey2=ey1<br />
+<span style="color: #aaffff; font-weight: bold;">While</span> e&lt;&gt;Null<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Line</span> ex<span style="color: #33ffdd;">-20</span>,ey<span style="color: #33ffdd;">+10</span>,ex<span style="color: #33ffdd;">+15</span>,ey<span style="color: #33ffdd;">+10</span><br />
+&nbsp;<span style="color: #ffee00">;Подсветка текущего элемента</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> e=sel <span style="color: #aaffff; font-weight: bold;">Then</span> c=<span style="color: #33ffdd;">127</span> <span style="color: #aaffff; font-weight: bold;">Else</span> c=<span style="color: #33ffdd;">0</span><br />
+&nbsp;<span style="color: #ffee00">;Если цвет элемента не задан - задаем случайным образом</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">If</span> e\r=<span style="color: #33ffdd;">0</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; e\r=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">128</span><span style=" ">&#41;</span><br />
+&nbsp; e\g=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">128</span><span style=" ">&#41;</span><br />
+&nbsp; e\b=<span style="color: #aaffff; font-weight: bold;">Rand</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span>,<span style="color: #33ffdd;">128</span><span style=" ">&#41;</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Color</span> c+e\r,c+e\g,c+e\b<br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span> ex,ey,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">20</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Color</span> <span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span>,<span style="color: #33ffdd;">255</span><br />
+&nbsp;<span style="color: #aaffff; font-weight: bold;">Rect</span> ex,ey,<span style="color: #33ffdd;">30</span>,<span style="color: #33ffdd;">20</span>,<span style="color: #aaffff; font-weight: bold;">False</span><br />
+&nbsp;ey2=ey<span style="color: #33ffdd;">+10</span><br />
+&nbsp;ey=ey<span style="color: #33ffdd;">+25</span><br />
+&nbsp;branchview e<br />
+&nbsp;e=e\nxt<br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<span style="color: #aaffff; font-weight: bold;">Line</span> ex<span style="color: #33ffdd;">-20</span>,ey1,ex<span style="color: #33ffdd;">-20</span>,ey2<br />
+ex=ex<span style="color: #33ffdd;">-35</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Вставка элемента перед заданным</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> einsertafter.element<span style=" ">&#40;</span>what.element,afterwhat.element<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Если элемент не задан - создаем его, иначе корректно удаляем из его группы</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> what=<span style="color: #aaffff; font-weight: bold;">New</span> element <span style="color: #aaffff; font-weight: bold;">Else</span> epush what<br />
+<span style="color: #ffee00">;Соединяем новый элемент с верхним и нижним в группе</span><br />
+what\prev=afterwhat<br />
+what\nxt=afterwhat\nxt<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> afterwhat\nxt&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> afterwhat\nxt\prev=what<br />
+afterwhat\nxt=what<br />
+<span style="color: #ffee00">;Задаем корень и возвращаем указатель на элемент</span><br />
+what\root=afterwhat\root<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> what<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Вставка элемента после заданного</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> einsertbefore.element<span style=" ">&#40;</span>what.element,beforewhat.element<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> what=<span style="color: #aaffff; font-weight: bold;">New</span> element <span style="color: #aaffff; font-weight: bold;">Else</span> epush what<br />
+what\prev=beforewhat\prev<br />
+what\nxt=beforewhat<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> beforewhat\prev&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> beforewhat\prev\nxt=what<br />
+what\root=beforewhat\root<br />
+<span style="color: #ffee00">;Если элемент помещается перед первым в группе - соединяем с ним корень</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what\prev=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> what\root\sub=what<br />
+beforewhat\prev=what<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> what<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Вставка элемента в группу заданного</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> einsertin.element<span style=" ">&#40;</span>what.element,inwhat.element<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> what=<span style="color: #aaffff; font-weight: bold;">New</span> element <span style="color: #aaffff; font-weight: bold;">Else</span> epush what<br />
+<span style="color: #ffee00">;Помещаем элемент в начало группы</span><br />
+what\prev=<span style="color: #aaffff; font-weight: bold;">Null</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> inwhat\sub=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp;what\nxt=<span style="color: #aaffff; font-weight: bold;">Null</span><br />
+<span style="color: #aaffff; font-weight: bold;">Else</span><br />
+&nbsp;<span style="color: #ffee00">;Если группа не пуста - сдвигая первый элемент вниз, соединяя его с новым</span><br />
+&nbsp;what\nxt=inwhat\sub<br />
+&nbsp;inwhat\sub\prev=what<br />
+<span style="color: #aaffff; font-weight: bold;">End</span> <span style="color: #aaffff; font-weight: bold;">If</span><br />
+<span style="color: #ffee00">;Соединяем корень группы с новым элементом (теперь первым в группе)</span><br />
+inwhat\sub=what<br />
+what\root=inwhat<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> what<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Удаление элемента вместе с его ответвлениями</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> eremove<span style=" ">&#40;</span>what.element,care=<span style="color: #aaffff; font-weight: bold;">True</span><span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Корректно удаляем элемент из его группы</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> care <span style="color: #aaffff; font-weight: bold;">Then</span> epush what<br />
+e.element=what\sub<br />
+<span style="color: #ffee00">;Если элемент содержит вложенные - удаляем их, используя рекурсию</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> e&lt;&gt;Null<br />
+&nbsp;e2.element=e<br />
+&nbsp;e=e\nxt<br />
+&nbsp;<span style="color: #ffee00">;Вложенные элементы не нуждаются в корректном удалении из группы</span><br />
+&nbsp;eremove e2,<span style="color: #aaffff; font-weight: bold;">False</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+<span style="color: #aaffff; font-weight: bold;">Delete</span> what<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #ffee00">;Вспомогательная функция - корректное удаление дэлемента из группы</span><br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> epush<span style=" ">&#40;</span>what.element<span style=" ">&#41;</span><br />
+<span style="color: #ffee00">;Соединяем верхний и нижний элементы друг с другом</span><br />
+<span style="color: #ffee00">;Если элемент находится в верху группы - соединяем с ним корень группы</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what\prev&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> what\prev\nxt=what\nxt <span style="color: #aaffff; font-weight: bold;">Else</span> what\root\sub=what\nxt<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> what\nxt&lt;&gt;Null <span style="color: #aaffff; font-weight: bold;">Then</span> what\nxt\prev=what\prev<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/1/11/TreeStructure.bb" class="internal" title="TreeStructure.bb">скачать исходный код</a></div>
+<hr />
+<p>Автор: <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Matt_Merkulov" title="Участник:Matt Merkulov">Матвей Меркулов</a> (E-mail: MattMerk@mail.ru, ICQ: 392-274-050)
+</p><!-- 
+Pre-expand include size: 5741 bytes
+Post-expand include size: 352 bytes
+Template argument size: 23 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:624-0!1!0!!ru!2 and timestamp 20071110040733 -->
+<div class="printfooter">
+Получено с <a href="rlbh2v08.html">http://blitzetcetera.org/index.php/%D0%94%D1%80%D0%B5%D0%B2%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%94%D1%80%D0%B5%D0%B2%D0%BE%D0%B2%D0%B8%D0%B4%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81_%D0%A1%D0%B5%D1%82%D1%8C%D1%8E_%D0%B2_Blitz3D:_UDP by HTTrack Website Copier/3.x [XR&CO'2007], Mon, 12 Nov 2007 11:20:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Работа с Сетью в Blitz3D: UDP,Tadeus" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Работа с Сетью в Blitz3D: UDP — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Работа_с_Сетью_в_Blitz3D:_UDP";
+var wgTitle = "Работа с Сетью в Blitz3D: UDP";
+var wgAction = "view";
+var wgArticleId = "1701";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3257";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Работа_с_Сетью_в_Blitz3D_UDP">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Работа с Сетью в Blitz3D: UDP</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Итак, что же такое UDP? UDP - это протокол негарантированной передачи данных. То есть, никто вам не гарантирует, что пакеты дойдут в целости и сохранности да еще и в нужном порядке. Вы спросите: а зачем он тогда? Дело в том, что отстутствие гарантии передачи данных дает нам большую скорость, нежели дает TCP. То есть, это самое оно, когда вы пишете сетевой шутер или action. UDP расположен непосредственно над протоколом IP, и впрочем, не очень от него отличается. 
+</p><p>Теперь немного о портах. Порты до 1024 являются системными и использовать их в сетевых играх не стоит. Также следует поберечься от портов с номерами от 1024 до 49151 - они зарезервированны. Рекомендуется использовать порты с номерами от 49152 до 65535 - они динамические. В любом случае, если не указывать порт, Blitz3D вам сам найдет подходящий. На мой взгляд, автоматический выбор порта является оптимальным решением, однако и у него есть несколько недостатков.
+</p><p>Про IP-адресс, думаю, рассказывать много не придется. Единственное, что хочется упомянуть: в UDP используется целочисленный IP-адресс, а не текстового вида, вроде "127.0.0.1". Чтобы превратить из текстового вида в целочисленный, можно использовать следующую функцию:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Function</span> Int_IP<span style=" ">&#40;</span>IP$<span style=" ">&#41;</span><br />
+<p>d1%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+d2%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+d3%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+d4%=IP$<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style=" ">&#40;</span>d1 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">24</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d2 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">16</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d3 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span> <span style=" ">&#41;</span> +d4<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Также, чтобы узнать все свои IP-адресса, нужно использовать такой код:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #aaffff; font-weight: bold;">CountHostIPs</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #aaffff; font-weight: bold;">DottedIP</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">HostIP</span><span style=" ">&#40;</span>i<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Next</span></div>
+<p>В итоге на экране отобразятся все IP-адресса локальной машины. Почему их может быть много? Есть несколько причин: некоторое количетсво сетевых плат, прокси и т.д. Чтобы узнать внешний IP-адресс (то есть тот, который используется уже непосредственно), нужно либо считать с какого-то сайта, где показывается IP-адресс, либо сделать такой сайт. В качестве первого,могу предложить <a href="http://checkip.dyndns.org/" class="external free" title="http://checkip.dyndns.org/" rel="nofollow">http://checkip.dyndns.org/</a> , благо там нет ничего лишнего, кроме надписи "Current IP Address: ". Но это преодолевается за пару секунд. 
+</p><p>Также следует учитывать, что UDP использует схему peer-to-peer, а это значит, что у нас нет ни серверов, ни клиентов, однако я буду употреблять термин "клиент" для обозначения программы, которая обменивается с нами по протоколу UDP. Так вот, такая архитектура построяние клиентов, означает, что чтобы послать сообщение, надо указать IP-адресс, клиента, которому вы собственно будете это сообщение посылать. Разумеется, необязательно вводить IP-адресса вручную, ведь это можно сделать программно, но об этом ниже.
+</p><p>Итак, давайте уже наконец-то приступим. Для начала надо создать отдельный сетевой поток на определенном порте. Как уже выше говорилось, надо брать номер от 49152 до 65535. Возьмем, к примеру,  53424. 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">Stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style="color: #33ffdd;">53424</span><span style=" ">&#41;</span></div>
+<p>Итак, вот мы и создали поток. Кстати, если номер порта не указывается, то программа все равно будет нормально работать:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">Stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style=" ">&#41;</span></div>
+<p>Но как можно узнать какой же порт мы используем для приложения? Очень просто! UDPStreamPort(поток) вернет нам порт, к которому мы привязали наш поток. В скобках мы должны указывать имя нашего потока. Вот так:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">Stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #aaffff; font-weight: bold;">UDPStreamPort</span><span style=" ">&#40;</span>Stream<span style=" ">&#41;</span></div>
+<p>Данная небольшая программа печает на экране используемый нами порт. 
+</p><p>Ну, все это детские забавы. Давайте займемся чем нибудь посерьезнее. Напишем, например, две программы. Однак будет посылать текст, другая - принимать. Для этого нам понадобятся две команды: SendUDPMsg и RecvUDPMsg. С помощью первой мы можем отправлять сообщения, вот так:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">SendUDPMsg</span> поток,IP_получателя<span style=" ">&#91;</span>,порт_получателя<span style=" ">&#93;</span></div>
+<p>Как видите, порт получателя указывать необязательно. Хочется сразу сказать, что лучше использовать многопоточный принцип, то есть для каждого клиента создавать отдельный поток со своим, оссобенным портом. Это поможет не возникать некоторым конфликтам. Да и удобнее. Также, в параметре IP_получателя должен указыватся целочисленный адрес. Напоминаю, что функция, превращающая точнечный адрес в целочисленный есть в начале статьи.
+</p><p>Далее, команда RecvUDPMsg. Синтаксис прост:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">RecvUDPMsg</span><span style=" ">&#40;</span>поток<span style=" ">&#41;</span></div>
+<p>эта функция возвращает IP-адрес отправителя, если сообщение пришло и 0 в том случае, если сообщение не пришло. Вообще, IP-адресс отправителя последнего сообщения можна также легко узнать с помощью функции UDPMsgIP:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">UDPMsgIP</span><span style=" ">&#40;</span>поток<span style=" ">&#41;</span></div>
+<p>В скобках, разумеется, нужно указать поток, откуда должно прийти сообщение. Также можно получить порт, с которого пришло сообщение, с помощью похожей команды UDPMsgPort:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">UDPMsgPort</span><span style=" ">&#40;</span>поток<span style=" ">&#41;</span></div>
+<p>Пожалуй, это все. Только осталось изучить одну команду - UDPTimeouts. Синтаксис таков:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">UDPTimeouts</span> милисекунды</div>
+<p>Указывает, с какой частотой RecvUDPMsg будет проверять наличие входящих сообщений. В основном применяется для контролированния над скоростью приложения.
+</p><p>Итак, вы изучили команды, которые применяет UDP, пора написать то, что мы описывали раньше: два приложение, где одно посылает текст, а другое принимает. 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style="color: #33ffdd;">53425</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Writeline</span> stream,<span style="color: #00ff66;">&quot;1&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Writeline</span> stream,<span style="color: #00ff66;">&quot;2&quot;</span><br />
+<span style="color: #aaffff; font-weight: bold;">SendUDPMsg</span> stream,Int_IP<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;127.0.0.1&quot;</span><span style=" ">&#41;</span>,<span style="color: #33ffdd;">53424</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Int_IP<span style=" ">&#40;</span>IP$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d1%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d2%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d3%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d4%=IP$<br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> <span style=" ">&#40;</span>d1 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">24</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d2 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">16</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d3 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span> <span style=" ">&#41;</span> +d4<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Как видно в UDP можно формировать пакет из нескольких сообщений в одном. Так что, можно не обьединять информацию в одну строку, а просто разместить правильно в одном пакете. Считывается такой пакет,кстати, тоже очень удобно. К слову, IP-адресс "127.0.0.1" всегда обозначает локальную машину, то есть сетевую игру можно будет легко и просто отлаживать.
+</p><p>Далее, пишем код второй программы:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style="color: #33ffdd;">53424</span><span style=" ">&#41;</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">KeyHit</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">RecvUDPMsg</span><span style=" ">&#40;</span>stream<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #aaffff; font-weight: bold;">ReadLine</span>$<span style=" ">&#40;</span>stream<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #aaffff; font-weight: bold;">ReadLine</span>$<span style=" ">&#40;</span>stream<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">EndIf</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End</span></div>
+<p>Не забудьте, чтобы были разные порты у клиента и у сервера, иначе сообщение попросту не прийдет. Это касается локальной сети. 
+</p><p>Как видите, многострочный пакеты весьма удобны. Однако, следует помнить, что в Интернете некоторые части пакетов могут потерятся и вы получите совсем не то, что было нужно.
+</p><p>Теперь о том, как не узнавать IP-адресс каждого клиента по отдельности, ибо сейчас мы обсудим принцип, по которому можно настроить UDP на архитектуру "клиент-сервер". В таком случае будет преимущество - нужно будет знать только один IP-адресс - сервера. Согласитесь, это куда удобнее. Как же будет действовать наша система? Все гениальное - просто. Мы посылаем сообщение серверу, что мол подключаюсь, он регистрирует ваш IP-адресс и у себя и рассылает остальным ваш IP-адресс. Просто, не правда ли? Давайте посмотрим, как это реализовать в коде:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Global</span> stream<br />
+<p><span style="color: #aaffff; font-weight: bold;">Global</span> is_server<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> Player<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Field</span> ip<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Host<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style="color: #33ffdd;">53424</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; is_server=<span style="color: #aaffff; font-weight: bold;">True</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Join<span style=" ">&#40;</span>ipadress$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; stream=<span style="color: #aaffff; font-weight: bold;">CreateUDPStream</span><span style=" ">&#40;</span><span style="color: #33ffdd;">5</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; ip=Int_IP<span style=" ">&#40;</span>ipadress$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">WriteLine</span> stream,GetMyIP<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">SendUDPMsg</span> stream,ip,<span style="color: #33ffdd;">53424</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> is_server <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">If</span> <span style="color: #aaffff; font-weight: bold;">RecvUDPMsg</span><span style=" ">&#40;</span>stream<span style=" ">&#41;</span> <span style="color: #aaffff; font-weight: bold;">Then</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p.Player=<span style="color: #aaffff; font-weight: bold;">New</span> Player<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; p\ip=Int_IP<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">ReadLine</span>$<span style=" ">&#40;</span>stream<span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Endif</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Endif</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Int_IP<span style=" ">&#40;</span>IP$<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d1%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d2%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d3%=<span style="color: #aaffff; font-weight: bold;">Left</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style="color: #33ffdd;">-1</span><span style=" ">&#41;</span>:IP$=<span style="color: #aaffff; font-weight: bold;">Right</span><span style=" ">&#40;</span>IP$,<span style="color: #aaffff; font-weight: bold;">Len</span><span style=" ">&#40;</span>IP$<span style=" ">&#41;</span>-<span style="color: #aaffff; font-weight: bold;">Instr</span><span style=" ">&#40;</span>IP$,<span style="color: #00ff66;">&quot;.&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; d4%=IP$<br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> <span style=" ">&#40;</span>d1 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">24</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d2 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">16</span><span style=" ">&#41;</span> + <span style=" ">&#40;</span>d3 <span style="color: #aaffff; font-weight: bold;">Shl</span> <span style="color: #33ffdd;">8</span> <span style=" ">&#41;</span> +d4<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> GetMyIP$<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">DottedIP</span>$<span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">HostIP</span><span style=" ">&#40;</span><span style="color: #aaffff; font-weight: bold;">CountHostIPs</span><span style=" ">&#40;</span><span style="color: #00ff66;">&quot;&quot;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<p>Давайте я дам краткое описание каждой функцией, а с кодом вы разберетесь сами - я же не могу за вас все разжевывать. Итак, сначала мы создаем глобальные переменные: переменная потока и переменная, обозначающая сервер мы или клиент. Первая функция создает поток сервера, и в перменную is_server записывает значение True. Вторая - сообщает серверу о себе, то есть мы становимся клиентом и посылаем серверу наш IP-адресс,а также выставляет значение is_server равное False. Третья функция служит для выполнения циклических действий на стороне сервера: прием сообщений, рассылка IP-адрессов. Четвертую функцию вы уже знаете - она превращает IP-адресс из точечного в целочисленный. Наконец, пятая возвращает IP-адресс локальной машины, хоть и не точно. Как узнать точный IP-адресс читайте вначале статьи. В качестве домашнего задания сделайте так, чтобы сервер рассылал IP-адресса одних клиентов другим. Я специально упустил этот момент, дабы дать вам область для тренировки.
+</p><p>Также приводу простейший пример использования - сервер выводит на экран подсоединенных игроков(пусть и не самым лучшим методом), а клиент сначала подключается и посылает о себе информацию. Код приводится без учета преидущих функций.
+</p><p>Сервер:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">Host<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+<p><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> <span style="color: #aaffff; font-weight: bold;">KeyDown</span><span style=" ">&#40;</span><span style="color: #33ffdd;">1</span><span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Cls</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">For</span> p.Player=<span style="color: #aaffff; font-weight: bold;">Each</span> Player<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Print</span> <span style="color: #aaffff; font-weight: bold;">DottedIP</span>$<span style=" ">&#40;</span>p\ip<span style=" ">&#41;</span><br />
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #aaffff; font-weight: bold;">Next</span> <br />
+&nbsp; &nbsp; &nbsp; &nbsp; UpdateNetwork<span style=" ">&#40;</span><span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Wend</span></div>
+<p>Клиент:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;">Join<span style=" ">&#40;</span><span style="color: #00ff66;">&quot;127.0.0.1&quot;</span><span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">End</span></div>
+<p>Как видите, все очень просто.
+</p><p>Теперь вы знаете как работать с одним из основных протоколов. Теперь вы можете написать динамическую сетевую игру. Между прочим, одна из известных онлайновых ролевых игр, написанных на блице (их кстати, немного) использовала сетевую библиотеку BlitzPlay, которая в свою очередь использовала UDP. Вообщем, желаю вам успехов и удачи в проектах. 
+</p><p>С Уважением, <a href="http://blitzetcetera.org/index.php/%D0%A3%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA:Tadeus" title="Участник:Tadeus">Волошин Леонид аka Tadeus</a>
+</p>
+<!-- Saved in parser cache with key db1:pcache:idhash:1701-0!1!0!!ru!2 and timestamp 20071112105840 -->
+<div class="printfooter">
+Получено с <a href="c4-jaf4m.html">http://blitzetcetera.org/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81_%D0%A1%D0%B5%D1%82%D1%8C%D1%8E_%D0%B2_Blitz3D:_UDP</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81_%D0%A1%D0%B5%D1%82%D1%8C%D1%8E_%D0%B2_Blitz3D:_UDP by HTTrack Website Copier/3.x [XR&CO'2007], Mon, 12 Nov 2007 11:20:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>

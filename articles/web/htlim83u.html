@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru" dir="ltr">	
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%D0%BC%D0%B8 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+<head>		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />				<meta name="keywords" content="Работа со списками" />
+		<link rel="shortcut icon" href="http://blitzetcetera.org/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="http://blitzetcetera.org/opensearch_desc.php" title="Blitz Et Cetera (Русский)" />
+		<title>Работа со списками — Blitz Et Cetera</title>		<style type="text/css" media="screen,projection">/*<![CDATA[*/ @import "bvih5rde.css?63"; /*]]>*/</style>		<link rel="stylesheet" type="text/css" media="print" href="gcxktlm6.css?63" />		<link rel="stylesheet" type="text/css" media="handheld" href="zumsslq_.css?63" />		<!--[if lt IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE50Fixes.css?63";</style><![endif]-->		<!--[if IE 5.5000]><style type="text/css">@import "/skins/OfflineNew/IE55Fixes.css?63";</style><![endif]-->		<!--[if IE 6]><style type="text/css">@import "/skins/OfflineNew/IE60Fixes.css?63";</style><![endif]-->		<!--[if IE 7]><style type="text/css">@import "/skins/OfflineNew/IE70Fixes.css?63";</style><![endif]-->		<!--[if lt IE 7]><script type="text/javascript" src="/skins/common/IEFixes.js?63"></script>		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->		<script type= "text/javascript">/*<![CDATA[*/
+var skin = "OfflineNew";
+var stylepath = "/skins";
+var wgArticlePath = "/index.php/$1";
+var wgScriptPath = "";
+var wgServer = "http://blitzetcetera.org/";
+var wgCanonicalNamespace = "";
+var wgCanonicalSpecialPageName = false;
+var wgNamespaceNumber = 0;
+var wgPageName = "Работа_со_списками";
+var wgTitle = "Работа со списками";
+var wgAction = "view";
+var wgArticleId = "618";
+var wgIsArticle = true;
+var wgUserName = null;
+var wgUserGroups = null;
+var wgUserLanguage = "ru";
+var wgContentLanguage = "ru";
+var wgBreakFrames = false;
+var wgCurRevisionId = "3563";
+/*]]>*/</script>
+		<script type="text/javascript" src="2nq-6cel.js?63"><!-- wikibits js --></script>		<script type="text/javascript" src="http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=js"><!-- site js --></script>		<style type="text/css">/*<![CDATA[*/
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=MediaWiki:OfflineNew.css&amp;usemsgcache=yes&amp;action=raw&amp;ctype=text/css&amp;smaxage=18000";
+@import "http://blitzetcetera.org/index.php?title=-&amp;action=raw&amp;gen=css&amp;maxage=18000";
+/*]]>*/</style>		<!-- Head Scripts -->	</head><body  class="mediawiki ns-0 ltr page-Работа_со_списками">	<div id="globalWrapper">	<div id="logocontainer">		<table align="center">		  <tr>				<td id="blitzetclogo">				</td>			</tr>		</table>	</div>	<div id="magbar">	Журнал о программированнии на языках Blitz3D, BlitzMax, BlitzPlus	</div>		<div id="column-content">	<div id="content">		<a name="top" id="top"></a>				<div id="bodyContent">		<table cellspacing=0 cellpadding=0 width=100%>			<tr>			  <td class="leftside">				</td>				<td class="sheetbody">					<h1 class="sheet">Работа со списками</h1>			<h3 id="siteSub">Материал из Blitz Et Cetera.</h3>			<div id="contentSub"></div>			<!-- start content -->			<p>Поводом написания этой статьи было мое личное заблуждение по использованию типов в Blitz-е. Возьмем простой пример - нужен список юнитов игрока. Что обычно делается (ну или я делал) - делаю такой простой код: 
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> TUnit<br />
+<p><span style="color: #aaffff; font-weight: bold;">Field</span> x,y,id<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> Units.TUnit &nbsp;<span style="color: #ffee00">; создаем переменную юнитов</span><br />
+<span style="color: #aaffff; font-weight: bold;">for</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">to</span> <span style="color: #33ffdd;">10</span><br />
+Units.TUnit = <span style="color: #aaffff; font-weight: bold;">New</span> TUnit<br />
+Units\x=i:Units\x=i:Units\id=i<br />
+<span style="color: #aaffff; font-weight: bold;">next</span><br />
+<span style="color: #ffee00">; теперь переберем все юниты</span><br />
+<span style="color: #aaffff; font-weight: bold;">for</span> Unit.TUnit=<span style="color: #aaffff; font-weight: bold;">Each</span> TUnit<br />
+<span style="color: #aaffff; font-weight: bold;">Print</span> Unit\id<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Next</span></div>
+<p>В данном случае все нормально - но если мы захотим списки для каждого игрока, то такой способ не подойдет, т.к. при переборе Each Unit  - будут выдаваться все юниты этого типа. Можно конечно ставить всякие условия, но есть способ гораздо лучший. Делаем связанный список используя типы Блица и проблема решается. Вникать в подробности создания списка я не буду (это можно понять самому, т.к. код небольшой), а дам пример использования.
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #ffee00">; Переменная списка - может быть сколько угодно разных</span><br />
+<p><span style="color: #aaffff; font-weight: bold;">Global</span> MyList.TList = <span style="color: #aaffff; font-weight: bold;">New</span> TList<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> MyList2.TList = <span style="color: #aaffff; font-weight: bold;">New</span> TList<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">10</span><br />
+Add<span style=" ">&#40;</span>MyList,i<span style=" ">&#41;</span> <span style="color: #ffee00">; Добавляет i в список List</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">10</span><br />
+Add<span style=" ">&#40;</span>MyList2,i<span style="color: #33ffdd;">+15</span><span style=" ">&#41;</span> <span style="color: #ffee00">; Добавляет i в список List</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+Start<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Устанавливает список на начало</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> EofList<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Пока список не закончился</span><br />
+NextItem<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Следующий элемент</span><br />
+<span style="color: #aaffff; font-weight: bold;">Print</span> Item<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span><br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">Wend</span></div>
+<p>Это был код который нужно написать пользователю для использованию списков с предлагаемыми мною функциями. Как видите здесь все просто. И все списки отделены друг от друга! Так же можно создать массив списков. 
+Полный код включаю мои функции:
+</p>
+<div class="bb" style="font-family: monospace;background-color:#FFFFFF;border:1px dashed #CCCCCC;padding:10px;background-color:#225588;color:#FFFFFF;border:1px solid #003040;padding:10px;"><span style="color: #aaffff; font-weight: bold;">Type</span> TList<br />
+<p><span style="color: #aaffff; font-weight: bold;">Field</span> Start.TItem,Item.TItem<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span><br />
+<span style="color: #aaffff; font-weight: bold;">Type</span> TItem<br />
+<span style="color: #aaffff; font-weight: bold;">Field</span> c% <br />
+<span style="color: #aaffff; font-weight: bold;">Field</span> N.TItem<br />
+<span style="color: #aaffff; font-weight: bold;">End Type</span> <br />
+<br />
+<span style="color: #ffee00">; Переменная списка - может быть сколько угодно разных</span><br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> MyList.TList = <span style="color: #aaffff; font-weight: bold;">New</span> TList<br />
+<span style="color: #aaffff; font-weight: bold;">Global</span> MyList2.TList = <span style="color: #aaffff; font-weight: bold;">New</span> TList<br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">10</span><br />
+Add<span style=" ">&#40;</span>MyList,i<span style=" ">&#41;</span> <span style="color: #ffee00">; Добавляет i в список List</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">For</span> i=<span style="color: #33ffdd;">1</span> <span style="color: #aaffff; font-weight: bold;">To</span> <span style="color: #33ffdd;">10</span><br />
+Add<span style=" ">&#40;</span>MyList2,i<span style="color: #33ffdd;">+15</span><span style=" ">&#41;</span> <span style="color: #ffee00">; Добавляет i в список List</span><br />
+<span style="color: #aaffff; font-weight: bold;">Next</span><br />
+<br />
+Start<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Устанавливает список на начало</span><br />
+<span style="color: #aaffff; font-weight: bold;">While</span> <span style="color: #aaffff; font-weight: bold;">Not</span> EofList<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Пока список не закончился</span><br />
+NextItem<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span> <span style="color: #ffee00">; Следующий элемент</span><br />
+<span style="color: #aaffff; font-weight: bold;">Print</span> Item<span style=" ">&#40;</span>MyList<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Wend</span> <br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Add<span style=" ">&#40;</span>List.TList,i<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Local</span> a.TItem<br />
+a.TItem = <span style="color: #aaffff; font-weight: bold;">New</span> TItem<br />
+a\c=i<br />
+<span style="color: #aaffff; font-weight: bold;">If</span> List\Item=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> List\Item=<span style="color: #aaffff; font-weight: bold;">New</span> TItem:List\Start=List\Item<br />
+List\Item\n=a<br />
+List\Item=a<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Start<span style=" ">&#40;</span>List.TList<span style=" ">&#41;</span><br />
+List\Item=List\Start<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> NextItem<span style=" ">&#40;</span>List.TList<span style=" ">&#41;</span><br />
+List\Item=List\Item\n<br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> EofList<span style=" ">&#40;</span>List.TList<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">If</span> List\Item\n=<span style="color: #aaffff; font-weight: bold;">Null</span> <span style="color: #aaffff; font-weight: bold;">Then</span> <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">True</span> <span style="color: #aaffff; font-weight: bold;">Else</span> <span style="color: #aaffff; font-weight: bold;">Return</span> <span style="color: #aaffff; font-weight: bold;">False</span><br />
+<span style="color: #aaffff; font-weight: bold;">End Function</span><br />
+<br />
+<span style="color: #aaffff; font-weight: bold;">Function</span> Item<span style=" ">&#40;</span>List.TList<span style=" ">&#41;</span><br />
+<span style="color: #aaffff; font-weight: bold;">Return</span> List\Item\c<br />
+</p>
+<span style="color: #aaffff; font-weight: bold;">End Function</span></div>
+<div align="right"><a href="http://blitzetcetera.org/images/e/e6/Lists2.bb" class="internal" title="Lists2.bb">скачать исходный код</a></div>
+<hr />
+<p>Автор: Amir (e-mail: AmirL@mail.ru)
+</p><!-- 
+Pre-expand include size: 1435 bytes
+Post-expand include size: 183 bytes
+Template argument size: 16 bytes
+Maximum: 2097152 bytes
+-->
+
+<!-- Saved in parser cache with key db1:pcache:idhash:618-0!1!0!!ru!2 and timestamp 20071110040729 -->
+<div class="printfooter">
+Получено с <a href="htlim83u.html">http://blitzetcetera.org/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%D0%BC%D0%B8</a></div>
+			<!-- end content -->			<div class="visualClear"></div>				</td>				<td class="rightside">				</td>			</tr>		</table>		</div>	</div>		</div>	
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+</div></body>
+<!-- Mirrored from localhost/index.php/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0_%D1%81%D0%BE_%D1%81%D0%BF%D0%B8%D1%81%D0%BA%D0%B0%D0%BC%D0%B8 by HTTrack Website Copier/3.x [XR&CO'2007], Sat, 10 Nov 2007 05:16:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8"><!-- /Added by HTTrack -->
+</html>
